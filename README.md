@@ -1,6 +1,6 @@
 # Ancient Guy
 
-***Knowing your your very most essential WHY*** ... the UNIQUE reason for your existence ... is about a UNIQUE, personal quest ... the reason for this quest is to [be able to get over your damned self and let your most essential WHY come out in your existence](https://kidadl.com/quotes/best-meister-eckhart-quotes-from-the-german-monist-philosopher).
+***Knowing your your very most essential WHY*** ... the UNIQUE reason for your existence ... is about a UNIQUE, personal quest ... the reason for this quest is to [be able to get over your damned ego with all of its accumulated baggage and inebriating poison and to begin to let your most essential WHY come out in your existence](https://kidadl.com/quotes/best-meister-eckhart-quotes-from-the-german-monist-philosopher).
 
 Tnowing the Origins of your most original origins is what the genuinely old school Ancient Guy lifestyle is about ... it is a necessarily a mystical and very personal quest. It is a quest which could be *defined* as the quest to know one's Creator, to know one's God. Other's might have some sort of linguistic, semantic or pathological psychic hang-ups with the word "God" but this quest has absolutely NOTHING to do with religous beliefs ... it is more fundamental than peer-pressure, more fundamental than religion. It is unique and PERSONAL.
 

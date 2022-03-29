@@ -1,5 +1,13 @@
 # Ancient Guy
-Knowing your most essential WHY or knowing the origins of your original origin is fundamental to a genuinely old school Ancient Guy lifestyle. 
+
+***Knowing your your very most essential WHY*** ... the UNIQUE reason for your existence ... is about a UNIQUE, personal quest ... the reason for this quest is to [be able to get over your damned self and let your most essential WHY come out in your existence](https://kidadl.com/quotes/best-meister-eckhart-quotes-from-the-german-monist-philosopher).
+
+Tnowing the Origins of your most original origins is what the genuinely old school Ancient Guy lifestyle is about ... it is a necessarily a mystical and very personal quest. It is a quest which could be *defined* as the quest to know one's Creator, to know one's God. Other's might have some sort of linguistic, semantic or pathological psychic hang-ups with the word "God" but this quest has absolutely NOTHING to do with religous beliefs ... it is more fundamental than peer-pressure, more fundamental than religion. It is unique and PERSONAL.
+
+The Ancient Guy life is fundamentally very old school, ancient, cold, hard quest for the very most essential and absolute WHY of one's existence. It is fundmentally about the attempt to pierce the ego and get past ALL of accumulated mental baggage of one's existence. Hopefully, it should be obvious enough that **this mystical quest is not for sissies** or people who are addicted to fantasies and comfort. It is not for those who have just swallowed regurgitated intellectual baby food for their entire lives. But is also not about [*seeing the face of God*](https://www.biblestudytools.com/exodus/33-20.html), but it is about recognizing the face of God in the lives and world around us. The quest for the most essential WHY is the quest to see the fabric of Reality as it really is, not as we might hope or wish that it might be ... it will, at times, be fundamentally disconcerting -- so it is only for those who are sufficiently bathed in love so that they can endure the extreme discomfort of some very cold truths.
+
+***Knowing your your very most essential WHY*** ... the UNIQUE reason for your existence ... is about your UNIQUE quest for the fundamental truths of your existence ... and that includes the saving grace of your spiritual salvation or the *reason* [if such a word as "reason" can possible apply here] for why/how your soul can be eternal.
+
 
 In modern parlance, the Ancient Guy lifestyle involves working on the code of the very barest of [bare-metal operating systems](https://en.wikipedia.org/wiki/Bare_machine) in every sense of one's existence. 
 

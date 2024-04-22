@@ -22,9 +22,11 @@ A healthier body supports the mind.
 
 It's tough to have much of life that isn't about pain and the suffering and anxieties that comes from knowing the future is nothing but pain if one doesn't take care of one body. This does not change the inescapable Reality that your mind is the only place in this existence that you have to live. In order to ***cultivate the living garden of one's mind*** it is necessary to protect and sustain that living garden with a physical temple ... your body is that temple, that physical edifice that houses your mind.
 
-## The necessity of building a better prayer life.
+## The necessity of ***meticulously*** BUILDING a better prayer life.
 
-EVENTUALLY, one realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer ... sustaining a constant meditative awareness so that one is able to pray without ceasing. One does not need the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to pray without ceasing ... to be in a constant state of prayer ... to be in a constant state of meditative awareness.
+*EVENTUALLY, one finally realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer and sustaining a constant meditative awareness so that one is able to pray without ceasing.
+
+One does not need ANY the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to pray without ceasing ... to be in a constant state of prayer ... to be in a constant state of meditative awareness.
 
  There are several types of prayerful meditation and strategies for greater cognitive awareness that have been practiced by monks and spiritual practitioners across various traditions throughout the ages. 
  

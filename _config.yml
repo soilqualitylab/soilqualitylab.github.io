@@ -1,1 +1,9 @@
-theme: jekyll-theme-leap-day
+# Site settings
+title: AncientGuy
+email: MarkBruns@MarkBruns.com
+description: Attempting understand the ONE Origin of your most original origins
+twitter_username: QualityFellow
+github_username:  AncientGuy
+
+# Build settings
+markdown: kramdown

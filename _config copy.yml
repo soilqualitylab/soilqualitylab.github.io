@@ -1,0 +1,9 @@
+# Site settings
+title: AZYNCH
+email: Z@azynch.com
+description: ASYNCHRONOUS workflows for placing a higher priority on being fully present in SYNCHRONOUS lifestyles.
+twitter_username: QualityFellow
+github_username:  AZYNCH
+
+# Build settings
+markdown: kramdown

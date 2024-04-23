@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Improving The Earnestness Of Intention In One's Prayer Life"
-date:   2024-03-12 4:30:00
+date:   2024-03-01 4:30:00
 categories: template
 ---
 

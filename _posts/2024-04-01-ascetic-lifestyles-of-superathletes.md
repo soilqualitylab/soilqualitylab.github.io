@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ascetic Lifestyles of Superathletes: The AncientGuy.Fitness Syllabus"
-date:   2024-04-19 4:30:00
+date:   2024-04-01 4:30:00
 categories: template
 ---
 

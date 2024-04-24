@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Immersive Education: The AncientGuy.Fitness Syllabi"
+title:  "Immersive Education: The AncientGuy Mental Fitness Syllabi"
 date:   2024-01-01 4:30:00
 categories: template
 ---

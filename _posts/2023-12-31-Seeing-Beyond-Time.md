@@ -7,7 +7,11 @@ categories: template
 
 # The point of the AncientGuy essays are about transcending Time
 
-Transcending time is about ditching the baggage of one's ego.
+Time and [the quest for a better understanding of timekeeping](https://www.quantamagazine.org/what-is-time-a-history-of-physics-biology-clocks-and-culture-20200504/) is extremely important for the practical human technlogy that humans increasingly depend upon. For example, CERN's [White Rabbit](https://ohwr.org/project/white-rabbit) [open hardware project](https://ohwr.org/welcome) is a fully deterministic Ethernet-based network for general purpose data transfer and synchronization. It can synchronize over 1000 nodes with sub-ns accuracy over fiber lengths of up to 10 km by providing sub-nanosecond accuracy and picoseconds precision of synchronization for large distributed systems and also allows for deterministic and reliable data delivery.
+
+***But what if Time is a bit of a dimensional illusion or something dependent upon a human-centric view of the Universe?*** 
+
+*Does Time matter in the REALLY BIG picture?* Transcending notions of Time is about thinking outside the human box or completely ditching the baggage of one's ego ... not just viewing one's problem from a different angle millions of miles into space and not just from a completely different dimensional framework, but from beyond dimensions.
 
 The root cause of bad theory is generally driven by the ego of the theorist ... the theory always suffers as the theorist clings to the belief that one, ie the theorist, can make a ***permanent*** contribution ... it's a matter of DESPERATELY, PATHETICALLY needing to see oneself as *The Discoverer* of the Grand Unifying Theory of Everything, ie something that explains away all need for God.
 

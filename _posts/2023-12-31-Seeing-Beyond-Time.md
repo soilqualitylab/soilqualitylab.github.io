@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Seeing Beyond Time"
+title:  "Seeing Beyond Time -- The Theology of Time"
 date:   2023-12-31 4:30:00
 categories: template
 ---
@@ -9,9 +9,27 @@ categories: template
 
 Transcending time is about ditching the baggage of one's ego.
 
-Seeing beyond Time involves realizing that the ORIGIN of all Origins is defined as God. This must be emphasize, God is matter of operationally DEFINING a word, eg Genesis 1:1, this is a matter of DEFINITIONS of a word not a matter of belief. 
+The root cause of bad theory is generally driven by the ego of the theorist ... the theory always suffers as the theorist clings to the belief that one, ie the theorist, can make a ***permanent*** contribution ... it's a matter of DESPERATELY, PATHETICALLY needing to see oneself as *The Discoverer* of the Grand Unifying Theory of Everything, ie something that explains away all need for God.
 
-It's not that God is *alive*, per se. God is the Creator of Everything, including Time. God IS Everywhere, throughout all time, but all at once. Life is an artificial, imperfect human concept constrained by the limitations of the human experience.  Of course, we have inklings that our understanding is limited that our notions of Everything is severely limited ... we can start to think about things like dark matter, blackholes, spacetime, timewarps, gravitation, electromagnetism, strong/weak nuclear forces ... but the human cognitive potential will always be severely limited as long humans remain bound by their own egos, their own thoughts, their own significance [as measured by others, in their own time or the time that human can contemplate, eg 5,000 years]. The Creator is not bound by Time or Space or human concepts of physical dimensions or concepts like attrative forces such as electromagnetic forces, gravitational force, weak nuclear force, strong nuclear force.
+Seeing Beyond Time necessarily involves realizing that the ORIGIN of all Origins is **defined** as God. The DEFINITIION of terms is what we must emphasize.
+
+God is matter of operationally DEFINING a word ... not a matter of faith ... , eg Genesis 1:1 is an operational DEFINITION ... strictly about opening the story to DEFINE a term ... Genesis 1:1 is not a matter of belief. 
+
+It's not that God is *alive*, per se. The human concept of what it means to be *alive* is strictly what that means in a human context ... and we humans generally have terrible ideas about what life is about or was about, even when we are on our deathbed or facing certain death. The idea of what it means *to be alive* illustrates the human cognitive limitations ... OF EVEN THINGS that we are immersed in. 
+
+God ... as the ORIGIN of all origins ... is obviously not bound by human limitations. God is not bound by ANY limitation.
+
+God is the Creator of Everything, including Time. 
+
+God IS Everywhere, throughout all time, but all at once. 
+
+The notion of life or what it means to be alive is an artificial, imperfect human concept constrained by the limitations of the human experience.  
+
+Of course, we have do have our moments of actually understanding our limits, such as when we contemplate the human inklings of what Everything really is. Our understanding is limited by what we can cognitively imagine; so obviously that our species' notions of Everything will necessarily be severely limited.
+
+We can start to contemplate things like dark matter, blackholes, spacetime, timewarps, gravitation, electromagnetism, strong/weak nuclear forces ... and our understanding of these things SLOWLY expands, but the human cognitive potential will always be severely limited as long humans remain bound by their own egos, their own thoughts, their own significance [as measured by others, in their own time or the time that human can contemplate, eg 5,000 years]. 
+
+The Creator is not bound by Time or Space or human concepts of physical dimensions or concepts like attrative forces such as electromagnetic forces, gravitational force, weak nuclear force, strong nuclear force.
 
 God is not some nice Old Man, not our servant, not some superhero, not some anthropomorphized quasi-equal that'll will invite us up to the club so we can say we had steaks at God's place. 
 

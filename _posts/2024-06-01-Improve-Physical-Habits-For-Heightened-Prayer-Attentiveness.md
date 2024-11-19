@@ -1,11 +1,51 @@
 ---
 layout: post
-title:  "Improve Physical Habits  For Heightened Prayer Attentiveness"
+title:  "Improve Physical Habits For Improved Prayer and Heightened Conscious Attentiveness During Prayer"
 date:   2024-06-01 4:30:00
 categories: template
 ---
 
-We can explore how very basic fundamentals of prayer postures and efforts to improve physical wellness can enhance spiritual practice.
+The biomechanics of different prayer positions can influence the body in several key ways:
+
+### Kneeling Prayer Position:
+
+Creates hip flexion and lengthens the psoas muscle
+Activates slow muscle fibers in quadriceps and hip flexors
+Weight distribution through knees increases proprioceptive input
+May increase parasympathetic activation through consistent pressure points
+
+
+### Prostration (as in Islamic prayer):
+
+Places the head below the heart, temporarily altering blood flow dynamics
+Stretches the lower back muscles and hamstrings
+Stimulates the vestibular system through position changes
+May increase alpha wave activity in frontal regions
+
+### Seated Meditation Postures:
+
+Promotes neutral spine alignment
+Engages core stabilizing muscles
+Reduces muscle tension compared to standing
+Associated with increased theta wave activity
+
+### Standing Or Walking Prayer:
+
+Requires sustained postural muscle engagement
+Promotes bilateral symmetry and balance
+Maintains consistent blood flow patterns
+May enhance alertness through proprioceptive feedback
+
+The cognitive effects appear to be position-dependent but generally include:
+
+Increased interoceptive awareness
+Enhanced focus and attention
+Reduced default mode network activity
+Altered arousal states based on posture
+
+Although, we might have and *okish* biomechanical understanding of these positions, some of the neurophysiological effects would definitely benefit from further applied research. 
+
+We could, for example, explore how very basic fundamentals of prayer postures and efforts to improve physical wellness can enhance spiritual practice.
 
 Prayer Posture Dynamics:
 

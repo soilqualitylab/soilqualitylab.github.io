@@ -1,6 +1,8 @@
 # Ancient Guy
 
-***Really knowing your very most essential WHY*** ... really understanding the UNIQUE reason for your existence ... it's about ***trying to understand the ONE Origin of your most original origins*** ... it is a matter ascetic lifestyle in order to free one's mind from distractions.
+***Really knowing your very most essential WHY*** ... really understanding the UNIQUE reason for your existence ... it's about ***trying to understand the ONE Origin of your most original origins***.
+
+The Ancient Guy lifestyle eschews comfort, adopting a purely ascetic lifestyle and renounce other materialist pursuits in order to free one's mind from distractions, to be able to spend more time in contemplation of the Creator's will, to practice more intuitive remote viewing and to developed more advanced cognitive capabilities that are possible only through prayer.
 
 ## Stop EVER Blaming Others
 

@@ -99,7 +99,7 @@ Physiological Optimization Strategies:
 - Progressive muscle relaxation
 - Mindful body scans
 - Rosary beads for meditating on mysteries of Christ, praying the rosary https://rosarycenter.org/how-to-pray-the-rosary and multi-day intentions or novenas https://hallow.com/blog/how-to-pray-54-day-novena 
-- Mudras ... https://asivanayoga.com/blogs/yoga-blog/yoga-hand-symbols ... and reflexology practices ... https://pmc.ncbi.nlm.nih.gov/articles/PMC4624523/ ... due to its non-invasive, non-pharmacological complementary nature, reflexology is widely accepted; significant evidence of positive effect reflexology in a variety of health conditions is available.
+- Hand positions or *mudras* ... https://asivanayoga.com/blogs/yoga-blog/yoga-hand-symbols ... and reflexology practices ... https://pmc.ncbi.nlm.nih.gov/articles/PMC4624523/ ... due to its non-invasive, non-pharmacological complementary nature, reflexology is widely accepted; significant evidence of positive effect reflexology in a variety of health conditions is available.
 
 6. Fitness Components to Develop:
 - Cardiovascular endurance for sustained practice

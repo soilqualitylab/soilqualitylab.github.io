@@ -76,13 +76,14 @@ Physiological Optimization Strategies:
 - Gentle movement between long prayer sessions
 - Attention to foot, knee, hip and joint health
 
-The key is finding the right balance of:
+Key Points Of Summary: Finding the right balance
+
 1. Physical preparation that supports rather than distracts
 2. Movement that enhances rather than disrupts focus
 3. Practices sustainable for your specific needs/limitations
 4. Integration with existing prayer traditions
 5. Gradual adaptation of new supportive practices
-6. Practice, practice, practice
-7. Balance … longer-term meditative 6X 9-day novena or even 12-day duodecimena sets (typically 3X sets of “intentional ask” + 3X sets of thanksgiving) of contemplating the mystery of Christ’s life Joyful-Sorrowful-Glorious Joyful-Sorrowful-Glorious Joyful-Sorrowful-Glorious novenas or the full twelve-day Joyful-Luminous-Sorrowful-Glorious Joyful-Luminous-Sorrowful-Glorious Joyful-Luminous-Sorrowful-Glorious sets as well as other highly-disciplined prayer routines … as a complement spontaneous, more-or-less continuous prayer routines ... https://hallow.com/blog/how-to-pray-54-day-novena
+6. Practice, adapting different approaches to practice, more practice IN PRAYER
+7. Balance through sustained practice … longer-term meditative 6X 9-day novena or even 12-day duodecimena sets (typically 3X sets of “intentional ask” + 3X sets of thanksgiving) of contemplating the mystery of Christ’s life Joyful-Sorrowful-Glorious Joyful-Sorrowful-Glorious Joyful-Sorrowful-Glorious novenas or the full twelve-day Joyful-Luminous-Sorrowful-Glorious Joyful-Luminous-Sorrowful-Glorious Joyful-Luminous-Sorrowful-Glorious sets as well as other highly-disciplined prayer routines … as a complement spontaneous, more-or-less continuous prayer routines ... https://hallow.com/blog/how-to-pray-54-day-novena
 
 

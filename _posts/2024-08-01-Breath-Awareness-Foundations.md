@@ -5,6 +5,8 @@ date:   2024-08-01 4:30:00
 categories: template
 ---
 
+Polyvagal theory proposes that the nervous system has three states that correspond to different levels of perceived safety or threat: the ventral vagal state, the sympathetic state and the dorsal vagal state. Some people ... emergency responders, for example ... must frequently and routinely face critical incidents and crisis situations. TThrough the lens of understanding something about polyvagal theory, responders and people in crisis situations can have better self-awareness and understand their own nervous system responses to stress and trauma and develop strategies to regulate their states, promoting safety, healing and well-being. In order to deepen and improve our contemplative prayer practice, we should also understand something about this theory in order to better understand our own emotional state and to level up our prayer game when we are considering prayer, particularly for those in crisis. 
+
 # Polyvagal Integration in Contemplative Practice
 
 ## 1. Foundational Framework
@@ -17,16 +19,16 @@ categories: template
    - Improved spiritual discernment
 
 2. Sympathetic State (Fight/Flight)
-   - Common barrier to deep prayer
+   - Commonly a barrier to deep prayer
    - Manifestation of spiritual resistance
    - Opportunity for transformation
    - Integration point for warrior-monk practices
 
 3. Dorsal Vagal State (Shutdown)
-   - Spiritual dryness periods
-   - Contemplative desert experiences
-   - Recovery and integration needs
-   - Pathway to deeper surrender
+   - Spiritual drought or periods of isolation in which there's an absence of stimulus.
+   - Sometimes deliberate; there IS a time/place for hermit-like isolation and contemplative desert experiences
+   - One notable example involves recovery and integration needs, eg "putting pieces of our puzzle together"
+   - Pathway to deeper surrender, more fundamental and basic insight
 
 ## 2. Breathing Patterns and Nervous System States
 

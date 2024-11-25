@@ -5,7 +5,13 @@ date:   2024-08-01 4:30:00
 categories: template
 ---
 
-Polyvagal theory proposes that the nervous system has three states that correspond to different levels of perceived safety or threat: the ventral vagal state, the sympathetic state and the dorsal vagal state. Some people ... emergency responders, for example ... must frequently and routinely face critical incidents and crisis situations. TThrough the lens of understanding something about polyvagal theory, responders and people in crisis situations can have better self-awareness and understand their own nervous system responses to stress and trauma and develop strategies to regulate their states, promoting safety, healing and well-being. In order to deepen and improve our contemplative prayer practice, we should also understand something about this theory in order to better understand our own emotional state and to level up our prayer game when we are considering prayer, particularly for those in crisis. 
+Some people ... emergency responders would be one example ... must frequently and routinely face critical incidents and perform well in crisis situations. There ARE ways that people who excel in crisis situations have have adapted and trained themselves to be able to not just handle difficult crisis situations but also make those around them more able to take the steps to get out of crisis. Dealing with crisis in an appropriate manner is NOT about first reaching for something to numb the senses and knock out the conscious awareness of pain.
+
+Through the lens of understanding something about polyvagal theory, responders and people in crisis situations can have better self-awareness and understand their own nervous system responses to stress and trauma and develop strategies to regulate their states, promoting safety, healing and well-being. In order to deepen and improve our contemplative prayer practice, we should also understand something about this theory in order to better understand our own emotional state and to level up our prayer game when we are considering prayer, particularly for those in crisis. 
+
+The main idea of polyvagal theory for treating trauma [as well as feelings of depression, worry, awareness that *something isn't quite right*] is that trauma isn’t just in your head or hidden deep in your subconscious mind or memories. According to polyvagal theory, trauma, even minor trauma, actually gets stored as a habitual reflexive state of your nervous system. As a gross simplification, polyvagal theory breaks down the function of nervous system into three states that correspond to different levels of perceived safety or threat: the ventral vagal state, the sympathetic state and the dorsal vagal state. 
+
+
 
 # Polyvagal Integration in Contemplative Practice
 

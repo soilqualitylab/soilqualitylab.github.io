@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Integrating Ignatian Examen Journaling With Quantifiable Measurement"
-date:   2024-07-01 4:30:00
+date:   2025-08-01 4:30:00
 categories: template
 ---
 

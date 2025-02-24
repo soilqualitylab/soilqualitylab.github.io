@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Improve Physical Habits For Improved Prayer and Heightened Conscious Attentiveness During Prayer"
-date:   2024-06-01 4:30:00
+date:   2025-07-01 4:30:00
 categories: template
 ---
 

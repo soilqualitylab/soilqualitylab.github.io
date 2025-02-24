@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Seeing Beyond Time -- The Theology of Time"
-date:   2023-12-31 4:30:00
+date:   2025-03-31 4:30:00
 categories: template
 ---
 

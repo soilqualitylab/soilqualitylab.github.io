@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Compactification and Dimensional Reduction in Mathematics and The Effects On Space-Time Dimensions"
-date:   2024-05-01 4:30:00
+date:   2025-10-01 4:30:00
 categories: template
 ---
 

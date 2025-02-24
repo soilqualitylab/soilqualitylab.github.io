@@ -28,21 +28,21 @@ The pungency is indeed connected to their biological activity and plant defense 
 
 3. **Artificial Sweeteners** - Are you aware that artificial sweeteners can disrupt gut microbiome balance, potentially leading to glucose intolerance and metabolic disorders despite having zero calories?
 
-4. **Processed Vegetable Oils** - Did you realize that many vegetable oils contain high levels of omega-6 fatty acids that, when consumed excessively, promote systemic inflammation linked to numerous chronic diseases?
+4. **Processed Vegetable Oils** - Did you realize that most vegetable and seed oils contain excessively high levels of omega-6 fatty acids that, when consumed excessively, promote systemic inflammation linked to numerous chronic diseases?
 
-5. **Trans Fats** - Have you considered that trans fats not only increase "bad" LDL cholesterol but simultaneously decrease "good" HDL cholesterol, creating a double negative effect on cardiovascular health?
+5. **Trans Fats** - Have you considered that trans fats and high-temp conversion, oils found in your favorite baked goods and fried foods, not only increase "bad" LDL cholesterol but simultaneously decrease "good" HDL cholesterol, creating a double negative effect on cardiovascular health?
 
-6. **Ultra-processed Foods** - Did you know that ultra-processed foods often contain chemical additives that can disrupt hormonal signaling and potentially contribute to metabolic syndrome?
+6. **Ultra-processed Foods** - Did you know that ultra-processed foods almost necessarily contain all kinds of chemical additives and addictive food engineering agents [to make the stuff taste fabulous] that can disrupt hormonal signaling and potentially contribute to metabolic syndrome?
 
-7. **Alcohol** - Are you aware that even moderate alcohol consumption can suppress REM sleep, reducing sleep quality and cognitive restoration even when you sleep a full eight hours?
+7. **Alcohol** - Are you aware that ANY, even moderate levels of alcohol consumption will suppress REM sleep, reduce sleep quality and leave poisons in your brain to block cognitive restoration, even when you sleep a full eight hours or more?
 
-8. **Soft Drinks** - Have you considered that phosphoric acid in many sodas can contribute to calcium leaching from bones, potentially accelerating osteoporosis?
+8. **Soft Drinks** - Have you considered that phosphoric acid in many sodas can contribute to calcium leaching from bones, accelerating osteoporosis or generally predisposing you to things like broken hips or other bones?
 
-9. **Fruit Juices** - Did you realize that many commercial fruit juices contain as much sugar as soda while lacking the fiber that makes whole fruit beneficial?
+9. **Fruit Juices** - Did you realize that commercial fruit juices or coffee shop fruit lattes are not even really a fruit product, but instead contain as much high fructose corn syrup as soda while lacking the fiber that would makes whole fruit almost beneficial?
 
-10. **Breakfast Cereals** - Are you aware that many breakfast cereals marketed as "healthy" contain more sugar per serving than dessert items while providing minimal nutritional value?
+10. **Breakfast Cereals** - Are you aware that all breakfast cereals, including those marketed as "healthy" contain more sugar per serving than dessert items while providing negligible nutritional value, ie you'd be better off eating grass?
 
-11. **Flavored Yogurts** - Did you know that a single serving of flavored yogurt can contain more added sugar than the daily maximum recommended amount for women?
+11. **Flavored Yogurts** - Did you know that a SINGLE serving of flavored yogurt usually contains more added sugar than the daily maximum recommended amount of sugar for an adult?
 
 12. **Salad Dressings** - Have you considered that many commercial salad dressings contain high fructose corn syrup that can contribute to fatty liver disease when consumed regularly?
 

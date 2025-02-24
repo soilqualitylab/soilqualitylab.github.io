@@ -6,9 +6,9 @@ categories: template
 ---
 
 
-*We all know about hormesis ... that which does not kill you makes you stronger.*
+*We all know about [how hormesis defines the limits of productive healthspan](https://www.sciencedirect.com/science/article/pii/S1568163723002337?via%3Dihub) ... that which does not kill us makes us stronger.*
 
-# That which does not make you stronger is killing you. 
+# That which does not make us stronger is killing us. 
 
 I really enjoy watching onions, garlic, ramps grow IN EARLY SPRING, way before they look like they are thriving, just for their toughness and FIGHT under tough conditions ... that other wimpy plants like tomatoes, herbs or pansies LITERALLY behave like pansies ... and don't even try until several months go past and it gets all warm and toasty. It's the [allicin](https://pmc.ncbi.nlm.nih.gov/articles/PMC6271412/) in alliums which makes'm tough ... provides the ridiculously strong antimicrobial and antioxidant properties, even against MRSA strains that make the best pharmaceutical drugs tap out.
 

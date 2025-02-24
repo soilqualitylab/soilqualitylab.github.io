@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Comfort Kills"
+title:  "Comfort Kills -- 100 Comfort Traps And The Hidden Risks of Modern Convenience"
 date:   2025-02-24 4:30:00
 categories: template
 ---

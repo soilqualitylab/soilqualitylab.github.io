@@ -1,0 +1,4 @@
+# Chapter 2 -- The 50-Day Plan For Building A Personal Assistant Agentic System (PAAS)
+### Daily Resources Augment The Program Of Study With Serindiptious Learning
+
+- **Papers**: Routinely peruse the latest research on [agent systems](https://arxiv.org/search/?query=%22agent+systems%22&searchtype=all&source=header), [LLMs](https://arxiv.org/search/?query=%22LLM%22&searchtype=all&abstracts=show&order=-announced_date_first&size=200), [information retrieval](https://arxiv.org/search/?query=%22information+retrieval%22&searchtype=all&abstracts=show&order=-announced_date_first&size=200), and various repositories on Rust, , and GitHub reposotiories searchs for relevant Rust news/books such as [LangDB](https://github.com/langdb)'s [AI Gateway](https://github.com/langdb/ai-gateway), [Peroxide](https://github.com/Axect/Peroxide), or the [Rust Performance Optimization Book](https://nnethercote.github.io/perf-book/introduction.html)

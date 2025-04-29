@@ -1,0 +1,6 @@
+[book]
+authors = ["MarkBruns"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AncientGuy.Fitness"

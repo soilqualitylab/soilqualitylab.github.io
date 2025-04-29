@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Day 3-4 LLMs and LLMops - AncientGuy.Fitness</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AncientGuy.Fitness</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="chapter-2----the-50-day-plan-for-building-a-personal-assistant-agentic-system-paas"><a class="header" href="#chapter-2----the-50-day-plan-for-building-a-personal-assistant-agentic-system-paas">Chapter 2 -- The 50-Day Plan For Building A Personal Assistant Agentic System (PAAS)</a></h1>
+<h2 id="phase-1-foundations-days-1-10"><a class="header" href="#phase-1-foundations-days-1-10">PHASE 1: FOUNDATIONS (Days 1-10)</a></h2>
+<h3 id="day-3-4-understanding-basic-organization-structure-for-developing-agentic-systems--large-language-models"><a class="header" href="#day-3-4-understanding-basic-organization-structure-for-developing-agentic-systems--large-language-models">Day 3-4: Understanding Basic Organization Structure For Developing Agentic Systems &amp; Large Language Models</a></h3>
+<p>During these two days, you will focus on building a comprehensive understanding of is necessary to develop agentic systems which goes beyond just how the system work but how the systems are developed. It is mostly about project management and organization, but with particular emphasis on how LLMs will be used and what kinds of things need to be in place as foundation for their develop. You will explore everything that you can how modern LLMs function, what capabilities they offer for creating autonomous agents, and what architectural patterns have proven most effective in research. You will need to identify the key limitations and opportunities for improvement. At first, you will work on the basics, but then move on to how problems were overcome, such as context window constraints and hallucination tendencies. You will need to use your experience on how to prompt LLMs more effectively to get them to reason better through complex tasks in a step-by-step fashion. In the final analysis, your use of AI agents will inform your engineering of systems based on the concepts you have acquired to build better intelligence gathering systems that monitor their own operation and assist in the process of synthesizing information from multiple sources.</p>
+<p><strong>REMINDER</strong> <em>FIRST thing ... each day ... READ the assignment over carefully</em>, just to assure you <em>understand</em> the day's assignment. You are not required to actually DO that assignment, but you really should try to UNDERSTAND what you are supposed to look over ... REMEMBER: This is not only about programming a PAAS, <strong>you are programming yourself to be an autodidact</strong> so if you want to rip up the script and do it a better way, <em>go for it...</em></p>
+<ul>
+<li>
+<p><strong>Morning (3h)</strong>: Study the fundamentals of agentic systems
+Ask your favorite AI to explain things to to you; learn to really USE agentic AI ... push it, ask more questions, SPEEDREAD or even skim what it has produced and ask more and more questions. Immerse yourself in dialogue with agentic systems, particularly in learning more about the following key concepts of agentic systems:</p>
+<ul>
+<li><strong>LLM capabilities and limitations:</strong> Examine the core capabilities of LLMs like Claude and GPT-4 or the latest/greatest/hottest trending LLM, focusing on their reasoning abilities, knowledge limitations, and how context windows constrain what they can process at once. Deep into various techniques that different people are tweeting, blogging, discussion on things like prompt engineering, chain-of-thought prompting, and retrieval augmentation that help overcome these limitations. Take note of what perplexes you as you come across it and use your AI assistant to explain it to you ... use the answers to help you <em><strong>curate your own reading lists of important matter on LLM capabilities and limitations.</strong></em></li>
+<li><strong><a href="https://arxiv.org/search/?query=Agent+architecture+patterns&amp;searchtype=all&amp;source=header">Agent architecture patterns</a></strong> (<a href="https://langchain-ai.github.io/langgraph/concepts/agentic_concepts/#react-implementation">ReAct</a>, Plan-and-Execute, Self-critique): Learn the standard patterns for building LLM-based agents, understanding how ReAct combines reasoning and action in a loop, how Plan-and-Execute separates planning from execution, and how self-critique mechanisms allow agents to improve their outputs. Focus on identifying which patterns will work best for continuous intelligence gathering and summarization tasks. Develop curating reading lists of blogs like the <a href="https://blog.langchain.dev/top-5-langgraph-agents-in-production-2024/">LangChain.Dev Blog</a> in order to follow newsy topics like <a href="https://blog.langchain.dev/top-5-langgraph-agents-in-production-2024/">Top 5 LangGraph Agents in Production 2024</a> or <a href="https://blog.langchain.dev/tag/case-studies/">agent case studies</a></li>
+<li><a href="https://arxiv.org/list/cs.CL/recent"><strong>Develop your skimming, sorting, speedreading capabilities for key papers on Computatation and Language</strong></a>: <a href="https://arxiv.org/search/?query=Chain-of-Thought&amp;searchtype=all&amp;source=header">Chain-of-Thought</a>, <a href="https://arxiv.org/search/?query=Tree+of+Thoughts&amp;searchtype=all&amp;source=header">Tree of Thoughts</a>, <a href="https://arxiv.org/search/?query=React+Agent+LLM&amp;searchtype=all&amp;abstracts=show&amp;order=-announced_date_first&amp;size=200">ReAct</a>: Use a tool, <a href="https://www.connectedpapers.com/main/1c8871c4126a4855ac96c1b29fb06d012f56feb5/Autono%3A-A-ReAct%20Based-Highly-Robust-Autonomous-Agent-Framework/graph">such as ConnectedPapers</a> to understand the knowledge graphs of these papers; as you <em><strong>USE</strong></em> the knowledge graph tool, think about how you would like to see it built better ... <em>that kind of capability is kind of the point of learning to dev automated intelligence gathering PAAS</em>. You will want to examine the structure of the knowledge landscape, until you can identify the foundational seminal papers and intuitively understand the direction of research behind modern agent approaches, taking detailed notes on their methodologies and results. Implement simple examples of each approach using Python and an LLM API to solidify your understanding of how they work in practice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Afternoon (3h)</strong>: Research and begin to set up development environments</p>
+<ul>
+<li><strong>Install necessary Python libraries (transformers, langchain, etc.) LOCALLY</strong>: Compare/contrast the Pythonic approach with the Rust language approach from Day 1-2; there's certainly a lot to admire about Python, <em><strong>but there's also a reason to use Rust!</strong></em> You need to really <em><strong>understand</strong></em> the strengths of the Pythonic approach, before you reinvent the wheel in Rust. There's room for both languages and will be for some time. Set up several Python virtual environments and teach yourself how to rapidly install the essential packages like LangChain, transformers, and relevant API clients you'll need in these different environments. You might have favorites, but you will be using multiple Python environments throughout the project.</li>
+<li><strong>Research the realm of LLM tools vs LLM Ops platforms used to build, test, and monitor large language model (LLM) applications</strong>: LLM tools are for the technical aspects of model development, such as training, fine-tuning, and deployment of LLM applications. LLMOps are for operational practices of running LLM applications including tools that deploy, monitor, and maintain these models in production environments. You will ultimately use both, but that time you will focus on LLM tools, including HuggingFace, GCP Vertex, <a href="https://mlflow.org/docs/latest/index.html">MLflow</a>, <a href="https://docs.smith.langchain.com/">LangSmith</a>, <a href="https://langfuse.com/">LangFuse</a>, <a href="https://www.llamaindex.ai/">LlamaIndex</a>, <a href="https://www.deepset.ai/">DeepSetAI</a>  Understand the <a href="https://docs.smith.langchain.com/administration/concepts">general concepts related to managing users, organizations, and workspaces within a platforms like LangSmith</a>; these concepts will be similar to, but perhaps not identical to those you would use for the other platforms you might use to build, test, and monitor large language model (LLM) applications ... you will want to be thinking about your strategies for things like configure your API keys for LLM services (OpenAI, Antropic, et al) you plan to use, <a href="https://www.strac.io/blog/sharing-and-storing-api-keys-securely">ensuring your credentials are stored securely.</a></li>
+<li><strong>Research cloud GPU resources and start thinking about how you will set up these items:</strong> At this point, this is entirely a matter of research, not actually setting up resources but you will want to look at how that is accomplished. At this point, you will asking lots of questions and evaluating the quality of the documentation/support available, before dabbling a weensy little bit. You will need to be well-informed in order to begin determining what kind of cloud computing resources are relevant for your purposes and which will will be most relevant for you to evalate when you need the computational power for more intensive tasks, considering options like RunPod, ThunderCompute, VAST.AI or others or maybe the AWS, GCP, or Azure for hosting your system. Understand the billing first of all, then research the processes for create accounts and setting up basic infrastructure ... you will want to understand how this is done BEFORE YOU NEED TO DO IT. At some point, when you are ready, you can move forward knowledgably, understanding the alternatives to ensure that you can most efficiently go about programmatically accessing only those cloud services you actually require.</li>
+<li><strong>Create an organization project structure for your repositories:</strong> Establish a GitHub organizattion in order to ORGANIZE your project repositories with some semblance of a clear structure for your codebase, including repositories for important side projects and multi-branch repositories with branches/directories for each major component. You may wish to secure a domain name and forward it to this organization, but that is entirely optional. You will want to completely immerse yourself in the GitHub approach to doing everything, including how to manage an organization. You will want to review the best practices for things like create comprehensive READMEs which outlines the repository goals, setup instructions and contribution guidelines. You will also want to exploit all of GitHub features for  discussions, issues, wikis, development roadmaps. You may want to set up onboarding repositories for training / instructions intended for volunteers who might join your organization.</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nested/sub-chapter_2.1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nested/sub-chapter_2.3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nested/sub-chapter_2.1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nested/sub-chapter_2.3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

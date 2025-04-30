@@ -1,24 +1,19 @@
-# Ancient Guy
+# Remove the noise, LISTEN TO YOURSELF
 
-# The CORE of the AncientGuy method is removing the noise so that you can listen to yourself.
+Your body, your mind, your soul speaks to you. God is speaking to you. Are you listening? Most people are afraid to listen -- they try to stay busy or watch the teeveee or look at YouTube or Facebook.
 
-It's about getting serious about contemplation and reflection ... as if your soul and everything in this existence depended upon listening to yourself.
+Marketers, apps, and "experts" bombard you with garbage advice while your own inner wisdom gets drowned out. This ends now.
 
-***LIVE* as an AncientGuy would and go through your life paying attention to your life, contemplating the 100 questions in 10 areas.** Introspection demands working harder on trusting yourself -- to do that, you eliminate the bullshit advice being thrown at you by marketers, eg pitch the shit that shows up in your mail OR anything some ad recommendation engine suggests when use the disease known as the internet. 
+Silence the damn distractions. No podcasts during workouts. No audiobooks on hikes. No news while eating. Just you, experiencing your existence without filters.
 
-**Shut off your damned music or audio books or news programs, do your workouts and go for long, but intense hikes IN SILENCE, meditatively LISTENING to yourself.** 
+Build your own framework - ten categories, ten questions each. Start simple, refine through living. Let your journal be a conversation with yourself, not a todo list.
 
-Coming up with the first set of questions for contemplation and reflection is relatively easy, ie give an AI assistant to furnish 100 questions; read over that list and maybe make changes to the list to better reflect your concerns, then just *LIVE* and go through your life paying attention to your life, contemplating the questions and journalling about your thoughts on the questions, in light of daily aches/pains and events in life -- then routine ask the AI assitant to ingest your journalling and improve your questions. 
+The AncientGuy method demands one thing above all: attention. Not to outside voices, but to your own body's signals, your mind's insights, your soul's direction. 
 
-THESE questions will basically basically be designed by you to stimulate deep reflection and help develop a comprehensive approach to strength training that considers the unique circumstances of your life and what your life is telling you. The focus is not just on physical performance but on creating sustainable habits that support overall well-being and independence as you age. These questions will cover discipline, habits, consistency, and improvement strategies.
+Wake at dawn. Move with purpose. Eat with awareness. Sleep with intention. Everything becomes meditation when you're actually present for your own life.
 
-### Ten Key Factors for a Holistic Fitness Approach
+The voice that matters most has been inside you all along. Start listening. Listen ACTIVELY; one example of that happens when you journal like you're mapping unexplored country, because you are. A man who can't hear his own footsteps will always follow someone else's trail. 
 
-**MEDITATIVELY PAY CLOSER ATTENTION TO YOUR LIFE AND WHAT YOUR LIFE IS TELLING YOU**
-
-This repository is about *"wheel-rounded"* 360-degree approach to fitness for an Ancient Guy to prioritize his overall well-being without relying on outside marketing bullshit, crap from recommendation engines or conventional, financially-driven advice from big medicine or someone trying to make you dependent on their bullshit. 
-
-**The first step is SHUT DOWN ALL OF THE OUTSIDE NOISE ... shut off your damned music or audio books or news programs, get up at 4:00 AM every morning for Holy Hour; do your workouts throughout the day; stop driving around -- instead go for long, but intense hikes IN SILENCE, meditatively LISTENING to yourself. SHUT DOWN ALL OF THE OUTSIDE NOISE** 
 
 ### 1. Christian Spiritual Health, Contemplative Prayer Life
 

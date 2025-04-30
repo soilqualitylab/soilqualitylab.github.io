@@ -56,6 +56,8 @@ The hydration section examines personal hydration patterns, awareness of subtle 
 The mobility section examines one's current movement capabilities while exploring quality of movement patterns, flexibility development strategies, and balance integration challenges. Questions address coordination, motor control, environmental factors affecting movement, and integrated training approaches that support comprehensive movement health. The section covers recovery techniques, adaptation processes, and social-psychological dimensions of movement exploration and limitation. Special attention is given to developing a long-term vision for movement capability maintenance throughout aging, approaching mobility as a spiritual discipline, and cultivating curiosity rather than frustration with changing physical abilities. The questions encourage celebrating movement as a gift while developing compassionate yet challenging practices that support lifelong independence and functional capacity.
 # In Summary
 
+**It's mostly about what you remove. REMOVE THE NOISE.**
+
 Listening your life as you live your life is about ***really KNOWING and trying to BE your very most essential WHY*** ... really understanding the UNIQUE reason for your existence ... it's about ***trying to understand the ONE Origin of your most original origins***.
 
 The Ancient Guy lifestyle eschews comfort, adopting a purely ascetic lifestyle and renounce other materialist pursuits in order to free one's mind from distractions, to be able to spend more time in contemplation of the Creator's will, to practice more intuitive remote viewing and to developed more advanced cognitive capabilities that are possible only through prayer.

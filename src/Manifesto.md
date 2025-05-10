@@ -1,6 +1,11 @@
 # Remove the noise, LISTEN TO YOURSELF
 
-Your body, your mind, your soul speaks to you. God is speaking to you. Are you listening? Most people are afraid to listen -- they try to stay busy or watch the teeveee or look at YouTube or Facebook.
+Listen. Your **BODY** needs to be used; your body knows why "*Discipline Equals Freedom.*" It's time for you to ignore fitness gadgets or apps, and LISTEN in order to develop your body awareness. Your **MIND** needs the aggravation and challenge of learning. *[Don't look back; we aren't going that ... it doesn't matter what you used to know. You have to LEARN to NOT be a specialist.](B.md)*  Most important, pay attention to your
+**SOUL**. Internalize [Mark 8:35-36](https://www.bibleref.com/Mark/8/Mark-8-35.html) and stop trifling away your life chasing wealth, power, status or even more idiotic human pursuits.
+
+Your body, your mind, your soul are ALL speaking to you. **LISTEN!**
+
+God is speaking to you. Are you listening? Most people are afraid to listen -- they try to stay busy or watch the teeveee or look at YouTube or Facebook; they'd rather imitate a famous celebrity or maybe someone they see as powerful or even worse, they chase money, assets, material wealth.
 
 Marketers, apps, and "experts" bombard you with garbage advice while your own inner wisdom gets drowned out. This ends now.
 
@@ -15,43 +20,43 @@ Wake at dawn. Move with purpose. Eat with awareness. Sleep with intention. Every
 The voice that matters most has been inside you all along. Start listening. Listen ACTIVELY; one example of that happens when you journal like you're mapping unexplored country, because you are. A man who can't hear his own footsteps will always follow someone else's trail. 
 
 
-### 1. Christian Spiritual Health, Contemplative Prayer Life
+### [1. Christian Spiritual Health, Contemplative Prayer Life](1.md)
 
 Christian spiritual health forms the cornerstone of holistic wellbeing, influencing all other aspects of life through prayer, scripture engagement, and spiritual practices. The questions explore deepening one's prayer life, developing meaningful scripture study habits, properly observing Holy Hour and keeping the Sabbath holy, and participating actively in Christian community in different ways. They prompt reflection on cultivating gratitude and worship as daily practices, serving others as an extension of faith, and embracing spiritual disciplines like fasting. The questions also address stewardship of resources, cultivating humility and repentance, and integrating physical wellbeing with spiritual practice. These reflective prompts encourage intentional spiritual development while recognizing the interconnected nature of spiritual health with other dimensions of life.
 
-### 2. Strength Training
+### [2. Strength Training](2.md)
 
 The strength training section examines one's foundation and motivation for building strength, encouraging honest assessment of current capabilities and barriers to consistency. Questions explore program design and progression strategies, technique and safety considerations, and methods for maintaining consistency and discipline. Special attention is given to recovery and adaptation processes, equipment and environmental factors, and the integration of progressive challenges including plyometrics and martial arts training. The section concludes with questions about integrating strength training with other fitness components and developing a long-term vision for strength maintenance throughout aging, including how strength training can become a spiritual discipline honoring God's gift of physical embodiment.
 
-### 3. Cardiovascular Health
+### [3. Cardiovascular Health](3.md)
 
 The cardiovascular health questions explore one's evolving relationship with cardio exercise throughout different life stages and help identify enjoyable activities rather than mere obligations. They examine heart rate monitoring and training zones, fitness assessment methods, and strategies for effective progression in cardiovascular development. The section addresses integration with overall health factors like sleep, nutrition, and medication considerations, alongside environmental and contextual influences on cardiovascular training. Special attention is given to equipment choices, technology utilization, psychological aspects of motivation, and recovery strategies to optimize cardiovascular benefits. The questions culminate in developing a long-term vision for cardiovascular longevity, emphasizing reframing exercise from obligation to privilege and celebration of continuing capability.
 
-### 4. Nutrition and Fasting
+### [4. Nutrition and Fasting](4.md)
 
 The nutrition section examines dietary patterns and habits that have evolved throughout one's life while exploring optimal macronutrient balance and micronutrient intake for aging bodies. Questions address practical aspects of meal planning, preparation strategies, and hydration practices, alongside psychological and social dimensions of eating. The section covers environmental and ethical considerations in food choices, digestive health issues, and food sensitivities that commonly develop with age. Special attention is given to nutritional approaches supporting longevity and healthy aging, with practical implementation strategies for continuous improvement. The reflective prompts encourage approaching nutrition as an act of stewardship for one's body rather than focusing solely on restriction or indulgence.
 
-### 5. Intellectual Well-being
+### [5. Intellectual Well-being](5.md)
 
 The intellectual health section explores cognitive stimulation strategies, learning approaches, and mental clarity practices that support brain health throughout aging. Questions examine intellectual curiosity, wonder, creative expression, and mental flexibility as essential components of cognitive wellbeing. The section addresses social cognition, intellectual discussion, and digital life management to support mental clarity rather than fragmentation. Special consideration is given to the integration of mental and physical wellbeing, mental resilience development, and spiritual dimensions of intellectual life. The questions cultivate a deeper understanding of how contemplative practices, wisdom traditions, and spiritual exploration can enhance cognitive function and resilience while honoring God-given cognitive capacities.
 
-### 6. Social Connection
+### [6. Social Connection](6.md)
 
 The social connection questions explore one's evolving relationship with social interaction throughout different life stages while examining the depth and quality of current relationships. The section addresses family dynamics, friendship patterns, and community involvement that contribute to a sense of belonging and purpose. Questions examine the profound connection between social engagement and physical health, alongside the impact of technology on relationship quality. Special attention is given to maintaining and adapting social connections through major life transitions and exploring spiritual dimensions of human connection. The section concludes with questions about personal growth through relationships and approaching social connection as an ongoing practice of presence, compassion, and growth rather than achievement.
 
-### 7. Sleep Quality
+### [7. Sleep Quality](7.md)
 
 The sleep quality section examines sleep patterns, duration, and environmental optimization strategies that support restorative rest throughout aging. Questions explore circadian rhythm alignment, sleep timing considerations, and approaches for addressing common age-related sleep disruptions and disorders. The section addresses how daytime habits affect sleep quality, alongside the strategic use of napping and recovery practices when optimal sleep isn't possible. Special attention is given to psychological dimensions of sleep, technological influences, and integration with other health factors like nutrition and stress management. The questions culminate in developing a long-term vision for sleep as a spiritual discipline that honors God's gift of rest and renewal.
 
-### 8. Stress Management
+### [8. Stress Management](8.md)
 
 The stress management section explores one's evolving relationship with stress while examining physiological, psychological, and relational dimensions of the stress response. Questions address mindfulness practices, present-moment awareness, and environmental factors that influence baseline stress levels. The section covers physical approaches to stress reduction, time management strategies, and prioritization methods that prevent unnecessary stressors. Special attention is given to developing long-term stress resilience, reframing past stressful experiences as sources of wisdom, and approaching stress management as a spiritual discipline. The questions encourage cultivating perspective, gratitude, and peace in challenging circumstances while honoring God's gift of peace amidst life's difficulties.
 
-### 9. Hydration and Water Quality
+### [9. Hydration and Water Quality](9.md)
 
 The hydration section examines personal hydration patterns, awareness of subtle physiological signals, and considerations for water quality and sourcing. Questions explore strategic timing of fluid intake, environmental factors affecting hydration needs, and connections between hydration and various body systems. The section addresses common hydration challenges, monitoring methods, and special considerations for aging individuals with specific health conditions. Special attention is given to integrating optimal hydration with other health practices and approaching water consumption as a spiritual practice of gratitude and stewardship. The questions culminate in reflecting on hydration as an act of honoring one's God-given body through mindful care and appreciation for this essential element.
 
-### 10. Mobility, Flexibility, Balance and Coordination
+### [10. Mobility, Flexibility, Balance and Coordination](A.md)
 
 The mobility section examines one's current movement capabilities while exploring quality of movement patterns, flexibility development strategies, and balance integration challenges. Questions address coordination, motor control, environmental factors affecting movement, and integrated training approaches that support comprehensive movement health. The section covers recovery techniques, adaptation processes, and social-psychological dimensions of movement exploration and limitation. Special attention is given to developing a long-term vision for movement capability maintenance throughout aging, approaching mobility as a spiritual discipline, and cultivating curiosity rather than frustration with changing physical abilities. The questions encourage celebrating movement as a gift while developing compassionate yet challenging practices that support lifelong independence and functional capacity.
 # In Summary

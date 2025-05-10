@@ -12,6 +12,7 @@
 - [Stress Management](./8.md)
 - [Hydration / Water Quality](./9.md)
 - [Mobility, Coordination](./A.md)
+- [Specialization Is For Insects](./B.md)
 - [Develop Locally, Deploy To The Cloud](./chapter_5.md)
     - [Section 1: Foundations of Local Development for ML/AI](nested/sub-chapter_5.1.md)
     - [Section 2: Hardware Optimization Strategies](nested/sub-chapter_5.2.md)

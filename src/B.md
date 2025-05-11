@@ -1,8 +1,10 @@
-# STOP Being Programmed.
+# STOP Being Programmed
 
-#### You do not have to be somebody else's bitch
+#### You do not have to be a gadget ...
 
-Come up with your OWN programming ... put together your own list. **DEVELOP Your Life**
+... *you don't have to be somebody else's bitch* ... but being powerless, defenseless, or controlled by others is the only possible result when you program yourself to be another *customer* enslaved by your purchases or another materialist dead-ender *owned* by your assets.
+
+Come up with your OWN programming ... put together your own list. It's on you to...**DEVELOP Your Life**
 
 ### Christian Development & Community Service
 0. [Listen to your soul, mind, body](#0-listen-to-yourself)

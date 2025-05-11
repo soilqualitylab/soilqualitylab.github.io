@@ -1,24 +1,15 @@
-# Remove the noise, LISTEN TO YOURSELF
+# Remove the Noise!
 
-Listen. Your **BODY** needs to be used; your body knows why "*Discipline Equals Freedom.*" It's time for you to ignore fitness gadgets or apps, and LISTEN in order to develop your body awareness. Your **MIND** needs the aggravation and challenge of learning. *[Don't look back; we aren't going that ... it doesn't matter what you used to know. You have to LEARN to NOT be a specialist.](B.md)*  Most important, pay attention to your
+LISTEN TO YOURSELF!
+
+Most importantly, pay attention to your
 **SOUL**. Internalize [Mark 8:35-36](https://www.bibleref.com/Mark/8/Mark-8-35.html) and stop trifling away your life chasing wealth, power, status or even more idiotic human pursuits.
 
-Your body, your mind, your soul are ALL speaking to you. **LISTEN!**
+Your **MIND** needs the aggravation of growth, the challenge of learning. **Stop looking back!** Time does not work that way. Instead of being an irrelevant senile geezer, try to LEARN as much as you can in order to grow. [Try to NOT be another fossilized, dead ***ego-stink-dick*** *professional specialist.](5.md)*  
 
-God is speaking to you. Are you listening? Most people are afraid to listen -- they try to stay busy or watch the teeveee or look at YouTube or Facebook; they'd rather imitate a famous celebrity or maybe someone they see as powerful or even worse, they chase money, assets, material wealth.
+Listen. Your **BODY** needs to be used; your body knows why "*Discipline Equals Freedom.*" It's time for you to ignore fitness gadgets or apps, and LISTEN in order to develop your body awareness. 
 
-Marketers, apps, and "experts" bombard you with garbage advice while your own inner wisdom gets drowned out. This ends now.
-
-Silence the damn distractions. No podcasts during workouts. No audiobooks on hikes. No news while eating. Just you, experiencing your existence without filters.
-
-Build your own framework - ten categories, ten questions each. Start simple, refine through living. Let your journal be a conversation with yourself, not a todo list.
-
-The AncientGuy method demands one thing above all: attention. Not to outside voices, but to your own body's signals, your mind's insights, your soul's direction. 
-
-Wake at dawn. Move with purpose. Eat with awareness. Sleep with intention. Everything becomes meditation when you're actually present for your own life.
-
-The voice that matters most has been inside you all along. Start listening. Listen ACTIVELY; one example of that happens when you journal like you're mapping unexplored country, because you are. A man who can't hear his own footsteps will always follow someone else's trail. 
-
+Your body, your mind, your soul are ***attempting*** to repeat what God is trying to tell your old, fossilized ass. **LISTEN TO YOURSELF!**
 
 ### [1. Christian Spiritual Health, Contemplative Prayer Life](1.md)
 

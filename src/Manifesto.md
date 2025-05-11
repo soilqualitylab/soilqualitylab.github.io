@@ -1,15 +1,6 @@
-# Remove the Noise!
+Your fitness and satisfaction in life depends upon you listening to yourself, in a complete, full-circle, 360-degree total holistic approach ... if your life sucks, it's because you have failed to DEVELOP and IMPLEMENT a better plan for your life. 
 
-LISTEN TO YOURSELF!
-
-Most importantly, pay attention to your
-**SOUL**. Internalize [Mark 8:35-36](https://www.bibleref.com/Mark/8/Mark-8-35.html) and stop trifling away your life chasing wealth, power, status or even more idiotic human pursuits.
-
-Your **MIND** needs the aggravation of growth, the challenge of learning. **Stop looking back!** Time does not work that way. Instead of being an irrelevant senile geezer, try to LEARN as much as you can in order to grow. [Try to NOT be another fossilized, dead ***ego-stink-dick*** *professional specialist.](5.md)*  
-
-Listen. Your **BODY** needs to be used; your body knows why "*Discipline Equals Freedom.*" It's time for you to ignore fitness gadgets or apps, and LISTEN in order to develop your body awareness. 
-
-Your body, your mind, your soul are ***attempting*** to repeat what God is trying to tell your old, fossilized ass. **LISTEN TO YOURSELF!**
+DEVELOP what is left of your life; the remainder of your life is the only life that you have to worry about. It's your life; YOU get to be, and have to be, the developer of your life.  **Develop Your Life**
 
 ### [1. Christian Spiritual Health, Contemplative Prayer Life](1.md)
 

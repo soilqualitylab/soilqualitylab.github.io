@@ -1,5 +1,7 @@
 # Develop Locally, DEPLOY TO THE CLOUD
 
+*If you have not already done so, read the [full backgrounder attempting to explain WHY it is so vitally important to pitch in and take greater responsibility for developing/extending dev terminals and other parts of one toolchain](C.md) such as [Rust-based wezterm](https://github.com/MarkBruns/wezterm) and/or [Go-based waveterm](https://github.com/MarkBruns/waveterm).*
+
 ***Develop Locally, DEPLOY TO THE CLOUD*** is the strategy we advocate when to assist people who are developing PERSONALIZED or business-specific agentic AI for the Plumbing, HVAC, Sewer trade.*
 
 ***This content is for people looking to LEARN ML/AI Op principles, practically*** ... with real issues, real systems ... but WITHOUT enough budget *to just buy the big toys you want.*

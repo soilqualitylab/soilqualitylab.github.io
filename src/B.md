@@ -4,7 +4,7 @@
 
 ... *you don't have to be somebody else's bitch* ... but being powerless, defenseless, or controlled by others is the only possible result when you program yourself to be another *customer* enslaved by your purchases or another materialist dead-ender *owned* by your assets.
 
-Come up with your OWN programming ... put together your own list. It's on you to...**DEVELOP Your Life**
+OWN, don't BE the lost soul who is owned. Come up with your OWN programming ... put together your own list. It's on you to...**DEVELOP Your Life**
 
 ### Christian Development & Community Service
 0. [Listen to your soul, mind, body](#0-listen-to-yourself)

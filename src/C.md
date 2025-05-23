@@ -1,4 +1,6 @@
-# Your AI-Assisted Terminal Life
+# USE AI-Assistance To Enhance Your Cognitive Flexibility
+
+Take control of how your brain rewires itself.
 
 **[TL;DR](https://wizardofads.org/wp-content/uploads/IMG_1773.jpg)** *This backgrounder attempts to explain WHY it is so vitally important to pitch in and take greater responsibility for developing/extending parts of one toolchain such as [Rust-based wezterm](https://github.com/MarkBruns/wezterm) and/or [Go-based waveterm](https://github.com/MarkBruns/waveterm).*
 

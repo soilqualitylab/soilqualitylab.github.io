@@ -1,6 +1,6 @@
-# STOP Being Programmed
+# STOP Being Programmed Carelessly; Program Yourself
 
-#### You do not have to be a gadget ...
+#### You do not have to be a gadget running somebody else's app...
 
 ... *you don't have to be somebody else's bitch* ... but being powerless, defenseless, or controlled by others is the only possible result when you program yourself to be another *customer* enslaved by your purchases or another materialist dead-ender *owned* by your assets.
 

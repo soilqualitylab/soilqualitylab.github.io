@@ -35,35 +35,35 @@
 
 ### Day 1
 **May 23, 2025 - Macronutrient Balance Fundamentals** *[Nutrition]*
-Understanding the optimal ratio of proteins, carbohydrates, and fats for your individual needs and activity level.
+[Understanding the optimal ratio of proteins, carbohydrates, and fats for your individual needs and activity level.](https://docs.google.com/document/d/1tB8x0f3MIxf7iTAO8LOW34Yjr8Fr8aikZxtq4diWBKU/edit?usp=sharing)
 
 ### Day 2
 **May 24, 2025 - Progressive Overload Principles** *[Fitness/Strength]*
-How to systematically increase training demands to build strength and muscle while avoiding plateaus.
+[How to systematically increase training demands to build strength and muscle while avoiding plateaus.](https://docs.google.com/document/d/1aULmM5tGpqINyRXoMe4ny4xa4cRcvV-_lOXE7CvFnnQ/edit?usp=sharing)
 
 ### Day 3
 **May 25, 2025 - Hip Mobility Assessment** *[Mobility/Flexibility]*
-Simple tests to evaluate hip flexibility and targeted stretches to improve range of motion.
+[Simple tests to evaluate hip flexibility and targeted stretches to improve range of motion.](https://docs.google.com/document/d/1LxkG2jjk6u7rQwoNVBIpWpzw6g7531kSMwAquuVqEKU/edit?usp=sharing)
 
 ### Day 4
 **May 26, 2025 - Heart Rate Zone Training** *[Cardio]*
-Understanding your target heart rate zones for different cardio training objectives.
+[Understanding your target heart rate zones for different cardio training objectives.](https://docs.google.com/document/d/1bWzhVc65KxQWe2kTp3zEZRCmTeM-4sx8Xr5-7hk3lc0/edit?usp=sharing)
 
 ### Day 5
-**May 27, 2025 - Box Breathing Fundamentals** *[Breathwork]*
-The 4-4-4-4 breathing pattern for stress reduction and mental clarity.
+**May 27, 2025 - 4-7-8 or 4-4-4-4 Box Breathing Fundamentals** *[Breathwork]*
+[Respect The Traditions Of Diaphragmatic Breathwork](https://docs.google.com/document/d/1zGevLUTfsUohQqFmb8e-pCExYsrRSCcA4TBFkQmg1Gk/edit?usp=sharing)
 
 ### Day 6
 **May 28, 2025 - Optimal Daily Water Intake** *[Hydration]*
-Calculating your individual hydration needs based on body weight, activity, and climate.
+[Calculating your individual hydration needs based on body weight, activity, and climate.](https://docs.google.com/document/d/1TAVq8NVdSVctrndMGm2Um3WQhlCrVl6CrrY_l35TSUI/edit?usp=sharing)
 
 ### Day 7
 **May 29, 2025 - Situational Awareness Basics** *[Self-Defense]*
-Developing awareness of your surroundings and recognizing potential threats.
+[Developing awareness of your surroundings and recognizing potential threats.](https://docs.google.com/document/d/14-cAaqT9Hg4ocaHkS0aL7hAnkMDTtPAopSPq1x2hYFU/edit?usp=sharing)
 
 ### Day 8
 **May 30, 2025 - Anti-Inflammatory Foods** *[Nutrition]*
-Identifying and incorporating foods that naturally reduce inflammation in the body.
+[Identifying and incorporating foods that naturally reduce inflammation in the body.](https://docs.google.com/document/d/109fbPVNV76DvyUOj4Nxz5RpZwjOX1yhdm1XlkM6BUZ0/edit?usp=sharing)
 
 ### Day 9
 **May 31, 2025 - Compound Movement Mastery** *[Fitness/Strength]*

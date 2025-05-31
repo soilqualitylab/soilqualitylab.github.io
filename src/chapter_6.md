@@ -70,7 +70,7 @@
 
 ### Day 9
 **May 31, 2025 - Compound Movement Mastery** *[Fitness/Strength]*
-[Perfecting fundamental multi-joint exercises like squats, deadlifts, and presses.](https://docs.google.com/document/d/1jqMEc6GTEmJDDiqbup2apjaQSQMQfZqV3dqq2cmHFkg/edit?usp=sharing)
+[Perfecting fundamental multi-joint exercises like squats, deadlifts, and presses ... and the favorite for unbalanced de-atrophication, the Farmer's Carry.](https://docs.google.com/document/d/1jqMEc6GTEmJDDiqbup2apjaQSQMQfZqV3dqq2cmHFkg/edit?usp=sharing)
 
 ### Day 10
 **June 1, 2025 - Ankle Mobility Enhancement** *[Mobility/Flexibility]*

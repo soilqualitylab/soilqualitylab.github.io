@@ -62,7 +62,7 @@
 
 ### Day 7
 **May 29, 2025 - Situational Awareness Basics** *[Self-Defense]*
-[Developing awareness of your surroundings and recognizing potential threats.](https://docs.google.com/document/d/14-cAaqT9Hg4ocaHkS0aL7hAnkMDTtPAopSPq1x2hYFU/edit?usp=sharing)
+[Developing awareness of your surroundings and recognizing opportunities as well as potential threats. ***BE STOKED!***](https://docs.google.com/document/d/14-cAaqT9Hg4ocaHkS0aL7hAnkMDTtPAopSPq1x2hYFU/edit?usp=sharing)
 
 ### Day 8
 **May 30, 2025 - Anti-Inflammatory Foods** *[Nutrition]*

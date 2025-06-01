@@ -38,7 +38,7 @@
 
 ## June 2025
 
-### Day 1 - June 1, 2025 | Christian Spiritual Health: Beginning with Gratitude
+### [Day 1 - June 1, 2025](https://docs.google.com/document/d/1o24EKyMnEG3PkPWYp6FQSmZMdwV5fuGIzO1CQjTpAgs/edit?usp=sharing) | Christian Spiritual Health: Beginning with Gratitude
 - Establish morning prayer routine for summer season
 - Create sacred space for daily scripture reading
 - Practice gratitude journaling for physical health blessings

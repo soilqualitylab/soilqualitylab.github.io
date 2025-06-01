@@ -76,15 +76,17 @@ A healthier body supports the mind.
 
 It's tough to have much of life that isn't about pain and the suffering and anxieties that comes from knowing the future is nothing but pain if one doesn't take care of one body. This does not change the inescapable Reality that your mind is the only place in this existence that you have to live. In order to ***cultivate the living garden of one's mind*** it is necessary to protect and sustain that living garden with a physical temple ... your body is that temple, that physical edifice that houses your mind.
 
-### The necessity of ***meticulously*** BUILDING a better prayer life.
+### The necessity of ***meticulously*** PRAYING WITHOUT CEASING ... meditative prayer life.
 
-*EVENTUALLY, one finally realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer and sustaining a constant meditative awareness so that one is able to pray without ceasing.
+*EVENTUALLY, one finally realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer and sustaining a constant meditative awareness so that one is able to **pray without ceasing.**
 
-One does not need ANY the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to pray without ceasing ... to be in a constant state of prayer ... to be in a constant state of meditative awareness.
+The state of *being in prayer without ceasing* is the IDEAL ... it's unlikely, probably impossible for you to ever get there ... because your affluent existence has PROGRAMMED YOU to be driven by materialism and material distractions ... like your assets, your moneypit house, you stupid vehicle to take you to your dumbass distractions ... so, as a programmed affluent gadget, programmed to take cues from the material world, you can only dream of being in a perfect state of praying without ceasing.
 
- There are several types of prayerful meditation and strategies for greater cognitive awareness that have been practiced by monks and spiritual practitioners across various traditions throughout the ages. 
- 
- Here are some of the most prominent ones ... in order of importance:
+Of course, one does not need ANY the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to TRY TO get to the state of prayer without ceasing ... to live meditatively, to be in a constant state of prayer ... to be something approaching a constant state of meditative awareness.
+
+### Meditative AWARENESS
+
+There are several types of prayerful meditation and strategies for greater cognitive awareness that have been practiced by monks and spiritual practitioners across various traditions throughout the ages. Some of the prominent or effective approaches ... not necessarily, in order of importance, ie *try all of them and others; use whatever ploy seems to work for you.*
 
 1. Devotional Meditation: Devotional meditation focuses on some core principle or idea cultivating a deeper sense of love, humility or surrender, and an openness to more direct connection ... to emphasize our complete devotion a higher, more deeply spiritual Reality. Practitioners tend to engage in prayer centered around a devotional topic in order to cultivate a stronger feeling of the presence of God, to open hearts and experience a sense of divine union.
 

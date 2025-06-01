@@ -8,7 +8,7 @@ The Creator has given you life in order to CREATE. *Develop your life!*
 
 ## **Develop Your Life**
 
-### [1. Christian Spiritual Health / Prayer Life / Situational Awareness / Empathy](1.md)
+### [1. Christian Spiritual Health / Prayer Life / Situational Awareness / Prioritization](1.md)
 
 The Creator is still creating. That's what the resurrection of our Lord Jesus Christ was about. Christian spiritual health forms the cornerstone of holistic wellbeing, influencing all other aspects of life through prayer, scripture engagement, and spiritual practices. The questions explore deepening one's prayer life, developing meaningful scripture study habits, properly observing Holy Hour and keeping the Sabbath holy, and participating actively in Christian community in different ways. They prompt reflection on cultivating gratitude and worship as daily practices, serving others as an extension of faith, and embracing spiritual disciplines like fasting. The questions also address stewardship of resources, cultivating humility and repentance, and integrating physical wellbeing with spiritual practice. These reflective prompts encourage intentional spiritual development while recognizing the interconnected nature of spiritual health with other dimensions of life.
 
@@ -20,7 +20,7 @@ The strength training section examines one's foundation and motivation for build
 
 The cardiovascular health questions explore one's evolving relationship with cardio exercise throughout different life stages and help identify enjoyable activities rather than mere obligations. They examine heart rate monitoring and training zones, fitness assessment methods, and strategies for effective progression in cardiovascular development. The section addresses integration with overall health factors like sleep, nutrition, and medication considerations, alongside environmental and contextual influences on cardiovascular training. Special attention is given to equipment choices, technology utilization, psychological aspects of motivation, and recovery strategies to optimize cardiovascular benefits. The questions culminate in developing a long-term vision for cardiovascular longevity, emphasizing reframing exercise from obligation to privilege and celebration of continuing capability.
 
-### [4. Nutrition / Gardening / Food Enjoyment / Appetite Control](4.md)
+### [4. Nutrition / Gardening / Food Enjoyment / Appetite Control / Fasting](4.md)
 
 The nutrition section examines dietary patterns and habits that have evolved throughout one's life while exploring optimal macronutrient balance and micronutrient intake for aging bodies. Questions address practical aspects of meal planning, preparation strategies, and hydration practices, alongside psychological and social dimensions of eating. The section covers environmental and ethical considerations in food choices, digestive health issues, and food sensitivities that commonly develop with age. Special attention is given to nutritional approaches supporting longevity and healthy aging, with practical implementation strategies for continuous improvement. The reflective prompts encourage approaching nutrition as an act of stewardship for one's body rather than focusing solely on restriction or indulgence.
 
@@ -28,7 +28,7 @@ The nutrition section examines dietary patterns and habits that have evolved thr
 
 The intellectual health section explores cognitive stimulation strategies, learning approaches, and mental stability and clarity practices that support brain health throughout aging. Questions examine intellectual curiosity, wonder and scientific exploration, creative expression, and how mental flexibility as essential components of cognitive wellbeing. The section addresses social cognition, intellectual discussion, and digital life management to support mental clarity rather than fragmentation. Special consideration is given to the integration of mental and physical wellbeing, mental resilience development, and spiritual dimensions of intellectual life. The questions cultivate a deeper understanding of how contemplative practices, wisdom traditions, and spiritual exploration can enhance cognitive function and resilience while honoring God-given cognitive capacities.
 
-### [6. Social Connection / Community / Development](6.md)
+### [6. Social Connection / Community / Empathy / Open Source Development and Venture Philanthropy](6.md)
 
 The social connection questions explore one's evolving relationship with social interaction throughout different life stages while examining the depth and quality of current relationships. The section addresses family dynamics, friendship patterns, and community involvement that contribute to a sense of belonging and purpose. Questions examine the profound connection between social engagement and physical health, alongside the impact of technology on relationship quality. Special attention is given to maintaining and adapting social connections through major life transitions and exploring spiritual dimensions of human connection. The section concludes with questions about personal growth through relationships and approaching social connection as an ongoing practice of presence, compassion, and growth rather than achievement.
 
@@ -44,11 +44,11 @@ The stress management section explores one's evolving relationship with stress w
 
 The hydration section examines personal hydration patterns, awareness of subtle physiological signals, and considerations for water quality and sourcing. Questions explore strategic timing of fluid intake, environmental factors affecting hydration needs, and connections between hydration and various body systems. The section addresses common hydration challenges, monitoring methods, and special considerations for aging individuals with specific health conditions. Special attention is given to integrating optimal hydration with other health practices and approaching water consumption as a spiritual practice of gratitude and stewardship. The questions culminate in reflecting on hydration as an act of honoring one's God-given body through mindful care and appreciation for this essential element.
 
-### [10. Mobility, Flexibility, Balance and Coordination](A.md)
+### [10. Mobility and Flexibility / Balance and Coordination / Martial Arts](A.md)
 
 The mobility section examines one's current movement capabilities while exploring quality of movement patterns, flexibility development strategies, and balance integration challenges. Questions address coordination, motor control, environmental factors affecting movement, and integrated training approaches that support comprehensive movement health. The section covers recovery techniques, adaptation processes, and social-psychological dimensions of movement exploration and limitation. Special attention is given to developing a long-term vision for movement capability maintenance throughout aging, approaching mobility as a spiritual discipline, and cultivating curiosity rather than frustration with changing physical abilities. The questions encourage celebrating movement as a gift while developing compassionate yet challenging practices that support lifelong independence and functional capacity.
 
-# In SUMMARY
+# In Summary
 
 **Most of the gains comes from what you remove in order sculpt the perfect life intended by your Creator. It can at times seems tedious, repetitive, even painful and tough to do, but much of creating is about the discipline of being optimistic and ready to exploit new opportunities, ie *being stoked*, ditching the hate, forgiving sin, letting go of attachments and moving forward without the distractions ... while you steadily, patiently call out the noisemakers and REMOVE THE NOISE.**
 
@@ -76,15 +76,17 @@ A healthier body supports the mind.
 
 It's tough to have much of life that isn't about pain and the suffering and anxieties that comes from knowing the future is nothing but pain if one doesn't take care of one body. This does not change the inescapable Reality that your mind is the only place in this existence that you have to live. In order to ***cultivate the living garden of one's mind*** it is necessary to protect and sustain that living garden with a physical temple ... your body is that temple, that physical edifice that houses your mind.
 
-### The necessity of ***meticulously*** BUILDING a better prayer life.
+### The necessity of ***meticulously*** PRAYING WITHOUT CEASING ... meditative prayer life.
 
-*EVENTUALLY, one finally realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer and sustaining a constant meditative awareness so that one is able to pray without ceasing.
+*EVENTUALLY, one finally realizes that the ONLY decent use of life is prayer ... or being in a constant state of prayer and sustaining a constant meditative awareness so that one is able to **pray without ceasing.**
 
-One does not need ANY the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to pray without ceasing ... to be in a constant state of prayer ... to be in a constant state of meditative awareness.
+The state of *being in prayer without ceasing* is the IDEAL ... it's unlikely, probably impossible for you to ever get there ... because your affluent existence has PROGRAMMED YOU to be driven by materialism and material distractions ... like your assets, your moneypit house, you stupid vehicle to take you to your dumbass distractions ... so, as a programmed affluent gadget, programmed to take cues from the material world, you can only dream of being in a perfect state of praying without ceasing.
 
- There are several types of prayerful meditation and strategies for greater cognitive awareness that have been practiced by monks and spiritual practitioners across various traditions throughout the ages. 
- 
- Here are some of the most prominent ones ... in order of importance:
+Of course, one does not need ANY the other CRAP that is part of our affluent existence ... but [if one cares about one's soul] one really needs to be able to TRY TO get to the state of prayer without ceasing ... to live meditatively, to be in a constant state of prayer ... to be something approaching a constant state of meditative awareness.
+
+### Meditative AWARENESS
+
+There are several types of prayerful meditation and strategies for greater cognitive awareness that have been practiced by monks and spiritual practitioners across various traditions throughout the ages. Some of the prominent or effective approaches ... not necessarily, in order of importance, ie *try all of them and others; use whatever ploy seems to work for you.*
 
 1. Devotional Meditation: Devotional meditation focuses on some core principle or idea cultivating a deeper sense of love, humility or surrender, and an openness to more direct connection ... to emphasize our complete devotion a higher, more deeply spiritual Reality. Practitioners tend to engage in prayer centered around a devotional topic in order to cultivate a stronger feeling of the presence of God, to open hearts and experience a sense of divine union.
 

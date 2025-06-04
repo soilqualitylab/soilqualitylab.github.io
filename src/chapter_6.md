@@ -38,25 +38,25 @@
 
 ## June 2025
 
-### [Day 1 - June 1, 2025](https://docs.google.com/document/d/1o24EKyMnEG3PkPWYp6FQSmZMdwV5fuGIzO1CQjTpAgs/edit?usp=sharing) | Christian Spiritual Health: Beginning with Gratitude
+### [Day 1 - June 1, 2025](https://docs.google.com/document/d/1o24EKyMnEG3PkPWYp6FQSmZMdwV5fuGIzO1CQjTpAgs/edit?usp=sharing) | [Christian Spiritual Health: Beginning with Gratitude](https://g.co/gemini/share/7324bae6ed03)
 - Establish morning prayer routine for summer season
 - Create sacred space for daily scripture reading
 - Practice gratitude journaling for physical health blessings
 - Set spiritual intentions for the year-long wellness journey
 
-### [Day 2 - June 2, 2025](https://docs.google.com/document/d/16K7ezjyWbaW7c6NmUYPL-BmPEUkfYCLib9y3YmyxsBY/edit?usp=sharing) | Strength Training: Foundation Assessment
+### [Day 2 - June 2, 2025](https://docs.google.com/document/d/16K7ezjyWbaW7c6NmUYPL-BmPEUkfYCLib9y3YmyxsBY/edit?usp=sharing) | [Strength Training: Foundation Assessment](https://g.co/gemini/share/cd1f83b4713f)
 - Evaluate current strength capabilities honestly
 - Identify three primary movement patterns to focus on
 - Assess home gym equipment and space needs
 - Set realistic strength goals for summer months
 
-### [Day 3 - June 3, 2025](https://docs.google.com/document/d/1UxfBrBe0iAm5bsvASG5JTmGlL2owOme3unuQyeYzfWk/edit?usp=sharing) | Cardiovascular Health: Heart Rate Awareness
+### [Day 3 - June 3, 2025](https://docs.google.com/document/d/1UxfBrBe0iAm5bsvASG5JTmGlL2owOme3unuQyeYzfWk/edit?usp=sharing) | [Cardiovascular Health: Heart Rate Awareness](https://g.co/gemini/share/d4eb9f8f004b)
 - Learn to take accurate resting heart rate
 - Understand basic training zones for your age
 - Plan enjoyable summer cardio activities
 - Assess current cardiovascular fitness level
 
-### [Day 4 - June 4, 2025](https://docs.google.com/document/d/1c3vQkr20K18JnWmVIfHJ2FLUn5L4mORR_zjAxT3tavE/edit?usp=sharing) | Exercise More; Sweat More: Summer Hydration Focus
+### [Day 4 - June 4, 2025](https://docs.google.com/document/d/1c3vQkr20K18JnWmVIfHJ2FLUn5L4mORR_zjAxT3tavE/edit?usp=sharing) | [Exercise More; Sweat More: Summer Hydration Focus](https://g.co/gemini/share/d37a294f1d35)
 - Calculate daily water needs for active summer lifestyle
 - Explore natural electrolyte sources for hot weather
 - Ingest more hydrating foods (fruits, vegetables) from garden

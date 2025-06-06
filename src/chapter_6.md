@@ -68,11 +68,11 @@
 - Plan intellectual stimulation during exercise WODs ... avoid vehicles like the parasitic plague they are; instead [use COMPUTE](https://docs.google.com/document/d/13xYZNePhYtKzSxGi3AhHPhT87Itc59tZHlvMPhScrw4/edit?usp=sharing); avoid closed source poison, instead dev [open source tech](https://docs.google.com/document/d/19SAreNbtAsl1BrUk4cXhLge9-_TkXLIoqzS1UWlb96s/edit?usp=sharing), [dev/test prototypes locally on CHEAP hardware](https://docs.google.com/document/d/15IHiTtzzu2aIY5B6cD9N-UHuBfqeoNeIpXBwbtd19-g/edit?usp=sharing) while deploying production AI to rentable Big Compute in the cloud
 - Develop better ways to incorporate [Gratitude](https://markbruns.github.io/holyhour/2025/03/18/250Q-Gratitude-Igniter.html) and [Examen](https://markbruns.github.io/holyhour/2025/03/17/250Q-Examen-Igniter.html) ***igniters*** in order to bring in the curiosity and adoration of the Creator.
 
-### Day 6 - June 6, 2025 | Social Connection: Community Assessment
+### [Day 6 - June 6, 2025](https://docs.google.com/document/d/1Q2MUmRJn9zQMntycg1-net5uZZa_OqvDzwLJQJeZLOw/edit?usp=sharing) | [Social Connection: Community Assessment](https://g.co/gemini/share/0114caea6790)
 - Evaluate current support system for health goals
-- Identify one person to share wellness journey with
-- Plan social activities that include physical movement
-- Consider joining fitness or spiritual community
+- Identify SEVERAL persons to share wellness journey with, *just don't try to get them to exercise*
+- Plan social activities ...or ATTACKS on lethargy ... which feature physical movement
+- Consider joining other fitness or spiritual communities ... ***always be STALKING the opportunities!***
 
 ### Day 7 - June 7, 2025 | Rest & Recovery: Sleep Environment
 - Optimize bedroom for summer sleep quality

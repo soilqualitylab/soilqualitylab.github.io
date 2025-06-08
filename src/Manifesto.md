@@ -2,7 +2,9 @@
 
 *Be* ***STOKED***! Regard every second of every day as a blessing. Mindfully draw every breath. Every breath that you take is a reminder for you that the Creator is still CREATING in your life!
 
-STOP wasting any time looking back; life is not lived that way. It's pathetically STUPID to look back, longing for the past. Sure, cherish the memories as they arise, but the reason that people die younger than ever is that they dwell on the past and disregard what they must do with their futures ... so they die. ***Let the dead bury their dead.***
+STOP wasting any time looking back; life is not lived that way. It's pathetically STUPID to look back, longing for the past. Sure, cherish the memories as they arise, but the reason that people die younger than ever is that they dwell on the past and disregard what they must do with their futures ... so they die. 
+
+***Let the dead bury their dead.***
 
 The Creator has given you life in order to CREATE. *Develop your life!*
 

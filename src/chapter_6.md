@@ -39,42 +39,49 @@
 ## June 2025
 
 ### [Day 1 - June 1, 2025](https://docs.google.com/document/d/1o24EKyMnEG3PkPWYp6FQSmZMdwV5fuGIzO1CQjTpAgs/edit?usp=sharing) | [Christian Spiritual Health: Beginning with Gratitude](https://g.co/gemini/share/7324bae6ed03)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Establish morning prayer routine for summer season
 - Create sacred space for daily scripture reading
 - Practice gratitude journaling for physical health blessings
 - Set spiritual intentions for the year-long wellness journey
 
 ### [Day 2 - June 2, 2025](https://docs.google.com/document/d/16K7ezjyWbaW7c6NmUYPL-BmPEUkfYCLib9y3YmyxsBY/edit?usp=sharing) | [Strength Training: Foundation Assessment](https://g.co/gemini/share/cd1f83b4713f)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Evaluate current strength capabilities honestly
 - Identify three primary movement patterns to focus on
 - Assess home gym equipment and space needs
 - Set realistic strength goals for summer months
 
 ### [Day 3 - June 3, 2025](https://docs.google.com/document/d/1UxfBrBe0iAm5bsvASG5JTmGlL2owOme3unuQyeYzfWk/edit?usp=sharing) | [Cardiovascular Health: Heart Rate Awareness](https://g.co/gemini/share/d4eb9f8f004b)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Learn to take accurate resting heart rate
 - Understand basic training zones for your age
 - Plan enjoyable summer cardio activities
 - Assess current cardiovascular fitness level
 
 ### [Day 4 - June 4, 2025](https://docs.google.com/document/d/1c3vQkr20K18JnWmVIfHJ2FLUn5L4mORR_zjAxT3tavE/edit?usp=sharing) | [Exercise More; Sweat More: Summer Hydration Focus](https://g.co/gemini/share/d37a294f1d35)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Calculate daily water needs for active summer lifestyle
 - Explore natural electrolyte sources for hot weather
 - Ingest more hydrating foods (fruits, vegetables) from garden
 - Create morning hydration ritual to replace the coffee rituals
 
 ### [Day 5 - June 5, 2025](https://docs.google.com/document/d/1WHKR35GG-gRbNqXGTezkROADkTIJz8dD9zFSzoDGvmQ/edit?usp=sharing) | [Intellectual Wellbeing: Learning Goals](https://g.co/gemini/share/655338a3ec9b)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Identify three learning objectives for the year ... [HROS.dev](https://github.com/HROSdev), [INTG.dev](https://github.com/INTGworld/gitbutler), [WutUp.dev](https://ancientguy.github.io/)
 - Make your Gratitude Journal and/or Examen Journal the only book for you to read on health or spirituality *only because the* ***ignited*** *journal entries should reference thoughts on everything else*
 - Plan intellectual stimulation during exercise WODs ... avoid vehicles like the parasitic plague they are; instead [use COMPUTE](https://docs.google.com/document/d/13xYZNePhYtKzSxGi3AhHPhT87Itc59tZHlvMPhScrw4/edit?usp=sharing); avoid closed source poison, instead dev [open source tech](https://docs.google.com/document/d/19SAreNbtAsl1BrUk4cXhLge9-_TkXLIoqzS1UWlb96s/edit?usp=sharing), [dev/test prototypes locally on CHEAP hardware](https://docs.google.com/document/d/15IHiTtzzu2aIY5B6cD9N-UHuBfqeoNeIpXBwbtd19-g/edit?usp=sharing) while deploying production AI to rentable Big Compute in the cloud
 - Develop better ways to incorporate [Gratitude](https://markbruns.github.io/holyhour/2025/03/18/250Q-Gratitude-Igniter.html) and [Examen](https://markbruns.github.io/holyhour/2025/03/17/250Q-Examen-Igniter.html) ***igniters*** in order to bring in the curiosity and adoration of the Creator.
 
 ### [Day 6 - June 6, 2025](https://docs.google.com/document/d/1Q2MUmRJn9zQMntycg1-net5uZZa_OqvDzwLJQJeZLOw/edit?usp=sharing) | [Social Connection: Community Assessment](https://g.co/gemini/share/0114caea6790)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - Evaluate current support system for health goals
 - Identify SEVERAL persons to share wellness journey with, *just don't try to get them to exercise*
 - Plan social activities ...or ATTACKS on lethargy ... which feature physical movement
 - Consider joining other fitness or spiritual communities ... ***always be STALKING the opportunities!***
 
 ### [Day 7 - June 7, 2025](https://docs.google.com/document/d/1UEixNPpCJNb9K5J90XOOdJxeuBAJ_d_XxT5qULFxZ0Y/edit?usp=sharing) | [Rest? Recovery? What Sleep Environment?](https://g.co/gemini/share/ce260429cd9a)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - The POINT is ... you're NOT resting, recovering or sleeping ... because you're watching all kinds of vid content ... shorts, youtube, weather vlogs, news programs, sports highlights, vid snippets on X and all kinds of things that you like to watch or even imagine that you need to follow in order be well-informed.
 - Never mind optimizing your bedroom for summer sleep quality; there are way, way, way bigger fish that you might be trying to fry, instead of RECOVERING, RESTING and doing everything necessary to SLEEP
 - Why and how does video, media consumption completely undermine all of time mgmt discipline ... include the part of time management that is also consistent bedtime routine ... Netflix, ESPN, Spotify, YouTube, news orgs, and all kinds of empires UNDERSTAND why the main competitor to their content is your SLEEP.
@@ -82,6 +89,7 @@
 - Recognize how vid algorithms and dopamine mgmt by *someone else* controls you; think about who's controlling your video-watching algorithm and WHY you have abdicated responsibility ... sure, it's NOT exactly just like meth, but the mechanism very similar ... and watching vids is not only socially acceptable, you probably have an annoying friend who sends you those vids, because he's trying to under the [token-governed AI services industry for making addictive videos](https://www.aicut.pro/#pricing) which help drive the [monetization schemes in a variety new business models he's enthalled by](https://www.youtube.com/watch?v=UPSXnrHmqsM) ... **if you want to sleep better, first you have to** ***JUST SAY NO TO VIDEOS!***
 
 ### [Day 8 - June 8, 2025](https://docs.google.com/document/d/1upA76JVcppfb0ng71K7XBXSh8fC3ukSiFINXDlHGtJA/edit?usp=sharing) | [Stress Management: Baseline Assessment](https://g.co/gemini/share/db184d3d1b30)
+- **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
 - THINK about this, but don't just think -- you have to approach it with serious intention that you are going to finally DO SOMETHING ABOUT IT. Sure, you can start by identifying your current stress triggers and responses ... sing a few verses of kum-bay-yah ... but don't continue to be a passive fuck -- MOVE ON quickly on to attacking and optimizing stress. **Stop playing DEFENSE! When it comes to stress, you need to be on the OFFENSIVE side of the ball ... and you don't ever want to just punt.**
 - PRACTICE basic breathing and breathwork techniques for at least 10-15 minutes every day, to build the discipline ... to gradually become more and more and MORE aware of how badly you are actually carrying your stress ... *or else, just wash your high blood pressure pills down with a stiff drink or two and die early like you're supposed to, according the expecations in the actuarial tables, because that's what people tend to do and turning humans into to passive prey-animal victims of stress really does wonders for keeping the insurance companies profitable and the staff who at hospitals who could get jobs elsewhere gainfully employed*
 - Create or DEVELOP A BETTER peaceful morning transition-to-***getting-shit-done***-from-your-4-AM-holy-hour-wake-up routine ... if you don't continually develop and improve upon this routine, your life will go back into the shitter like it always has ... getting up at 4 AM for prayer/reflection and then TRANSITIONING into snarling attack mode is the key to happiness ... and having a strong OFFENSIVE capability.

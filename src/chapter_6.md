@@ -68,7 +68,7 @@
 
 ### [Day 5 - June 5, 2025](https://docs.google.com/document/d/1WHKR35GG-gRbNqXGTezkROADkTIJz8dD9zFSzoDGvmQ/edit?usp=sharing) | [Intellectual Wellbeing: Learning Goals](https://g.co/gemini/share/655338a3ec9b)
 - **FOLLOW THE HYPERLINKS FOR THE DAY AND TOPIC FOR MORE DETAIL**
-- Identify three BIG learning objectives for the year ... [HROS.dev, swarm robotics dev and proving ground](https://github.com/HROSdev), [INTG.dev, intell gathering and knowledge engineering](https://github.com/INTGworld/gitbutler), [WutUp.dev, ancientguy fitness and RAG AI for personalized health AI](https://ancientguy.github.io/) ... other currently lower priority ventures-in-waiting include: 4) [lessgovt.dev], [lessgovt.us], [bruno.solutions] ... 5) DRAIN.tips and TRIZ.tips, TRIZ or TIPS-driven theory of inventive problem-solving AI and development of of contradiction-tensor algorithm [similar to contradiction-matrix of TRIZ] ...  6) AUCT.us, BIDM.at and SalebarnLLC accelerated negotiation ... 7) MarkBruns.com, MelonCave.com, cognitive neuroscience comedy, brainbuilding is nothing too cerebral ... 8) nanotoolworks, no job too small contract machine and prototyping *shop* ... 9) RockRapids.INFO, *ART, *WORK, *FUN, *GUIDE 10) Annotify.org, data annotation and curated information apps for personal ML/AI ops engineering 
+- Identify three BIG learning objectives for the year ... [HROS.dev, swarm robotics dev and proving ground](https://github.com/HROSdev), [INTG.dev, intell gathering and knowledge engineering](https://github.com/INTGworld/gitbutler), [WutUp.dev, ancientguy fitness and RAG AI for personalized health AI](https://ancientguy.github.io/) ... other currently lower priority ventures-in-waiting include: 4) [lessgovt.dev](https://lessgovt.dev/), [lessgovt.us](https://lessgovt.us), [bruno.solutions](https://bruno.solutions) ... 5) DRAIN.tips and TRIZ.tips, TRIZ or TIPS-driven theory of inventive problem-solving AI and development of of contradiction-tensor algorithm [similar to contradiction-matrix of TRIZ] ...  6) AUCT.us, BIDM.at and SalebarnLLC accelerated negotiation ... 7) MarkBruns.com, MelonCave.com, cognitive neuroscience comedy, brainbuilding is nothing too cerebral ... 8) nanotoolworks, no job too small contract machine and prototyping *shop* ... 9) RockRapids.INFO, *ART, *WORK, *FUN, *GUIDE 10) Annotify.org, data annotation and curated information apps for personal ML/AI ops engineering 
 - Make your Gratitude Journal and/or Examen Journal the only book for you to read on health or spirituality *only because the* ***ignited*** *journal entries should reference thoughts on everything else*
 - Plan intellectual stimulation during exercise WODs ... avoid vehicles like the parasitic plague they are; instead [use COMPUTE](https://docs.google.com/document/d/13xYZNePhYtKzSxGi3AhHPhT87Itc59tZHlvMPhScrw4/edit?usp=sharing); avoid closed source poison, instead dev [open source tech](https://docs.google.com/document/d/19SAreNbtAsl1BrUk4cXhLge9-_TkXLIoqzS1UWlb96s/edit?usp=sharing), [dev/test prototypes locally on CHEAP hardware](https://docs.google.com/document/d/15IHiTtzzu2aIY5B6cD9N-UHuBfqeoNeIpXBwbtd19-g/edit?usp=sharing) while deploying production AI to rentable Big Compute in the cloud
 - Develop better ways to incorporate [Gratitude](https://markbruns.github.io/holyhour/2025/03/18/250Q-Gratitude-Igniter.html) and [Examen](https://markbruns.github.io/holyhour/2025/03/17/250Q-Examen-Igniter.html) ***igniters*** in order to bring in the curiosity and adoration of the Creator.
@@ -95,11 +95,35 @@
 - Create or DEVELOP A BETTER peaceful morning transition-to-***getting-shit-done***-from-your-4-AM-holy-hour-wake-up routine ... if you don't continually develop and improve upon this routine, your life will go back into the shitter like it always has ... getting up at 4 AM for prayer/reflection and then TRANSITIONING into snarling attack mode is the key to happiness ... and having a strong OFFENSIVE capability.
 - Establish or improve upon your end-of-day stress release discipline, *ie this is not JUST about knocking the crap out of the heavy bag,* but peacefully letting go of stress is WHY you need something you can really pound the *living eff* out of.  Before bedtime ... you wanna leave'r all on the field, as they say.
 
-### Day 9 - June 9, 2025 | Hydration: Water Quality Evaluation
-- Assess home water quality and filtration needs
-- Experiment with natural flavor additions (lemon, herbs)
-- Track hydration patterns throughout the day
-- Connect proper hydration to energy levels
+### [Day 9 - June 9, 2025](https://docs.google.com/document/d/13swC71sIyFgPlXOI2-u2vfhFU1sgZZ_xHCsu5EqbR4M/edit?usp=sharing) | [Hydration: Water Quality Evaluation](https://g.co/gemini/share/44fd452da214)
+
+- **THE HYPERLINKS FOR THE DAY AND TOPIC ARE PROVIDED TO ADD DETAIL to my comments below.**
+
+**THERE IS NO NEED FOR A REVERSE OSMOSIS SYSTEM -- WE DO HAVE A PROVEN EXAMPLE OF THE NEED TO BE EXTREMELY SKEPTICAL OF AI CONTENT**
+
+
+**THERE IS NO NEED FOR A REVERSE OSMOSIS SYSTEM -- WE DO HAVE A PROVEN EXAMPLE OF THE NEED TO BE EXTREMELY SKEPTICAL OF AI CONTENT**
+
+**THERE IS NO NEED FOR A REVERSE OSMOSIS SYSTEM -- WE DO HAVE A PROVEN EXAMPLE OF THE NEED TO BE EXTREMELY SKEPTICAL OF AI CONTENT**
+
+Today's Water Quality topic illustrates how/why it is probably IMPOSSIBLE to get reasonably accurate information from AI, especially on a topic that one knows/backward, inside/out, up/down ... it's VERY LONG family-related story but I have been a water quality nut for basically almost 60 years, because of how water quality impacted my father's farming operation and how he relied on mygreat-uncle [a WW II vet combat surgeon in the S Pacific, who'd seen enough surgery in adverse condition, thus, changed careers and became a chemistry teacher and water quality specialist after WW II].
+
+So the water quality material is GALLINGLY incorrect ... basically a matter of information terrorism.
+
+As we should know .... AI are HEAVILY BIASED politically and EXCEPTIONALLY HEAVILY BIASED in terms of recommending more reliance on govt regulation, medical experts regardless of how the medical experts are amongst the worst killers through their malpractice and more reliance on pharmaceuticals and things like chemotherapy to *cure* cancer.
+
+FOR EXAMPLE, EVEN GEMINI's 2nd ATTEMPT AT A REPORT IS STILL PRETTY MUCH POISONOUS JUNK!  
+
+The WORST nitrate level ever reported by the Rock Rapids Municipal Waterworks was 0.5 ppm.  The nitrate levels here IN Rock Rapids have never actually tested even close to 1 ppm for nitrates.  I have confirmed this in multiple home water tests. The Maximum Contaminant Level (MCL) for nitrate in drinking water has been set at 10 mg/L (10 parts per million, ppm) measured as nitrate-nitrogen (NO3-N). This standard was set at an EXTREMELY CONSERVATIVELY LOW to protect against blue-baby syndrome, a serious health condition seen only in infants ... but not really a concern for the general population certainly not a major concern in livestock operations.  
+
+Of course, it would be slightly concerning if the nitrate level were at or over 10 mg/L ... but 10 mg/L is still very safe ... 8 is EXTREMELY SAFE ... 9 is EXTREMELY SAFE ... 10 is still SAFE ... but, of course, it makes sense that the level is set CONSERVATIVELY low at 10 mg/L to give more than sufficient warning, but POLITICIZING nitrate policy is something that is aggressively used by publications which want to go beyond penalizing and actually severely damage the economies of *fly over country.*
+
+As such, the severe FEAR-MONGERING of Gemini's report for Rock Rapids Iowa does not reflect the factual reality that the WORST nitrate level ever reported from the Rock Rapids Waterworks was 0.5 ppm, less than one have of 1 ppm or an order of magnitude below the 10 mg/L CONSERVATIVE standard.  The fact that report spent most of it text talking about how to counter nitrates, which is completely a non-issue is not just angering but sufficient to confirm my worst suspicions of the implicit politicization attempts to induce fear/doubt in areas that the Google organizations wishes to terrorizes midwestern populations by going far out of its way to deliberately furnish with horrendously terrorizing and distorted information.
+
+I directed Gemini to redo to its report ... to remove the FACTUALLY INCORRECT and fear-inducing mentions of any reason for concern about nitrates ... because the VERY WORST level reported here in decades was 0.5 ppm or 1/20th of the CONSERVATIVE Maximum Contaminant Level (MCL) ... as a general rule, it is far too much to expect that Google OR any of the other AI will ever KNOCK OFF THE SEVERE DISTORTIONS or stop attempting to terrorize the public when it comes to anything that this related to TERRORIZING people into believing they need more government, more medical services, more pharmaceutical pills and side-effects ... it is not possible for organizations devoted to telling lies and politicizing the reporting of results to ever try much harder to err on the side of TRUTH rather than to err on the side of the political correct woke conventional wisdom.  
+
+The ONLY antidote is to NEVER TRUST the reports generated by AI. They cannot fix their reporting ... the problem is endemic, fundamental to their core existence ... when it comes to things like truth, EXPECT far less truth from all AI companies.
+
 
 ### Day 10 - June 10, 2025 | Mobility: Morning Movement Assessment
 - Evaluate morning stiffness and movement quality

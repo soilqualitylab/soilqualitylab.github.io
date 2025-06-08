@@ -81,11 +81,11 @@
 - Sure, of course temp, light, noise matter ... BUT the [800-lb monstrous BigFoot or Yeti](https://www.facebook.com/reel/1307306544394878) is THE video in the room is what is keeping you from optimizing your time mgmt, your sleep schedule, your thoughts while you are laying there ... NOT SLEEPING ... there are all kinds of things that you can't change about your work, where you live right now, your physical ailments -- BUT you can change your media discipline, if you stop being an idiot and recognize that you have a problem.
 - Recognize how vid algorithms and dopamine mgmt by *someone else* controls you; think about who's controlling your video-watching algorithm and WHY you have abdicated responsibility ... sure, it's NOT exactly just like meth, but the mechanism very similar ... and watching vids is not only socially acceptable, you probably have an annoying friend who sends you those vids, because he's trying to under the [token-governed AI services industry for making addictive videos](https://www.aicut.pro/#pricing) which help drive the [monetization schemes in a variety new business models he's enthalled by](https://www.youtube.com/watch?v=UPSXnrHmqsM) ... **if you want to sleep better, first you have to** ***JUST SAY NO TO VIDEOS!***
 
-### Day 8 - June 8, 2025 | Stress Management: Baseline Assessment
-- Identify current stress triggers and responses
-- Practice basic breathing technique for 5 minutes
-- Create peaceful morning transition routine
-- Establish end-of-day stress release practice
+### [Day 8 - June 8, 2025](https://docs.google.com/document/d/1upA76JVcppfb0ng71K7XBXSh8fC3ukSiFINXDlHGtJA/edit?usp=sharing) | [Stress Management: Baseline Assessment](https://g.co/gemini/share/db184d3d1b30)
+- Identify your current stress triggers and responses
+- PRACTICE basic breathing techniques for at least 5-10 minutes every day
+- Create peaceful morning transition-to-work-from-holy-hour-wake-up routine
+- Establish or improve upon your end-of-day stress release practice, *ie this is not JUST about knocking the crap out of the heavy bag*
 
 ### Day 9 - June 9, 2025 | Hydration: Water Quality Evaluation
 - Assess home water quality and filtration needs

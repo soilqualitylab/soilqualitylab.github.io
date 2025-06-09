@@ -131,7 +131,7 @@
 
 - **What We Should Actually Fear**
 
-Regular sugar consumption poses extreme danger. Sugar and the promotion of sweetness as healthy should face the same scrutiny we apply to nitrates. People shouldn't *need* sugar—sugar added to yogurt, sugar added to rhubarb. People *should* crave meat, not sugar, carbohydrates, and snacks.
+- Regular sugar consumption poses extreme danger ... that means ANYTHING has been sweetened. Foods do not NEED to be sweetened; sweetness ADDICTS need to sweeten foods; that especially includes artificial sweeteners, which are far worse than sugar ... but sweetening is tolerated, even promoted. Sugar and the promotion of sweetness as healthy should face the same scrutiny we apply to nitrates. People shouldn't *need* sugar—sugar added to yogurt, sugar added to rhubarb. People *should* crave meat, not sugar, carbohydrates, and snacks.
 
 The so-called "recommended" protein consumption levels fall radically below optimal requirements, particularly for older adults. Yes, nitrates in water from meat-producing regions run higher than elsewhere, but remain safe—certainly safer than the standard American diet.
 

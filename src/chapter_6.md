@@ -101,7 +101,19 @@
 
 Today's Water Quality topic illustrates how/why it is probably IMPOSSIBLE to get reasonably accurate information from AI that manage, propagandize and heavily spin their output in the same manner as media organization.
 
-The water quality material is gallingly ALMOST correct, but extemely misleading ... the VERY WORST nitrate level ever reported by the Rock Rapids Municipal Waterworks was 0.5 ppm.The nitrate levels here IN Rock Rapids have never actually tested even close to 1 ppm for nitrates -- if they had tested anything over 0.5 ppm, the AI would used the higher number. So there is no need to push expensive, problematic, maintenance-intensive reverse osmosis water filtration appliances ... except that is PART of a larger problem with nutrition and fitness "information" that is part of the standard recommendation MEDIA POLLUTION and DISINFORMATION from media organzations ... EXTREMELY frustrating to see this; but the disinformation campaign is a matter of political power aggravating/encouraging already terrible habits like cigarette smoking, ie there's no BIG problem with an occassional cigar or a pipe -- but we shouldn't ignore the small problem ... AND there are consequences and health impacts of any kind of regular practice that involves REGULARLY undermining one's lungs.
+The water quality material is gallingly ALMOST correct, but extemely misleading.
+
+The PIVOTAL fact of the matter the VERY WORST nitrate level ever reported by the Rock Rapids Municipal Waterworks was 0.5 ppm.
+
+The nitrate levels here IN Rock Rapids have never actually tested even close to 1 ppm for nitrates. 0.5 ppm is the WORST for nitrates.
+
+If those levels in Rock Rapids had tested anything over 0.5 ppm, the AI would used the higher number ... just as they rushed to report the VERY WORST levels in the region, in a report tailored for a male in Rock Rapids. 
+
+People can blow their money on idiotic gadgets and applicances if they want, but there is no NEED to push expensive, problematic, maintenance-intensive reverse osmosis water filtration appliances ... except that is PART of a larger problem with nutrition and fitness "information" that is part of the standard recommendation MEDIA POLLUTION and DISINFORMATION from media organzations.
+
+Sure, EXTREMELY frustrating to see this; but that WHY I work with AI ... to experience, understand and deconstruct the frustrations.
+
+The disinformation campaign is a matter of political power aggravating/encouraging already terrible habits like cigarette smoking ... and how tobacco advocacy USED TO BE EXTREMELY POWERFUL IN DRIVING US POLITICS ... used to be ... now we basically know that there's no BIG problem with an occassional cigar or a pipe, except that runners and athletes KNOW why/how it affects their performance.  But, it is sort of a matter of balance and perspective; we shouldn't ignore the small problem ... because there are very serious consequences and health impacts of any kind of regular, routine, several-times-a-day practice that involves REGULARLY undermining one's health.
 
 ***REGULARLY consuming insufficient meat is a BIG problem, especially in older males that metabolize / convert food less efficiently into muscle ... not consuming enough meat is probably bigger than smoking cigarettes everyday for the older male ... unless you want to be WEAK and lose strength at an even more rapid pace.  We need to understand how nitrate propaganda is linked to grain, livestock and meat production.***
 
@@ -109,7 +121,7 @@ POLITICIZING nitrate policy is something that is part of an aggressively campaig
 
 PROPAGANDIZING nitrate policy ... by hyperinflation of nitrate fears ... is part of a larger campaign to sugar up diets, shift food preferences, drive an epidemic of insulin resistance, get people to ignore the Warburg effect and generally drive cancers to worsen/metastacize.
 
-SUGAR is what is dangerous; sugar should be treated like nitrates ... the so-called "recommended" protein/meat consumption levels are radically below what they should be, especially for older people ... nitrates in water from areas producing most of the nations meat are higher, but still safe, ie much safer than the standard American diet.
+Regular SUGAR is EXTREMELY dangerous; sugar and pushing for sweetness as healthy should be treated like nitrates ... a person should not NEED to have sugar, eg sugar added to yogurt or sugar added to rhubarb ... a person SHOULD crave MEAT ... not sugar, carbs, snacks ... the so-called "recommended" protein/meat consumption levels are radically below what they should be, especially for older people ... nitrates in water from areas producing most of the nations meat are higher, but still safe, ie much safer than the standard American diet.
 
 The Maximum Contaminant Level (MCL) for nitrate in drinking water has been set at 10 mg/L (10 parts per million, ppm) measured as nitrate-nitrogen (NO3-N). There's nothing wrong with this level, but we should understand standard was actually set at an EXTREMELY CONSERVATIVELY LOW level to protect against blue-baby syndrome ... which is of course a serious health condition, it's just never seen -- it has only been in infants that were exposed continually to levels that were orders of magnitude worse than 10 mg/L ... not just 100, but think in terms of 1000 -- where manure runoff from a farming operation was running right into the wells/rivers from which the water was drawn ... of course, we don't want to allow these kinds of direct infusion of high nitrates into drinking waater ... but not really a widespread concern for the general population, although if were dipping out of water with over 10 mg/L, we would need to use methods like reverse osmosis to treat the water ... we certain don't want excessive levels of nitrates in our drinking water ... there's not really debate about that, BUT.  
 

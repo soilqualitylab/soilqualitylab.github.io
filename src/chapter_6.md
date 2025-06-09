@@ -153,7 +153,7 @@ I confess: the propaganda affected even me. I used to read the news. I understoo
 
 The results confirmed, or were much lower than what the municipal data already showed: **The worst nitrate level ever reported by Rock Rapids Municipal Waterworks was 0.5 ppm.** *Of course, that level could spike to a level that would be an order of magnitude higher ... but 5 ppm is still SAFE, in fact MORE than SAFE, still only half the extra-safe canary-coughing-in-coalmine levels of the MCL.
 
-*I apologize for the pedantic repititions, but the most important facts bear repeating ... EAT MORE MEAT; DRINK MORE WATER ... it's fine to check on quality every so often, but generally EAT MORE MEAT; DRINK MORE WATER.*
+*I apologize ... sort of, but not really ... for the pedantic repititions, because the most important facts bear repeating ... EAT MORE MEAT; DRINK MORE WATER ... it's fine to check on quality every so often, but generally EAT MORE MEAT; DRINK MORE WATER.*
 
 ### Day 10 - June 10, 2025 | Mobility: Morning Movement Assessment
 - Evaluate morning stiffness and movement quality

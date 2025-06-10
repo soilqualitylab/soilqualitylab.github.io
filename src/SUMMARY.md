@@ -17,6 +17,7 @@
 
 - [365 Days Of Wellness Topics](./chapter_6.md)
 
+  - [Section 0: Skepticism](nested/sub-chapter_6.0.md)
   - [Section 1: Nutrition](nested/sub-chapter_6.1.md)
   - [Section 2: Fitness/Strength](nested/sub-chapter_6.2.md)
   - [Section 3: Mobility/Flexibility](nested/sub-chapter_6.3.md)

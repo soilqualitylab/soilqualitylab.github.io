@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Section 0: Skepticism - Beat The Addiction To Comfort</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Beat The Addiction To Comfort</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="try-to-be-skeptical"><a class="header" href="#try-to-be-skeptical">TRY To Be Skeptical</a></h1>
+<p><em>THINK!!!</em></p>
+<h3 id="try-to-spot-the-regurgitated-lies-news-mediajournoseditorsai-are-pushing"><a class="header" href="#try-to-spot-the-regurgitated-lies-news-mediajournoseditorsai-are-pushing">TRY To Spot the Regurgitated Lies News Media/Journos/Editors/AI Are Pushing</a></h3>
+<p>You have to THINK about the biases, errors in your thinking ... attack the bad habits of being yourself, re-examine your assumptions ... <a href="https://meloncave.github.io/tools/2025/04/04/Ego-Transcendence-Practices-Across-Contemplative-Traditions.html"><em>CAVE IN THE MELON!</em></a></p>
+<p>This process requires <strong>continuous</strong> intellectual effort and self-awareness and then even more skepticism, ie modern journalists and AI censored-response developers are exactly like con artists, spamsters, identity thieves and all other information parasites that use deception and careful presentation of facts in an illusory magic act ... they are ALL continually working and improving their cons ... the bastards even con themselves, so well that that they don't really have any grasp on what Reality actually is any more ... but that's how the world works. There's no escaping it.</p>
+<p>In this existence, we all still need to use tainted information ... there's no such thing as clean, filtered, <em>triple-magic reverse osmosis de-ionized primordial elixir</em>, PURE information ... thus, it is essential for us to improve our skills in making informed decisions and resisting manipulation. <em><strong>As Christians, we can PRAY for DISCERNMENT ... but we should never imagine that our discernment is close to perfect.</strong></em></p>
+<p><strong>The best that you can do is to TRY ... but you have to TRY, or else you become part of lie-spreading problem.</strong></p>
+<h3 id="stay-sharp-stay-skeptical-try-to-stay-somewhat-free"><a class="header" href="#stay-sharp-stay-skeptical-try-to-stay-somewhat-free">Stay sharp. Stay skeptical. <strong>TRY</strong> to stay <strong>SOMEWHAT</strong> free.</a></h3>
+<p>The information wars are real, and you're standing in the middle of the battlefield. Every news story, every AI-generated article, every tweet is a weapon aimed at your mind. Your defense? Old-fashioned skepticism sharpened to a razor's edge. This manual will teach you how to think like a free human being instead of a sheep waiting for slaughter.</p>
+<h2 id="the-four-questions-that-save-your-brain"><a class="header" href="#the-four-questions-that-save-your-brain">The Four Questions That Save Your Brain</a></h2>
+<h3 id="question-one-whos-doing-the-talking"><a class="header" href="#question-one-whos-doing-the-talking">Question One: Who's Doing the Talking?</a></h3>
+<p>Before you believe a word, find out who they're quoting. Are you hearing from actual experts, or just the same handful of talking heads who show up everywhere?</p>
+<p>The numbers don't lie: back in 2014, cable news trotted out the same crowd - 84% white, 72% male. But here's what the statistics miss: hiring managers in any industry tend to select people who look like they do, think like they do, went to the same schools, came from similar backgrounds in suburbia or those interesting places that suburbanites vacation to. No deplorables, nobody from flyover country, nobody who might upset the carefully manicured narrative.</p>
+<p>When you push for manufactured diversity, you get something that looks pretty, looks harmonious, looks like a nice suburban monoculture - tasteful, well-behaved, artificial plants arranged around the edges of the same old lawn. What passes for diversity in newsrooms is whitewashed, well-behaved, defender-of-the-status-quo diversity. That's not diversity of thought; that's an echo chamber with better demographics and expert-approved opinions. When everyone sounds the same, they cannot possibly think different.</p>
+<p><strong>Your move:</strong> Hunt down the primary sources. Talk to people who actually live with the consequences of whatever story they're peddling - especially the ones who make the comfortable uncomfortable.</p>
+<h3 id="question-two-who-signs-their-paychecks"><a class="header" href="#question-two-who-signs-their-paychecks">Question Two: Who Signs Their Paychecks?</a></h3>
+<p>Every story has a storyteller, and every storyteller has bills to pay. In 2018, American newsrooms were 83% white in a country that's nothing close to that. But skin color is just the surface. What matters is the uniformity of background, education, and assumptions that creates a hive mind masquerading as journalism.</p>
+<p>These aren't reporters; they're stenographers for the establishment, hired precisely because they can be trusted not to ask inconvenient questions or challenge the fundamental assumptions of their class.</p>
+<p><strong>Your move:</strong> Dig into who runs the show. Corporate ownership charts and university attendance records tell you more about editorial slant than any diversity report ever will.</p>
+<h3 id="question-three-who-pays-for-the-pretty-pictures"><a class="header" href="#question-three-who-pays-for-the-pretty-pictures">Question Three: Who Pays for the Pretty Pictures?</a></h3>
+<p>Here's where it gets interesting. When PBS runs stories about military drones sponsored by Lockheed Martin - the company that builds those very drones - you're not getting news. You're getting advertising dressed up in a three-piece suit with a nonprofit tax exemption.</p>
+<p>The whole game is rigged, and they're not even trying to hide it anymore. They just assume you're too stupid to notice or too polite to mention it.</p>
+<p><strong>Your move:</strong> Follow the money trail. Sites like Media Bias/Fact Check will show you who owns what and who's pulling the purse strings. Then follow those strings all the way to the top.</p>
+<h3 id="question-four-what-are-they-not-telling-you"><a class="header" href="#question-four-what-are-they-not-telling-you">Question Four: What Are They Not Telling You?</a></h3>
+<p>The most dangerous bias isn't in what they say; it's in what they don't say. Media outlets will spend weeks covering shoplifting while ignoring wage theft that steals billions from workers' pockets. Why? Because one story reinforces their narrative about dangerous underclasses, and the other might implicate their advertisers and friends.</p>
+<p>They'll obsess over mean tweets while ignoring corruption that would make Tammany Hall blush. They'll manufacture outrage over cultural flashpoints while real power moves happen in boardrooms and backrooms.</p>
+<p><strong>Your move:</strong> Ask yourself what stories aren't being told and why certain issues get wall-to-wall coverage while others disappear faster than evidence in a Clinton investigation.</p>
+<h2 id="your-survival-toolkit"><a class="header" href="#your-survival-toolkit">Your Survival Toolkit</a></h2>
+<p><strong>Cross-Check Everything:</strong> One source is no source, especially when all your sources went to the same journalism schools and live in the same zip codes. Get your information from multiple outlets, including foreign ones who don't have skin in our domestic games, and domestic ones that the establishment considers beyond the pale.</p>
+<p><strong>Go to the Source:</strong> Skip the middleman entirely. Read the actual court documents, the original studies, the primary data. Most "reporting" is just someone else's interpretation of facts you can access yourself - and their interpretation is filtered through assumptions you probably don't share.</p>
+<p><strong>Use Your Tools:</strong> Bias detection tools like UnbiasedAI and AllSides Bias Checker can spot patterns your brain might miss. But remember: these tools were built by the same class of people who built the problems they're trying to solve.</p>
+<p><strong>Diversify Your Information Diet:</strong> If everyone you follow went to the same universities and lives in the same metropolitan areas, you're not getting diversity - you're getting variations on a theme. Seek out voices from different regions, different classes, different life experiences. The people the establishment calls "problematic" often have the most interesting things to say.</p>
+<p><strong>Study the Propaganda Playbook:</strong> Learn how emotional manipulation works, how selective reporting distorts reality, how loaded language shapes perception. The techniques haven't changed much since Goebbels; they've just gotten more sophisticated and harder to spot.</p>
+<p><strong>Check Your Own Blind Spots:</strong> The hardest person to fool is someone who knows their own weaknesses. But don't just examine your assumptions - examine the assumptions you've been taught not to question.</p>
+<h2 id="field-testing-your-skills"><a class="header" href="#field-testing-your-skills">Field Testing Your Skills</a></h2>
+<p>Put these tools to work on real examples. Compare how Reuters and The Intercept covered the 2020 election - different outlets, different angles, different universes entirely. Watch primary footage of the January 6 events, then read the media coverage. Notice not just what's emphasized, but what's completely omitted. Cross-check COVID reporting against actual WHO studies and primary research, then ask why certain treatments were forbidden while others were mandated.</p>
+<h2 id="the-bottom-line"><a class="header" href="#the-bottom-line">The Bottom Line</a></h2>
+<p>The information war isn't just about getting the facts wrong - it's about controlling which facts you're allowed to consider and which questions you're allowed to ask. Your mind is the battlefield, and the prize is your ability to think independently.</p>
+<p>But you have advantages they don't want you to know about: common sense, direct observation, and the ability to talk to people outside their approved circles. Use these advantages, and you'll develop the intellectual immune system needed to resist their programming.</p>
+<p>The establishment counts on your politeness, your desire to be thought well of, your fear of being called names. They're betting you'll choose comfortable lies over uncomfortable truths. Disappoint them.</p>
+<p>Stay ornery. Stay skeptical. Stay SOMEWHAT free ... while realizing that it's on YOU to exercise your freedoms and TRY to be somewhat more free.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter_6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nested/sub-chapter_6.1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter_6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nested/sub-chapter_6.1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

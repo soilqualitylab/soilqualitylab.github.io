@@ -1,6 +1,6 @@
-# TRY To Be Skeptical
+# TRY Harder To Be More Productively Skeptical
 
-*THINK!!!*
+*Don't just be negative ... THINK!!!*
 
 ### TRY To Spot the Regurgitated Lies News Media/Journos/Editors/AI Are Pushing
 

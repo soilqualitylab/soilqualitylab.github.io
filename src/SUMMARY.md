@@ -17,16 +17,9 @@
 
 - [365 Days Of Wellness Topics](./chapter_6.md)
 
-  - [Section 0: Skepticism](nested/sub-chapter_6.0.md)
-  - [Section 1: Nutrition](nested/sub-chapter_6.1.md)
-  - [Section 2: Fitness/Strength](nested/sub-chapter_6.2.md)
-  - [Section 3: Mobility/Flexibility](nested/sub-chapter_6.3.md)
-  - [Section 4: Cardio](nested/sub-chapter_6.4.md)
-  - [Section 5: Breathwork](nested/sub-chapter_6.5.md)
-  - [Section 6: Hydration](nested/sub-chapter_6.6.md)
-  - [Section 7: Self-Defense](nested/sub-chapter_6.7.md)
-  - [Section 8: Emotional Stability/Mental Health](nested/sub-chapter_6.8.md)
-  - [Section 9: Community/Social](nested/sub-chapter_6.9.md)
+  - [The Necessity Of Skepticism](nested/sub-chapter_6.0.md)
+  - [The Necessity Of Transformation](nested/sub-chapter_6.A.md)
+
 - [Develop Locally, Deploy To The Cloud](./chapter_5.md)
   - [Section 1: Foundations of Local Development for ML/AI](nested/sub-chapter_5.1.md)
   - [Section 2: Hardware Optimization Strategies](nested/sub-chapter_5.2.md)

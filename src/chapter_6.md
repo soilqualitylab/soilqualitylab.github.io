@@ -195,10 +195,12 @@ Today is for [FUNCTIONAL strength training, with an upper body focus that includ
 - Synthesize all gathered scientific information to revise and deepen the provided text. Integrate citations, more detailed physiological explanations, and a robust, evidence-backed philosophy for the standing-only, functional approach to senior fitness.
 
 ### Day 13 - June 13, 2025 | Cardiovascular Health: Outdoor Summer Cardio
-- Try walking or hiking in nature
-- Practice mindful movement in fresh air
-- Notice heart rate changes with terrain
-- Connect outdoor exercise to spiritual reflection
+- After some iterative prep, the AI was prompted to find authoritative guidelines on cardiovascular exercise for men over 65, including recommended types, frequency, duration, and intensity levels for improving heart health.
+- Research methods to transform gardening, landscaping, and other outdoor work into effective cardiovascular workouts. Investigate techniques like high-intensity interval training (HIIT) for yard work and incorporating bodyweight exercises into outdoor tasks.
+- Analyze the Transformative Discipleship Technology TDT Curriculum and identify specific principles, lessons, and practices that can be integrated with physical activity.
+- Develop concrete examples of how to merge the TDT curriculum with outdoor cardio. For instance: (a) Connecting the 'Daily prayer of surrender' (Lesson 1) to the beginning of a gardening session. (b) Using the 'Constant Prayer' practice (Lesson 7) as a framework for mindful breaks during physical labor. (c) Aligning a long, reflective hike with the moral inventory and forgiveness exercises (Lessons 10 & 12).(d) Framing all physical work as an act of service and worship as described in Phase 4.
+- Find techniques for enhancing body awareness and proprioception during exercise without using electronic gadgets. Focus on mindful movement, breathwork, and internal feedback loops to monitor exertion and physical sensations.
+- Synthesize the findings into something approximating a holistic framework that combines productive outdoor cardio with spiritual reflection, detailing how to use physical activity as a medium for the prayerful and intuitive disciplines outlined in the TDT curriculum.
 
 ### Day 14 - June 14, 2025 | Nutrition: Seasonal Eating Introduction
 - Research local summer produce availability

@@ -276,7 +276,7 @@ With this preparation out of the way ... and the reminder that the conventional 
 - Synthesize how the combination of habit, routine, ritual, and sleep hygiene can create an 'elegant' system for maintaining optimal hydration without external tracking or reminders.
 - Evaluate the effectiveness and long-term sustainability of these elegant, internalized methods for hydration discipline compared to reliance on digital gadgets or explicit record-keeping.
 
-### [Day 20 - June 20, 2025](https://docs.google.com/document/d/1IiimG_fDuBoy6_UTGW3E9BONudjuyevRUehJxAjOCzg/edit?usp=sharing) | [Summer Guide To Enhanced Mobility and Faith]()
+### [Day 20 - June 20, 2025](https://docs.google.com/document/d/1IiimG_fDuBoy6_UTGW3E9BONudjuyevRUehJxAjOCzg/edit?usp=sharing) | [Summer Guide To Enhanced Mobility and Faith](https://g.co/gemini/share/e605c4fe89d9)
 Today's topic will mostly be about laying out the strategy for the next few months of mobility/joint WODs for the Summer, to exploit the season, gardening/landscaping activities and longer days [for a couple months or so] to celebrate body's movement capacity, while focus on major joint mobility (ankles, hips, shoulders) and practice dynamic warm-up before seasonal activities. It's an opportunity enjoy the season while reflecting on movement opportunities as gift from Creator. Toward that end, the AI was prompted to:
 
 - Analyze the physiological impact of summer on joint health by researching scientific literature from medical and rheumatology sources on how heat, humidity, and barometric pressure affect conditions like osteoarthritis in seniors. Investigate advanced nutritional and hydration strategies for joint lubrication and inflammation reduction.

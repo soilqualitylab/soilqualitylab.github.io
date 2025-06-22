@@ -300,11 +300,16 @@ With this introductory preparation, the AI was prompted to:
 - Re-evaluate the spiritual disciplines mentioned in the original text (Sabbath, gratitude, trust) through this new lens. Frame them not merely as restorative practices but as active training of consciousness for a shift in perception and being.
 - Based on all the research, critique the original provided text by identifying its shallow interpretations, logical gaps, and potential misrepresentations, then formulate the expanded, in-depth backgrounder as requested.
 
-### Day 22 - June 22, 2025 | Strength Training: Lower Body Foundation
-- Master bodyweight squat progression
-- Focus on hip hinge movement (deadlift pattern)
-- Practice single-leg stability exercises
-- Connect leg strength to daily functional activities
+### [Day 22 - June 22, 2025](https://docs.google.com/document/d/1KvQHxrJefwaaU2hqtBzoMk1VHrsPOMjV41QQqNfE0es/edit?usp=sharing) | [Strength Training: Lower Body Foundation](https://g.co/gemini/share/0430273f13f4)
+After almost zero amount of prep drawing tighter lines of context ... *after all, how can it be possible for an AI to cornfuckulate a straightforward topic like strength training [unless one is really deep in periodization shit of elite bodybuilders]* ... the AI was prompted to:
+- Research the scientific basis and biomechanical principles of functional strength training, specifically how bodyweight exercises like squats, hip hinges, and single-leg movements enhance real-world activities and reduce injury risk.
+- Deepen the explanation of each bodyweight exercise category (squat progressions, hip hinges, single-leg stability) by identifying the primary muscles engaged, common form errors, and advanced variations.
+-  Explore additional bodyweight exercises or modifications that can further enhance lower body strength, power, and endurance relevant to gardening and landscaping tasks.
+- Investigate the specific physiological benefits of gardening as a form of exercise, including its impact on muscular strength, cardiovascular health, flexibility, and balance, supported by scientific studies or expert opinions.
+- Find information on progressive overload techniques applicable to bodyweight exercises and functional movements, detailing how to increase the challenge without traditional gym equipment.
+- Research guidelines and recommendations from physical therapists, ergonomists, or health organizations on injury prevention strategies for common gardening-related ailments, particularly those affecting the lower back, knees, and hips.
+- Synthesize advice on adapting functional strength training routines for individuals of different fitness levels, from beginners to more experienced gardeners, ensuring safety and effectiveness.
+- Identify and integrate additional reputable academic sources, peer-reviewed articles, or expert-backed resources to strengthen the claims and provide further reading for each section of the guide.
 
 ### Day 23 - June 23, 2025 | Cardiovascular Health: Interval Introduction
 - Learn basic interval training concept

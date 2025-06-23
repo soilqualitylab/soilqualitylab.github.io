@@ -311,7 +311,7 @@ After almost zero amount of prep drawing tighter lines of context ... *after all
 - Synthesize advice on adapting functional strength training routines for individuals of different fitness levels, from beginners to more experienced gardeners, ensuring safety and effectiveness.
 - Identify and integrate additional reputable academic sources, peer-reviewed articles, or expert-backed resources to strengthen the claims and provide further reading for each section of the guide.
 
-### [Day 23 - June 23, 2025] | [Cardiovascular Health: Interval Introduction]
+### [Day 23 - June 23, 2025](https://docs.google.com/document/d/1C7m5jD8pSMmCkX735sV1lSeJEhWmtYg44-JIUqwmRRI/edit?usp=sharing) | [Cardiovascular Health: Interval Introduction](https://g.co/gemini/share/0adbc242688d)
 Again, after almost zero amount of prep drawing tighter lines of context ... *after all, how can it be possible for an AI to cornfuckulate a straightforward version of an internet search topic like this*  ... the AI was prompted to:
 - Analyze the provided backgrounder to identify its scope, depth, and the specific areas that require further elaboration and deeper referencing.
 - Research the physiological mechanisms by which interval training, including HIIT and Tabata, specifically benefits cardiovascular health in older adults, focusing on cellular, metabolic, and systemic adaptations.

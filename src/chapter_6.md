@@ -409,7 +409,7 @@ The characteristic of misrepresenting or spinning the truth is FUNDAMENTAL to hu
 - Track progress in simple log or journal
 - Celebrate small improvements as victories
 
-### Day 33 - July 3, 2025 | Independence Day Is Work-From-Home Day Using Tabata HIIT WODs
+### [Day 33 - July 3, 2025](https://docs.google.com/document/d/1QF7tFgt75GhiYlcoqHKBGqHv2grPj-a1f0w2V9QRRbI/edit?usp=sharing) | [Independence Day Is Work-From-Home Day Using Tabata HIIT WODs](https://g.co/gemini/share/54ab7c380388)
 - Research the principles of High-Intensity Interval Training (HIIT), specifically the Tabata protocol (8 rounds of 20 seconds of work followed by 10 seconds of rest for a total of 4 minutes). Concurrently, research fitness guidelines and safe exercises for active adults aged 65+, focusing on joint-friendly movements, balance, and functional strength.
 - Compile a comprehensive list of exercises that can be performed with no equipment or with limited equipment (pull-up bar, resistance bands, dumbbells, stability ball). Categorize these exercises by the primary muscle groups they target (e.g., upper body push, upper body pull, legs, core, full-body cardio).
 - For each exercise in the compiled list, find or create modifications to adjust the difficulty, particularly to offer lower-impact and less strenuous options suitable for a 65-year-old individual.

@@ -323,7 +323,13 @@ Again, after almost zero amount of prep drawing tighter lines of context ... *af
 - Synthesize all gathered information into a comprehensive, critically analyzed, and thoroughly referenced backgrounder that addresses the user's request for a deeper understanding.
 
 ### [Day 24 - June 24, 2025](https://docs.google.com/document/d/1qdiYbNUNfq_8Pjn8A7B7r4ctanQgNuFawHXhWu6NBOM/edit?usp=sharing) | [Nutrition: Timing Optimization and Ketogenic Diets](https://g.co/gemini/share/94ef0a703461)
-The NUTRITION information from the conventional sources on diet and nutrition is JUNK *or should be regarded as JUNK, until it's proven itself in one's diet for at least ten years* ... thus ... this took some prep and **finally I just gave up on the bullshit*, so the product is still highly suspect.  The AI was prompted to: 
+The NUTRITION information from the conventional sources on diet and nutrition is pretty much JUNK ... *or at least should be regarded as JUNK* ... until that information PROVEN itself in one's diet for at least ten years or so*.
+
+What I KNOW is that my diet prior to 2016 or so was absolute JUNK ... and it's hard, maybe almost impossible to not eat junk ... especially with decades of bad programming -- so I am basically a JUNK addict -- in recovery and with a tendency to relapse to JUNK or to just give up and settle for the Standard American Diet ... BUT I also know what ketosis feels like and I am better off in a state of ketosis ... OR to otherwise push with fasting blood glucose ... which should be around 70-99 mg/dL (3.9-5.5 mmol/L) down to the lower-ish end of that *should be* range.
+
+Thus ... this nutritional ketosis deep dive took some prep and ... to make a long story short ... ***I finally I just gave up on the bullshit***, and went with what I've have ... so the *product* is still highly suspect ... maybe more detail than most wants, but the topic is serious and REQUIRES that level of detail, ie *that's why Americans EAT THE POISONOUS SHIT that they do and suffer accordingly.*  
+
+In order order to get here, the AI was prompted to: 
 - Research the scientific principles of very-low-carbohydrate, high-fat, high-protein diets, focusing on the metabolic state of ketosis and its physiological effects.
 - Investigate the specific application and implications of these diets for active adults over the age of 65. Find peer-reviewed studies on their effects on muscle mass (sarcopenia), energy metabolism, bone health, and cognitive function in this demographic.
 - Analyze how the body adapts to using fat and protein for fuel during sustained, moderate-intensity physical activities like gardening and landscaping.

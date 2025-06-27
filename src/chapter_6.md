@@ -412,7 +412,7 @@ The AI was prompted to:
 
 ### Day 28 - June 28, 2025 | Stress Management: Breathing Techniques
 The AI was prompted to:
-- Conduct an in-depth search of scientific and medical literature for the detailed physiological mechanisms of breathwork, focusing on its effects on cerebral blood flow, brain oxygenation, CO2 tolerance, and the autonomic nervous system, going beyond the information provided.
+- Conduct an in-depth search of scientific and medical literature for the detailed physiological mechanisms of breathwork, focusing on its effects on cerebral blood flow, brain oxygenation, CO2 tolerance, and [the autonomic nervous system](https://my.clevelandclinic.org/health/body/23273-autonomic-nervous-system), going beyond the information provided. {NOTE: Eventually, we will probably want to devote an entire day to JUST the autonomic nervous system, and how we continually train this system, ie **if we don't train the autonomic nervous system, we are in effect training it to be sub-optimal.**}
 - Investigate and compile a set of practical, micro-practice breathing techniques specifically designed for managing state changes during transitions between daily activities, such as moving from a work task to a break or from a commute to home.
 - Research methods from psychology, neuroscience, and mindfulness for developing sustained interoceptive awareness, which is the ability to continually self-monitor one's own breathing patterns throughout the day without active concentration.
 - Find expert tutorials and biomechanical analyses on how to practice and internalize optimal diaphragmatic breathing, including common errors and strategies for maintaining it during various activities like sitting at a desk or walking.

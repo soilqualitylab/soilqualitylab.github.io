@@ -417,7 +417,7 @@ The AI was prompted to:
 - Use breathing to transition between daily activities
 - Connect conscious breathing to spiritual practice
 
-### Day 29 - June 29, 2025 | Hydration: Improving Municipal Nitrate Management
+### [Day 29 - June 29, 2025](https://docs.google.com/document/d/15nYKpWhIkvNj0CD9iAhRShisZ07N8o05GC10Z9ZAjiA/edit?usp=sharing) | [Hydration: Improving Municipal Nitrate Management](https://g.co/gemini/share/15fa71d0a2fd)
 The AI was prompted to:
 - Define and explain the principles of phytoremediation and green infrastructure as they apply to water treatment, specifically for nitrate removal.
 - Describe the biogeochemical mechanisms by which engineered plant-based ecosystems remove nitrates, detailing the roles of plant uptake, soil media, and microbial denitrification.

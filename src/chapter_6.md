@@ -491,10 +491,15 @@ Finally, using BOTH Grok's output and [Claude's output, which is still way too b
 - Structure the final, thoroughly referenced backgrounder to be practical and non-preachy, ensuring it is exhaustive and addresses the audience's goal of improving spiritual, mental, and physical discipline.
 
 ### Day 32 - July 2, 2025 | Strength Training: Progressive Overload
+In a nutshell, the successive context engineering approach for today's topics is to start by prompting Grok to look at the topic with a focus on the following sub-topics:
 - Understand principle of gradual challenge increase
 - Add repetitions or hold time to current exercises
 - Track progress in simple log or journal
 - Celebrate small improvements as victories
+
+Using Grok's output, Claude will be prompted to improve upon Grok's **START** ...
+
+Finally, using BOTH Grok's output and Claude's output, Gemini will be prompted to produce a comprehensive backgrounder on the topic of progressive overload.
 
 ### [Day 33 - July 3, 2025](https://docs.google.com/document/d/1QF7tFgt75GhiYlcoqHKBGqHv2grPj-a1f0w2V9QRRbI/edit?usp=sharing) | [Independence Day Is Work-From-Home Day Using Tabata HIIT WODs](https://g.co/gemini/share/54ab7c380388)
 - Research the principles of High-Intensity Interval Training (HIIT), specifically the Tabata protocol (8 rounds of 20 seconds of work followed by 10 seconds of rest for a total of 4 minutes). Concurrently, research fitness guidelines and safe exercises for active adults aged 65+, focusing on joint-friendly movements, balance, and functional strength.

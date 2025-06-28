@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Best Practices In Context Engineering - Beat The Addiction To Comfort</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Beat The Addiction To Comfort</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="best-practices-in-context-engineering"><a class="header" href="#best-practices-in-context-engineering">Best Practices In Context Engineering</a></h1>
+<p><strong>Key Points:</strong></p>
+<ul>
+<li>Context engineering involves curating and structuring information to optimize large language model (LLM) performance, going beyond simple prompt crafting.</li>
+<li>It seems likely that effective context engineering enhances LLM reliability by providing relevant data, tools, and formats, though challenges like token costs and context degradation persist.</li>
+<li>Research suggests practices like structured state management, compression, and multi-agent systems improve outcomes, but there’s ongoing debate about balancing technical and organizational needs.</li>
+<li>The term "context engineering" is gaining traction over "prompt engineering," reflecting its broader scope, though some argue it overlaps with intent or communication engineering.</li>
+</ul>
+<p><strong>What is Context Engineering?</strong>
+Context engineering is the practice of designing and managing the information provided to LLMs to ensure they can effectively perform tasks. Unlike prompt engineering, which focuses on crafting specific instructions, context engineering involves dynamically assembling relevant data, tools, and formats to create a comprehensive context window. This process is critical for complex AI applications, such as agentic systems, where LLMs need to handle long-running tasks or integrate with external tools.</p>
+<p><strong>Why It Matters</strong>
+As LLMs become more powerful, their ability to process and utilize context determines their effectiveness. Poorly managed context can lead to irrelevant or incorrect outputs, while well-engineered context can transform an LLM into a highly capable assistant. This is particularly important in industrial applications where tasks require specific, often organizationally unique, information.</p>
+<p><strong>Core Practices</strong></p>
+<ul>
+<li><strong>Track Token Usage</strong>: Monitor and manage token consumption to optimize costs and performance.</li>
+<li><strong>Structure Context</strong>: Use schemas to organize data, ensuring only relevant information is included.</li>
+<li><strong>Compress Data</strong>: Summarize outputs from tools to keep context manageable.</li>
+<li><strong>Implement Memory</strong>: Use simple memory systems to track and update agent states.</li>
+<li><strong>Leverage Multi-Agent Systems</strong>: Employ multiple agents for parallel tasks to enhance efficiency.</li>
+<li><strong>Dynamic Context Assembly</strong>: Build systems that adaptively fetch and format context from various sources.</li>
+</ul>
+<p><strong>Relevant Research</strong>
+Recent studies, such as those on arXiv, explore scaling context lengths and attributing model outputs to specific context parts, offering tools to refine context engineering practices. These findings suggest that with proper data engineering, LLMs can handle extended contexts, improving their utility in real-world applications.</p>
+<hr />
+<h3 id="comprehensive-overview-of-context-engineering-best-practices"><a class="header" href="#comprehensive-overview-of-context-engineering-best-practices">Comprehensive Overview of Context Engineering Best Practices</a></h3>
+<p>Context engineering has emerged as a pivotal discipline in the development of AI applications, particularly those leveraging large language models (LLMs). It encompasses the strategic curation, structuring, and management of information provided to LLMs to optimize their performance across diverse tasks. This section provides a detailed exploration of best practices, drawing from recent discussions, research papers, and industry insights, including those referenced in the provided document by Lance Martin and related X posts.</p>
+<h4 id="defining-context-engineering"><a class="header" href="#defining-context-engineering">Defining Context Engineering</a></h4>
+<p>Context engineering is the art and science of building dynamic systems that supply LLMs with the right information and tools in an appropriate format to accomplish tasks effectively. As articulated by Andrej Karpathy in an X post on June 25, 2025 (<a href="https://x.com/karpathy/status/1937902205765607626">Karpathy's Post</a>), it involves filling the LLM’s context window with task descriptions, few-shot examples, retrieval-augmented generation (RAG) data, multimodal inputs, tools, state, and history. This process requires balancing the amount and relevance of information to avoid performance degradation or excessive costs, blending scientific precision with an intuitive understanding of how LLMs process context.</p>
+<p>The LangChain blog post on June 23, 2025 (<a href="https://blog.langchain.com/the-rise-of-context-engineering/">The Rise of Context Engineering</a>), further defines context engineering as distinct from prompt engineering, emphasizing its focus on assembling dynamic data rather than just crafting instructions. It highlights that context engineering is becoming the most critical skill for AI engineers as applications evolve from single prompts to complex, agentic systems.</p>
+<h4 id="best-practices-in-context-engineering-1"><a class="header" href="#best-practices-in-context-engineering-1">Best Practices in Context Engineering</a></h4>
+<p>The following best practices are synthesized from the document by Lance Martin (<a href="https://rlancemartin.github.io/2025/06/23/context_engineering/">Context Engineering</a>), X posts, and related resources, providing actionable strategies for effective context engineering.</p>
+<ol>
+<li>
+<p><strong>Instrumentation for Token Management</strong></p>
+<ul>
+<li><strong>Description</strong>: Tracking token usage is essential to identify and mitigate excessive consumption, particularly from tool calls, which can inflate costs and degrade performance.</li>
+<li><strong>Implementation</strong>: Use monitoring tools to track token usage and isolate token-heavy operations. This sets the stage for optimizing context engineering efforts.</li>
+<li><strong>Reference</strong>: Hamel’s blog on evaluations (<a href="https://hamel.dev/blog/posts/evals/">Evals Blog</a>) emphasizes the importance of instrumentation in managing LLM performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Structured State Management</strong></p>
+<ul>
+<li><strong>Description</strong>: Define a well-structured state schema to control the information exposed to the LLM, avoiding bloated message lists that can overwhelm the model.</li>
+<li><strong>Implementation</strong>: Use frameworks like Pydantic to create structured schemas. For example, Anthropic’s research system saves research plans for future use, ensuring consistent context (<a href="https://www.anthropic.com/engineering/built-multi-agent-research-system">Anthropic’s Multi-Agent System</a>).</li>
+<li><strong>Example</strong>: A state schema might include fields for task objectives, user preferences, and recent interactions, ensuring only relevant data is included.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compression at Tool Boundaries</strong></p>
+<ul>
+<li><strong>Description</strong>: Summarize outputs from token-heavy tool calls to prevent context growth, maintaining efficiency.</li>
+<li><strong>Implementation</strong>: Use a smaller LLM with straightforward prompting to compress tool outputs. For instance, Claude Code auto-compacts context at 95% of the context window (<a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code Best Practices</a>).</li>
+<li><strong>Benefit</strong>: Reduces token costs and maintains model focus on relevant information.</li>
+</ul>
+</li>
+<li>
+<p><strong>Simple Memory Systems</strong></p>
+<ul>
+<li><strong>Description</strong>: Implement basic memory systems to track and update agent states, enhancing context continuity.</li>
+<li><strong>Implementation</strong>: Use file-based memory to store preferences or states, updated via LLM based on human feedback. An example is an email assistant tracking user preferences (<a href="https://github.com/langchain-ai/agents-from-scratch">LangChain Agents</a>).</li>
+<li><strong>Tools</strong>: Frameworks like Letta, Mem0, LangGraph, Zep, or Neo4J can facilitate memory management.</li>
+</ul>
+</li>
+<li>
+<p><strong>Multi-Agent Systems for Parallel Tasks</strong></p>
+<ul>
+<li><strong>Description</strong>: Employ multiple agents for tasks that can be parallelized, improving efficiency but requiring careful coordination.</li>
+<li><strong>Implementation</strong>: Anthropic’s multi-agent researcher outperformed single-agent systems by 90.2%, though it used 15× more tokens (<a href="https://www.anthropic.com/engineering/built-multi-agent-research-system">Anthropic’s Multi-Agent System</a>).</li>
+<li><strong>Challenge</strong>: Coordination in multi-agent systems can be complex, requiring robust context isolation strategies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Context Assembly</strong></p>
+<ul>
+<li><strong>Description</strong>: Build systems that dynamically fetch and format context from multiple sources, such as user inputs, previous interactions, Juno, tool outputs, and external data.</li>
+<li><strong>Implementation</strong>: Use retrieval systems to dynamically insert relevant information into prompts, as discussed in the LangChain blog (<a href="https://blog.langchain.com/the-rise-of-context-engineering/">The Rise of Context Engineering</a>).</li>
+<li><strong>Example</strong>: An agent might fetch user preferences from a database and combine them with real-time tool outputs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Format and Structure Optimization</strong></p>
+<ul>
+<li><strong>Description</strong>: The format of context significantly impacts LLM performance. Clear, consistent formatting enhances pattern recognition.</li>
+<li><strong>Implementation</strong>: Ensure consistent formatting of examples and instructions, as noted in a Reddit post on in-context learning (<a href="https://www.reddit.com/r/LLMDevs/comments/1g8uio9/prompt_engineering_best_practices_for_incontext/">Reddit Post</a>). For example, order examples from simple to complex or place the most relevant ones last.</li>
+<li><strong>Insight</strong>: @omarsar0 on X emphasizes structuring inputs/outputs, including schema definitions, to improve clarity (<a href="https://x.com/omarsar0/status/1938239935770763727">Omar's Post</a>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Evaluation and Iteration</strong></p>
+<ul>
+<li><strong>Description</strong>: Continuously evaluate whether the context enables the LLM to plausibly accomplish the task, iterating as needed.</li>
+<li><strong>Implementation</strong>: Use observability tools like LangSmith to trace agent calls and identify context-related issues (<a href="https://smith.langchain.com/">LangSmith</a>).</li>
+<li><strong>Question</strong>: As per the LangChain blog, ask, “Can it plausibly accomplish the task?” to diagnose context deficiencies.</li>
+</ul>
+</li>
+</ol>
+<h4 id="challenges-in-context-engineering"><a class="header" href="#challenges-in-context-engineering">Challenges in Context Engineering</a></h4>
+<ul>
+<li><strong>Context Degradation Syndrome</strong>: Overloading the context window with irrelevant data can reduce performance, as noted by Karpathy (<a href="https://x.com/karpathy/status/1937902205765607626">Karpathy's Post</a>).</li>
+<li><strong>Token Costs</strong>: Deep research agents can consume significant tokens (e.g., &gt;500k tokens per run), increasing costs (<a href="https://rlancemartin.github.io/2025/06/23/context_engineering/">Context Engineering</a>).</li>
+<li><strong>Coordination in Multi-Agent Systems</strong>: Ensuring seamless interaction among agents requires careful context isolation, such as using schemas or sandbox environments.</li>
+</ul>
+<h4 id="relevant-research-from-arxiv"><a class="header" href="#relevant-research-from-arxiv">Relevant Research from arXiv</a></h4>
+<p>Recent research on arXiv provides valuable insights into context engineering:</p>
+<ul>
+<li>
+<p><strong><a href="https://arxiv.org/abs/2402.10171">Data Engineering for Scaling Language Models to 128K Context</a></strong>:</p>
+<ul>
+<li><strong>Findings</strong>: Lightweight continual pretraining with 500M to 5B tokens of balanced, domain-diverse data enables LLMs to handle 128K-token contexts. Domain balance and length upsampling are critical for optimal performance.</li>
+<li><strong>Implication</strong>: Context engineering for long contexts requires careful data engineering to maintain model capabilities across extended inputs.</li>
+<li><strong>Code</strong>: Available at <a href="https://github.com/FranxYao/Long-Context-Data-Engineering">Long Context Data Engineering</a>.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://arxiv.org/abs/2409.00729">ContextCite: Attributing Model Generation to Context</a></strong>:</p>
+<ul>
+<li><strong>Findings</strong>: ContextCite is a scalable method to pinpoint which context parts influence specific model outputs, aiding in verification, context pruning, and poisoning detection.</li>
+<li><strong>Implication</strong>: Tools like ContextCite enhance context engineering by ensuring outputs are grounded in relevant context, improving reliability.</li>
+<li><strong>Code</strong>: Available at <a href="https://github.com/MadryLab/context-cite">ContextCite GitHub</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="additional-insights-from-industry"><a class="header" href="#additional-insights-from-industry">Additional Insights from Industry</a></h4>
+<ul>
+<li><strong>Organizational Context</strong>: Ethan Mollick on X emphasizes that context engineering involves aligning LLMs with organizational operations, including reports, processes, and tone (<a href="https://x.com/emollick/status/1937952769513517328">Mollick's Post</a>). This cross-functional approach ensures AI outputs reflect company identity.</li>
+<li><strong>Tool Integration</strong>: Tools like LangGraph and LangSmith facilitate context engineering by providing control over agent workflows and observability (<a href="https://github.com/langchain-ai/langgraph">LangGraph</a>, <a href="https://smith.langchain.com/">LangSmith</a>).</li>
+<li><strong>Community Perspectives</strong>: X posts highlight diverse views, such as @virtualmilin’s use of unique code and app flow context for a 95% success rate in root cause analysis (<a href="https://x.com/virtualmilin/status/1937970191193018455">Virtualmilin's Post</a>), and @ankrgyl’s note on the pervasive challenge of engineering every stack layer (<a href="https://x.com/ankrgyl/status/1913766591910842619">Ankrgyl's Post</a>).</li>
+</ul>
+<h4 id="practical-example"><a class="header" href="#practical-example">Practical Example</a></h4>
+<h1 id="example-context-engineering-workflow"><a class="header" href="#example-context-engineering-workflow">Example Context Engineering Workflow</a></h1>
+<h2 id="objective"><a class="header" href="#objective">Objective</a></h2>
+<p>Create an LLM-based email assistant that responds to customer inquiries with relevant product information.</p>
+<h2 id="context-components"><a class="header" href="#context-components">Context Components</a></h2>
+<ul>
+<li><strong>User Preferences</strong>: Stored in a JSON file, updated based on feedback.
+<pre><code class="language-json">{
+  "user_id": "123",
+  "preferred_tone": "professional",
+  "language": "English"
+}
+</code></pre>
+</li>
+<li><strong>Product Data</strong>: Retrieved via RAG from a product database.
+<pre><code class="language-json">{
+  "product_id": "456",
+  "name": "Widget X",
+  "features": ["Feature A", "Feature B"],
+  "price": "$99.99"
+}
+</code></pre>
+</li>
+<li><strong>Conversation History</strong>: Summarized to maintain context continuity.
+<pre><code class="language-text">Customer asked about Widget X features on 2025-06-25.
+</code></pre>
+</li>
+<li><strong>Instructions</strong>: Clear, structured prompt.
+<pre><code class="language-text">You are a professional email assistant. Respond to the customer's inquiry about Widget X using the provided product data and user preferences. Maintain a professional tone.
+</code></pre>
+</li>
+</ul>
+<h2 id="workflow"><a class="header" href="#workflow">Workflow</a></h2>
+<ol>
+<li><strong>Retrieve Context</strong>: Fetch user preferences and product data.</li>
+<li><strong>Summarize History</strong>: Compress conversation history to fit context window.</li>
+<li><strong>Format Prompt</strong>: Combine instructions, preferences, data, and history in a structured format.</li>
+<li><strong>Evaluate</strong>: Check if the context enables a plausible response; adjust if necessary.</li>
+<li><strong>Generate Response</strong>: Pass the context to the LLM for response generation.</li>
+</ol>
+<h2 id="expected-output"><a class="header" href="#expected-output">Expected Output</a></h2>
+<p>A professional email response detailing Widget X’s features, tailored to the user’s preferences.</p>
+<h4 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h4>
+<p>Context engineering is a multifaceted discipline that enhances LLM performance by ensuring the right information, tools, and formats are provided. By implementing best practices like instrumentation, structured state management, and dynamic context assembly, developers can create robust AI applications. Ongoing research and tools like LangGraph and ContextCite continue to advance the field, addressing challenges like token costs and context degradation. As LLMs evolve, context engineering will remain a cornerstone of effective AI development, bridging technical precision with organizational needs.</p>
+<p><strong>Key Citations:</strong></p>
+<ul>
+<li><a href="https://x.com/karpathy/status/1937902205765607626">Karpathy’s X Post on Context Engineering</a></li>
+<li><a href="https://blog.langchain.com/the-rise-of-context-engineering/">The Rise of Context Engineering by LangChain</a></li>
+<li><a href="https://boristane.com/blog/context-engineering/">Boris Tane’s Blog on Context Engineering</a></li>
+<li><a href="https://arxiv.org/abs/2402.10171">Data Engineering for Scaling Language Models to 128K Context</a></li>
+<li><a href="https://arxiv.org/abs/2409.00729">ContextCite: Attributing Model Generation to Context</a></li>
+<li><a href="https://hamel.dev/blog/posts/evals/">Hamel’s Blog on Evaluations</a></li>
+<li><a href="https://www.anthropic.com/engineering/built-multi-agent-research-system">Anthropic’s Multi-Agent Research System</a></li>
+<li><a href="https://github.com/langchain-ai/agents-from-scratch">LangChain Agents from Scratch</a></li>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code Best Practices by Anthropic</a></li>
+<li><a href="https://www.reddit.com/r/LLMDevs/comments/1g8uio9/prompt_engineering_best_practices_for_incontext/">Reddit Post on In-Context Learning Best Practices</a></li>
+<li><a href="https://x.com/omarsar0/status/1938239935770763727">Omar’s X Post on Context Engineering Components</a></li>
+<li><a href="https://x.com/emollick/status/1937952769513517328">Mollick’s X Post on Organizational Context</a></li>
+<li><a href="https://x.com/virtualmilin/status/1937970191193018455">Virtualmilin’s X Post on Seer System</a></li>
+<li><a href="https://x.com/ankrgyl/status/1913766591910842619">Ankrgyl’s X Post on Context Engineering Challenges</a></li>
+<li><a href="https://github.com/langchain-ai/langgraph">LangGraph GitHub Repository</a></li>
+<li><a href="https://smith.langchain.com/">LangSmith Observability Platform</a></li>
+<li><a href="https://github.com/FranxYao/Long-Context-Data-Engineering">Long Context Data Engineering GitHub</a></li>
+<li><a href="https://github.com/MadryLab/context-cite">ContextCite GitHub Repository</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nested/sub-chapter_6.A.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chapter_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nested/sub-chapter_6.A.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chapter_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

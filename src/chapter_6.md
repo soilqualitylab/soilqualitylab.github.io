@@ -433,7 +433,7 @@ The AI was prompted to:
 - Synthesize all findings to evaluate the overall potential and limitations of using plant-based systems as a primary or supplementary method for treating nitrate-contaminated water to make it potable or less expensive to purify.
 
 ### Day 30 - June 30, 2025 | Mobility: Full Body Integration
-After doing this for 30 days, we finally have a large enough sample size in order to better apply some of the latest, greatest best thinking for developing best practices in [context engineering](https://rlancemartin.github.io/2025/06/23/context_engineering/), which should build upon what we have learned in the previous month. After reviewing [Grok's take on the emergent body of work surrounding the context engineering practice](https://grok.com/share/c2hhcmQtMg%3D%3D_ce82c62b-9dfb-4f24-ba83-fb79ee05cfba), the AI was prompted to: 
+After doing this for about a month now, we finally have **enough frustrating disappointments in AI*** to give us a large enough sample size in order to better apply some of the latest, greatest best thinking for developing best practices in [context engineering](https://rlancemartin.github.io/2025/06/23/context_engineering/), which should build upon what we have learned in the previous month. After compiling [our own set of the best practices in context engineering](nested/sub-chapter_6.B.md), we can adjust our approach perhaps, so in this case the AI was prompted to: 
 
 - Practice movement sequence connecting all joints
 - Focus on coordination and balance challenges

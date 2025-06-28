@@ -19,7 +19,7 @@
 
   - [The Necessity Of Skepticism](nested/sub-chapter_6.0.md)
   - [The Necessity Of Transformation](nested/sub-chapter_6.A.md)
-  - [Best Practices In Context Engineering](nested/sub-chapter_6.B.md)
+  - [Best Practices In AI Context Engineering](nested/sub-chapter_6.B.md)
 
 - [Develop Locally, Deploy To The Cloud](./chapter_5.md)
   - [Section 1: Foundations of Local Development for ML/AI](nested/sub-chapter_5.1.md)

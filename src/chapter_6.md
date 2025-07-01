@@ -490,7 +490,8 @@ Finally, using BOTH Grok's output and [Claude's output, which is still way too b
 - Formulate a practical guide section that outlines actionable strategies for integrating diet, exercise, prayer, and mental wellness practices into a holistic and disciplined lifestyle, suitable for the target audience.
 - Structure the final, thoroughly referenced backgrounder to be practical and non-preachy, ensuring it is exhaustive and addresses the audience's goal of improving spiritual, mental, and physical discipline.
 
-### Day 32 - July 2, 2025 | Strength Training: Progressive Overload
+### [Day 32 - July 2, 2025](https://docs.google.com/document/d/13fuSv5-CDD_67mcnROiowFT97xGep6_FAMuWESzrNDI/edit?usp=sharing) | [Strength Training: Progressive Overload](https://g.co/gemini/share/0b7f70064750)
+
 In a nutshell, the successive context engineering approach for today's topics is to start by prompting Grok to look at the topic with a focus on the following sub-topics:
 - Understand principle of gradual challenge increase
 - Add repetitions or hold time to current exercises

@@ -542,9 +542,11 @@ Today's topic is primarily about mitochonrial assessment.  The conventional one-
 
 ### [Day 35 - July 5, 2025](https://docs.google.com/document/d/1bhpowV7Ka8Thqfg0yeGwYpbdFmJp4hbyldWji-qrsGM/edit?usp=sharingc ) | [Intellectual Wellbeing: Developing Elite Skills and Upgrading Disciplines](https://g.co/gemini/share/15eca02a4ba7)
 
-Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... that and all of the other baggage one is carrying.
+Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... that and all of the other baggage one is carrying. It's mostly the other baggages, ie most of your gains come from what you REMOVE, rather than what you swallow -- BUT, technical debt, in the GENERAL sense, is the accumulated cost of shortcuts or suboptimal choices made in the creation or use of any tool, process, or system, which hinders future development, adaptability, or performance and requires future remediation ... using tools better is most of what upgrading intellectual wellbeing is about.
 
-But how do we make it better? It's fine to say "Work SMARTER, not harder" -- but when people hear something like that, MOST people just sort of implicitly give up, roll their eyes and WTF the whole thing, give up on even trying to try to improve and just stop working as hard. Never mind the SMARTER part. 
+***But how do we make pay down technical debt, especially, since, as technology advances our technical debt is ALWAYS increasing?*** 
+
+It's fine to say "Work SMARTER, not harder" -- but when people hear something like that, MOST people just sort of implicitly give up, roll their eyes and WTF the whole thing, give up on even trying to try to improve and just stop working as hard. Never mind the SMARTER part. 
 
 But HOW DOES SOMEONE WORK SMARTER?  For anyone aspiring to elite levels of performance ... or, screw the "elite" part of that ... just a level of performance past glacial iceflow speed ... for that matter, for anyone just aspiring to get out of bed in the morning ... we have to think about developing [what are to our level now] new elite-level skills and constantly upgrading disciplines ... or else we're pretty much just spectators and might as well just watch stuff from bed and hope to pass out.
 

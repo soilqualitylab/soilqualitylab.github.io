@@ -542,7 +542,9 @@ Today's topic is primarily about mitochonrial assessment.  The conventional one-
 
 ### [Day 35 - July 5, 2025](https://docs.google.com/document/d/1bhpowV7Ka8Thqfg0yeGwYpbdFmJp4hbyldWji-qrsGM/edit?usp=sharingc ) | [Intellectual Wellbeing: Developing Elite Skills and Upgrading Disciplines](https://g.co/gemini/share/15eca02a4ba7)
 
-Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... that and all of the other baggage one is carrying. It's mostly the other baggages, ie most of your gains come from what you REMOVE, rather than what you swallow -- BUT, technical debt, in the GENERAL sense, is the accumulated cost of shortcuts or suboptimal choices made in the creation or use of any tool, process, or system, which hinders future development, adaptability, or performance and requires future remediation ... using tools better is most of what upgrading intellectual wellbeing is about.
+Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... you're slow as fuck to start with AND you don't work at keeping up, so you get slower.
+
+So technical debt IS killing your velocity ... well, that ... and all of the other baggage one is carrying. For today, let's ignore the fact that it's mostly your other baggage, ie most of your gains come from what you REMOVE, rather than what you swallow -- BUT, technical debt, in the GENERAL sense, is the accumulated cost of shortcuts or suboptimal choices made in the creation or use of any tool, process, or system, which hinders future development, adaptability, or performance and requires future remediation ... using tools better is most of what upgrading intellectual wellbeing is about.
 
 ***But how do we make pay down technical debt, especially, since, as technology advances our technical debt is ALWAYS increasing?*** 
 

@@ -575,10 +575,11 @@ After giving a cursory look over their backgrounds and contributions, Gemini AI 
 - Synthesize the identified attributes into a list of at least 25 unique common skillsets, habits, or personal disciplines, providing brief explanations for each based on the gathered information.
 
 ### Day 36 - July 6, 2025 | Social Connection: Community Fitness
-- Participate in local fitness group or class
-- Encourage someone else's health journey
-- Share resources or knowledge about wellness
-- Practice being supportive workout companion
+- **Participate** in whatever fitness activities are available locally, eg Community Gardens, home HIIT Tabata exercise snacks ... you are probably not going to have the best of everything, stop whining or make excuses, you can MAKE THE BEST OF WHAT YOU HAVE
+- Encourage someone else's health journey, with beligerence if necessary. OR ELSE, they will die
+- Share resources about wellness; encourage others to develop their own fitness knowledge. For example, remind them that every hour of sweating and exercising contributes 5-10 hours of healthier life expectancy -- maybe not true if they already exercise 3 hours per week, but if they are basically sedentary, adding 3 hours of exercise per week will EASILY add 1-2 days [for each week one exercises] of HEALTHY life to their lifespan, ie add 3 hours/week of exercise per week for a year, add 7-15 weeks of healthy lifespan -- do it consistently for a decade, add a year ... *THE POINT: Exercise does not take time, it add to one's allotment of healthier, happier life*.
+- Practice being supportive or obnoxious or whateverTF it takes to get people to workout and extend their healthy lifespans.  Just accept that you are going to have to be an annoying pest, because people tend to indulge in spectator-driven affluent lifestyles that encourage them to be lazy fat fucks.
+- OTHERWISE, if you end up living with a bunch of sedentary fat lazy complaining gossips, you deserve it.
 
 ### Day 37 - July 7, 2025 | Rest & Recovery: Heat Recovery
 - Learn cooling strategies for summer exercise recovery

@@ -574,7 +574,7 @@ After giving a cursory look over their backgrounds and contributions, Gemini AI 
 - Extract and categorize distinct skillsets (e.g., analytical thinking, mathematical prowess, programming proficiency), habits (e.g., deep work, iterative experimentation, meticulous documentation), and personal disciplines (e.g., perseverance, intellectual curiosity, critical self-reflection) that are consistently present across multiple researchers.
 - Synthesize the identified attributes into a list of at least 25 unique common skillsets, habits, or personal disciplines, providing brief explanations for each based on the gathered information.
 
-### Day 36 - July 6, 2025 | Social Connection: Community Fitness
+### [Day 36 - July 6, 2025](https://docs.google.com/document/d/1Thl1GY1AKJRMThtNGnDeE4UO4VsEPuUDngQT78ioVHw/edit?usp=sharing) | [Social Connection: Community Fitness](https://g.co/gemini/share/be06f04fe896)
 Today's topic is about adding, developing, improving, growing, expanding social connections based upon participating in and evangelizing community fitness programs.  *This is about encouraging POSITIVE social connections, rather than negative social connections, eg drinking alcohol or swallowing extra food.*
 
 In a nutshell, the successive context engineering approach for today's topics was used by prompting Grok to look at the topic with a focus on the following sub-topics:

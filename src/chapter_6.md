@@ -548,9 +548,11 @@ Based on some very preliminary work to develop context for the AI to assess the 
 
 ### [Day 35 - July 5, 2025](https://docs.google.com/document/d/1bhpowV7Ka8Thqfg0yeGwYpbdFmJp4hbyldWji-qrsGM/edit?usp=sharingc ) | [Intellectual Wellbeing: Developing Elite Skills and Upgrading Disciplines](https://g.co/gemini/share/15eca02a4ba7)
 
-Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... you're slow as fuck to start with AND you don't work at keeping up, so you get slower.
+Did you ever think to yourself, "Is technical debt killing my velocity?" ... OF COURSE, it is ... you're slow as fuck to start with AND you don't work at keeping up, let alone getting smarter, so you get slower.
 
-So technical debt IS killing your velocity ... well, that ... and all of the other baggage one is carrying. For today, let's ignore the fact that it's mostly your other baggage, ie most of your gains come from what you REMOVE, rather than what you swallow -- BUT, technical debt, in the GENERAL sense, is the accumulated cost of shortcuts or suboptimal choices made in the creation or use of any tool, process, or system, which hinders future development, adaptability, or performance and requires future remediation ... using tools better is most of what upgrading intellectual wellbeing is about.
+So technical debt IS killing your velocity ... well, that ... and all of the other baggage one is carrying. 
+
+For today, let's ignore the fact that it's mostly your other baggage, ie most of your gains come from what you REMOVE, rather than what you swallow -- BUT, technical debt, in the GENERAL sense, is the accumulated cost of shortcuts or suboptimal choices made in the creation or use of any tool, process, or system, which hinders future development, adaptability, or performance and requires future remediation ... using tools better is most of what upgrading intellectual wellbeing is about.
 
 ***But how do we make pay down technical debt, especially, since, as technology advances our technical debt is ALWAYS increasing?*** 
 
@@ -558,7 +560,11 @@ It's fine to say "Work SMARTER, not harder" -- but when people hear something li
 
 But HOW DOES SOMEONE WORK SMARTER?  For anyone aspiring to elite levels of performance ... or, screw the "elite" part of that ... just a level of performance past glacial iceflow speed ... for that matter, for anyone just aspiring to get out of bed in the morning ... we have to think about developing [what are to our level now] new elite-level skills and constantly upgrading disciplines ... or else we're pretty much just spectators and might as well just watch stuff from bed and hope to pass out.
 
-We could use any discipline for this, martial arts is never lacking in metaphors ... but **today**'s topic will consider the example of Meta's AI researchers, such as Bansal, Zhao, Bi, Yu, Beyer, Kolesnikov, Rae, Ren, Sun, Pobar, and Schalkwyk. These individuals have made significant contributions to breakthrough AI systems like ChatGPT, GPT-4, Gemini, Vision Transformer, Gopher, Chinchilla, YouTube Shorts algorithms, Waymo's perception systems, and Google Voice Search. The goal our request of AI today is understand common attributes and synthesize a comprehensive understanding of the common skills, workflows and disciplines that contributed to or help propel these 11 researchers' success. Gemini AI was prompted to:
+We could use any discipline for this, martial arts is never lacking in metaphors ... but in **today**'s topic, we will consider the example of Meta's AI researchers, such as Bansal, Zhao, Bi, Yu, Beyer, Kolesnikov, Rae, Ren, Sun, Pobar, and Schalkwyk. What are the common attributes, skills, and disciplines that have contributed to their success ... might these things generalize to other researchers, or even to other normalish people, like old retired geezers, in general?
+
+These individuals have made significant contributions to breakthrough AI systems like ChatGPT, GPT-4, Gemini, Vision Transformer, Gopher, Chinchilla, YouTube Shorts algorithms, Waymo's perception systems, and Google Voice Search. The goal our request of AI today is understand common attributes and synthesize a comprehensive understanding of the common skills, workflows and disciplines that contributed to or help propel these 11 researchers' success. 
+
+After giving a cursory look over their backgrounds and contributions, Gemini AI was prompted to:
 - For each of the 11 researchers (Bansal, Zhao, Bi, Yu, Beyer, Kolesnikov, Rae, Ren, Sun, Pobar, Schalkwyk), gather comprehensive biographical information, focusing on their academic background, career trajectory, and major contributions to AI.
 - Investigate their specific roles and contributions to the breakthrough AI systems mentioned (e.g., ChatGPT, GPT-4, Gemini, Vision Transformer, Gopher, Chinchilla, YouTube Shorts algorithms, Waymo's perception systems, Google Voice Search).
 - Analyze interviews, public talks, publications, and profiles for each researcher to identify their research philosophy, problem-solving approaches, and methodologies.

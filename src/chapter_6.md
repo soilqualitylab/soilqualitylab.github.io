@@ -599,8 +599,9 @@ Then using [Grok's output](https://grok.com/share/c2hhcmQtMg%3D%3D_67763a46-e867
 - Structure the final output as an exhaustive report with distinct sections covering the theological foundation, comparative spiritual insights, a practical guide to implementation for both local and virtual communities, and the benefits of such a program.
 
 
-### Day 37 - July 7, 2025 | Rest & Recovery: Heat Recovery
-First, Grok was prompted for better ways to:
+### [Day 37 - July 7, 2025](https://docs.google.com/document/d/1kWMdEwLoiq0IrCwft_MlZeCzUWHKtfZj_0oh8lB2xOs/edit?usp=sharing) | [Rest & Recovery: Heat Recovery](https://g.co/gemini/share/3d755e79ade8)
+
+To kick off the AI-assisted context engineering, Grok was prompted for better ways to:
 - Learn cooling strategies for summer exercise recovery
 - Practice contrast therapy (cool shower after heat)
 - Monitor fatigue levels in hot weather

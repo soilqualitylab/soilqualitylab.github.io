@@ -646,11 +646,11 @@ To START OFF, Gemini was prompted to:
 
 Using this [STARTER backgrounder](https://docs.google.com/document/d/1FYCF58Z1g2oZKZPHBGezU3ZTn1ZEI6Qtp-hz7VxeStM/edit?usp=sharing) and [interactive webpage](https://g.co/gemini/share/b4fcb261fcd3), Grok was then prompted to:
 
-- Learn about sodium, potassium needs in summer
-- Experiment with natural electrolyte sources
-- Monitor hydration through urine color awareness
-- Balance water intake with mineral replacement
-- Brainstorm ideas and explore even better ways to learn how to learn through functional mastery hydration and electolyte balancing
+- Dive much more deeply into cheap, effective ways to meet sodium, potassium and other electrolyte needs in summer
+- Suggest ways that others have successfully experimented with natural electrolyte sources
+- Explore complementary ways to provide more information than just monitoring hydration through urine color awareness
+- Explore different ways that athletes, coaches, professionals suggest to balance water intake with mineral replacement
+- Brainstorm ideas from various sources on X and explore even better ways to learn how to learn through functional mastery hydration and electolyte balancing
 
 ### Day 40 - July 10, 2025 | Mobility: Self-Coaching and Learning To Learn Better
 To START OFF, Gemini was prompted to:

@@ -661,7 +661,7 @@ To START OFF, Gemini was prompted to:
 - Find practical techniques for developing mind-muscle connection, analyzing one's own exercise form (e.g., through video analysis), and effectively using educational content for physical improvement.
 - Synthesize all findings into a comprehensive STARTER backgrounder on 'Movement Learning'. This backgrounder must: (a) Frame fitness as a continuous learning process, not just a physical activity.(b) Apply each of the five learning dimensions from the source text to the specific context of learning and self-coaching physical movements. (c) Use insights from the YouTube comments to proactively address potential hurdles and misunderstandings in the learning process. (d) Provide actionable strategies for an individual to become a better self-coach in their fitness journey.
 
-Using this [STARTER backgrounder](https://docs.google.com/document/d/1CZq73bjVLI5zD9IvpPw2HvvHornCUE7n0oG_r11j0Wc/edit?usp=sharing) and [interactive webpage](https://g.co/gemini/share/bee1b7eb9e43), Grok was then prompted to:
+Using this [STARTER backgrounder](https://docs.google.com/document/d/1CZq73bjVLI5zD9IvpPw2HvvHornCUE7n0oG_r11j0Wc/edit?usp=sharing) and [interactive webpage](https://g.co/gemini/share/dce55b45f5a9), Grok was then prompted to:
 
 - Prepare body for different seasonal physical activities (gardening, watering, weeding, landscaping, sorting, moving, sifting materials, garage cleaning and disposal, hiking, harvesting, delivering produce, doing martial arts, archery training, etc)
 - Practice functional movement-specific movement patterns

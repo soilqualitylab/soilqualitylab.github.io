@@ -633,6 +633,7 @@ Then adapting [Grok's output](https://grok.com/share/c2hhcmQtMg%3D%3D_e6ac557f-0
 - Structure the collected information into a practical guide. Provide specific, actionable exercises drawn from each tradition, and include a dedicated section on how to adapt these techniques to safely and effectively coach others dealing with the combined burden of cumulative and heat stress.
 
 ### Day 39 - July 9, 2025 | Hydration: Electrolyte Balance Self-Coaching and Learning To Learn Better
+
 To START OFF, Gemini was prompted to:
 - Analyze the 'learning to learn' framework, focusing on its five core dimensions: Deep Processing, Self-Regulation, Mindset, Retrieval, and Self-Management.
 - Visit a [specific YouTube video page on "Learning To Learn"](https://www.youtube.com/watch?v=dYRmZdwi9mo) to browse the comments section, identifying common questions, misunderstandings, and points of confusion from viewers.
@@ -643,7 +644,8 @@ To START OFF, Gemini was prompted to:
 - Explore how modern technologies, including AI-assisted applications and wearable devices, can aid in the process of self-coaching and personalized health skill acquisition for hydration.
 - Construct a comprehensive backgrounder on Electrolyte Balance, framing it as a continuous learning skill. This document should integrate all researched findings, use the five dimensions as a structural guide, and address the common misunderstandings identified from the video comments.
 
-Using this [STARTER backgrounder]() and [interactive webpage](), Grok was then prompted to:), Grok was then prompted to:
+Using this [STARTER backgrounder](https://docs.google.com/document/d/1FYCF58Z1g2oZKZPHBGezU3ZTn1ZEI6Qtp-hz7VxeStM/edit?usp=sharing) and [interactive webpage](https://g.co/gemini/share/b4fcb261fcd3), Grok was then prompted to:
+
 - Learn about sodium, potassium needs in summer
 - Experiment with natural electrolyte sources
 - Monitor hydration through urine color awareness

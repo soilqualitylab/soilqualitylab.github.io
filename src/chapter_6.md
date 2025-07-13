@@ -776,15 +776,16 @@ Finally ... using BOTH [Grok4's output](https://x.com/i/grok/share/11DFyRsoC9AZA
 - Gather and cite academic studies, historical sources, and expert opinions to thoroughly reference all claims made throughout the report, ensuring a well-supported and credible document.
 
 
-### Day 44 - July 14, 2025 | Nutrition: Seasonal Nutrition Advice To Exploit Fresh Produce From The Garden
-Grok4 was prompted to develop a very specific backgrounder on nutrition for the remaineder of the growing season, in order to exploit the massive amounts of fresh green produce available from the garden.
+### [Day 44 - July 14, 2025](https://docs.google.com/document/d/1rrVrLr8gKjRy590Jm_PMqkzwoi4vb-3eho42q0ghysM/edit?usp=sharing) | [Nutrition: Seasonal Strategies For Exploiting Unlimited Fresh Produce From The Garden](https://g.co/gemini/share/d081a09c3679)
+
+To provide a solid foundation for this, Grok4 was prompted to develop a very specific backgrounder on nutrition for the remaineder of the growing season, in order to exploit the massive amounts of fresh green produce available from the garden.
 - Seasonal nutrition is mostly about juicing fresh vegetables
 - It's also focused on lean proteins, boiled eggs, peanut butter, grilled meats
 - Portion awareness is not a factor, due to the appetitite control by juiced produce
 - The might be deficiencies, so the plan is balanced for peak nourishment
 - The plan includes yogurt fermenet with L. Reuteri bacterie for probiotics and oxytocin
 
-Using [Grok4's output](https://x.com/i/grok/share/11DFyRsoC9AZAy6mpjXrSymdc), Gemini was prompted as follows to produce a comprehensive backgrounder on seasonal nutrition for an active monk:
+Using only [Grok4's output](https://x.com/i/grok/share/11DFyRsoC9AZAy6mpjXrSymdc) and avoiding other sources, eg ChatGPT, Antropic, DeekSeek, et al, which have proven to be especially more prone to aggregious error, bias and homogenized industry propaganda baked into LLMs, Gemini was prompted as follows to produce a comprehensive backgrounder on seasonal nutrition for an active monk:
 
 - Analyze the user-provided text to identify the core components of the diet: seasonal eating based on a personal garden, juicing, homemade L. Reuteri yogurt, simple protein additions, and the specific lifestyle context of a 65-year-old active monk.
 - Conduct in-depth research on the health benefits of Lactobacillus reuteri, focusing on its probiotic effects on the gut microbiome and its scientifically documented role in stimulating oxytocin release and the associated physiological and psychological benefits.
@@ -793,6 +794,8 @@ Using [Grok4's output](https://x.com/i/grok/share/11DFyRsoC9AZAy6mpjXrSymdc), Ge
 - Develop a seasonal utilization plan for the monk's garden produce (leafy greens, broccoli, rhubarb, squash, tomatoes, peppers, etc.), focusing on juicing strategies, nutrient pairing, and simple preparation methods to maximize the benefits of the hyper-fresh, abundant supply.
 - Develop a comprehensive list of protein sources that fit the 'fresh and minimal prep' ethos, drawing from nutritional science and the researched monastic traditions, including plant-based, dairy, and animal options.
 - Synthesize all gathered information into a structured and referenced backgrounder. The report should integrate the user's foundational plan with scientific evidence, cross-cultural wisdom, and practical, season-specific recommendations based on the garden's output.
+
+**It's worth noting here that Gemini's final output is still basically HIGHLY FLAWED ... for things like suggesting the consumption of lentils, which require preparation and cooking, which is NOT in line with the user's request for a simple, no-cook, seasonal nutrition plan. So the final output also fails to adequately address the specific needs of a 65-year-old active monk ... it's not possible to BEAT THE STUPID out of the public LLMs that are a reflection of being trained on propaganda ... at some point, one has to stop trying to overcome the massive PROPAGANDIZATION implicit in all media, including the public AI LLMS ... the only fix for this is to BEGIN THE PROCESS OF CLEANING UP the LLMs and sifting out the propaganda and poisonous PR baked into media and scientific bodies of literature, as we move to the PRIVATELY TWEAKED LLMs and PRIVATELY DEVELOPED RAG AI system running on a mini pc with 96 GB of DDR5 and a GPU with 24GB of RAM.**
 
 ### Day 45 - July 15, 2025 | Intellectual Wellbeing: Movement Learning
 - Study proper form for exercises you're doing regularly

@@ -21,6 +21,8 @@
   - [The Necessity Of Transformation](nested/sub-chapter_6.A.md)
   - [Best Practices In AI Context Engineering](nested/sub-chapter_6.B.md)
   - [Community Development To Improve Context Engineering](nested/sub-chapter_6.C.md)
+  - [Dev Bootcamp For AI-Assisted Communication Improvement AI](nested/sub-chapter_6.D.md)
+  - [References For Dev Bootcamp For AI-Assisted Communication Improvement AI](nested/sub-chapter_6.E.md)
 
 - [Develop Locally, Deploy To The Cloud](./chapter_5.md)
   - [Section 1: Foundations of Local Development for ML/AI](nested/sub-chapter_5.1.md)

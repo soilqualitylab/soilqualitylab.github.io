@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dev Bootcamp For AI-Assisted Communication Improvement AI - Beat The Addiction To Comfort</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Beat The Addiction To Comfort</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="development-bootcamp-for-ai-assisted-communication-improvement-ai"><a class="header" href="#development-bootcamp-for-ai-assisted-communication-improvement-ai">Development Bootcamp For AI-Assisted Communication Improvement AI</a></h1>
+<p>This 200-module training bootcamp is designed to guide trainees through the process of building a RAG-based AI communication system using the Modular platform, Mojo programming language, and MAX engine. The system will leverage LLMs for inference on smartphones, notebooks, workstations, and use cloud compute for training. It emphasizes enhancing local community communication by improving promotion, alternative options discovery, recommendations for services/stores, and identifying hidden demands.</p>
+<p>The bootcamp assumes trainees have basic AI knowledge and can use AI tools (e.g., Grok or similar) to resolve issues. Hardware starts with a mini PC equipped with PCIe 4.0 eGPU and a compatible GPU (e.g., NVIDIA/AMD for MAX compatibility), supplemented by rentable cloud compute (e.g., AWS, GCP with GPU instances).</p>
+<p>Modules are structured progressively: foundational knowledge, core technologies, hardware/integration, development, and advanced application. Each module has 3 sub-modules:</p>
+<ul>
+<li><strong>Sub-module 1</strong>: Theory and Concepts (reading, videos, discussions).</li>
+<li><strong>Sub-module 2</strong>: Hands-on Practice (code exercises, setups on mini PC/cloud).</li>
+<li><strong>Sub-module 3</strong>: Application Challenge (mini-project tying to the communication system).</li>
+</ul>
+<p>Trainees should allocate 1-2 weeks or 5-10 days per 10 modules, using AI for upgrading skills and debugging.</p>
+<h4 id="section-1-introduction-to-the-project-and-tools-modules-1-20"><a class="header" href="#section-1-introduction-to-the-project-and-tools-modules-1-20">Section 1: Introduction to the Project and Tools (Modules 1-20)</a></h4>
+<p><strong>Module 1: Overview of the AI Communication System</strong></p>
+<ul>
+<li>Sub-module 1: Understanding the system's goals for community enhancement and RAG/LLM integration.</li>
+<li>Sub-module 2: Mapping user needs to AI features like recommendations and hidden demand detection.</li>
+<li>Sub-module 3: Brainstorm a simple use case for local promotion using pseudocode.</li>
+</ul>
+<p><strong>Module 2: Introduction to Modular Ecosystem</strong></p>
+<ul>
+<li>Sub-module 1: Exploring Modular's vision for unified AI compute.</li>
+<li>Sub-module 2: Installing Modular tools on mini PC.</li>
+<li>Sub-module 3: Run a basic hello-world in Mojo on eGPU.</li>
+</ul>
+<p><strong>Module 3: Mojo Language Basics</strong></p>
+<ul>
+<li>Sub-module 1: Mojo as a Python superset for performance.</li>
+<li>Sub-module 2: Writing simple Mojo scripts.</li>
+<li>Sub-module 3: Convert a Python script to Mojo for speed comparison.</li>
+</ul>
+<p><strong>Module 4: MAX Platform Fundamentals</strong></p>
+<ul>
+<li>Sub-module 1: MAX as an AI compute suite for CPUs/GPUs.</li>
+<li>Sub-module 2: Setting up MAX on mini PC with eGPU.</li>
+<li>Sub-module 3: Deploy a sample model inference via MAX.</li>
+</ul>
+<p><strong>Module 5: Hardware Setup for Development</strong></p>
+<ul>
+<li>Sub-module 1: PCIe 4.0 eGPU configurations and compatibility.</li>
+<li>Sub-module 2: Assembling mini PC with GPU and testing.</li>
+<li>Sub-module 3: Benchmark GPU performance for AI tasks.</li>
+</ul>
+<p><strong>Module 6: Cloud Compute Integration</strong></p>
+<ul>
+<li>Sub-module 1: Rentable cloud options for training (e.g., GPU instances).</li>
+<li>Sub-module 2: Setting up cloud accounts and linking to local setup.</li>
+<li>Sub-module 3: Transfer data between mini PC and cloud.</li>
+</ul>
+<p><strong>Module 7: AI Ethics in Community Systems</strong></p>
+<ul>
+<li>Sub-module 1: Bias, privacy in local recommendations.</li>
+<li>Sub-module 2: Audit a sample dataset for fairness.</li>
+<li>Sub-module 3: Design ethical guidelines for the system.</li>
+</ul>
+<p><strong>Module 8: Project Management for AI Dev</strong></p>
+<ul>
+<li>Sub-module 1: Agile methods for AI projects.</li>
+<li>Sub-module 2: Set up Git for version control.</li>
+<li>Sub-module 3: Plan a sprint for system prototype.</li>
+</ul>
+<p><strong>Module 9: Using AI Assistants for Learning</strong></p>
+<ul>
+<li>Sub-module 1: Leveraging LLMs like Grok for debugging.</li>
+<li>Sub-module 2: Query AI for Mojo syntax examples.</li>
+<li>Sub-module 3: Solve a stuck exercise with AI guidance.</li>
+</ul>
+<p><strong>Module 10: Bootcamp Tools and Resources</strong></p>
+<ul>
+<li>Sub-module 1: Recommended readings on Modular docs.</li>
+<li>Sub-module 2: Install IDEs for Mojo/MAX development.</li>
+<li>Sub-module 3: Create a resource bookmark list.</li>
+</ul>
+<p><strong>Module 11: Data Handling Basics</strong></p>
+<ul>
+<li>Sub-module 1: Local community data types (e.g., user needs, inventory).</li>
+<li>Sub-module 2: Load datasets on mini PC.</li>
+<li>Sub-module 3: Clean data for RAG use.</li>
+</ul>
+<p><strong>Module 12: Python Review for Mojo Transition</strong></p>
+<ul>
+<li>Sub-module 1: Key Python features used in AI.</li>
+<li>Sub-module 2: Write AI scripts in Python.</li>
+<li>Sub-module 3: Identify performance bottlenecks.</li>
+</ul>
+<p><strong>Module 13: Introduction to Inference vs. Training</strong></p>
+<ul>
+<li>Sub-module 1: Differences and hardware needs.</li>
+<li>Sub-module 2: Run inference on eGPU.</li>
+<li>Sub-module 3: Simulate training on cloud mockup.</li>
+</ul>
+<p><strong>Module 14: System Architecture Overview</strong></p>
+<ul>
+<li>Sub-module 1: High-level design of RAG system.</li>
+<li>Sub-module 2: Diagram components.</li>
+<li>Sub-module 3: Prototype a basic flow.</li>
+</ul>
+<p><strong>Module 15: Community Needs Analysis</strong></p>
+<ul>
+<li>Sub-module 1: Survey methods for local demands.</li>
+<li>Sub-module 2: Collect sample data.</li>
+<li>Sub-module 3: Analyze for hidden patterns.</li>
+</ul>
+<p><strong>Module 16: Security Basics for AI Systems</strong></p>
+<ul>
+<li>Sub-module 1: Data protection in community apps.</li>
+<li>Sub-module 2: Implement basic encryption.</li>
+<li>Sub-module 3: Test for vulnerabilities.</li>
+</ul>
+<p><strong>Module 17: Versioning Models and Code</strong></p>
+<ul>
+<li>Sub-module 1: MLflow or similar for tracking.</li>
+<li>Sub-module 2: Set up model registry.</li>
+<li>Sub-module 3: Version a sample LLM.</li>
+</ul>
+<p><strong>Module 18: Collaboration Tools</strong></p>
+<ul>
+<li>Sub-module 1: GitHub for team dev.</li>
+<li>Sub-module 2: Collaborative coding session.</li>
+<li>Sub-module 3: Merge conflicts resolution.</li>
+</ul>
+<p><strong>Module 19: Performance Metrics for AI</strong></p>
+<ul>
+<li>Sub-module 1: Accuracy, speed, efficiency.</li>
+<li>Sub-module 2: Measure on mini PC.</li>
+<li>Sub-module 3: Optimize a simple task.</li>
+</ul>
+<p><strong>Module 20: Mid-Section Review</strong></p>
+<ul>
+<li>Sub-module 1: Recap intro concepts.</li>
+<li>Sub-module 2: Quiz on tools.</li>
+<li>Sub-module 3: Group discussion on project vision.</li>
+</ul>
+<h4 id="section-2-ai-and-ml-fundamentals-modules-21-40"><a class="header" href="#section-2-ai-and-ml-fundamentals-modules-21-40">Section 2: AI and ML Fundamentals (Modules 21-40)</a></h4>
+<p><strong>Module 21: Machine Learning Basics</strong></p>
+<ul>
+<li>Sub-module 1: Supervised vs. unsupervised learning.</li>
+<li>Sub-module 2: Train a simple model in Python.</li>
+<li>Sub-module 3: Apply to community data classification.</li>
+</ul>
+<p><strong>Module 22: Neural Networks Introduction</strong></p>
+<ul>
+<li>Sub-module 1: Layers, activations, backpropagation.</li>
+<li>Sub-module 2: Build a basic NN.</li>
+<li>Sub-module 3: Visualize for recommendation tasks.</li>
+</ul>
+<p><strong>Module 23: Data Preprocessing Techniques</strong></p>
+<ul>
+<li>Sub-module 1: Normalization, tokenization.</li>
+<li>Sub-module 2: Process local datasets.</li>
+<li>Sub-module 3: Pipeline for RAG input.</li>
+</ul>
+<p><strong>Module 24: Evaluation Metrics</strong></p>
+<ul>
+<li>Sub-module 1: Precision, recall, F1 for AI systems.</li>
+<li>Sub-module 2: Evaluate a model.</li>
+<li>Sub-module 3: Metrics for communication effectiveness.</li>
+</ul>
+<p><strong>Module 25: Overfitting and Regularization</strong></p>
+<ul>
+<li>Sub-module 1: Concepts and avoidance strategies.</li>
+<li>Sub-module 2: Apply dropout in code.</li>
+<li>Sub-module 3: Tune for LLM fine-tuning.</li>
+</ul>
+<p><strong>Module 26: Transfer Learning</strong></p>
+<ul>
+<li>Sub-module 1: Using pre-trained models.</li>
+<li>Sub-module 2: Fine-tune on mini PC.</li>
+<li>Sub-module 3: Adapt for local needs detection.</li>
+</ul>
+<p><strong>Module 27: Embeddings and Vector Spaces</strong></p>
+<ul>
+<li>Sub-module 1: Word embeddings basics.</li>
+<li>Sub-module 2: Generate embeddings.</li>
+<li>Sub-module 3: Use in similarity search for alternatives.</li>
+</ul>
+<p><strong>Module 28: Clustering Algorithms</strong></p>
+<ul>
+<li>Sub-module 1: K-means, DBSCAN.</li>
+<li>Sub-module 2: Cluster community data.</li>
+<li>Sub-module 3: Identify hidden demands.</li>
+</ul>
+<p><strong>Module 29: Reinforcement Learning Intro</strong></p>
+<ul>
+<li>Sub-module 1: For recommendation optimization.</li>
+<li>Sub-module 2: Simple RL example.</li>
+<li>Sub-module 3: Simulate promotion strategies.</li>
+</ul>
+<p><strong>Module 30: ML Pipelines</strong></p>
+<ul>
+<li>Sub-module 1: End-to-end workflows.</li>
+<li>Sub-module 2: Build a pipeline.</li>
+<li>Sub-module 3: Integrate with Modular.</li>
+</ul>
+<p><strong>Module 31: Deep Learning Frameworks Review</strong></p>
+<ul>
+<li>Sub-module 1: PyTorch, TensorFlow basics.</li>
+<li>Sub-module 2: Compare with MAX.</li>
+<li>Sub-module 3: Migrate code to Mojo.</li>
+</ul>
+<p><strong>Module 32: GPU Acceleration Basics</strong></p>
+<ul>
+<li>Sub-module 1: CUDA/ROCm for eGPU.</li>
+<li>Sub-module 2: Run accelerated code.</li>
+<li>Sub-module 3: Benchmark on mini PC.</li>
+</ul>
+<p><strong>Module 33: Feature Engineering</strong></p>
+<ul>
+<li>Sub-module 1: For community features.</li>
+<li>Sub-module 2: Engineer features from data.</li>
+<li>Sub-module 3: Enhance for RAG retrieval.</li>
+</ul>
+<p><strong>Module 34: Anomaly Detection</strong></p>
+<ul>
+<li>Sub-module 1: In user needs data.</li>
+<li>Sub-module 2: Implement isolation forest.</li>
+<li>Sub-module 3: Detect unusual demands.</li>
+</ul>
+<p><strong>Module 35: Time Series Analysis</strong></p>
+<ul>
+<li>Sub-module 1: For demand forecasting.</li>
+<li>Sub-module 2: Analyze sales data.</li>
+<li>Sub-module 3: Predict inventory needs.</li>
+</ul>
+<p><strong>Module 36: Ensemble Methods</strong></p>
+<ul>
+<li>Sub-module 1: Boosting, bagging.</li>
+<li>Sub-module 2: Build ensemble model.</li>
+<li>Sub-module 3: Improve recommendations.</li>
+</ul>
+<p><strong>Module 37: Bias Mitigation</strong></p>
+<ul>
+<li>Sub-module 1: Techniques in ML.</li>
+<li>Sub-module 2: Debias a dataset.</li>
+<li>Sub-module 3: Apply to local system.</li>
+</ul>
+<p><strong>Module 38: Scalable ML</strong></p>
+<ul>
+<li>Sub-module 1: Distributed training concepts.</li>
+<li>Sub-module 2: Setup on cloud.</li>
+<li>Sub-module 3: Scale a simple model.</li>
+</ul>
+<p><strong>Module 39: ML Ops Introduction</strong></p>
+<ul>
+<li>Sub-module 1: Deployment cycles.</li>
+<li>Sub-module 2: CI/CD for models.</li>
+<li>Sub-module 3: Pipeline for communication system.</li>
+</ul>
+<p><strong>Module 40: Section Review and Quiz</strong></p>
+<ul>
+<li>Sub-module 1: Recap ML fundamentals.</li>
+<li>Sub-module 2: Hands-on quiz.</li>
+<li>Sub-module 3: Mini-project integration.</li>
+</ul>
+<h4 id="section-3-large-language-models-modules-41-60"><a class="header" href="#section-3-large-language-models-modules-41-60">Section 3: Large Language Models (Modules 41-60)</a></h4>
+<p><strong>Module 41: LLM Architecture</strong></p>
+<ul>
+<li>Sub-module 1: Transformers, attention mechanisms.</li>
+<li>Sub-module 2: Dissect a small LLM.</li>
+<li>Sub-module 3: Relate to communication tasks.</li>
+</ul>
+<p><strong>Module 42: Pre-trained LLMs</strong></p>
+<ul>
+<li>Sub-module 1: GPT, BERT overview.</li>
+<li>Sub-module 2: Load and inference on eGPU.</li>
+<li>Sub-module 3: Generate promotion text.</li>
+</ul>
+<p><strong>Module 43: Fine-Tuning LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Methods like PEFT.</li>
+<li>Sub-module 2: Fine-tune on cloud.</li>
+<li>Sub-module 3: Adapt for local recommendations.</li>
+</ul>
+<p><strong>Module 44: Prompt Engineering</strong></p>
+<ul>
+<li>Sub-module 1: Techniques for better outputs.</li>
+<li>Sub-module 2: Craft prompts.</li>
+<li>Sub-module 3: Optimize for user needs.</li>
+</ul>
+<p><strong>Module 45: LLM Evaluation</strong></p>
+<ul>
+<li>Sub-module 1: BLEU, ROUGE, human eval.</li>
+<li>Sub-module 2: Evaluate generations.</li>
+<li>Sub-module 3: Test on community scenarios.</li>
+</ul>
+<p><strong>Module 46: Quantization for LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Reducing model size.</li>
+<li>Sub-module 2: Quantize a model.</li>
+<li>Sub-module 3: Run on smartphone sim.</li>
+</ul>
+<p><strong>Module 47: Multimodal LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Text + image for promotions.</li>
+<li>Sub-module 2: Integrate modalities.</li>
+<li>Sub-module 3: Recommend based on visuals.</li>
+</ul>
+<p><strong>Module 48: LLM Safety</strong></p>
+<ul>
+<li>Sub-module 1: Alignment, red-teaming.</li>
+<li>Sub-module 2: Implement guards.</li>
+<li>Sub-module 3: Secure community interactions.</li>
+</ul>
+<p><strong>Module 49: Efficient LLM Inference</strong></p>
+<ul>
+<li>Sub-module 1: Batching, caching.</li>
+<li>Sub-module 2: Optimize on MAX.</li>
+<li>Sub-module 3: Speed up for workstations.</li>
+</ul>
+<p><strong>Module 50: LLM Data Preparation</strong></p>
+<ul>
+<li>Sub-module 1: Curating datasets.</li>
+<li>Sub-module 2: Prepare local data.</li>
+<li>Sub-module 3: For hidden demand analysis.</li>
+</ul>
+<p><strong>Module 51: Advanced Fine-Tuning</strong></p>
+<ul>
+<li>Sub-module 1: LoRA, QLoRA.</li>
+<li>Sub-module 2: Apply on cloud.</li>
+<li>Sub-module 3: Tune for alternatives suggestion.</li>
+</ul>
+<p><strong>Module 52: LLM Chains and Agents</strong></p>
+<ul>
+<li>Sub-module 1: LangChain-like setups.</li>
+<li>Sub-module 2: Build chains in Mojo.</li>
+<li>Sub-module 3: Agent for service recommendations.</li>
+</ul>
+<p><strong>Module 53: Knowledge Distillation</strong></p>
+<ul>
+<li>Sub-module 1: From large to small models.</li>
+<li>Sub-module 2: Distill an LLM.</li>
+<li>Sub-module 3: For edge devices.</li>
+</ul>
+<p><strong>Module 54: LLM Deployment Strategies</strong></p>
+<ul>
+<li>Sub-module 1: On-device vs. cloud.</li>
+<li>Sub-module 2: Deploy via MAX.</li>
+<li>Sub-module 3: Hybrid for community system.</li>
+</ul>
+<p><strong>Module 55: Handling Long Contexts</strong></p>
+<ul>
+<li>Sub-module 1: Techniques for extended inputs.</li>
+<li>Sub-module 2: Implement sliding windows.</li>
+<li>Sub-module 3: For detailed user queries.</li>
+</ul>
+<p><strong>Module 56: LLM Interpretability</strong></p>
+<ul>
+<li>Sub-module 1: Attention visualization.</li>
+<li>Sub-module 2: Interpret outputs.</li>
+<li>Sub-module 3: Explain recommendations.</li>
+</ul>
+<p><strong>Module 57: Federated Learning for LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Privacy-preserving training.</li>
+<li>Sub-module 2: Simulate federation.</li>
+<li>Sub-module 3: For local community data.</li>
+</ul>
+<p><strong>Module 58: LLM Optimization Tools</strong></p>
+<ul>
+<li>Sub-module 1: Hugging Face integrations.</li>
+<li>Sub-module 2: Optimize with MAX.</li>
+<li>Sub-module 3: Benchmark on notebooks.</li>
+</ul>
+<p><strong>Module 59: Case Studies in LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Real-world communication apps.</li>
+<li>Sub-module 2: Analyze cases.</li>
+<li>Sub-module 3: Adapt to project.</li>
+</ul>
+<p><strong>Module 60: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: LLM recap.</li>
+<li>Sub-module 2: Comprehensive exercises.</li>
+<li>Sub-module 3: LLM-based mini-system.</li>
+</ul>
+<h4 id="section-4-retrieval-augmented-generation-rag-modules-61-80"><a class="header" href="#section-4-retrieval-augmented-generation-rag-modules-61-80">Section 4: Retrieval-Augmented Generation (RAG) (Modules 61-80)</a></h4>
+<p><strong>Module 61: RAG Fundamentals</strong></p>
+<ul>
+<li>Sub-module 1: Retrieval + generation pipeline.</li>
+<li>Sub-module 2: Build basic RAG.</li>
+<li>Sub-module 3: Apply to user needs.</li>
+</ul>
+<p><strong>Module 62: Vector Databases</strong></p>
+<ul>
+<li>Sub-module 1: FAISS, Pinecone.</li>
+<li>Sub-module 2: Set up database.</li>
+<li>Sub-module 3: Store community data.</li>
+</ul>
+<p><strong>Module 63: Retrieval Techniques</strong></p>
+<ul>
+<li>Sub-module 1: Dense vs. sparse retrieval.</li>
+<li>Sub-module 2: Implement retrievers.</li>
+<li>Sub-module 3: Retrieve alternatives.</li>
+</ul>
+<p><strong>Module 64: Indexing Strategies</strong></p>
+<ul>
+<li>Sub-module 1: For efficient search.</li>
+<li>Sub-module 2: Index local inventories.</li>
+<li>Sub-module 3: Optimize for speed.</li>
+</ul>
+<p><strong>Module 65: RAG Evaluation</strong></p>
+<ul>
+<li>Sub-module 1: Relevance, faithfulness metrics.</li>
+<li>Sub-module 2: Evaluate RAG outputs.</li>
+<li>Sub-module 3: Test on promotion tasks.</li>
+</ul>
+<p><strong>Module 66: Advanced RAG Architectures</strong></p>
+<ul>
+<li>Sub-module 1: Multi-hop, hybrid.</li>
+<li>Sub-module 2: Build advanced RAG.</li>
+<li>Sub-module 3: For hidden demands.</li>
+</ul>
+<p><strong>Module 67: Data Augmentation for RAG</strong></p>
+<ul>
+<li>Sub-module 1: Synthetic data generation.</li>
+<li>Sub-module 2: Augment datasets.</li>
+<li>Sub-module 3: Enhance local knowledge base.</li>
+</ul>
+<p><strong>Module 68: RAG with LLMs</strong></p>
+<ul>
+<li>Sub-module 1: Integrating retrieval in prompts.</li>
+<li>Sub-module 2: Combine with fine-tuned LLM.</li>
+<li>Sub-module 3: Recommend services.</li>
+</ul>
+<p><strong>Module 69: Scaling RAG Systems</strong></p>
+<ul>
+<li>Sub-module 1: Distributed retrieval.</li>
+<li>Sub-module 2: Scale on cloud.</li>
+<li>Sub-module 3: For community scale.</li>
+</ul>
+<p><strong>Module 70: RAG Optimization</strong></p>
+<ul>
+<li>Sub-module 1: Latency reduction.</li>
+<li>Sub-module 2: Optimize with MAX.</li>
+<li>Sub-module 3: Run on smartphones.</li>
+</ul>
+<p><strong>Module 71: RAG Security</strong></p>
+<ul>
+<li>Sub-module 1: Protecting retrieved data.</li>
+<li>Sub-module 2: Implement access controls.</li>
+<li>Sub-module 3: Secure user interactions.</li>
+</ul>
+<p><strong>Module 72: Multimodal RAG</strong></p>
+<ul>
+<li>Sub-module 1: Text + image retrieval.</li>
+<li>Sub-module 2: Build multimodal.</li>
+<li>Sub-module 3: For visual promotions.</li>
+</ul>
+<p><strong>Module 73: RAG Fine-Tuning</strong></p>
+<ul>
+<li>Sub-module 1: Retriever-generator alignment.</li>
+<li>Sub-module 2: Fine-tune components.</li>
+<li>Sub-module 3: Tune for alternatives.</li>
+</ul>
+<p><strong>Module 74: Knowledge Graphs in RAG</strong></p>
+<ul>
+<li>Sub-module 1: Graph-based retrieval.</li>
+<li>Sub-module 2: Build graph.</li>
+<li>Sub-module 3: Link community entities.</li>
+</ul>
+<p><strong>Module 75: RAG Deployment</strong></p>
+<ul>
+<li>Sub-module 1: On-device considerations.</li>
+<li>Sub-module 2: Deploy via Modular.</li>
+<li>Sub-module 3: Integrate in app.</li>
+</ul>
+<p><strong>Module 76: Error Handling in RAG</strong></p>
+<ul>
+<li>Sub-module 1: Hallucination mitigation.</li>
+<li>Sub-module 2: Add checks.</li>
+<li>Sub-module 3: Robustify system.</li>
+</ul>
+<p><strong>Module 77: RAG Case Studies</strong></p>
+<ul>
+<li>Sub-module 1: Real-world applications.</li>
+<li>Sub-module 2: Analyze examples.</li>
+<li>Sub-module 3: Adapt to project.</li>
+</ul>
+<p><strong>Module 78: Hybrid Search in RAG</strong></p>
+<ul>
+<li>Sub-module 1: Combining methods.</li>
+<li>Sub-module 2: Implement hybrid.</li>
+<li>Sub-module 3: For diverse needs.</li>
+</ul>
+<p><strong>Module 79: RAG Monitoring</strong></p>
+<ul>
+<li>Sub-module 1: Logging and metrics.</li>
+<li>Sub-module 2: Set up monitoring.</li>
+<li>Sub-module 3: Track performance.</li>
+</ul>
+<p><strong>Module 80: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: RAG recap.</li>
+<li>Sub-module 2: Full RAG exercise.</li>
+<li>Sub-module 3: RAG prototype for system.</li>
+</ul>
+<h4 id="section-5-mojo-programming-language-modules-81-110"><a class="header" href="#section-5-mojo-programming-language-modules-81-110">Section 5: Mojo Programming Language (Modules 81-110)</a></h4>
+<p><strong>Module 81: Mojo Syntax Deep Dive</strong></p>
+<ul>
+<li>Sub-module 1: Differences from Python.</li>
+<li>Sub-module 2: Write advanced scripts.</li>
+<li>Sub-module 3: Port AI code to Mojo.</li>
+</ul>
+<p><strong>Module 82: Performance Features in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Static typing, compilation.</li>
+<li>Sub-module 2: Optimize loops.</li>
+<li>Sub-module 3: Speed up RAG components.</li>
+</ul>
+<p><strong>Module 83: GPU Programming with Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Kernel writing.</li>
+<li>Sub-module 2: Run on eGPU.</li>
+<li>Sub-module 3: Accelerate inference.</li>
+</ul>
+<p><strong>Module 84: Mojo Libraries for AI</strong></p>
+<ul>
+<li>Sub-module 1: Built-in math/AI libs.</li>
+<li>Sub-module 2: Use in models.</li>
+<li>Sub-module 3: Build custom functions.</li>
+</ul>
+<p><strong>Module 85: Debugging Mojo Code</strong></p>
+<ul>
+<li>Sub-module 1: Tools and techniques.</li>
+<li>Sub-module 2: Debug a script.</li>
+<li>Sub-module 3: Fix AI bugs.</li>
+</ul>
+<p><strong>Module 86: Mojo for Data Processing</strong></p>
+<ul>
+<li>Sub-module 1: Arrays, tensors.</li>
+<li>Sub-module 2: Process datasets.</li>
+<li>Sub-module 3: For community data.</li>
+</ul>
+<p><strong>Module 87: Advanced Types in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Structs, traits.</li>
+<li>Sub-module 2: Implement types.</li>
+<li>Sub-module 3: Use in LLM wrappers.</li>
+</ul>
+<p><strong>Module 88: Parallelism in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Multi-threading.</li>
+<li>Sub-module 2: Parallel code.</li>
+<li>Sub-module 3: Scale retrieval.</li>
+</ul>
+<p><strong>Module 89: Mojo Interop with Python</strong></p>
+<ul>
+<li>Sub-module 1: Calling Python libs.</li>
+<li>Sub-module 2: Hybrid code.</li>
+<li>Sub-module 3: Migrate project code.</li>
+</ul>
+<p><strong>Module 90: Mojo Best Practices</strong></p>
+<ul>
+<li>Sub-module 1: Code style, optimization.</li>
+<li>Sub-module 2: Refactor code.</li>
+<li>Sub-module 3: Apply to system.</li>
+</ul>
+<p><strong>Module 91: Mojo for ML Models</strong></p>
+<ul>
+<li>Sub-module 1: Implementing NNs.</li>
+<li>Sub-module 2: Build simple model.</li>
+<li>Sub-module 3: Integrate with RAG.</li>
+</ul>
+<p><strong>Module 92: Error Handling in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Exceptions, results.</li>
+<li>Sub-module 2: Handle errors.</li>
+<li>Sub-module 3: Robust AI code.</li>
+</ul>
+<p><strong>Module 93: Mojo Testing Frameworks</strong></p>
+<ul>
+<li>Sub-module 1: Unit testing.</li>
+<li>Sub-module 2: Write tests.</li>
+<li>Sub-module 3: Test recommendation logic.</li>
+</ul>
+<p><strong>Module 94: Portability in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Cross-hardware code.</li>
+<li>Sub-module 2: Test on CPU/GPU.</li>
+<li>Sub-module 3: For devices.</li>
+</ul>
+<p><strong>Module 95: Mojo Extensions</strong></p>
+<ul>
+<li>Sub-module 1: Building packages.</li>
+<li>Sub-module 2: Create extension.</li>
+<li>Sub-module 3: For communication features.</li>
+</ul>
+<p><strong>Module 96: Performance Profiling</strong></p>
+<ul>
+<li>Sub-module 1: Tools for Mojo.</li>
+<li>Sub-module 2: Profile code.</li>
+<li>Sub-module 3: Optimize bottlenecks.</li>
+</ul>
+<p><strong>Module 97: Mojo for Inference Engines</strong></p>
+<ul>
+<li>Sub-module 1: Custom inference.</li>
+<li>Sub-module 2: Implement engine.</li>
+<li>Sub-module 3: Run LLM inference.</li>
+</ul>
+<p><strong>Module 98: Community Contributions to Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Open-source aspects.</li>
+<li>Sub-module 2: Explore repos.</li>
+<li>Sub-module 3: Contribute a fix.</li>
+</ul>
+<p><strong>Module 99: Advanced Mojo Patterns</strong></p>
+<ul>
+<li>Sub-module 1: Metaprogramming.</li>
+<li>Sub-module 2: Use patterns.</li>
+<li>Sub-module 3: In system architecture.</li>
+</ul>
+<p><strong>Module 100: Mojo Project Structure</strong></p>
+<ul>
+<li>Sub-module 1: Organizing large projects.</li>
+<li>Sub-module 2: Structure code.</li>
+<li>Sub-module 3: For full system.</li>
+</ul>
+<p><strong>Module 101: Mojo with Cloud APIs</strong></p>
+<ul>
+<li>Sub-module 1: Integrating cloud.</li>
+<li>Sub-module 2: Call APIs.</li>
+<li>Sub-module 3: Training hooks.</li>
+</ul>
+<p><strong>Module 102: Mojo Security Features</strong></p>
+<ul>
+<li>Sub-module 1: Safe coding.</li>
+<li>Sub-module 2: Secure code.</li>
+<li>Sub-module 3: Protect data.</li>
+</ul>
+<p><strong>Module 103: Mojo for Edge Computing</strong></p>
+<ul>
+<li>Sub-module 1: Lightweight code.</li>
+<li>Sub-module 2: Optimize for edge.</li>
+<li>Sub-module 3: Smartphone inference.</li>
+</ul>
+<p><strong>Module 104: Benchmarking Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Vs. Python/C++.</li>
+<li>Sub-module 2: Run benchmarks.</li>
+<li>Sub-module 3: Report for project.</li>
+</ul>
+<p><strong>Module 105: Mojo Updates and Versions</strong></p>
+<ul>
+<li>Sub-module 1: Keeping up with changes.</li>
+<li>Sub-module 2: Update setup.</li>
+<li>Sub-module 3: Migrate code.</li>
+</ul>
+<p><strong>Module 106: Collaborative Mojo Dev</strong></p>
+<ul>
+<li>Sub-module 1: Team coding.</li>
+<li>Sub-module 2: Pair program.</li>
+<li>Sub-module 3: Merge features.</li>
+</ul>
+<p><strong>Module 107: Mojo for RAG Implementations</strong></p>
+<ul>
+<li>Sub-module 1: Retrieval in Mojo.</li>
+<li>Sub-module 2: Code RAG.</li>
+<li>Sub-module 3: Integrate LLM.</li>
+</ul>
+<p><strong>Module 108: Custom Kernels in Mojo</strong></p>
+<ul>
+<li>Sub-module 1: Writing kernels.</li>
+<li>Sub-module 2: GPU kernel.</li>
+<li>Sub-module 3: Accelerate generation.</li>
+</ul>
+<p><strong>Module 109: Mojo Case Studies</strong></p>
+<ul>
+<li>Sub-module 1: Real uses.</li>
+<li>Sub-module 2: Analyze.</li>
+<li>Sub-module 3: Apply lessons.</li>
+</ul>
+<p><strong>Module 110: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: Mojo mastery recap.</li>
+<li>Sub-module 2: Comprehensive coding.</li>
+<li>Sub-module 3: Mojo-based RAG prototype.</li>
+</ul>
+<h4 id="section-6-max-platform-modules-111-130"><a class="header" href="#section-6-max-platform-modules-111-130">Section 6: MAX Platform (Modules 111-130)</a></h4>
+<p><strong>Module 111: MAX Engine Overview</strong></p>
+<ul>
+<li>Sub-module 1: Components for AI compute.</li>
+<li>Sub-module 2: Install and run.</li>
+<li>Sub-module 3: Deploy sample model.</li>
+</ul>
+<p><strong>Module 112: Model Serving with MAX</strong></p>
+<ul>
+<li>Sub-module 1: Inference serving.</li>
+<li>Sub-module 2: Serve LLM.</li>
+<li>Sub-module 3: For community app.</li>
+</ul>
+<p><strong>Module 113: MAX Optimization Tools</strong></p>
+<ul>
+<li>Sub-module 1: Auto-optimization.</li>
+<li>Sub-module 2: Optimize model.</li>
+<li>Sub-module 3: Speed up RAG.</li>
+</ul>
+<p><strong>Module 114: Cross-GPU Support in MAX</strong></p>
+<ul>
+<li>Sub-module 1: NVIDIA/AMD compatibility.</li>
+<li>Sub-module 2: Test on eGPU.</li>
+<li>Sub-module 3: Port to different hardware.</li>
+</ul>
+<p><strong>Module 115: MAX for Training</strong></p>
+<ul>
+<li>Sub-module 1: Accelerated training.</li>
+<li>Sub-module 2: Train on cloud via MAX.</li>
+<li>Sub-module 3: Fine-tune LLM.</li>
+</ul>
+<p><strong>Module 116: Integrating Mojo with MAX</strong></p>
+<ul>
+<li>Sub-module 1: Seamless execution.</li>
+<li>Sub-module 2: Run Mojo code on MAX.</li>
+<li>Sub-module 3: Build system component.</li>
+</ul>
+<p><strong>Module 117: MAX Deployment Pipelines</strong></p>
+<ul>
+<li>Sub-module 1: CI/CD integration.</li>
+<li>Sub-module 2: Set up pipeline.</li>
+<li>Sub-module 3: Deploy to devices.</li>
+</ul>
+<p><strong>Module 118: Monitoring in MAX</strong></p>
+<ul>
+<li>Sub-module 1: Metrics and logs.</li>
+<li>Sub-module 2: Monitor inference.</li>
+<li>Sub-module 3: Track system performance.</li>
+</ul>
+<p><strong>Module 119: MAX Security Features</strong></p>
+<ul>
+<li>Sub-module 1: Model protection.</li>
+<li>Sub-module 2: Secure deployment.</li>
+<li>Sub-module 3: For community data.</li>
+</ul>
+<p><strong>Module 120: Scaling with MAX</strong></p>
+<ul>
+<li>Sub-module 1: Multi-GPU setups.</li>
+<li>Sub-module 2: Scale on cloud.</li>
+<li>Sub-module 3: Handle community growth.</li>
+</ul>
+<p><strong>Module 121: MAX for Edge Inference</strong></p>
+<ul>
+<li>Sub-module 1: Optimization for low-power.</li>
+<li>Sub-module 2: Run on notebooks.</li>
+<li>Sub-module 3: Smartphone simulation.</li>
+</ul>
+<p><strong>Module 122: Custom Models in MAX</strong></p>
+<ul>
+<li>Sub-module 1: Importing models.</li>
+<li>Sub-module 2: Import custom LLM.</li>
+<li>Sub-module 3: Integrate RAG.</li>
+</ul>
+<p><strong>Module 123: MAX Benchmarks</strong></p>
+<ul>
+<li>Sub-module 1: Performance testing.</li>
+<li>Sub-module 2: Benchmark models.</li>
+<li>Sub-module 3: Compare hardware.</li>
+</ul>
+<p><strong>Module 124: MAX Updates and Community</strong></p>
+<ul>
+<li>Sub-module 1: Following developments.</li>
+<li>Sub-module 2: Update platform.</li>
+<li>Sub-module 3: Contribute feedback.</li>
+</ul>
+<p><strong>Module 125: Advanced MAX Configurations</strong></p>
+<ul>
+<li>Sub-module 1: Custom configs.</li>
+<li>Sub-module 2: Configure for project.</li>
+<li>Sub-module 3: Optimize for features.</li>
+</ul>
+<p><strong>Module 126: MAX with Cloud Providers</strong></p>
+<ul>
+<li>Sub-module 1: Integration tips.</li>
+<li>Sub-module 2: Setup on rentable compute.</li>
+<li>Sub-module 3: Train and transfer.</li>
+</ul>
+<p><strong>Module 127: Error Handling in MAX</strong></p>
+<ul>
+<li>Sub-module 1: Common issues.</li>
+<li>Sub-module 2: Debug deployment.</li>
+<li>Sub-module 3: Fix system errors.</li>
+</ul>
+<p><strong>Module 128: MAX for Multimodal</strong></p>
+<ul>
+<li>Sub-module 1: Handling multiple inputs.</li>
+<li>Sub-module 2: Build multimodal.</li>
+<li>Sub-module 3: For promotions.</li>
+</ul>
+<p><strong>Module 129: Case Studies with MAX</strong></p>
+<ul>
+<li>Sub-module 1: GenAI deployments.</li>
+<li>Sub-module 2: Analyze.</li>
+<li>Sub-module 3: Apply to project.</li>
+</ul>
+<p><strong>Module 130: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: MAX recap.</li>
+<li>Sub-module 2: Full deployment exercise.</li>
+<li>Sub-module 3: MAX-based system module.</li>
+</ul>
+<h4 id="section-7-hardware-setup-and-optimization-modules-131-150"><a class="header" href="#section-7-hardware-setup-and-optimization-modules-131-150">Section 7: Hardware Setup and Optimization (Modules 131-150)</a></h4>
+<p><strong>Module 131: Mini PC Configurations</strong></p>
+<ul>
+<li>Sub-module 1: Specs for AI dev.</li>
+<li>Sub-module 2: Optimize OS.</li>
+<li>Sub-module 3: Setup for project.</li>
+</ul>
+<p><strong>Module 132: eGPU Integration</strong></p>
+<ul>
+<li>Sub-module 1: PCIe 4.0 details.</li>
+<li>Sub-module 2: Connect and test.</li>
+<li>Sub-module 3: Run MAX on it.</li>
+</ul>
+<p><strong>Module 133: GPU Driver Management</strong></p>
+<ul>
+<li>Sub-module 1: NVIDIA/AMD drivers.</li>
+<li>Sub-module 2: Install/update.</li>
+<li>Sub-module 3: Troubleshoot.</li>
+</ul>
+<p><strong>Module 134: Cloud GPU Instances</strong></p>
+<ul>
+<li>Sub-module 1: Selecting providers.</li>
+<li>Sub-module 2: Launch instance.</li>
+<li>Sub-module 3: Train sample model.</li>
+</ul>
+<p><strong>Module 135: Hybrid Local-Cloud Setup</strong></p>
+<ul>
+<li>Sub-module 1: Sync strategies.</li>
+<li>Sub-module 2: Implement hybrid.</li>
+<li>Sub-module 3: For training/inference.</li>
+</ul>
+<p><strong>Module 136: Power Management for Hardware</strong></p>
+<ul>
+<li>Sub-module 1: Efficiency in mini PC.</li>
+<li>Sub-module 2: Monitor usage.</li>
+<li>Sub-module 3: Optimize for long runs.</li>
+</ul>
+<p><strong>Module 137: Device-Specific Optimization</strong></p>
+<ul>
+<li>Sub-module 1: Smartphones, notebooks.</li>
+<li>Sub-module 2: Test on emulators.</li>
+<li>Sub-module 3: Inference tweaks.</li>
+</ul>
+<p><strong>Module 138: Benchmarking Hardware</strong></p>
+<ul>
+<li>Sub-module 1: Tools like MLPerf.</li>
+<li>Sub-module 2: Run benchmarks.</li>
+<li>Sub-module 3: Report for system.</li>
+</ul>
+<p><strong>Module 139: Cooling and Maintenance</strong></p>
+<ul>
+<li>Sub-module 1: For eGPU setups.</li>
+<li>Sub-module 2: Maintain hardware.</li>
+<li>Sub-module 3: Prevent downtime.</li>
+</ul>
+<p><strong>Module 140: Cost Optimization</strong></p>
+<ul>
+<li>Sub-module 1: Cloud billing.</li>
+<li>Sub-module 2: Monitor costs.</li>
+<li>Sub-module 3: Budget for project.</li>
+</ul>
+<p><strong>Module 141: Networking for Distributed Compute</strong></p>
+<ul>
+<li>Sub-module 1: Local-cloud connectivity.</li>
+<li>Sub-module 2: Setup VPN.</li>
+<li>Sub-module 3: Secure data transfer.</li>
+</ul>
+<p><strong>Module 142: Emulation for Devices</strong></p>
+<ul>
+<li>Sub-module 1: Simulating smartphones.</li>
+<li>Sub-module 2: Emulate inference.</li>
+<li>Sub-module 3: Test app features.</li>
+</ul>
+<p><strong>Module 143: Hardware Upgrades</strong></p>
+<ul>
+<li>Sub-module 1: Scaling mini PC.</li>
+<li>Sub-module 2: Plan upgrades.</li>
+<li>Sub-module 3: For advanced training.</li>
+</ul>
+<p><strong>Module 144: Troubleshooting Hardware Issues</strong></p>
+<ul>
+<li>Sub-module 1: Common problems.</li>
+<li>Sub-module 2: Diagnose.</li>
+<li>Sub-module 3: Fix in context.</li>
+</ul>
+<p><strong>Module 145: Sustainability in AI Hardware</strong></p>
+<ul>
+<li>Sub-module 1: Energy-efficient practices.</li>
+<li>Sub-module 2: Implement green code.</li>
+<li>Sub-module 3: For community system.</li>
+</ul>
+<p><strong>Module 146: Multi-Device Testing</strong></p>
+<ul>
+<li>Sub-module 1: Cross-device consistency.</li>
+<li>Sub-module 2: Test suite.</li>
+<li>Sub-module 3: Ensure compatibility.</li>
+</ul>
+<p><strong>Module 147: Storage Solutions</strong></p>
+<ul>
+<li>Sub-module 1: For datasets/models.</li>
+<li>Sub-module 2: Setup SSD/cloud storage.</li>
+<li>Sub-module 3: Manage for RAG.</li>
+</ul>
+<p><strong>Module 148: Hardware Security</strong></p>
+<ul>
+<li>Sub-module 1: Protecting setups.</li>
+<li>Sub-module 2: Secure mini PC.</li>
+<li>Sub-module 3: Prevent breaches.</li>
+</ul>
+<p><strong>Module 149: Advanced GPU Techniques</strong></p>
+<ul>
+<li>Sub-module 1: Tensor cores usage.</li>
+<li>Sub-module 2: Leverage in code.</li>
+<li>Sub-module 3: Accelerate LLM.</li>
+</ul>
+<p><strong>Module 150: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: Hardware recap.</li>
+<li>Sub-module 2: Full setup exercise.</li>
+<li>Sub-module 3: Optimized hardware prototype.</li>
+</ul>
+<h4 id="section-8-model-training-on-cloud-modules-151-170"><a class="header" href="#section-8-model-training-on-cloud-modules-151-170">Section 8: Model Training on Cloud (Modules 151-170)</a></h4>
+<p><strong>Module 151: Cloud Training Setup</strong></p>
+<ul>
+<li>Sub-module 1: Instance selection.</li>
+<li>Sub-module 2: Configure environment.</li>
+<li>Sub-module 3: Train small LLM.</li>
+</ul>
+<p><strong>Module 152: Distributed Training</strong></p>
+<ul>
+<li>Sub-module 1: Multi-GPU methods.</li>
+<li>Sub-module 2: Implement DDP.</li>
+<li>Sub-module 3: Scale for project.</li>
+</ul>
+<p><strong>Module 153: Data Parallelism</strong></p>
+<ul>
+<li>Sub-module 1: Concepts.</li>
+<li>Sub-module 2: Apply in code.</li>
+<li>Sub-module 3: For large datasets.</li>
+</ul>
+<p><strong>Module 154: Hyperparameter Tuning</strong></p>
+<ul>
+<li>Sub-module 1: Grid/random search.</li>
+<li>Sub-module 2: Tune on cloud.</li>
+<li>Sub-module 3: Optimize RAG model.</li>
+</ul>
+<p><strong>Module 155: Checkpointing and Resuming</strong></p>
+<ul>
+<li>Sub-module 1: Saving states.</li>
+<li>Sub-module 2: Implement.</li>
+<li>Sub-module 3: Resume interrupted training.</li>
+</ul>
+<p><strong>Module 156: Cloud Cost Management</strong></p>
+<ul>
+<li>Sub-module 1: Spot instances.</li>
+<li>Sub-module 2: Use efficiently.</li>
+<li>Sub-module 3: Budget training runs.</li>
+</ul>
+<p><strong>Module 157: Transfer Learning on Cloud</strong></p>
+<ul>
+<li>Sub-module 1: From pre-trained.</li>
+<li>Sub-module 2: Fine-tune.</li>
+<li>Sub-module 3: For communication.</li>
+</ul>
+<p><strong>Module 158: Monitoring Training</strong></p>
+<ul>
+<li>Sub-module 1: TensorBoard etc.</li>
+<li>Sub-module 2: Set up.</li>
+<li>Sub-module 3: Analyze runs.</li>
+</ul>
+<p><strong>Module 159: Data Loading for Training</strong></p>
+<ul>
+<li>Sub-module 1: Efficient loaders.</li>
+<li>Sub-module 2: Implement.</li>
+<li>Sub-module 3: For local data.</li>
+</ul>
+<p><strong>Module 160: Advanced Optimizers</strong></p>
+<ul>
+<li>Sub-module 1: AdamW, etc.</li>
+<li>Sub-module 2: Use in training.</li>
+<li>Sub-module 3: Improve convergence.</li>
+</ul>
+<p><strong>Module 161: Mixed Precision Training</strong></p>
+<ul>
+<li>Sub-module 1: FP16 for speed.</li>
+<li>Sub-module 2: Enable.</li>
+<li>Sub-module 3: Train faster.</li>
+</ul>
+<p><strong>Module 162: Model Export from Cloud</strong></p>
+<ul>
+<li>Sub-module 1: To local formats.</li>
+<li>Sub-module 2: Export model.</li>
+<li>Sub-module 3: Transfer to mini PC.</li>
+</ul>
+<p><strong>Module 163: Cloud Security for Training</strong></p>
+<ul>
+<li>Sub-module 1: Data encryption.</li>
+<li>Sub-module 2: Secure instances.</li>
+<li>Sub-module 3: Protect sensitive data.</li>
+</ul>
+<p><strong>Module 164: Batch Size Optimization</strong></p>
+<ul>
+<li>Sub-module 1: Impact on training.</li>
+<li>Sub-module 2: Experiment.</li>
+<li>Sub-module 3: For LLM.</li>
+</ul>
+<p><strong>Module 165: Early Stopping Techniques</strong></p>
+<ul>
+<li>Sub-module 1: Preventing overfit.</li>
+<li>Sub-module 2: Implement.</li>
+<li>Sub-module 3: Apply in runs.</li>
+</ul>
+<p><strong>Module 166: Cloud APIs for AI</strong></p>
+<ul>
+<li>Sub-module 1: Provider-specific.</li>
+<li>Sub-module 2: Integrate.</li>
+<li>Sub-module 3: Automate training.</li>
+</ul>
+<p><strong>Module 167: Training Pipelines</strong></p>
+<ul>
+<li>Sub-module 1: End-to-end.</li>
+<li>Sub-module 2: Build pipeline.</li>
+<li>Sub-module 3: For system models.</li>
+</ul>
+<p><strong>Module 168: Handling Large Datasets</strong></p>
+<ul>
+<li>Sub-module 1: Sharding.</li>
+<li>Sub-module 2: Manage on cloud.</li>
+<li>Sub-module 3: For community scale.</li>
+</ul>
+<p><strong>Module 169: Training Case Studies</strong></p>
+<ul>
+<li>Sub-module 1: LLM training examples.</li>
+<li>Sub-module 2: Analyze.</li>
+<li>Sub-module 3: Adapt strategies.</li>
+</ul>
+<p><strong>Module 170: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: Training recap.</li>
+<li>Sub-module 2: Full training exercise.</li>
+<li>Sub-module 3: Trained model for project.</li>
+</ul>
+<h4 id="section-9-inference-on-edge-devices-modules-171-190"><a class="header" href="#section-9-inference-on-edge-devices-modules-171-190">Section 9: Inference on Edge Devices (Modules 171-190)</a></h4>
+<p><strong>Module 171: On-Device Inference Basics</strong></p>
+<ul>
+<li>Sub-module 1: Constraints of devices.</li>
+<li>Sub-module 2: Run on notebook.</li>
+<li>Sub-module 3: Simple recommendation.</li>
+</ul>
+<p><strong>Module 172: Model Compression</strong></p>
+<ul>
+<li>Sub-module 1: Pruning, distillation.</li>
+<li>Sub-module 2: Compress LLM.</li>
+<li>Sub-module 3: Test on smartphone.</li>
+</ul>
+<p><strong>Module 173: MAX for Edge</strong></p>
+<ul>
+<li>Sub-module 1: Edge optimizations.</li>
+<li>Sub-module 2: Deploy.</li>
+<li>Sub-module 3: Inference flow.</li>
+</ul>
+<p><strong>Module 174: Android/iOS Integration</strong></p>
+<ul>
+<li>Sub-module 1: Mobile frameworks.</li>
+<li>Sub-module 2: Setup app.</li>
+<li>Sub-module 3: Run RAG on phone.</li>
+</ul>
+<p><strong>Module 175: Latency Optimization</strong></p>
+<ul>
+<li>Sub-module 1: Techniques for edge.</li>
+<li>Sub-module 2: Reduce latency.</li>
+<li>Sub-module 3: For real-time comm.</li>
+</ul>
+<p><strong>Module 176: Battery-Efficient Inference</strong></p>
+<ul>
+<li>Sub-module 1: Power-aware code.</li>
+<li>Sub-module 2: Optimize.</li>
+<li>Sub-module 3: Test on devices.</li>
+</ul>
+<p><strong>Module 177: Offline Capabilities</strong></p>
+<ul>
+<li>Sub-module 1: No-internet inference.</li>
+<li>Sub-module 2: Implement offline.</li>
+<li>Sub-module 3: Local recommendations.</li>
+</ul>
+<p><strong>Module 178: Device Testing</strong></p>
+<ul>
+<li>Sub-module 1: Emulators vs. real.</li>
+<li>Sub-module 2: Test suite.</li>
+<li>Sub-module 3: Debug issues.</li>
+</ul>
+<p><strong>Module 179: Hybrid Inference</strong></p>
+<ul>
+<li>Sub-module 1: Edge + cloud fallback.</li>
+<li>Sub-module 2: Implement hybrid.</li>
+<li>Sub-module 3: For complex queries.</li>
+</ul>
+<p><strong>Module 180: Security on Edge</strong></p>
+<ul>
+<li>Sub-module 1: On-device protection.</li>
+<li>Sub-module 2: Secure models.</li>
+<li>Sub-module 3: Prevent leaks.</li>
+</ul>
+<p><strong>Module 181: Multi-Device Sync</strong></p>
+<ul>
+<li>Sub-module 1: Consistent experience.</li>
+<li>Sub-module 2: Sync data.</li>
+<li>Sub-module 3: Across platforms.</li>
+</ul>
+<p><strong>Module 182: Inference Pipelines</strong></p>
+<ul>
+<li>Sub-module 1: End-to-end on edge.</li>
+<li>Sub-module 2: Build pipeline.</li>
+<li>Sub-module 3: For system features.</li>
+</ul>
+<p><strong>Module 183: Quantized Inference</strong></p>
+<ul>
+<li>Sub-module 1: INT8 etc.</li>
+<li>Sub-module 2: Quantize and run.</li>
+<li>Sub-module 3: Maintain accuracy.</li>
+</ul>
+<p><strong>Module 184: Custom Edge Optimizations</strong></p>
+<ul>
+<li>Sub-module 1: Device-specific.</li>
+<li>Sub-module 2: Apply.</li>
+<li>Sub-module 3: For workstations.</li>
+</ul>
+<p><strong>Module 185: Monitoring Edge Performance</strong></p>
+<ul>
+<li>Sub-module 1: On-device metrics.</li>
+<li>Sub-module 2: Log.</li>
+<li>Sub-module 3: Analyze.</li>
+</ul>
+<p><strong>Module 186: Updating Models on Edge</strong></p>
+<ul>
+<li>Sub-module 1: OTA updates.</li>
+<li>Sub-module 2: Implement update.</li>
+<li>Sub-module 3: Version control.</li>
+</ul>
+<p><strong>Module 187: Edge Case Studies</strong></p>
+<ul>
+<li>Sub-module 1: Mobile AI apps.</li>
+<li>Sub-module 2: Analyze.</li>
+<li>Sub-module 3: Lessons for project.</li>
+</ul>
+<p><strong>Module 188: Accessibility on Devices</strong></p>
+<ul>
+<li>Sub-module 1: Inclusive design.</li>
+<li>Sub-module 2: Implement features.</li>
+<li>Sub-module 3: For community users.</li>
+</ul>
+<p><strong>Module 189: Scaling Edge Deployments</strong></p>
+<ul>
+<li>Sub-module 1: To many users.</li>
+<li>Sub-module 2: Simulate scale.</li>
+<li>Sub-module 3: Community rollout.</li>
+</ul>
+<p><strong>Module 190: Section Review</strong></p>
+<ul>
+<li>Sub-module 1: Edge inference recap.</li>
+<li>Sub-module 2: Device exercises.</li>
+<li>Sub-module 3: Edge-ready system.</li>
+</ul>
+<h4 id="section-10-system-integration-and-deployment-modules-191-200"><a class="header" href="#section-10-system-integration-and-deployment-modules-191-200">Section 10: System Integration and Deployment (Modules 191-200)</a></h4>
+<p><strong>Module 191: Full System Architecture</strong></p>
+<ul>
+<li>Sub-module 1: Integrating all components.</li>
+<li>Sub-module 2: Diagram and code.</li>
+<li>Sub-module 3: Build prototype.</li>
+</ul>
+<p><strong>Module 192: User Interface Development</strong></p>
+<ul>
+<li>Sub-module 1: App for communication.</li>
+<li>Sub-module 2: Build UI.</li>
+<li>Sub-module 3: Integrate AI.</li>
+</ul>
+<p><strong>Module 193: API Design for System</strong></p>
+<ul>
+<li>Sub-module 1: REST/GraphQL for features.</li>
+<li>Sub-module 2: Implement APIs.</li>
+<li>Sub-module 3: Connect to RAG.</li>
+</ul>
+<p><strong>Module 194: Testing the Full System</strong></p>
+<ul>
+<li>Sub-module 1: Unit/integration tests.</li>
+<li>Sub-module 2: Run tests.</li>
+<li>Sub-module 3: Fix bugs.</li>
+</ul>
+<p><strong>Module 195: Deployment Strategies</strong></p>
+<ul>
+<li>Sub-module 1: To production.</li>
+<li>Sub-module 2: Deploy on cloud/edge.</li>
+<li>Sub-module 3: Launch simulation.</li>
+</ul>
+<p><strong>Module 196: User Feedback Loops</strong></p>
+<ul>
+<li>Sub-module 1: Incorporating feedback.</li>
+<li>Sub-module 2: Build loop.</li>
+<li>Sub-module 3: Improve recommendations.</li>
+</ul>
+<p><strong>Module 197: Scaling the System</strong></p>
+<ul>
+<li>Sub-module 1: Handling growth.</li>
+<li>Sub-module 2: Scale components.</li>
+<li>Sub-module 3: For larger community.</li>
+</ul>
+<p><strong>Module 198: Maintenance and Updates</strong></p>
+<ul>
+<li>Sub-module 1: Ongoing dev.</li>
+<li>Sub-module 2: Plan updates.</li>
+<li>Sub-module 3: Apply to system.</li>
+</ul>
+<p><strong>Module 199: Final Project Presentation</strong></p>
+<ul>
+<li>Sub-module 1: Document system.</li>
+<li>Sub-module 2: Prepare demo.</li>
+<li>Sub-module 3: Present.</li>
+</ul>
+<p><strong>Module 200: Bootcamp Capstone and Review</strong></p>
+<ul>
+<li>Sub-module 1: Overall recap.</li>
+<li>Sub-module 2: Final tweaks.</li>
+<li>Sub-module 3: Complete communication system.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nested/sub-chapter_6.C.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nested/sub-chapter_6.E.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nested/sub-chapter_6.C.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nested/sub-chapter_6.E.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

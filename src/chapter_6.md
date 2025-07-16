@@ -862,9 +862,9 @@ After almost seven weeks on this project of using AI to radically level up healt
 
 - Practice tactical withdrawal from overcommitment during the next week, then extend operations through the month until Labor Day, then maintain defensive perimeter for the remainder of Summer [until Fall](https://days.to/until/autumn-or-fall)
 
-- If nine weeks of diplomatic "negative response" protocols prove insufficient, then it's time to escalate to more direct communications—deploy firm but respectful boundary enforcement, and perhaps mention your extensive collection of percussive maintenance tools.
+- If nine weeks of diplomatic "negative response" protocols prove insufficient, then it's time to [escalate to more direct communications—deploy firm but respectful boundary enforcement](https://grok.com/share/c2hhcmQtMg%3D%3D_f67bd2a7-44d6-4eb1-8bd2-1da957511470) ... at this point, there's no need for yelling or raising one's voice, but it's time to STOP JOKING AROUND -- be direct and unapologetic about saying "NO" ... you don't owe convicted attention whores plying their trade in your mental neighborhood an explanation or an apology -- it is probably time to hurt their feelings.
 
-- When that fails to achieve desired results, execute strategic disappearance maneuvers and establish yourself in a location accessible only for genuine Code Red emergencies
+- When even that fails to achieve desired results, execute strategic disappearance maneuvers and establish yourself in a location accessible only for genuine Code Red emergencies
 
 - As a final operational mode, consider transitioning to full hermit status and adopting monastic protocols... though don't kid yourself that this will stop people from trying to conscript you for missions that wouldn't matter if the world ended tomorrow.
 

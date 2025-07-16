@@ -1167,7 +1167,7 @@ After almost seven weeks on this project of using AI to radically level up healt
 
 - When even firm NO-itude fails to achieve desired results, execute strategic disappearance maneuvers and establish yourself in a location accessible only for genuine Code Red emergencies
 
-- As a final operational mode, drop out, go Galt, consider transitioning to full hermit status and adopting monastic protocols... just don't kid yourself that this will stop people from trying to conscript you for their idiotic missions; they'll even bring suits and you land in court for having asparagus in your front yard some other way to try to convict of treason against their pathetic psuedo-American way of affluent, comfort-seeking life.
+- As a final operational mode, drop out, go Galt, consider transitioning to full hermit status and adopting monastic protocols... just don't kid yourself that this will stop people from trying to conscript you for their idiotic missions; they'll even bring suits and you land in court accusing you of having asparagus in your front yard or some other way to try to convict of treason against their pathetic psuedo-american way of affluent, comfort-seeking, disgusting life.
 
 ### Day 48 - July 18, 2025 | Stress Management: Summer Schedule Balance
 - Manage busy summer social calendar mindfully

@@ -1227,7 +1227,7 @@ To look at this question, Gemini was prompted ... ***a FEW TIMES, because AI wil
 - Synthesize the findings into a cohesive document, structuring the analysis by first explaining the biological process, then introducing the metaphor's mapping, and finally providing detailed applications to AI and MLIR.
 - Gather and cite authoritative references from scientific papers, technical documentation, and computer science literature to support both the biological explanations and the technical analogies.
 
-### Day 50 - July 20, 2025 | Mobility: Vector Object Uploading Storage, Querying and Retrieval For More Agile AI-Assistance
+### [Day 50 - July 20, 2025](https://docs.google.com/document/d/1iKn-jZ79NdibfMbswl-nnxnzHeSd5yh3G7dTcxV26Gg/edit?usp=sharing) | [Mobility: Vector Object Uploading Storage, Querying and Retrieval For More Agile AI-Assistance](https://g.co/gemini/share/0d94f9978534)
 
 What can we learn about the flexibility of vector storage and retrieval from a semi-detailed look at why mobility matters? 
 

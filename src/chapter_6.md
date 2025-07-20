@@ -1342,7 +1342,7 @@ The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands
 
 **CHOOSE. NOW.**
 
-### [Day 52 - July 22, 2025]() | [Strength Training: Functional Patterns]
+### [Day 52 - July 22, 2025](https://docs.google.com/document/d/1UJ8XdJ5xvp5lIva0ub4JQktccJleqb4yZLFStKdhJac/edit?usp=sharing) | [Strength Training: Functional Patterns](https://g.co/gemini/share/63029ed51f31)
 
 This comes down to relatively simple or practical things ... and avoiding stupid shit and things people usually do ... screw going to the fitness center or weightlifting room, as if I'm a teen or twentysomething ... I am not training to make the JV Football team; I am training to be a 75-, 85-, 95-, 105-, 115-year-old gardener.  SIMPLE stuff, until you have to DO IT every day.
 
@@ -1361,9 +1361,9 @@ Gemini was prompte to
 - Develop a detailed section on injury prevention and management tailored to the user's history of shoulder surgery and back issues. Find evidence-based protocols for exercises like the McGill Big 3 and scapular stability routines.
 - Synthesize all findings into a comprehensive and exhaustive backgrounder. Structure the report to flow from philosophy to practical application, covering fitness principles, exercise programming, global nutritional wisdom, and holistic lifestyle integration.
 
-### [Day 53 - July 23, 2025]() | Cardiovascular Breathwork: Situational Adaptation
+### [Day 53 - July 23, 2025](https://docs.google.com/document/d/1h0FKpClzlauqexyQqK6RqDkaOeV_vPSWVfk4f_7S8k0/edit?usp=sharing) | [Cardiovascular Breathwork: Situational Adaptation](https://g.co/gemini/share/68648f496dab)
 
-As a mental exercise, let's just pretend for a few moments for that we don't have air conditioning or might have to adapt when we don't have air conditiong, shall we? There are things that we should probably review to make sure that we are not one of those severely UNHELPFUL idiots who FREAKS the livingF out when the princess doesn't have his AI. **YOU DO NOT TO BE THAT IDIOTIC PRINCESS!!!**
+*Take a deep breath* ... as a mental exercise, let's just pretend for a few moments for that we don't have air conditioning or might have to adapt when we don't have air conditiong, shall we? There are things that we should probably review to make sure that we are not one of those severely UNHELPFUL idiots who FREAKS the livingF out when the princess doesn't have his AI. **YOU DO NOT TO BE THAT IDIOTIC PRINCESS!!!**
 
 So get a grip beforehand ... there are all probably should already know about optimizing activity duration in corn sweat season, or monitoring heart rate response to heat stress, or why we should practice cooling strategies during and after exercise, there are more situational adaptations that we can learn from the body's response to summer heat and humidity for the body's adaptation to summer exercise conditions.  
 

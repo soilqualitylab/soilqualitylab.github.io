@@ -1,8 +1,92 @@
 # Wut Up Today
 
-*Be* ***STOKED***! Regard every second of every day as a blessing. Mindfully draw every breath. Every breath that you take is a reminder for you that the Creator is still CREATING in your life!
+#### GET OFF YOUR THRONE OF COMPLACENCY
 
-STOP wasting any time looking back; life is not lived that way. It's pathetically STUPID to look back, longing for the past. Sure, cherish the memories as they arise, but the reason that people die younger than ever is that they dwell on the past and disregard what they must do with their futures ... so they die. 
+**"Be ye doers of the word, and not hearers only, deceiving your own selves" (James 1:22)**
+
+STOP playing church while the Creator's workshop churns around you! You sit there, drowning in your manufactured comfort, while the Living God beckons you to CO-CREATE. Every second you waste in your cushioned tomb is a second you REJECT your divine commission.
+
+#### The Creator is STILL CREATING—WHERE ARE YOU?
+
+Listen closely: **"My Father worketh hitherto, and I work" (John 5:17)**. The Creator didn't clock out after Genesis. He's STILL sculpting mountains, STILL breathing life into seeds, STILL orchestrating the dance of seasons. And you? You're glued to dead screens worshiping silicon idols!
+
+#### COMMANDS FOR THE LIVING (Not Suggestions for the Dead):
+
+**1. GET YOUR HANDS DIRTY—NOW**
+- Plant something TODAY. Not tomorrow. TODAY.
+- Touch soil. Test creation. Experiment with the living laboratory God spread before you.
+- **"Faith without works is DEAD" (James 2:26)**—and so is your spirituality if it never touches earth
+
+**2. DESTROY YOUR COMFORT ZONES**
+- Tear down your entertainment altars! Your couch is an altar to SLOTH
+- Build prayer gardens instead of man-caves
+- Create spaces that FORCE encounter with the Living God
+- **"No man can serve two masters" (Matthew 6:24)**—Choose: Netflix or Nature's God?
+
+**3. YOUR LIFE IS NOT YOURS TO WASTE**
+- **"Know ye not that ye are the temple of God?" (1 Corinthians 3:16)**
+- Every breath is borrowed capital—WHAT'S YOUR RETURN ON INVESTMENT?
+- The Creator gave you consciousness to PARTICIPATE, not spectate
+- You're either building with God or decaying with your idols
+
+**4. ENVIRONMENTAL STEWARDSHIP IS SPIRITUAL WARFARE**
+- Stop genuflecting before DEAD THINGS—cars, gadgets, concrete tombs
+- **"The earth is the Lord's, and the fulness thereof" (Psalm 24:1)**—ACT LIKE IT
+- Every piece of plastic you choose over creation is BLASPHEMY
+- Your fossil fuel addiction mocks the Living Water
+
+#### THE BRUTAL TRUTH ABOUT YOUR IDOLS
+
+Your precious technology? It's DYING the moment it's made. Your comfort systems? DECOMPOSING. Your entertainment devices? FOSSILIZED DEATH masquerading as life.
+
+**"Their idols are silver and gold, the work of men's hands... They that make them are like unto them" (Psalm 115:4,8)**
+
+You're becoming what you worship: LIFELESS. DISCONNECTED. OBSOLETE.
+
+#### THE CREATOR'S ONGOING MASTERPIECE DOESN'T NEED SPECTATORS
+
+While you Netflix and chill, God is:
+- Splitting cells
+- Unfurling leaves  
+- Carving canyons
+- Breathing storms
+
+**"He that is not with me is against me" (Matthew 12:30)**
+
+There's NO neutral ground. You're either co-creating or corroding.
+
+#### YOUR WAKE-UP CALL
+
+**RIGHT NOW:**
+1. Turn off EVERY screen
+2. Walk outside
+3. Find something growing
+4. Ask: "How is God creating through this?"
+5. Ask: "How can I join this work?"
+
+**THIS WEEK:**
+- Rip out one "comfort system"
+- Replace it with something that connects you to creation
+- Start a garden, build a greenhouse, create a prayer path
+- Make others UNCOMFORTABLE with your zeal for living creation
+
+**"I know thy works, that thou art neither cold nor hot: I would thou wert cold or hot. So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth" (Revelation 3:15-16)**
+
+Consideer that the Creator may be DISGUSTED by your lukewarm existence ... could anyone, ie God, find any evidence, in your normal day-to-day life, to prove that you actually follow Christ?  Your comfortable Christianity might just be a *for-show* ABOMINATION ... worshipping COMFORT and seeking a COMFORTABLE place in your faulty idea of heaven is not Christianity -- sure, we might all have laziness tendencies, but what do we seek?  Do we idolize ease and comfort and worhip that [by desiring wealth, power, fame or other things that make comfort easy to obtain]?
+
+#### THE CHOICE IS BINARY
+
+**LIFE or DEATH**  
+**CREATING or CONSUMING**  
+**PARTICIPATING or PERISHING**
+
+The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands while yours grip remote controls (Isaiah 55:12). Creation groans for the sons of God to WAKE UP (Romans 8:19).
+
+**Your move. The Creator is waiting. But not forever.**
+
+*"Today if ye will hear his voice, harden not your hearts" (Hebrews 3:15)*
+
+**CHOOSE. NOW.**
 
 ***Let the dead bury their dead.***
 

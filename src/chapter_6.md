@@ -7,7 +7,7 @@
 ## By Category
 
 ### 1. **Christian Spiritual Health** (51 days - 13%)
-[Day 1](#day-1---june-1-2025--christian-spiritual-health-beginning-with-gratitude) | [Day 11](#day-11---june-11-2025--transformative-discipleship-technology-tdt) | [Day 21](#day-21---june-21-2025--quantum-synthesis-or-transformation-of-consciousness-holy-hour-daily-rest-the-sabbath) | [Day 31](#day-31---july-1-2025--embodied-witness-christian-discipline-and-attractional-faith) | [Day 41](#day-41---july-11-2025--christian-spiritual-health-gratitude-for-ability-to-break-free-of-geography-and-participate-in-scientific-seminars) | [Day 51](#day-51---july-21-2025--christian-spiritual-health-creation-appreciation) | [Day 61](#day-61---july-31-2025--christian-spiritual-health-monthly-gratitude) | [Day 71](#day-71---august-10-2025--christian-spiritual-health-perseverance-through-heat) | [Day 81](#day-81---august-20-2025--christian-spiritual-health-body-as-temple) | [Day 91](#day-91---august-30-2025--christian-spiritual-health-faithful-consistency) | [Day 101](#day-101---september-9-2025--christian-spiritual-health-harvest-gratitude) | [Day 111](#day-111---september-19-2025--christian-spiritual-health-discipline-as-worship) | [Day 121](#day-121---september-29-2025--christian-spiritual-health-thankful-stewardship) | [Day 131](#day-131---october-9-2025--christian-spiritual-health-creations-seasons) | [Day 141](#day-141---october-19-2025--christian-spiritual-health-gratitude-for-harvest) | [Day 151](#day-151---october-29-2025--christian-spiritual-health-joy-in-celebration) | [Day 161](#day-161---november-8-2025--christian-spiritual-health-thankfulness-practice) | [Day 171](#day-171---november-18-2025--christian-spiritual-health-stewardship-reflection) | [Day 181](#day-181---november-28-2025--christian-spiritual-health-advent-preparation) | [Day 191](#day-191---december-8-2025--christian-spiritual-health-advent-discipline) | [Day 201](#day-201---december-18-2025--christian-spiritual-health-christmas-preparation-joy) | [Day 211](#day-211---december-28-2025--christian-spiritual-health-christmas-reflection) | [Day 221](#day-221---january-7-2026--christian-spiritual-health-epiphany-renewal) | [Day 231](#day-231---january-17-2026--christian-spiritual-health-winter-faithfulness) | [Day 241](#day-241---january-27-2026--christian-spiritual-health-winter-perseverance) | [Day 251](#day-251---february-6-2026--christian-spiritual-health-love-as-motivation) | [Day 261](#day-261---february-16-2026--christian-spiritual-health-love-in-action) | [Day 271](#day-271---february-26-2026--christian-spiritual-health-faithful-endurance) | [Day 281](#day-281---march-8-2026--christian-spiritual-health-spring-renewal) | [Day 291](#day-291---march-18-2026--christian-spiritual-health-spring-equinox-preparation) | [Day 301](#day-301---march-28-2026--christian-spiritual-health-spring-gratitude) | [Day 311](#day-311---april-7-2026--christian-spiritual-health-easter-preparation) | [Day 321](#day-321---april-17-2026--christian-spiritual-health-maundy-thursday-service) | [Day 331](#day-331---april-27-2026--christian-spiritual-health-spring-stewardship) | [Day 341](#day-341---may-7-2026--christian-spiritual-health-may-spiritual-renewal) | [Day 351](#day-351---may-17-2026--christian-spiritual-health-spring-service-preparation) | [Day 361](#day-361---may-27-2026--christian-spiritual-health-memorial-gratitude) | [Day 371](#day-371---june-6-2026--christian-spiritual-health-annual-stewardship-reflection) | [Day 381](#day-381---june-16-2026--christian-spiritual-health-fathers-day-strength) | [Day 391](#day-391---june-26-2026--christian-spiritual-health-summer-service-strength)
+[Day 1](#day-1---june-1-2025--christian-spiritual-health-beginning-with-gratitude) | [Day 11](#day-11---june-11-2025--transformative-discipleship-technology-tdt) | [Day 21](#day-21---june-21-2025--quantum-synthesis-or-transformation-of-consciousness-holy-hour-daily-rest-the-sabbath) | [Day 31](#day-31---july-1-2025--embodied-witness-christian-discipline-and-attractional-faith) | [Day 41](#day-41---july-11-2025--christian-spiritual-health-gratitude-for-ability-to-break-free-of-geography-and-participate-in-scientific-seminars) | [Day 51](#day-51---july-21-2025--christian-spiritual-health-stop-worshiping-idols-and-appreciate-howwhy-the-creator-is-still-creating) | [Day 61](#day-61---july-31-2025--christian-spiritual-health-monthly-gratitude) | [Day 71](#day-71---august-10-2025--christian-spiritual-health-perseverance-through-heat) | [Day 81](#day-81---august-20-2025--christian-spiritual-health-body-as-temple) | [Day 91](#day-91---august-30-2025--christian-spiritual-health-faithful-consistency) | [Day 101](#day-101---september-9-2025--christian-spiritual-health-harvest-gratitude) | [Day 111](#day-111---september-19-2025--christian-spiritual-health-discipline-as-worship) | [Day 121](#day-121---september-29-2025--christian-spiritual-health-thankful-stewardship) | [Day 131](#day-131---october-9-2025--christian-spiritual-health-creations-seasons) | [Day 141](#day-141---october-19-2025--christian-spiritual-health-gratitude-for-harvest) | [Day 151](#day-151---october-29-2025--christian-spiritual-health-joy-in-celebration) | [Day 161](#day-161---november-8-2025--christian-spiritual-health-thankfulness-practice) | [Day 171](#day-171---november-18-2025--christian-spiritual-health-stewardship-reflection) | [Day 181](#day-181---november-28-2025--christian-spiritual-health-advent-preparation) | [Day 191](#day-191---december-8-2025--christian-spiritual-health-advent-discipline) | [Day 201](#day-201---december-18-2025--christian-spiritual-health-christmas-preparation-joy) | [Day 211](#day-211---december-28-2025--christian-spiritual-health-christmas-reflection) | [Day 221](#day-221---january-7-2026--christian-spiritual-health-epiphany-renewal) | [Day 231](#day-231---january-17-2026--christian-spiritual-health-winter-faithfulness) | [Day 241](#day-241---january-27-2026--christian-spiritual-health-winter-perseverance) | [Day 251](#day-251---february-6-2026--christian-spiritual-health-love-as-motivation) | [Day 261](#day-261---february-16-2026--christian-spiritual-health-love-in-action) | [Day 271](#day-271---february-26-2026--christian-spiritual-health-faithful-endurance) | [Day 281](#day-281---march-8-2026--christian-spiritual-health-spring-renewal) | [Day 291](#day-291---march-18-2026--christian-spiritual-health-spring-equinox-preparation) | [Day 301](#day-301---march-28-2026--christian-spiritual-health-spring-gratitude) | [Day 311](#day-311---april-7-2026--christian-spiritual-health-easter-preparation) | [Day 321](#day-321---april-17-2026--christian-spiritual-health-maundy-thursday-service) | [Day 331](#day-331---april-27-2026--christian-spiritual-health-spring-stewardship) | [Day 341](#day-341---may-7-2026--christian-spiritual-health-may-spiritual-renewal) | [Day 351](#day-351---may-17-2026--christian-spiritual-health-spring-service-preparation) | [Day 361](#day-361---may-27-2026--christian-spiritual-health-memorial-gratitude) | [Day 371](#day-371---june-6-2026--christian-spiritual-health-annual-stewardship-reflection) | [Day 381](#day-381---june-16-2026--christian-spiritual-health-fathers-day-strength) | [Day 391](#day-391---june-26-2026--christian-spiritual-health-summer-service-strength)
 
 ### 2. **Strength Training** (43 days - 11%)
 [Day 2](#day-2---june-2-2025--strength-training-foundation-assessment) | [Day 12](#day-12---june-12-2025--strength-training-upper-body-focus) | [Day 22](#day-22---june-22-2025--strength-training-lower-body-foundation) | [Day 32](#day-32---july-2-2025--strength-training-progressive-overload) | [Day 42](#day-42---july-12-2025--strength-training-core-stability) | [Day 52](#day-52---july-22-2025--strength-training-functional-patterns) | [Day 62](#day-62---august-1-2025--strength-training-summer-challenge-peak) | [Day 72](#day-72---august-11-2025--strength-training-heat-adaptation-training) | [Day 82](#day-82---august-21-2025--strength-training-mind-muscle-connection) | [Day 92](#day-92---august-31-2025--strength-training-summer-strength-assessment) | [Day 102](#day-102---september-10-2025--strength-training-fall-strength-goals) | [Day 112](#day-112---september-20-2025--strength-training-core-strength-focus) | [Day 122](#day-122---september-30-2025--strength-training-monthly-strength-assessment) | [Day 132](#day-132---october-10-2025--strength-training-functional-fall-strength) | [Day 142](#day-142---october-20-2025--strength-training-winter-preparation-strength) | [Day 152](#day-152---october-30-2025--strength-training-celebration-energy) | [Day 162](#day-162---november-9-2025--strength-training-cold-weather-strength) | [Day 172](#day-172---november-19-2025--strength-training-gratitude-strength-training) | [Day 182](#day-182---november-29-2025--strength-training-december-preparation) | [Day 192](#day-192---december-9-2025--strength-training-holiday-energy-building) | [Day 202](#day-202---december-19-2025--strength-training-christmas-week-strength) | [Day 212](#day-212---december-29-2025--strength-training-year-end-strength-assessment) | [Day 222](#day-222---january-8-2026--strength-training-winter-strength-focus) | [Day 232](#day-232---january-18-2026--strength-training-progressive-challenge) | [Day 242](#day-242---january-28-2026--strength-training-january-consistency) | [Day 252](#day-252---february-7-2026--strength-training-february-strength-building) | [Day 262](#day-262---february-17-2026--strength-training-presidents-day-strength) | [Day 272](#day-272---february-27-2026--strength-training-february-strength-assessment) | [Day 282](#day-282---march-9-2026--strength-training-spring-strength-preparation) | [Day 292](#day-292---march-19-2026--strength-training-equinox-strength-balance) | [Day 302](#day-302---march-29-2026--strength-training-march-strength-assessment) | [Day 312](#day-312---april-8-2026--strength-training-spring-strength-building) | [Day 322](#day-322---april-18-2026--strength-training-good-friday-strength-through-suffering) | [Day 332](#day-332---april-28-2026--strength-training-april-strength-assessment) | [Day 342](#day-342---may-8-2026--strength-training-mothers-day-strength) | [Day 352](#day-352---may-18-2026--strength-training-late-may-strength-building) | [Day 362](#day-362---may-28-2026--strength-training-may-strength-assessment) | [Day 372](#day-372---june-7-2026--strength-training-annual-strength-celebration) | [Day 382](#day-382---june-17-2026--strength-training-fathers-day-functional-strength) | [Day 392](#day-392---june-27-2026--strength-training-summer-strength-application)
@@ -1231,11 +1231,13 @@ To look at this question, Gemini was prompted ... ***a FEW TIMES, because AI wil
 
 ### [Day 50 - July 20, 2025](https://docs.google.com/document/d/1iKn-jZ79NdibfMbswl-nnxnzHeSd5yh3G7dTcxV26Gg/edit?usp=sharing) | [Mobility: Vector Object Uploading Storage, Querying and Retrieval For More Agile AI-Assistance](https://g.co/gemini/share/0d94f9978534)
 
-What can we learn about the flexibility of vector storage and retrieval from a semi-detailed look at why mobility matters? 
+What can we learn about the flexibility of vector storage and retrieval from a semi-detailed look at why flexibility or mobility might matter? 
 
-The importance of [mobility and daily maintenance of mobility](https://thereadystate.com/daily-maintenance/) is probably almost too obvious to athletes or active lifestyle folks, but why should sedentary old geezers giveAF ... ESPECIALLY if the old geezer walks for everything, NEVER sits, does gardening/landscaping.  That mobile, fit geezer is not going to think he needs daily mobility maintenance because he is not bad off as a decrepit chair-bound geriatric as someone who uses their vehicle to get everything and prefers sitting in a comfortable recliner to doing things?  We could and did ask [what are 10 reasons why mobility and spending a little time each day on mobility matter to a knowledgeworker](https://claude.ai/public/artifacts/78012ca6-b0c0-4e7f-b5e2-a4541e3f328c) who works primarily in something like AI research, machine learning, data science or something on the surface might not appear to demand as much mobility as kayaking or mountain climbing or other outside sports where mobility might be necessary to save one's life or avoid deadly injuries. Workplace implementations of daily mobility maintenance exercises have demonstrated 75% improvement in sleep quality alongside significant reductions in work-related tension (19% reduction) and irritability (28% reduction) ... of course, old retired geezers might be too damn stubborn to admit they need to do mobility exercises, so there's not really any point in trying to help them to stop being miserable old bastards, because that's what they want ... after all, they know what "USE IT OR LOSE IT" means and they've opted for the latter.
+The importance of [mobility and daily maintenance of mobility](https://thereadystate.com/daily-maintenance/) is probably almost TOO obvious to athletes or active lifestyle folks, but why should sedentary old geezers giveAF ... ESPECIALLY if the old geezer walks for everything, NEVER sits, does gardening/landscaping.  That semi-mobile, fit geezer is not going to think he needs daily mobility maintenance because he is not bad off as a decrepit chair-bound geriatric as someone who uses their vehicle to get everything and prefers sitting in a comfortable recliner to doing things?  
 
-*Okay, okay, okay ... MAYBE the really important, pivotally important, make or break question is actually:* ***Will thinking about the parallels to the extra flexibility and agility offered by vector storage and retrieval actually help us remember to do our daily mobility maintenance exercises?***  Meh ... maybe not! But who cares? Anything is worth a try ... or else, we might as well just give up become a fossilized angry blob like another one of those senile, miserable old bastards.
+Maybe, we should and did ask [what are 10 reasons why mobility and spending a little time each day on mobility matter to a knowledgeworker](https://claude.ai/public/artifacts/78012ca6-b0c0-4e7f-b5e2-a4541e3f328c) who works primarily in something like AI research, machine learning, data science or something on the surface might not appear to demand as much mobility as kayaking or mountain climbing or other outside sports where mobility might be necessary to save one's life or avoid deadly injuries. Workplace implementations of daily mobility maintenance exercises have demonstrated 75% improvement in sleep quality alongside significant reductions in work-related tension (19% reduction) and irritability (28% reduction) ... of course, old retired geezers might be too damn stubborn to admit they need to do mobility exercises, so there's not really any point in trying to help them to stop being miserable old bastards, because that's what they want ... after all, they know what "USE IT OR LOSE IT" means and they've opted for the latter.
+
+*Okay, okay, okay ... MAYBE the really important, pivotally important, make or break question is actually the reflection question:* ***Will thinking about the parallels to the extra flexibility and agility offered by vector storage and retrieval actually help us remember to do our daily mobility maintenance exercises?***  Meh, who knows ... maybe not! But who cares? When we we are thowing mud at the wall to see what sticks, maybe anything is worth a try ... or else, we might as well just give up become a fossilized angry blob like another one of those senile, miserable old bastards.
 
 To understand, why there is a push toward improving the flexibility and agility of uploading, storing and querying vectors with a cloud service offering providing object store with native support to store and query vectors at scale, Gemini was prompted to:
 
@@ -1248,11 +1250,96 @@ To understand, why there is a push toward improving the flexibility and agility 
 - Explore the broader implications of this technology shift by identifying: (a) Other enabling technologies that complement scalable vector storage, such as improved embedding models, data annotation services, and optimized pre-trained LLMs. (b) Key barriers to the widespread adoption of private and specialized AI. For each barrier (e.g., cost, data management complexity, security concerns, model maintenance), analyze how native vector support in cloud storage helps to mitigate or resolve the issue.
 - Structure all the gathered information into a comprehensive backgrounder that explains how integrating vector capabilities directly into cloud storage fundamentally changes the development and deployment of next-generation AI applications.
 
-### Day 51 - July 21, 2025 | Christian Spiritual Health: Creation Appreciation
-- Exercise outdoors with focus on God's creation
-- Practice prayer while walking in nature
-- Reflect on being part of created order
-- Connect physical activity to environmental stewardship
+### Day 51 - July 21, 2025 | Christian Spiritual Health: Stop Worshiping Idols and Appreciate How/Why The Creator is Still Creating
+# WAKE UP: Stop Worshiping Dead Things and JOIN the Living God's Work
+
+#### GET OFF YOUR THRONE OF COMPLACENCY
+
+**"Be ye doers of the word, and not hearers only, deceiving your own selves" (James 1:22)**
+
+STOP playing church while the Creator's workshop churns around you! You sit there, drowning in your manufactured comfort, while the Living God beckons you to CO-CREATE. Every second you waste in your cushioned tomb is a second you REJECT your divine commission.
+
+#### The Creator is STILL CREATING—WHERE ARE YOU?
+
+Listen closely: **"My Father worketh hitherto, and I work" (John 5:17)**. The Creator didn't clock out after Genesis. He's STILL sculpting mountains, STILL breathing life into seeds, STILL orchestrating the dance of seasons. And you? You're glued to dead screens worshiping silicon idols!
+
+#### COMMANDS FOR THE LIVING (Not Suggestions for the Dead):
+
+**1. GET YOUR HANDS DIRTY—NOW**
+- Plant something TODAY. Not tomorrow. TODAY.
+- Touch soil. Test creation. Experiment with the living laboratory God spread before you.
+- **"Faith without works is DEAD" (James 2:26)**—and so is your spirituality if it never touches earth
+
+**2. DESTROY YOUR COMFORT ZONES**
+- Tear down your entertainment altars! Your couch is an altar to SLOTH
+- Build prayer gardens instead of man-caves
+- Create spaces that FORCE encounter with the Living God
+- **"No man can serve two masters" (Matthew 6:24)**—Choose: Netflix or Nature's God?
+
+**3. YOUR LIFE IS NOT YOURS TO WASTE**
+- **"Know ye not that ye are the temple of God?" (1 Corinthians 3:16)**
+- Every breath is borrowed capital—WHAT'S YOUR RETURN ON INVESTMENT?
+- The Creator gave you consciousness to PARTICIPATE, not spectate
+- You're either building with God or decaying with your idols
+
+**4. ENVIRONMENTAL STEWARDSHIP IS SPIRITUAL WARFARE**
+- Stop genuflecting before DEAD THINGS—cars, gadgets, concrete tombs
+- **"The earth is the Lord's, and the fulness thereof" (Psalm 24:1)**—ACT LIKE IT
+- Every piece of plastic you choose over creation is BLASPHEMY
+- Your fossil fuel addiction mocks the Living Water
+
+#### THE BRUTAL TRUTH ABOUT YOUR IDOLS
+
+Your precious technology? It's DYING the moment it's made. Your comfort systems? DECOMPOSING. Your entertainment devices? FOSSILIZED DEATH masquerading as life.
+
+**"Their idols are silver and gold, the work of men's hands... They that make them are like unto them" (Psalm 115:4,8)**
+
+You're becoming what you worship: LIFELESS. DISCONNECTED. OBSOLETE.
+
+#### THE CREATOR'S ONGOING MASTERPIECE DOESN'T NEED SPECTATORS
+
+While you Netflix and chill, God is:
+- Splitting cells
+- Unfurling leaves  
+- Carving canyons
+- Breathing storms
+
+**"He that is not with me is against me" (Matthew 12:30)**
+
+There's NO neutral ground. You're either co-creating or corroding.
+
+#### YOUR WAKE-UP CALL
+
+**RIGHT NOW:**
+1. Turn off EVERY screen
+2. Walk outside
+3. Find something growing
+4. Ask: "How is God creating through this?"
+5. Ask: "How can I join this work?"
+
+**THIS WEEK:**
+- Rip out one "comfort system"
+- Replace it with something that connects you to creation
+- Start a garden, build a greenhouse, create a prayer path
+- Make others UNCOMFORTABLE with your zeal for living creation
+
+**"I know thy works, that thou art neither cold nor hot: I would thou wert cold or hot. So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth" (Revelation 3:15-16)**
+
+Consideer that the Creator may be DISGUSTED by your lukewarm existence ... could anyone, ie God, find any evidence, in your normal day-to-day life, to prove that you actually follow Christ?  Your comfortable Christianity might just be a *for-show* ABOMINATION ... worshipping COMFORT and seeking a COMFORTABLE place in your faulty idea of heaven is not Christianity -- sure, we might all have laziness tendencies, but what do we seek?  Do we idolize ease and comfort and worhip that [by desiring wealth, power, fame or other things that make comfort easy to obtain]?
+
+#### THE CHOICE IS BINARY
+
+**LIFE or DEATH**  
+**CREATING or CONSUMING**  
+**PARTICIPATING or PERISHING**
+
+The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands while yours grip remote controls (Isaiah 55:12). Creation groans for the sons of God to WAKE UP (Romans 8:19).
+
+**Your move. The Creator is waiting. But not forever.**
+
+*"Today if ye will hear his voice, harden not your hearts" (Hebrews 3:15)*
+
+**CHOOSE. NOW.**
 
 ### Day 52 - July 22, 2025 | Strength Training: Functional Patterns
 - Practice movements used in daily life activities

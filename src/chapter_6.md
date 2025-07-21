@@ -1346,12 +1346,12 @@ The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands
 
 ### [Day 52 - July 22, 2025](https://docs.google.com/document/d/1UJ8XdJ5xvp5lIva0ub4JQktccJleqb4yZLFStKdhJac/edit?usp=sharing) | [Strength Training: Functional Patterns](https://g.co/gemini/share/63029ed51f31)
 
-This comes down to relatively simple or practical things ... and avoiding stupid shit and things people usually do ... screw going to the fitness center or weightlifting room, as if I'm a teen or twentysomething ... I am not training to make the JV Football team; I am training to be a 75-, 85-, 95-, 105-, 115-year-old gardener.  SIMPLE stuff, until you have to DO IT every day.
+This comes down to relatively simple or practical things ... and avoiding stupid workout shit and the kinds of things people usually do when they train for a purpose that has no connection their actual future will be ... screw going to the fitness center or weightlifting room, as if I'm a teen or twentysomething OR worse for the AARP beach conga geriatric fitness routine ... I am not training to make the JV Football team OR to be able to play shuffle board at the assisted living center; I am training to be a 75-, 85-, 95-, 105-, 115-year-old gardener.  Really basic, SIMPLE stuff one thinks ... until one has to DO IT every, every, EVERY SINGLE day ... only taking care of cattle could possibly be better than tending a large garden.
 
-- What kinds of movements or exertionsused in daily life activities are difficult?
-- Focus on lifting, carrying, pushing, pulling patterns and endurance and MORE ENDURANCE
-- Connect gym exercises to real-world applications or add reps to real-world activities
-- How can your strengthen movements now needed for the next season's activities
+- What kinds of movements or exertions used in daily activities are going to be difficult to sustain?
+- Focus on REGULAR lifting, carrying, pushing, pulling patterns and weight-challenged endurance and MORE ENDURANCE
+- Connect gym exercises to real-world applications or add reps and add steps to real-world activities
+- How can your strengthen movements now needed for the next week's, nextseason's activities
 
 Gemini was prompte to
 - Analyze the provided context I provided to understand its core principles of functional fitness for a 65-year-old. Find recent scientific literature and expert commentary to add references and depth to its claims on exercise selection, periodization, and injury modification.

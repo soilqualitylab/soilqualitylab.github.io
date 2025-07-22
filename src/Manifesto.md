@@ -2,6 +2,8 @@
 
 STOP playing church or bowing to materialist idolatry! Stop worshipping dead shit that's never going to be part of the Creator's plan. The Creator's workshop churns around us with examples of recovery, renewal, rebirth, resurrection and transformation!
 
+**The Creator has given you life in order for you to CREATE you** so *develop your life!*
+
 Never mind what you or your entire species thinks of its value or its accomplishments ... there are far, far, far bigger things than the tiny subset of Reality that humans can contemplate. That's true, even if we only look at grand sum total of everything that humans can appreciate in our known Universe. Obviously, there significantly bigger things, beyond anything than the human ego can appreciate ... the human mind is profoundly limited, to smaller degree by natural human limitations, ie a brain is finite, there are only so many neurons. MOST of the crippling limitations that constrain humans are self-imposed, by our tendency to cling to past experiences, favorite memories and pet grudges or other baggage we choose to maintain and polish and stay attached to.  
 
 In stark contrast to the tendency of the human species, the Creator has never stopped creating new Universes and new Realities, so of course, since the Creator is an infinitely merciful and loving God, He is still creating in and through you, and will continue creating long after anyone who remembers you or anyone you know will be forgotten.
@@ -12,25 +14,25 @@ The are just eight simple principles to remember in order to find renewal, recov
 
 1) **Realize I’m not God.** I admit that I am powerless to control my tendency to believe in myself and my capabilities, thus to continually stumble into old ways, doing the wrong thing, making my life is unmanageable. (Step 1 of 12-step programs) “Blessed are the poor in spirit, for theirs is the kingdom of heaven.” Matthew 5:3 NIV
 
-2) **Love God MORE than anything else** [including any church or group of friends or family] and believe that my life matters to Him and, through the power of the Resurrection, that **He has the power to completely restore and even thoroughly re-create me** and to help me to stop looking backward or regretting my past, but the old me must die and the new me must be re-born in Christ. I will always be profoundly sad that it has taken me so long to begin to realize why I must exist ONLY to glorify God and to do His will. (Step 2)“Blessed are those who mourn, for they will be comforted.” Matthew 5:4 NIV
+2) **Love God MORE than anything else** [including any church or group of friends or family] and believe that my life matters to Him and, through the power of the Resurrection, that **He has the power to completely restore and even thoroughly re-create me** and to help me to stop looking backward or regretting my past, but the old me must die and the new me must be re-born in Christ. I will always be profoundly sad that it has taken me so long to begin to realize why I must exist ONLY to glorify God and to do His will. (Step 2 of 12-step programs)“Blessed are those who mourn, for they will be comforted.” Matthew 5:4 NIV
 
-3) **Earnestly, deliberately, consciously choose to commit ALL my life and will to Christ’s care and control**, asking the Holy Spirit to come into my life. My life is now a continuous battle against the evil of my ego and a humble struggle to be an example of one doing the will of the Lord. (Step 3) “Blessed are the meek, for they will inherit the earth.” Matthew 5:5 NIV
+3) **Earnestly, deliberately, consciously choose to commit ALL my life and will to Christ’s care and control**, asking the Holy Spirit to come into my life. My life is now a continuous battle against the evil of my ego and a humble struggle to be an example of one doing the will of the Lord. (Step 3 of 12-step programs) “Blessed are the meek, for they will inherit the earth.” Matthew 5:5 NIV
 
-4) **Openly examine and confess my hurts, hang-ups and habits to myself, to God, and to anyone who cares about the will of the Lord and is able to listen.** (Steps 4 and 5) “Blessed are the PURE in heart, for they will see God.” Matthew 5:8 NIV
+4) **Openly examine and confess my hurts, hang-ups and habits to myself, to God, and to anyone who cares about the will of the Lord and is able to listen.** (Steps 4 and 5 of 12-step programs) “Blessed are the PURE in heart, for they will see God.” Matthew 5:8 NIV
 
-5) **Humbly SUBMIT to ALL nges God wants to make in my life** and voluntarily beg Him to use everything about me, my life, my transformation and my flaws for His purposes. (Steps 6 and 7) Blessed are those who hunger and thirst for righteousness, for they will be filled.” Matthew 5:6 NIV
+5) **Humbly SUBMIT to ALL nges God wants to make in my life** and voluntarily beg Him to use everything about me, my life, my transformation and my flaws for His purposes. (Steps 6 and 7 of 12-step programs) Blessed are those who hunger and thirst for righteousness, for they will be filled.” Matthew 5:6 NIV
 
-6) **Evaluate ALL of my relationships.** AVOID those relationships or minimize the part of any relationship that pushes me in the direction of comfort, ease and tendencies to relapse into bad habits. Offer forgiveness to those who have hurt me and make amends for harm I’ve done to others when possible, except when to do so would harm them or others. (Steps 8 and 9) “Blessed are the merciful, for they will be shown mercy.” Matthew 5:7 NIV “Blessed are the peacemakers, for they will be called children of God.” Matthew 5:9 NIV
+6) **Evaluate ALL of my relationships.** AVOID those relationships or minimize the part of any relationship that pushes me in the direction of comfort, ease and tendencies to relapse into bad habits. Offer forgiveness to those who have hurt me and make amends for harm I’ve done to others when possible, except when to do so would harm them or others. (Steps 8 and 9 of 12-step programs) “Blessed are the merciful, for they will be shown mercy.” Matthew 5:7 NIV “Blessed are the peacemakers, for they will be called children of God.” Matthew 5:9 NIV
 
-7) **Plan, reserve and set aside a DAILY holy time with God for deeper self-examination and Bible reading** and set the stage for being a constant state of prayer throughout the day in order to better know God and His will for my life and to allow Him to shape me to re-gain the creative power to follow His will. (Steps 10 and 11)
+7) **Plan, reserve and set aside a DAILY holy time with God for deeper self-examination and Bible reading** and set the stage for being a constant state of prayer throughout the day in order to better know God and His will for my life and to allow Him to shape me to re-gain the creative power to follow His will. (Steps 10 and 11 of 12-step programs)
 
-8) **Yield myself completely to God to be used to bring this Good News to others, primarily by my example and not just my words.** (Step 12) “Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.” Matthew 5:10 NIV
+8) **Yield myself completely to God to be used to bring this Good News to others, primarily by my example and not just my words.** (Step 12 of 12-step programs) “Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.” Matthew 5:10 NIV
 
-**CHOOSE. NOW.** Move forward with the Creator's plan for your life. ***Stop EVER Blaming Others!*** Stop waiting for others to change, stop waiting for the world to change, stop waiting for the church to change, stop waiting for your family to change, stop waiting for your friends to change ... **MOVE FORWARD!**
+**Stop looking back; stop catastrophizing about what might happen. CHOOSE NOW.** ***Let the dead bury their dead.*** Stop waiting for others to change, stop waiting for the world to change, stop waiting for the church to change, stop waiting for your family to change, stop waiting for your friends to change. 
 
-***Let the dead bury their dead.***
+Move forward implmementing the Creator's plan for your life. You can't fix others -- you can listen and show that you care, but YOU have to fix YOU. *Stop EVER blaming others!* **MOVE FORWARD implmementing the Creator's plan for your life!**
 
-The Creator has given you life in order to CREATE. *Develop your life!*
+**The Creator has given you life in order for you to CREATE you** so *develop your life!*
 
 ## **Develop Your Life**
 

@@ -1,92 +1,32 @@
 # Wut Up Today
 
-#### GET OFF YOUR THRONE OF COMPLACENCY
+STOP playing church or bowing to materialist idolatry! Stop worshipping dead shit that's never going to be part of the Creator's plan. The Creator's workshop churns around us with examples of recovery, renewal, rebirth, resurrection and transformation!
 
-**"Be ye doers of the word, and not hearers only, deceiving your own selves" (James 1:22)**
+Never mind what you or your entire species thinks of its value or its accomplishments ... there are far, far, far bigger things than the tiny subset of Reality that humans can contemplate. That's true, even if we only look at grand sum total of everything that humans can appreciate in our known Universe. Obviously, there significantly bigger things, beyond anything than the human ego can appreciate ... the human mind is profoundly limited, to smaller degree by natural human limitations, ie a brain is finite, there are only so many neurons. MOST of the crippling limitations that constrain humans are self-imposed, by our tendency to cling to past experiences, favorite memories and pet grudges or other baggage we choose to maintain and polish and stay attached to.  
 
-STOP playing church while the Creator's workshop churns around you! You sit there, drowning in your manufactured comfort, while the Living God beckons you to CO-CREATE. Every second you waste in your cushioned tomb is a second you REJECT your divine commission.
+In stark contrast to the tendency of the human species, the Creator has never stopped creating new Universes and new Realities, so of course, since the Creator is an infinitely merciful and loving God, He is still creating in and through you, and will continue creating long after anyone who remembers you or anyone you know will be forgotten.
 
-#### The Creator is STILL CREATING—WHERE ARE YOU?
+## The Road to Continuous Ressurection And Renewal Based on the Beatitudes
 
-Listen closely: **"My Father worketh hitherto, and I work" (John 5:17)**. The Creator didn't clock out after Genesis. He's STILL sculpting mountains, STILL breathing life into seeds, STILL orchestrating the dance of seasons. And you? You're glued to dead screens worshiping silicon idols!
+The are just eight simple principles to remember in order to find renewal, recovery and to CONTINOUSLY DEVELOP our lives.
 
-#### COMMANDS FOR THE LIVING (Not Suggestions for the Dead):
+1) **Realize I’m not God.** I admit that I am powerless to control my tendency to believe in myself and my capabilities, thus to continually stumble into old ways, doing the wrong thing, making my life is unmanageable. (Step 1 of 12-step programs) “Blessed are the poor in spirit, for theirs is the kingdom of heaven.” Matthew 5:3 NIV
 
-**1. GET YOUR HANDS DIRTY—NOW**
-- Plant something TODAY. Not tomorrow. TODAY.
-- Touch soil. Test creation. Experiment with the living laboratory God spread before you.
-- **"Faith without works is DEAD" (James 2:26)**—and so is your spirituality if it never touches earth
+2) **Love God MORE than anything else** [including any church or group of friends or family] and believe that my life matters to Him and, through the power of the Resurrection, that **He has the power to completely restore and even thoroughly re-create me** and to help me to stop looking backward or regretting my past, but the old me must die and the new me must be re-born in Christ. I will always be profoundly sad that it has taken me so long to begin to realize why I must exist ONLY to glorify God and to do His will. (Step 2)“Blessed are those who mourn, for they will be comforted.” Matthew 5:4 NIV
 
-**2. DESTROY YOUR COMFORT ZONES**
-- Tear down your entertainment altars! Your couch is an altar to SLOTH
-- Build prayer gardens instead of man-caves
-- Create spaces that FORCE encounter with the Living God
-- **"No man can serve two masters" (Matthew 6:24)**—Choose: Netflix or Nature's God?
+3) **Earnestly, deliberately, consciously choose to commit ALL my life and will to Christ’s care and control**, asking the Holy Spirit to come into my life. My life is now a continuous battle against the evil of my ego and a humble struggle to be an example of one doing the will of the Lord. (Step 3) “Blessed are the meek, for they will inherit the earth.” Matthew 5:5 NIV
 
-**3. YOUR LIFE IS NOT YOURS TO WASTE**
-- **"Know ye not that ye are the temple of God?" (1 Corinthians 3:16)**
-- Every breath is borrowed capital—WHAT'S YOUR RETURN ON INVESTMENT?
-- The Creator gave you consciousness to PARTICIPATE, not spectate
-- You're either building with God or decaying with your idols
+4) **Openly examine and confess my hurts, hang-ups and habits to myself, to God, and to anyone who cares about the will of the Lord and is able to listen.** (Steps 4 and 5) “Blessed are the PURE in heart, for they will see God.” Matthew 5:8 NIV
 
-**4. ENVIRONMENTAL STEWARDSHIP IS SPIRITUAL WARFARE**
-- Stop genuflecting before DEAD THINGS—cars, gadgets, concrete tombs
-- **"The earth is the Lord's, and the fulness thereof" (Psalm 24:1)**—ACT LIKE IT
-- Every piece of plastic you choose over creation is BLASPHEMY
-- Your fossil fuel addiction mocks the Living Water
+5) **Humbly SUBMIT to ALL nges God wants to make in my life** and voluntarily beg Him to use everything about me, my life, my transformation and my flaws for His purposes. (Steps 6 and 7) Blessed are those who hunger and thirst for righteousness, for they will be filled.” Matthew 5:6 NIV
 
-#### THE BRUTAL TRUTH ABOUT YOUR IDOLS
+6) **Evaluate ALL of my relationships.** AVOID those relationships or minimize the part of any relationship that pushes me in the direction of comfort, ease and tendencies to relapse into bad habits. Offer forgiveness to those who have hurt me and make amends for harm I’ve done to others when possible, except when to do so would harm them or others. (Steps 8 and 9) “Blessed are the merciful, for they will be shown mercy.” Matthew 5:7 NIV “Blessed are the peacemakers, for they will be called children of God.” Matthew 5:9 NIV
 
-Your precious technology? It's DYING the moment it's made. Your comfort systems? DECOMPOSING. Your entertainment devices? FOSSILIZED DEATH masquerading as life.
+7) **Plan, reserve and set aside a DAILY holy time with God for deeper self-examination and Bible reading** and set the stage for being a constant state of prayer throughout the day in order to better know God and His will for my life and to allow Him to shape me to re-gain the creative power to follow His will. (Steps 10 and 11)
 
-**"Their idols are silver and gold, the work of men's hands... They that make them are like unto them" (Psalm 115:4,8)**
+8) **Yield myself completely to God to be used to bring this Good News to others, primarily by my example and not just my words.** (Step 12) “Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.” Matthew 5:10 NIV
 
-You're becoming what you worship: LIFELESS. DISCONNECTED. OBSOLETE.
-
-#### THE CREATOR'S ONGOING MASTERPIECE DOESN'T NEED SPECTATORS
-
-While you Netflix and chill, God is:
-- Splitting cells
-- Unfurling leaves  
-- Carving canyons
-- Breathing storms
-
-**"He that is not with me is against me" (Matthew 12:30)**
-
-There's NO neutral ground. You're either co-creating or corroding.
-
-#### YOUR WAKE-UP CALL
-
-**RIGHT NOW:**
-1. Turn off EVERY screen
-2. Walk outside
-3. Find something growing
-4. Ask: "How is God creating through this?"
-5. Ask: "How can I join this work?"
-
-**THIS WEEK:**
-- Rip out one "comfort system"
-- Replace it with something that connects you to creation
-- Start a garden, build a greenhouse, create a prayer path
-- Make others UNCOMFORTABLE with your zeal for living creation
-
-**"I know thy works, that thou art neither cold nor hot: I would thou wert cold or hot. So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth" (Revelation 3:15-16)**
-
-Consideer that the Creator may be DISGUSTED by your lukewarm existence ... could anyone, ie God, find any evidence, in your normal day-to-day life, to prove that you actually follow Christ?  Your comfortable Christianity might just be a *for-show* ABOMINATION ... worshipping COMFORT and seeking a COMFORTABLE place in your faulty idea of heaven is not Christianity -- sure, we might all have laziness tendencies, but what do we seek?  Do we idolize ease and comfort and worhip that [by desiring wealth, power, fame or other things that make comfort easy to obtain]?
-
-#### THE CHOICE IS BINARY
-
-**LIFE or DEATH**  
-**CREATING or CONSUMING**  
-**PARTICIPATING or PERISHING**
-
-The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands while yours grip remote controls (Isaiah 55:12). Creation groans for the sons of God to WAKE UP (Romans 8:19).
-
-**Your move. The Creator is waiting. But not forever.**
-
-*"Today if ye will hear his voice, harden not your hearts" (Hebrews 3:15)*
-
-**CHOOSE. NOW.**
+**CHOOSE. NOW.** Move forward with the Creator's plan for your life. ***Stop EVER Blaming Others!*** Stop waiting for others to change, stop waiting for the world to change, stop waiting for the church to change, stop waiting for your family to change, stop waiting for your friends to change ... **MOVE FORWARD!**
 
 ***Let the dead bury their dead.***
 

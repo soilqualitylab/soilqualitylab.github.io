@@ -1346,7 +1346,13 @@ The rocks cry out while you stay silent (Luke 19:40). The trees clap their hands
 
 ### [Day 52 - July 22, 2025](https://docs.google.com/document/d/1UJ8XdJ5xvp5lIva0ub4JQktccJleqb4yZLFStKdhJac/edit?usp=sharing) | [Strength Training: Functional Patterns](https://g.co/gemini/share/63029ed51f31)
 
-This comes down to relatively simple or practical things ... and avoiding stupid workout shit and the kinds of things people usually do when they train for a purpose that has no connection their actual future will be ... screw going to the fitness center or weightlifting room, as if I'm a teen or twentysomething OR worse for the AARP beach conga geriatric fitness routine ... I am not training to make the JV Football team OR to be able to play shuffle board at the assisted living center; I am training to be a 75-, 85-, 95-, 105-, 115-year-old gardener.  Really basic, SIMPLE stuff one thinks ... until one has to DO IT every, every, EVERY SINGLE day ... only taking care of cattle could possibly be better than tending a large garden.
+*[Never mind truly DUMB goals.](https://x.com/MarkBruns/status/1947713644839493948)* Strength boils down to brutally simple and intensely practical things ... what's the STRENGTH for? 
+
+If one answer's this "what's it for" question first ... it's going means avoiding wasting time, energy money, etc on stupid workout shit and the kinds of things people usually do when they train for a purpose that has no connection their actual future will be.
+
+***Scaaaaarrrooooo*** going to the fitness center or weightlifting room, as if I'm a teen or twentysomething OR worse for the AARP beach conga geriatric fitness routine ... I am not training to make the JV Football team OR to be able to play shuffle board at the assisted living center; I am training to be a 75-, 85-, 95-, 105-, 115-year-old gardener.  Really basic, SIMPLE stuff one thinks ... until one has to DO IT every, every, EVERY SINGLE day ... only taking care of cattle could possibly be better than tending a large garden.
+
+**What kinds of STRENGTH am I going to need when I'm 115, 105, 95, 85, 75? How about 70, 69, 68, 67 ... since 66 is almost here, right now?**
 
 - What kinds of movements or exertions used in daily activities are going to be difficult to sustain?
 - Focus on REGULAR lifting, carrying, pushing, pulling patterns and weight-challenged endurance and MORE ENDURANCE

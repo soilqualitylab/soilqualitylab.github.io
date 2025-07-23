@@ -1371,11 +1371,9 @@ After some preliminary contextural AI-assisted diggery, Gemini was finally promp
 
 ### [Day 53 - July 23, 2025](https://docs.google.com/document/d/1h0FKpClzlauqexyQqK6RqDkaOeV_vPSWVfk4f_7S8k0/edit?usp=sharing) | [Cardiovascular Breathwork: Situational Adaptation](https://g.co/gemini/share/68648f496dab)
 
-*Take a deep breath* ... as a mental exercise, let's just pretend for a few moments for that we don't have air conditioning or might have to adapt when we don't have air conditiong, shall we? There are things that we should probably review to make sure that we are not one of those severely UNHELPFUL idiots who FREAKS the livingF out when the princess doesn't have his AI. **YOU DO NOT TO BE THAT IDIOTIC PRINCESS!!!**
+*Take a deep breath* ...  spend some time each day *just practicing* diaphramatic breathing ... breathwork is remarkably deep topic and has been studied for ages, but there are things that everyone probably should already know about optimizing activity duration in corn sweat season, or monitoring heart rate response to heat stress, or why we should practice cooling strategies during and after exercise, there are more situational adaptations that we can learn from the body's response to summer heat and humidity for the body's adaptation to summer exercise conditions.  
 
-So get a grip beforehand ... there are all probably should already know about optimizing activity duration in corn sweat season, or monitoring heart rate response to heat stress, or why we should practice cooling strategies during and after exercise, there are more situational adaptations that we can learn from the body's response to summer heat and humidity for the body's adaptation to summer exercise conditions.  
-
-Let's look at different applications of breathwork and cardiovascular health, ESPECIALLY in the context of summer heat and humidity [since extreme heat and humidity can exacerbate the difficulty of even being able to think coherently about the optimal body's stress response]:
+To keep it simple, let's look at different, but likely to arise, applications of breathwork and cardiovascular health, ESPECIALLY in the context of summer heat and humidity [since extreme heat and humidity can exacerbate the difficulty of even being able to think coherently about the optimal body's stress response]:
 - Promoting relaxation and general using what you have learned
 - Good morning regimen in order to wake up properly [without stimulants]
 - Developing athletic prowess, self-coaching and excellence
@@ -1384,7 +1382,7 @@ Let's look at different applications of breathwork and cardiovascular health, ES
 - Relieve discomfort in fingers, hands, arms, feet, legs, and neck
 - Conditioning the legs, arms, core, back, and neck
 - Creating a dynamic image, projecting vitality
-- Combatting insomnia or exessive napping
+- Combatting either insomnia or exessive napping [without CPAP]
 - Relieve gas, indigestion or feeling bloated
 - Relieving nasal/sinus congestion 
 - Relieving motion sickness, dizziness, vertigo

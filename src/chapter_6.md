@@ -1373,7 +1373,7 @@ After some preliminary contextural AI-assisted diggery, Gemini was finally promp
 
 *Take a deep breath* ...  spend some time each day *just practicing* diaphramatic breathing ... breathwork is remarkably deep topic and has been studied for ages, but there are things that everyone probably should already know about optimizing activity duration in corn sweat season, or monitoring heart rate response to heat stress, or why we should practice cooling strategies during and after exercise, there are more situational adaptations that we can learn from the body's response to summer heat and humidity for the body's adaptation to summer exercise conditions.  
 
-To keep it simple, let's look at different, but likely to arise, applications of breathwork and cardiovascular health, ESPECIALLY in the context of summer heat and humidity [since extreme heat and humidity can exacerbate the difficulty of even being able to think coherently about the optimal body's stress response]:
+To keep it simple, [look at different, likely-to-arise applications of breathwork](https://grok.com/share/c2hhcmQtMg%3D%3D_6998c98f-16c4-48ad-8c98-ba54f6dc989b) and generally improving cardiovascular health, ESPECIALLY TO PREPARE for greater heat and humidity ... and preparation beforehand is key, since extreme heat and humidity can exacerbate the difficulty of even being able to think coherently about what might be the optimal body's stress response:
 - Promoting relaxation and general using what you have learned
 - Good morning regimen in order to wake up properly [without stimulants]
 - Developing athletic prowess, self-coaching and excellence

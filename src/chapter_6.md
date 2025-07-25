@@ -1478,10 +1478,11 @@ To some degree, about FINANCIAL fitness but it's also about emotional fitness, s
 - Share resources or encouragement with the community
 
 ### Day 57 - July 27, 2025 | Rest & Recovery: Weekend Recovery Ritual
-- Create consistent weekend recovery routine
-- Balance active recovery with complete rest
-- Practice sleep-in opportunity while maintaining rhythm
-- Use weekend for meal prep and planning ahead
+- Stop using the weekend for doing stupid shit or hanging with doers of stupid shit
+- Allocate time for **recovery**, complete rest and better nutrition meal prep
+- Instead of sleeping-in or a *no rules* vacation, maintain workflow rhythm, ie ***no entitlements!***
+- Use weekend for WORK on **planning ahead** and paying down personal **technical debt**
+- Improve the consistency of your weekend **recovery** discipline improvement plan
 
 ### Day 58 - July 28, 2025 | Stress Management: Vacation Mindset
 - Practice being present during summer leisure time

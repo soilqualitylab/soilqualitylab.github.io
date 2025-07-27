@@ -1501,15 +1501,15 @@ Toward that end, Gemini was prompted to:
 
 ### [Day 57 - July 27, 2025](https://docs.google.com/document/d/1To91ko3bbOpV5nFZj3lKriuNX-zTlvW8VA-ub-Jqhpo/edit?usp=sharing) | [Rest & Recovery: Weekend Recovery Transformation](https://g.co/gemini/share/75264977a28f)
 
-Let's start with the OBVIOUS stuff, ie the kinds of things that one should've learned [***but maybe didn't***] in his early twenties.
+Let's start with the OBVIOUS stuff, ie the kinds of discipline things that one SHOULD HAVE learned [***but I didn't***] in his early twenties or even before.
 
-- Stop using the weekend for doing stupid shit, eg partying, OR hanging out with doers of stupid shit
-- Don't just recover, but ALLOCATED time for **recovery**, get complete rest, and do better meal prep for next weeks nutrtition
-- Instead of sleeping-in or treating weekends as a *no rules* vacation, maintain workflow rhythm, ie ***no entitlements!***
-- Use weekend for WORK on **planning ahead** and paying down personal **technical debt** on one's personal workflow toolchain
-- It's not just about discipline, but **improving** the consistency of your weekend **recovery** discipline improvement plan
+- Stop using the weekend for doing stupid shit, ie, knock off the partying lifestyle, STOP hanging out with doers of stupid shit
+- Don't just recover, but ALLOCATE time for **recovery** strategies and implementing plans, to get complete rest throughout the upcoming week and do things like better meal prep for next week's nutrtition, rather than going for convenience and junk
+- Instead of sleeping-in or treating weekends as vacation, maintain workflow rhythm, ie ***don't give in to the whiny "I'm ENTITLED to a vaction!" mindset***
+- Use weekend for VISIONARY WORK on **planning ahead** and developing a plan to continuosly relax by doing things like paying down personal **technical debt** on one's personal workflow toolchain, ie RATHER than doing stupid shit like watching teevee, flix or other pathetic passive shit that loser do.
+- It's not just about discipline, but make the weekend about **improving** the consistency of your weekend **recovery** discipline improvement plan
 
-With a a few lifetimes of preparation in this material, Gemini was prompted to:
+With a a few lifetimes of preparation in this material ... **and a long personal history of reaching for the EASY button and doing things the WRONG, pathetic spectator LOSER way** ...  Gemini was prompted to:
 
 - Research the foundational principles of physical and mental recovery, explaining why common habits like sleeping in can be counterproductive and elaborating on the importance of sleep hygiene and structured rest.
 - Find strategies for habit change, specifically focusing on replacing draining social activities with restorative ones and curating a supportive social environment.

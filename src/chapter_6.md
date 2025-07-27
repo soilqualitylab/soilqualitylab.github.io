@@ -1506,7 +1506,7 @@ Let's start with the OBVIOUS stuff, ie the kinds of discipline things that one S
 - Stop using the weekend for doing stupid shit, ie, knock off the partying lifestyle, STOP hanging out with doers of stupid shit
 - Don't just recover, but ALLOCATE time for **recovery** strategies and implementing plans, to get complete rest throughout the upcoming week and do things like better meal prep for next week's nutrtition, rather than going for convenience and junk
 - Instead of sleeping-in or treating weekends as vacation, maintain workflow rhythm, ie ***don't give in to the whiny "I'm ENTITLED to a vaction!" mindset***
-- Use weekend for VISIONARY WORK on **planning ahead** and developing a plan to continuosly relax by doing things like paying down personal **technical debt** on one's personal workflow toolchain, ie RATHER than doing stupid shit like watching teevee, flix or other pathetic passive shit that loser do.
+- Use weekend for VISIONARY WORK on **planning ahead** and developing a plan to continuosly relax by attacking things that continually improve one's ability to fight, like paying down personal **technical debt** on one's personal workflow or dev toolchain, ie RATHER than doing stupid shit like watching teevee, netflix/youtube or other kinds of pathetic passive *making oneself worse off* shit that losers with victim mindsets tend to do.
 - It's not just about discipline, but make the weekend about **improving** the consistency of your weekend **recovery** discipline improvement plan
 
 With a a few lifetimes of preparation in this material ... **and a long personal history of reaching for the EASY button and doing things the WRONG, pathetic spectator LOSER way** ...  Gemini was prompted to:

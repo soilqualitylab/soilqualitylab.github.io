@@ -1612,11 +1612,19 @@ In order to help give me a framework for how I can think about how I can do this
 
 ## August 2025
 
-### Day 62 - August 1, 2025 | Strength Training: Summer Challenge Peak
-- Assess strength gains from consistent summer training
-- Challenge yourself with next progression level
-- Practice perfect form rather than rushing advancement
-- Connect physical strength to inner resilience
+### Day 62 - August 1, 2025 | Strength Training: Using Strength Training Metrics As A Way To Gauge Extended Fasting.
+
+
+As 65-year-old [almost 66] healthy male, I want to want to shift into ketosis through fasting (intermittent and extended) -- the main goal: change metabolism to ketosis while RETAINING strength, not necessarily gaining any strength during the fasting. I will continue to use functional strength training (yard work, heavy lifting) as their exercise. I have done extended fasting before (~10 years ago); I am on no medications, good health per recent physical. **The whole point of THIS is about using strength metrics as a gauge for how hard to push with fasting** ... of course, I am also interested in other gauges but preserving strength levels is kind of the key, ie I expect there to be SOME discomfort with fasting. I will fast for 1-3 months and will REFUSE to start being dependent on pharmaceuticals ... thus Gemini was prompted to
+
+- Analyze the physiological effects of various fasting protocols (e.g., intermittent, prolonged, water-only) on the human body, focusing on metabolic shifts, hormonal changes (cortisol, HGH), and cellular processes like autophagy.
+- Investigate the documented effects of fasting on strength training performance by reviewing scientific studies and literature on changes in power output, muscle endurance, muscle protein synthesis vs. breakdown, and recovery times.
+- Explore the concept of using strength performance metrics as a bio-indicator for the physiological stress of a fast. Identify which metrics, such as reps to failure, volume load, or rate of perceived exertion (RPE), are most sensitive to a fasted state.
+- Synthesize the findings into a practical protocol for using strength training to monitor a fast. This should include how to establish a non-fasted baseline, the selection of key compound exercises, and the frequency of testing.
+- Propose and define specific performance-drop thresholds that could signal excessive catabolism or physiological stress, indicating when it may be advisable to break the fast.
+- Evaluate the potential risks, limitations, and contraindications of this method, including the risk of injury, electrolyte imbalances, and over-stressing the nervous system. Identify populations for whom this approach is not recommended.
+- Compare and contrast the use of strength metrics as a fasting gauge against other common monitoring methods like blood ketone meters, glucose monitors, and subjective self-assessment.
+- Research best practices for nutrient and electrolyte timing around fasted training sessions to support performance and minimize muscle loss upon refeeding.
 
 ### Day 63 - August 2, 2025 | Cardiovascular Health: Peak Summer Endurance
 - Test improved cardiovascular capacity from summer training

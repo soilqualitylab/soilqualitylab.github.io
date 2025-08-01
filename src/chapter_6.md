@@ -1625,9 +1625,9 @@ Let's say that, as 65-year-old [almost 66] healthy male, I want to want to shift
 - Compare and contrast the use of strength metrics as a fasting gauge against other common monitoring methods like blood ketone meters, glucose monitors, and subjective self-assessment.
 - Research best practices for nutrient and electrolyte timing around fasted training sessions to support performance and minimize muscle loss upon refeeding.
 
-### Day 63 - August 2, 2025 | Holistic Monastic Cardiovascular Optimization
+### [Day 63 - August 2, 2025](https://docs.google.com/document/d/1t1dYtOgUUj42avimJl6J6p0lLJWXf0Vbx27eY8Groe8/edit?usp=sharing) | [Holistic Monastic Cardiovascular Optimization](https://g.co/gemini/share/638c86ea0514)
 
-Based on how much my tail has been dragging after recent storm clean-up activities **while I have been trying to fast**, I started off thinking about:
+*Based on how much my tail has been dragging after recent storm clean-up activities* **while I have been trying to fast**, I started off today's topic a couple days ago, thinking about:
 
 - Improving my ad hoc experimental design, measuring cardiovascular capacity as a form of monitoring diet
 - Trying longer/shorter/different activity durations, to gage endurance and other changes from fasting

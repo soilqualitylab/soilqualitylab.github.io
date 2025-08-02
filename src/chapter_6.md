@@ -1646,7 +1646,7 @@ Toward this end, Gemini was prompted to:
 - Explore the nuances and potential challenges of this approach. Research age-related cardiovascular changes, the critical distinction between signs of overtraining and symptoms requiring medical consultation, and methods for troubleshooting conflicting body signals.
 - Structure the final report logically and exhaustively. Organize the content into sections covering the philosophy, the core physiological signals, detailed methodologies (including the cross-cultural findings), a practical implementation guide, and a section on long-term mastery and problem-solving.
 
-### Day 64 - August 3, 2025 | Metabolic Transition: Fasting, Juice Fasting, Masticating Juicing
+### [Day 64 - August 3, 2025](https://docs.google.com/document/d/1_QCuBuesxKfNVS2Ry9KA82MLGdlzNw4m2pSpVTl-FrQ/edit?usp=sharing) | [Metabolic Transition: Fasting, Juice Fasting, Masticating Juicing](https://g.co/gemini/share/a7248ab21c7e)
 
 In further support of my quest for a metabolic transition, which also takes advantage of the garden resources, I want to:
 - Incorporate peak summer produce into hydration events

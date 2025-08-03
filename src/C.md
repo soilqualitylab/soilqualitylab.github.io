@@ -18,7 +18,7 @@ This inaugural part of the study program serves as a critical bridge, connecting
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
-#### **Section 1: The Modern Systems Engineer's AI Toolkit (Modules 1-8)**
+#### [**Section 1: The Modern Systems Engineer's AI Toolkit (Modules 1-8)**](https://g.co/gemini/share/43f3d2a38ef6)
 
 This section reframes the traditional systems engineering lifecycle through the transformative lens of artificial intelligence, illustrating how AI augments and enhances every phase of system design, development, and operation.
 

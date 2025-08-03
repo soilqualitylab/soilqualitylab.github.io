@@ -13,7 +13,8 @@
   - [Hydration / Water Quality](./9.md)
   - [Mobility, Coordination](./A.md)
   - [Program Yourself](./B.md)
-  - [AI-Assisted Neuroplasticity](./C.md)
+  - [AI-Assisted Machine Learning and Knowledge Systems Engineering](./C.md)
+  - [Advanced AI Systems Development](./D.md)
 
 - [365 Days Of Wellness Topics](./chapter_6.md)
 

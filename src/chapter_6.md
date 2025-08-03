@@ -1796,7 +1796,7 @@ Toward this end, Gemini was prompted to:
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
-### [Day 65 - August 4, 2025](https://docs.google.com/document/d/1X2O0LJH2_U8d_BAQQL8M-wufUepbAUxIbiUY_Mtmq_0/edit?usp=sharing) | [Intellectual Wellbeing: Charting a Course for Lifelong Learning in the AI Era](./C.md)
+### [Day 65 - August 4, 2025](./D.md) | [Intellectual Wellbeing: Charting a Course for Lifelong Learning in the AI Era](./C.md)
 
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).

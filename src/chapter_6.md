@@ -1665,7 +1665,7 @@ Toward this end, Gemini was prompted to:
 - Develop a detailed and structured protocol for a juice fast, including a preparation phase, a daily regimen during the fast, and a safe transition plan back to solid foods, tailored to the user's profile.
 - Compile all research into a thoroughly referenced backgrounder, ensuring every claim and recommendation is supported by scientific literature or established traditional knowledge, and structure the report in a logical, exhaustive manner.
 
-### [Day 65 - August 4, 2025](https://docs.google.com/document/d/1qkr8m_3eUj6oYqA2eTdQRfyQ_1sUWoexe2CHOPPAD08/edit?usp=sharing) | [Intellectual Wellbeing: Charting a Course for Lifelong Learning in the AI Era](./C.md)
+### [Day 65 - August 4, 2025](https://docs.google.com/document/d/1X2O0LJH2_U8d_BAQQL8M-wufUepbAUxIbiUY_Mtmq_0/edit?usp=sharing) | [Intellectual Wellbeing: Charting a Course for Lifelong Learning in the AI Era](./C.md)
 
 I am a attempting to develop a FULL 200 module study program with the same level of detail for a 66-year-old systems engineer / developer attempting to learn how to level up a lifetime of multidisciplinary skills in engineering, economics, industry and agriculture ... in order to actively participate in the development communities that are active now and will be forming in the realm of AI-assisted knowledge engineering, knowledge graphs, graph vector database, MLIR compiler frameworks, development of AI-first IDEs and RAG-driven personal workflow toolchains.
 

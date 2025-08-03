@@ -1,6 +1,8 @@
 # AI-Assisted, Enhanced Cognitive Flexibility
 
-### ***Take control of how your brain rewires itself.***
+***Take control of how your brain rewires itself ... but you absolutely have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).***
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 ## **Charting a Course for Lifelong Learning in the AI Era**
 
@@ -14,18 +16,22 @@ The program is predicated on the understanding that the integration of AI is not
 
 This inaugural part of the study program serves as a critical bridge, connecting the learner's established expertise in classical systems engineering and software development with the foundational concepts, mathematical underpinnings, and historical paradigms of modern artificial intelligence. The objective is to establish a common vocabulary and a robust conceptual framework, ensuring that the advanced topics in subsequent sections are built upon solid, well-understood ground.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 1: The Modern Systems Engineer's AI Toolkit (Modules 1-8)**
 
 This section reframes the traditional systems engineering lifecycle through the transformative lens of artificial intelligence, illustrating how AI augments and enhances every phase of system design, development, and operation.
 
-* **Module 1: The Confluence of Systems Engineering and Machine Learning.** Objective: To establish the fundamental relationship between systems engineering and modern machine learning (ML). Key concepts include understanding ML as a subset of AI that enables systems to learn from data without being explicitly programmed.1 The module will explore how this integration is revolutionizing the field, enabling the creation of more efficient, reliable, and innovative systems.1  
-* **Module 2: AI's Role in the Systems Development Lifecycle.** Objective: To map specific AI technologies to the classical V-model of systems engineering. This module will detail how Natural Language Processing (NLP) enhances requirement gathering and documentation by understanding human language, and how ML is used for predictive analytics in design synthesis, system validation, and operational maintenance.2  
+* [**Module 1: The Confluence of Systems Engineering and Machine Learning.**](https://docs.google.com/document/d/1diDu6z2UE_ezCGVWBhy_RfWcmBsSZUnZfkrs_GX_tK8/edit?usp=sharing) Objective: To establish the fundamental relationship between systems engineering and modern machine learning (ML). Key concepts include understanding ML as a subset of AI that enables systems to learn from data without being explicitly programmed. The module will explore how this integration is revolutionizing the field, enabling the creation of more efficient, reliable, and innovative systems.  
+* [**Module 2: AI's Role in the Systems Development Lifecycle.**](https://docs.google.com/document/d/1TA4LJxJSw5AsywsG9ijBRLZQG_fQOKuY1RcaSsnseHI/edit?usp=sharing) Objective: To map specific AI technologies to the classical V-model of systems engineering. This module will detail how Natural Language Processing (NLP) enhances requirement gathering and documentation by understanding human language, and how ML is used for predictive analytics in design synthesis, system validation, and operational maintenance.  
 * **Module 3: Introduction to Intelligent Systems Engineering.** Objective: To define the emerging field of Intelligent Systems Engineering. This discipline examines the design, construction, and assurance of complex systems powered by AI/ML algorithms.3 A key focus is on systems whose components learn and behave in ways that cannot be fully predicted by their designers, presenting new challenges in safety and reliability.3  
 * **Module 4: A Survey of Machine Learning Paradigms for Engineers.** Objective: To provide a high-level overview of the three main ML paradigms relevant to engineering applications. The module will cover supervised learning (learning from labeled data), unsupervised learning (identifying patterns in unlabeled data), and reinforcement learning (learning through trial and error).1 Use cases like predictive maintenance (supervised) and anomaly detection (unsupervised) will be introduced.  
 * **Module 5: The Paradigm Shift from Deterministic Design to Probabilistic Assurance.** Objective: To analyze the fundamental change in engineering philosophy required by AI. Traditional systems engineering often relies on deterministic models and fixed requirements.2 The introduction of probabilistic, adaptive AI components necessitates a shift towards assuring the safety and reliability of systems that learn and evolve over time.3 This module explores the challenge of guaranteeing the performance of a system whose behavior is not fully predictable at design time.  
 * **Module 6: Technical Challenges in AI Integration.** Objective: To identify and categorize the primary technical hurdles in deploying AI within existing engineering workflows. Topics include data quality and availability, algorithm complexity, and the difficulty of integrating AI with legacy systems.1 This module frames these not as isolated ML problems, but as systems-level integration challenges.  
 * **Module 7: Ethical and Social Considerations in Intelligent Systems.** Objective: To introduce the critical non-technical challenges associated with AI in engineering. The curriculum will cover bias in AI models resulting from training data, the problem of accountability for AI-driven decisions, and the potential for job displacement.2 These are presented as first-order concerns for any systems architect.  
 * **Module 8: Mitigation Strategies and Best Practices.** Objective: To outline actionable strategies for addressing the challenges of AI integration. This includes continuous training and education for engineers, the establishment of clear ethical guidelines for development and deployment, and the creation of collaborative models that combine AI capabilities with human expertise to achieve superior outcomes.2
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 2: Mathematical and Statistical Refresher for Modern AI (Modules 9-14)**
 
@@ -37,6 +43,8 @@ This section provides a focused review of the mathematical disciplines that form
 * **Module 12: Probability and Statistics for Data Science.** Objective: To review fundamental concepts in probability theory and statistics. Topics include probability distributions, conditional probability, Bayes' theorem, and key statistical measures like mean, variance, and standard deviation. This is essential for understanding probabilistic models and evaluating model performance.7  
 * **Module 13: The Role of Optimization in Machine Learning.** Objective: To explicitly connect the user's existing knowledge of optimization with its central role in ML. This module will frame ML algorithms as layered optimization problems that seek to find the optimal set of parameters to solve a given task.8 This provides a conceptual bridge from classical engineering to modern AI.  
 * **Module 14: Case Study: Linear Regression from First Principles.** Objective: To synthesize the mathematical concepts by implementing a simple linear regression model from scratch. This hands-on exercise will involve defining a loss function, calculating gradients, and using gradient descent to find the optimal model parameters, solidifying the connection between calculus, linear algebra, and a practical ML algorithm.
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 3: Paradigms of AI: From Symbolic Reasoning to Connectionist Models (Modules 15-20)**
 
@@ -54,6 +62,8 @@ This section explores the two major historical and philosophical paradigms of ar
 ### **Part II: Core Technologies: Deep Learning and Transformers (Modules 21-50)**
 
 This part provides a deep and practical immersion into the technologies that power the current AI revolution. It begins with a hands-on survey of deep learning practices and culminates in a detailed architectural deconstruction of the Transformer model, the foundational building block for most of the advanced systems covered in this program.
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 4: Deep Learning Architectures and Practical Training (Modules 21-35)**
 
@@ -74,6 +84,8 @@ Adopting a "code-first, theory-second" philosophy, this section is designed for 
 * **Module 33: The Hugging Face Ecosystem.** Objective: To introduce the central hub of the modern NLP community. This module provides an overview of the Hugging Face platform, focusing on its role in democratizing AI by providing easy access to thousands of pre-trained models.16  
 * **Module 34: From Model to Application: Deployment Strategies.** Objective: To learn how to turn a trained model into a usable web application. This module will cover the basics of deploying models as APIs and creating simple user interfaces, bridging the gap between training and production.14  
 * **Module 35: Full Stack Deep Learning.** Objective: To understand the entire lifecycle of an AI-powered product. This module recommends the Full Stack Deep Learning course, which covers everything from problem definition and data management to deployment, monitoring, and user experience design.18
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 5: The Transformer Revolution: A Deep Dive into the Architecture (Modules 36-50)**
 
@@ -101,6 +113,8 @@ This section provides a rigorous, bottom-up deconstruction of the Transformer ar
 
 This extensive part of the curriculum is dedicated to the technologies and methodologies for representing, storing, managing, and reasoning over structured knowledge. It provides a comprehensive journey from the formal, logic-based principles of the Semantic Web to the practical implementation of modern graph databases and the application of graph-native machine learning, culminating in the fusion of symbolic and sub-symbolic data paradigms.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 6: Principles of Knowledge Representation and the Semantic Web (Modules 51-65)**
 
 This section lays the formal groundwork for knowledge engineering by exploring the W3C standards that underpin the Semantic Web. A grasp of these principles is essential for building robust, interoperable, and logically consistent knowledge systems.
@@ -120,6 +134,8 @@ This section lays the formal groundwork for knowledge engineering by exploring t
 * **Module 63: Advanced SPARQL: Aggregates, Subqueries, and Federation.** Objective: To explore more complex querying capabilities. This includes using aggregate functions (e.g., COUNT, SUM), nesting subqueries, and performing federated queries that retrieve data from multiple distributed SPARQL endpoints.  
 * **Module 64: Linked Open Data (LOD).** Objective: To understand the principles of publishing and connecting open datasets on the web using Semantic Web standards. This module will explore the LOD cloud and major public knowledge graphs like DBpedia and Wikidata.  
 * **Module 65: Semantic Web vs. Property Graphs: A Comparison.** Objective: To compare the formal, logic-based RDF/OWL model with the more flexible property graph model used by databases like Neo4j. This module will analyze the trade-offs in terms of schema flexibility, reasoning capabilities, and developer experience, setting the stage for the next section.
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 7: Building and Querying Knowledge Graphs (Modules 66-80)**
 
@@ -141,6 +157,8 @@ This section transitions from the formal principles of the Semantic Web to the p
 * **Module 79: Step 7 \- Testing and Validation.** Objective: To learn how to test and validate a newly created knowledge graph. This involves writing queries to check for data integrity, model consistency, and whether the graph can successfully answer the key questions defined in the use case phase.36  
 * **Module 80: Step 8 \- Maintenance and Evolution.** Objective: To understand the principles of maintaining a knowledge graph over time. This includes planning for schema evolution, automating data update pipelines, and monitoring query performance to ensure the graph remains a valuable and current asset.36
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 8: Graph-Native Machine Learning (Modules 81-90)**
 
 This section introduces the powerful paradigm of Graph Neural Networks (GNNs), which applies deep learning directly to graph-structured data, enabling predictions based on both entity features and the network topology.
@@ -155,6 +173,8 @@ This section introduces the powerful paradigm of Graph Neural Networks (GNNs), w
 * **Module 88: GNN Task III: Graph Classification.** Objective: To apply GNNs to tasks that require classifying an entire graph (e.g., determining if a molecule is toxic). This requires a "readout" or pooling layer that aggregates all node embeddings into a single graph-level representation.54  
 * **Module 89: Practical GNN Development with PyTorch Geometric (PyG) and DGL.** Objective: To gain hands-on experience with leading GNN libraries. This module will introduce PyTorch Geometric and the Deep Graph Library (DGL), which provide optimized building blocks and utilities for creating and training GNNs in PyTorch.63  
 * **Module 90: Graph Machine Learning Platforms.** Objective: To survey enterprise-grade platforms for graph data science. This module will explore solutions like the Neo4j Graph Data Science library and NVIDIA's GPU-accelerated GNN frameworks, which provide scalable environments for applying graph algorithms and ML on large-scale graphs.44
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 9: The Convergence: Graph Vector Databases (Modules 91-100)**
 
@@ -177,6 +197,8 @@ This section explores the cutting-edge intersection of knowledge graphs and vect
 
 This part shifts focus to the practical ecosystem of tools, frameworks, and environments that define the modern AI development workflow. It covers the foundational deep learning frameworks, the indispensable Hugging Face platform, the underlying compiler infrastructure that enables high-performance AI, and the next generation of AI-native development environments.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 10: Deep Learning Frameworks in Production (Modules 101-110)**
 
 This section provides a pragmatic, production-focused analysis of the two dominant deep learning frameworks, PyTorch and TensorFlow, equipping the learner to make informed architectural decisions.
@@ -191,6 +213,8 @@ This section provides a pragmatic, production-focused analysis of the two domina
 * **Module 108: The Rise of High-Level Abstractions.** Objective: To understand the impact of libraries like Hugging Face. These ecosystems provide a unified API that works on top of both PyTorch and TensorFlow, abstracting away many of the underlying differences and making the choice of framework less critical for the application developer.16  
 * **Module 109: Performance and Scalability Comparison.** Objective: To analyze the performance trade-offs. While both frameworks are highly optimized for GPU acceleration and distributed training, TensorFlow's static graph can sometimes allow for more aggressive optimizations. The choice often depends on the specific model architecture and hardware configuration.72  
 * **Module 110: Making the Choice: A Decision Framework.** Objective: To synthesize the section's learnings into a practical decision-making framework. The choice is no longer simply "research vs. production," but depends on factors like team expertise, project requirements for flexibility vs. structured deployment, and the specific ecosystem tools needed for the task at hand.71
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 11: The Hugging Face Ecosystem: A Practical Guide (Modules 111-120)**
 
@@ -207,6 +231,8 @@ This section provides a deep dive into the Hugging Face platform, positioning it
 * **Module 119: Sharing and Collaboration.** Objective: To learn how to contribute to the ecosystem. This module will cover how to upload and share custom models and datasets on the Hub, and how to create interactive demos of models using Gradio or Streamlit in Hugging Face Spaces.17  
 * **Module 120: The Application-Centric Paradigm.** Objective: To understand the philosophical shift enabled by Hugging Face. By commoditizing access to powerful models, the platform allows developers to shift their focus from inventing new model architectures to building innovative applications *around* existing models. The most valuable work becomes data curation, fine-tuning, and systems integration—a perfect fit for a systems engineering mindset.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 12: Compiler Infrastructure for AI: Understanding MLIR (Modules 121-130)**
 
 This section delves into the low-level infrastructure that enables AI models to run efficiently on diverse hardware, introducing the Multi-Level Intermediate Representation (MLIR) as the future of AI compilers.
@@ -221,6 +247,8 @@ This section delves into the low-level infrastructure that enables AI models to 
 * **Module 128: Case Study: MLIR in TensorFlow and XLA.** Objective: To see how MLIR is used in a major AI framework. TensorFlow uses MLIR as the backbone of its modern compiler stack. TensorFlow graphs are converted into MLIR's tf dialect, and then progressively lowered and optimized by the XLA (Accelerated Linear Algebra) compiler for different hardware targets.81  
 * **Module 129: Writing an MLIR Pass.** Objective: To gain practical experience with MLIR transformations. This module will walk through the "Toy" tutorial from the official MLIR documentation, which involves creating a custom dialect for a simple language and writing rewrite patterns and passes to lower it to other dialects.83  
 * **Module 130: The Role of MLIR in the Future of Heterogeneous Computing.** Objective: To appreciate MLIR's strategic importance. As AI workloads increasingly run on a diverse mix of CPUs, GPUs, and custom ASICs, a unified and extensible compiler infrastructure like MLIR is essential for connecting software frameworks to hardware without constant reinvention. It is the fundamental "plumbing" that will enable the next generation of high-performance AI systems.
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 13: The Rise of AI-First Integrated Development Environments (IDEs) (Modules 131-140)**
 
@@ -243,6 +271,8 @@ This section examines the new generation of IDEs that are being built from the g
 
 This part of the curriculum is dedicated to the practical synthesis of the previously learned technologies. It focuses on the architectural patterns and engineering practices required to build robust, knowledge-intensive AI applications. The central theme is Retrieval-Augmented Generation (RAG), a powerful and flexible framework that serves as a blueprint for creating personal and enterprise-grade intelligent systems.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 14: Retrieval-Augmented Generation (RAG): Principles and Architectures (Modules 141-150)**
 
 This section provides a thorough grounding in the fundamental principles and components of the RAG architecture.
@@ -257,6 +287,8 @@ This section provides a thorough grounding in the fundamental principles and com
 * **Module 148: The RAG System as an Architectural Pattern.** Objective: To appreciate RAG from a systems design perspective. RAG is a powerful architectural pattern that decouples the LLM's reasoning capabilities (its parametric knowledge) from the external knowledge base (non-parametric knowledge). This modularity allows for independent updating and optimization of the retrieval and generation components.  
 * **Module 149: Survey of RAG Use Cases.** Objective: To explore the wide range of applications for RAG. These include building chatbots that can answer questions about specific documents, creating enterprise search systems over internal knowledge bases, and developing tools for summarizing research papers.98  
 * **Module 150: Limitations of Naive RAG.** Objective: To identify the failure modes of a basic RAG pipeline. These include low retrieval accuracy if the query and document semantics don't align, issues with handling complex or ambiguous questions, and the challenge of retrieving information scattered across multiple documents.102
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 15: Engineering RAG-Driven Personal Workflow Toolchains (Modules 151-170)**
 
@@ -289,6 +321,8 @@ This section moves from the principles of RAG to the practical engineering chall
 
 This final part of the curriculum is designed to synthesize the knowledge and skills acquired throughout the program by applying them to the specific multidisciplinary domains of industry, economics, and agriculture. It culminates in a series of detailed capstone project blueprints, providing a clear path for the learner to translate their theoretical understanding and technical proficiency into a substantial, real-world application.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 16: Applying Knowledge Engineering in Industry and Economics (Modules 171-180)**
 
 This section explores the application of knowledge graphs and AI to model and analyze complex economic and industrial systems, transforming vast, interconnected data into actionable insights.
@@ -304,6 +338,8 @@ This section explores the application of knowledge graphs and AI to model and an
 * **Module 179: Integrating KGs with Industrial IoT.** Objective: To connect real-time sensor data to a knowledge graph. This involves creating a semantic layer that gives meaning to raw IoT data, enabling more intelligent monitoring, predictive maintenance, and process control.12  
 * **Module 180: The Future of Economic and Industrial Modeling.** Objective: To understand the long-term potential. KGs provide a new way to make complex systems legible and understandable. By integrating human knowledge with vast datasets, they offer a path towards more accurate and robust models of our economic and industrial world.
 
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 #### **Section 17: Applying Knowledge Engineering in Modern Agriculture (Modules 181-190)**
 
 This section focuses on the application of knowledge engineering to the agricultural domain, addressing critical challenges in food security, supply chain management, and sustainable production.
@@ -318,6 +354,8 @@ This section focuses on the application of knowledge engineering to the agricult
 * **Module 188: Knowledge-Driven Decision Support Systems.** Objective: To build applications on top of the agricultural KG. The structured knowledge can power intelligent question-answering systems, provide guidance to growers, and offer auxiliary decision-making assistance for managing agricultural enterprises.130  
 * **Module 189: The Internet of Food: A Vision for the Future.** Objective: To understand the long-term vision. By connecting disparate food-related data silos, KGs can help create a globally connected "Internet of Food," transforming food science and industry and enabling a more sustainable and secure global food system.131  
 * **Module 190: FAIR Data Principles in Agriculture.** Objective: To learn the principles for scientific data management. This module will cover the FAIR principles (Findable, Accessible, Interoperable, Reusable) and how knowledge graph technologies are essential for publishing agricultural data in a way that adheres to these standards.132
+
+### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
 #### **Section 18: Capstone Projects: Design and Implementation Blueprints (Modules 191-200)**
 

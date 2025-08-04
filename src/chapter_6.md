@@ -1816,12 +1816,11 @@ In order to help me get STARTED thinking about how I might this, I prompted Gemi
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
-### Day 66 - August 5, 2025 | Social Connection: Family Active Time
-- Plan active outing with family or close friends
-- Choose activity accessible to all fitness levels
-- Focus on fun and connection rather than performance
-- Create positive memories associated with physical activity
+### Day 66 - August 5, 2025 | Social Connection: Bible Study
 
+I am not at all a fan of churches or of organized religion and I don't think that will change, ie it's too much of an ingrained pattern. I don't need relationships; I don't need churches ... for the most part, I really detest being in any large group over 3 or 4 people ... ten or so is somewhat manageable, but certainly awkward, bordering on almost painful for me -- but I want NOTHING to do with groups larger than ten people ... I absolutely HATE things like family reunions or sporting events. But I am a Christian always looking for ideas for how to USE social situations.  So I am kind of always brainstorming better ideas ... which means that I am always looking to improve my list for 200 hard, probing, difficult questions to ponder on how to improve the value of my social connection through things like Bible Study or shared scriptural passages that actively address situations as they emerge with family, friends, professional colleagues or community members.  The contemplative questions to ponder are to help me listen better, or be more empathetic or to suggest advice that is applicable to activities, accessible to all levels of spiritual fitness and maturity. I want to focus more on actually helping and connection rather than overt displays of sympathy.  My intention in using social connections is NOT for me to have more friends, ie I have more than enough friends already, but I could always use more.  My intention in using social connections is to somehow influence people to find a closer connection with their Creator for themselves, NOT TO  associate me with insights or blessings given them as a result of their ability to discern the will of the Creator.
+
+AI is sort of tailor-made for helping generate lists of difficult questions to ponder.
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 

@@ -4,6 +4,8 @@
 
 [START off by being a lot more skeptical.](nested/sub-chapter_6.0.md). You really have to THINK about the biases, errors in your thinking, even in how you ask te question ... don't attack others -- attack the bad habits of being yourself, re-examine your assumptions, re-think your thinking ... [*CAVE IN THE MELON!*](https://meloncave.github.io/tools/2025/04/04/Ego-Transcendence-Practices-Across-Contemplative-Traditions.html)
 
+### REMINDER: Use AI to make some of the intelligence gathering tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
+
 ## By Category
 
 ### 1. **Christian Spiritual Health** (51 days - 13%)

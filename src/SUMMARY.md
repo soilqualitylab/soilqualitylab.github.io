@@ -20,5 +20,5 @@
   - [Knowledge Systems Engineering](./C.md)
   - [Advanced AI Systems Dev Tools](./D.md)
 
-- [365 Days Of Wellness Topics](./chapter_6.md)
+- [400 Days Of Wellness Topics](./chapter_6.md)
 

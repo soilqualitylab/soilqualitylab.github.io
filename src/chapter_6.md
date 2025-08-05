@@ -1835,7 +1835,7 @@ My intention in my social connections is to somehow glorify God or influence peo
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 
-### [Day 67 - August 6, 2025](./7.md) | [Rest and Recovery: Contemplative Questions For Intentional Improvement]
+### [Day 67 - August 6, 2025](./7.md) | [Rest and Recovery: Contemplative Questions For Intentional Improvement](https://g.co/gemini/share/fac887e901a3)
 
 In order to update the list of rest and recovery questions that I try to ponder, I will need 200 groups of hard, probing, impossibly difficult questions to ponder on how to strategically integrate biblical wisdom with practical strategies for sleep hygiene, rest, recovery, and especially heat recovery - all as a spiritual discipline of honoring your body as God's temple while maintaining readiness to serve others. Let me research this comprehensive topic to create questions that bridge physical wellness with spiritual service. Toward this end, Gemini was prompted to:
 

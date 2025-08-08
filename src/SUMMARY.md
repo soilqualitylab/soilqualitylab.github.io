@@ -16,7 +16,7 @@
   - [Stress Optimization](./8.md)
   - [Hydration and Qi](./9.md)
   - [Mobility, Coordination](./A.md)
-  - [Propagandize Yourself](./B.md)
+  - [Program Yourself](./B.md)
   - [Knowledge Systems Engineering](./C.md)
   - [Advanced AI Systems Dev Tools](./D.md)
 

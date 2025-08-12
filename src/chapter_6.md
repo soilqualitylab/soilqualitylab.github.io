@@ -1915,7 +1915,11 @@ Today's topic is another approach to expand, deepen the set of contemplative que
 
 ### [Day 73 - August 12, 2025](./3.md)  | [Cardiovascular Health: Unlocking Deeper Insights](https://g.co/gemini/share/24b7efdce0aa)
 
-The basic stuff about cardio is sort of OBVIOUS, right? Of course, we should:
+We can should study [all kinds of things about cardio](./3.md) and constantly think how to coach ourselves to push our cardio to better levels ... because the time and pain spent staying fit in a cardio sense will probably be returned 10X, 25X even 50X over in terms of being able to lead a happier, healthier life ... *easier said than done* but still true.
+
+Being unfit in a cardio sense will basically punish the person who avoids cardio, not just early death, but with a miserable, depressed life in which even thinking is harder ... it's not like we need to do cardio all day 30 minutes/day will transform any sedentary geezer -- whereas several hours of serious cardio on a daily basis is kind of stuff that elite athletes do, as long as they avoid the junk miles, junk reps, junk steps for the pedometer of just doing something for extra quantities ... cardio is like all forms of exercise QUALITY and SMART reps and paying attention matters more than quantity, but you gotta have the minimum quantities.
+
+But the basic stuff about cardio is sort of OBVIOUS, right? Of course, we all know that we should PROBABLY:
 
 - Establish a DAILY early morning routine to really get the blood flowing while beating the heat
 - Using something like [Rockport VO2max test](https://exrx.net/Calculators/Rockport) shows us why trend data helps improve our self-coaching. 
@@ -1923,7 +1927,7 @@ The basic stuff about cardio is sort of OBVIOUS, right? Of course, we should:
 - Give ourselves the opportunity to NOTICE things like the difference in energy throughout day
 - Practice discipline of early rising [and getting to bed early] for all-around improvement health
 
-One thing that might not be obvious is that people should STOP doing entirely is they STOP trying to distract themselves from the difficulties of cardio and instead USE THE DIFFICULTIES and contemplate why things are difficult, if they are difficult enough or need to push harder, why today is generally better or worse than yesterday ... EVERY DAY is a bit of race or a competition against where we were yesterday, where we need to be tomorrow -- **THE DIFFICULTY OF EXERCISE IS NOTHING TO DISTRACT YOURSELF AWAY FROM** ... of course, there are things to pay attention to, and not only the obvious difficulties that come from pushing a bit harder -- in general, we should contemplate [different questions and advanced topics about cardio](./3.md)
+One thing that might not be obvious is that people should STOP doing entirely is they STOP trying to distract themselves from the difficulties of cardio and instead USE THE DIFFICULTIES and contemplate why things are difficult, if they are difficult enough or need to push harder, why today is generally better or worse than yesterday ... EVERY DAY is a bit of race or a competition against where we were yesterday, where we need to be tomorrow -- **THE DIFFICULTY OF EXERCISE IS NOTHING TO DISTRACT YOURSELF AWAY FROM** ... of course, there are things to pay attention to, and not only the obvious difficulties that come from pushing a bit harder -- in general, we should contemplate [different questions and advanced topics about cardio](./3.md).
 
 ### REMINDER: Use AI only to make some of the tasks less menial, but ONLY rely on AI to furnish a high-level cliche-rich overview of the conventional wisdom embedded in ALL large language models driving all AI ... but don't trust AI to think for you;  the roadmap that AI provides -- you have to [PAY CLOSE ATTENTION TO COGNITIVE OFFLOADING](https://www.youtube.com/watch?v=6sJ50Ybp44I&t=840s).
 

@@ -63,9 +63,9 @@ By completing this curriculum, the engineer will have constructed not just a per
 ### **Modules 11-15: Skill Refreshment & Foundational Tooling**
 
 * **Tasks:**  
-  * **Day 11-13 (Mathematica Deep Dive):** Refresh foundational math concepts (Linear Algebra, Calculus, Probability) using Wolfram Mathematica.\[17, 18\] Create dedicated notebooks and export key visualizations and formulas as images to be embedded in new chapters of your mdBook.  
-  * **Day 14 (Docker & Containerization):** Create a standardized Dockerfile for a data science container (Python, common libraries, PyTorch) to ensure all future projects are reproducible.  
-  * **Day 15 (Advanced Git):** Master advanced Git workflows essential for open-source collaboration: interactive rebasing, cherry-picking, submodules, and conventional commit messages.  
+  * **Day 11-12 (Mathematica Deep Dive):** Refresh foundational math concepts (Linear Algebra, Calculus, Probability) using Wolfram Mathematica.\[17, 18\] Create dedicated notebooks and export key visualizations and formulas as images to be embedded in new chapters of your mdBook.  
+  * **Day 13 (Docker & Containerization):** Create a standardized Dockerfile for a data science container (Python, common libraries, PyTorch) to ensure all future projects are reproducible.  
+  * **Day 14-15 (Advanced Git and Jujutsu):** Master advanced DVCS, Git/Jujutsu workflows essential for open-source collaboration: interactive rebasing, cherry-picking, submodules, and conventional commit messages.  
 * **Deliverable:** New mdBook chapters documenting refreshed mathematical knowledge; a reusable Docker image for ML projects; and demonstrated proficiency in advanced Git workflows.
 
 ### **Modules 16-20: Establishing the Content & Networking Foundation**

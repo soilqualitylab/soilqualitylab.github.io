@@ -1,6 +1,6 @@
 # **Personal Knowledge Engineering (PKE) Manifesto**
 
-I will attempt to outline the primary goals (e.g., "Learn a new technology stack and meet three new developers through a shared project") that I have in developing my PKE system as well as its core principles (e.g., "Default to learning in public," "Bias for action and rapid failure over perfect planning," "Prioritize connections over collections") and success metrics (e.g., "Publish one new chapter per month," "Initiate three 'coffee chat' conversations with new contacts").  
+This Manifesto attempts to give [an overview](#the-100-day-personal-knowledge-engineering-curriculum-overview) based on primary goals of the 100 modules in 100-day project, as well as outline the core principles of PKE systems and to explain something about what the measures of success will be for this project.  
 
 ## Primary Goals
 
@@ -34,10 +34,10 @@ In summary, the core objective is to transition from the passive practice of *Pe
 
 | Phase | Module Range | Core Objective | Key Deliverables |
 | :---- | :---- | :---- | :---- |
-| **Phase 1: Foundation & Systems Architecture** | Modules 1-20 | To design and build the core infrastructure of the PKES around a publication-first, mdBook-centric workflow. | A fully configured mdBook project serving as a "personal library"; automated content pipelines; a public-facing professional identity hub. |
-| **Phase 2: Horizon Scanning & Deep Learning** | Modules 21-50 | To systematically identify, compare, and learn emerging technologies relevant to personal and professional goals through hands-on, failure-tolerant projects documented as book chapters. | An automated tech-trend dashboard; deep-dive projects in selected domains (e.g., Generative AI, Neuromorphic Computing); refreshed mathematical foundations. |
-| **Phase 3: Creation & Contribution** | Modules 51-80 | To translate learned knowledge into tangible public artifacts and contribute to the open-source community, using creation as a vehicle for connection. | Multiple open-source project contributions; a portfolio of projects on GitHub; published models on Hugging Face; a series of technical tutorials published in the book. |
-| **Phase 4: Connection & Synthesis** | Modules 81-100 | To leverage the published book and other artifacts for networking, establish thought leadership, and synthesize career experience into high-value knowledge products that foster community. | A targeted networking strategy; a personal CRM built as an mdBook extension; a plan for an online tech discussion group; tools for tracking professional opportunities. |
+| [**Phase 1: Foundation & Systems Architecture**](#phase-1-foundation--systems-architecture-modules-1-20) | Modules 1-20 | To design and build the core infrastructure of the PKES around a publication-first, mdBook-centric workflow. | A fully configured mdBook project serving as a "personal library"; automated content pipelines; a public-facing professional identity hub. |
+| [**Phase 2: Horizon Scanning & Deep Learning**](#phase-2-horizon-scanning--deep-learning-modules-21-50) | Modules 21-50 | To systematically identify, compare, and learn emerging technologies relevant to personal and professional goals through hands-on, failure-tolerant projects documented as book chapters. | An automated tech-trend dashboard; deep-dive projects in selected domains (e.g., Generative AI, Neuromorphic Computing); refreshed mathematical foundations. |
+| [**Phase 3: Creation & Contribution**](#phase-3-creation--contribution-modules-51-80) | Modules 51-80 | To translate learned knowledge into tangible public artifacts and contribute to the open-source community, using creation as a vehicle for connection. | Multiple open-source project contributions; a portfolio of projects on GitHub; published models on Hugging Face; a series of technical tutorials published in the book. |
+| [**Phase 4: Connection & Synthesis**](#phase-4-connection--synthesis-modules-81-100) | Modules 81-100 | To leverage the published book and other artifacts for networking, establish thought leadership, and synthesize career experience into high-value knowledge products that foster community. | A targeted networking strategy; a personal CRM built as an mdBook extension; a plan for an online tech discussion group; tools for tracking professional opportunities. |
 
 ## **Phase 1: Foundation & Systems Architecture (Modules 1-20)**
 

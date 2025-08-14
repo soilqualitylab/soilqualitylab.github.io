@@ -8,9 +8,9 @@ This Manifesto attempts to give [an overview](#the-100-day-personal-knowledge-en
 - Understanding the details of research at the forefront of technological innovation in various disciplines, 
 - Fostering meaningful new professional connections and friendships across different disciplines in virtual venues [where people would not otherwise meet in the halls of the departments or R&D labs of their corporations],
 - Enhancing the capacity to contribute to significant work in extensible open-source technologies. 
-- I will attempt to transform the MarkDown files in this knowledge base from a static archive into a dynamic, programmable publishing engine, ready for sharing, collaboration, and augmentation with AI. 
+- As we learn more, we will attempt to better transform the MarkDown files used for this **mdBook** knowledgebase from a static archive or online *book* into a more dynamic, programmable publishing engine, ready for sharing, collaboration, querying and other advanced augmentation with AI. 
 
-In summary, the core objective is to transition from the passive practice of *Personal Knowledge Management (PKM)*—the mere collection of random notes—to the active, tech-assisted discipline of ***Personal Knowledge Engineering (PKE)***. The general goal of our PKE technology is to accelerate the continuous learning process, spark creative work, and, most importantly, to meet new friends by sharing this journey of building PKE technology to accelerate the continuous learning process in public.
+In summary, the core objective is to transition from the passive practice of *Personal Knowledge Management (PKM)*—the mere collection of random notes and notetaking apps—TO more actively evolving, technology-assisted discipline of ***Personal Knowledge Engineering (PKE)***. The general goal of our PKE technology is to accelerate the continuous learning and development processes, to spark new creative work, and, most importantly, to meet new friends by sharing this journey of building PKE technology to accelerate the continuous learning process in public.
 
 
 ## Core principles

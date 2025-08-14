@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>References - 100-Day Personal Knowledge Engineering Curriculum</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">100-Day Personal Knowledge Engineering Curriculum</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="references"><a class="header" href="#references">References</a></h1>
+<ol>
+<li>How to Increase Knowledge Productivity: Combine the Zettelkasten ..., accessed August 12, 2025, <a href="https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/">https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/</a></li>
+<li>My Personal Knowledge Management System As a Software ..., accessed August 12, 2025, <a href="https://thewordyhabitat.com/my-personal-knowledge-management-system/">https://thewordyhabitat.com/my-personal-knowledge-management-system/</a></li>
+<li>Personal Knowledge Management (PKM) - Data Engineering Blog, accessed August 12, 2025, <a href="https://www.ssp.sh/brain/personal-knowledge-management-pkm/">https://www.ssp.sh/brain/personal-knowledge-management-pkm/</a></li>
+<li>Combine Your Second Brain with Zettelkasten - Sudo Science, accessed August 12, 2025, <a href="https://sudoscience.blog/2024/12/27/combine-your-second-brain-with-zettelkasten/">https://sudoscience.blog/2024/12/27/combine-your-second-brain-with-zettelkasten/</a></li>
+<li>FOR COMPARISON with mdBook ... Obsidian - Sharpen your thinking, accessed August 12, 2025, <a href="https://obsidian.md/">https://obsidian.md/</a></li>
+<li>FOR COMPARISON with mdBook... Developers - Obsidian Help, accessed August 12, 2025, <a href="https://help.obsidian.md/developers">https://help.obsidian.md/developers</a></li>
+<li>FOR COMPARISON with mdBook ... Home - Developer Documentation - Obsidian, accessed August 12, 2025, <a href="https://docs.obsidian.md/Home">https://docs.obsidian.md/Home</a></li>
+<li>Managing my personal knowledge base · tkainrad, accessed August 12, 2025, <a href="https://tkainrad.dev/posts/managing-my-personal-knowledge-base/">https://tkainrad.dev/posts/managing-my-personal-knowledge-base/</a></li>
+<li>Engineering - Notion, accessed August 12, 2025, <a href="https://www.notion.com/help/guides/category/engineering">https://www.notion.com/help/guides/category/engineering</a></li>
+<li>Junior to senior: An action plan for engineering career success ..., accessed August 12, 2025, <a href="https://github.com/readme/guides/engineering-career-success">https://github.com/readme/guides/engineering-career-success</a></li>
+<li>AswinBarath/AswinBarath: A quick bio about myself - GitHub, accessed August 12, 2025, <a href="https://github.com/AswinBarath/AswinBarath">https://github.com/AswinBarath/AswinBarath</a></li>
+<li>What Is Hugging Face? | Coursera, accessed August 12, 2025, <a href="https://www.coursera.org/articles/what-is-hugging-face">https://www.coursera.org/articles/what-is-hugging-face</a></li>
+<li>Hugging Face : Revolutionizing AI Collaboration in the Machine Learning Community | by Yuvraj kakkar | Medium, accessed August 12, 2025, <a href="https://medium.com/@yuvrajkakkar1/hugging-face-revolutionizing-ai-collaboration-in-the-machine-learning-community-28d9c6e94ddb">https://medium.com/@yuvrajkakkar1/hugging-face-revolutionizing-ai-collaboration-in-the-machine-learning-community-28d9c6e94ddb</a></li>
+<li>"Operator-Based Machine Intelligence: A Hilbert Space Framework ..., accessed August 12, 2025, <a href="https://www.reddit.com/r/singularity/comments/1mkwxzk/operatorbased_machine_intelligence_a_hilbert/">https://www.reddit.com/r/singularity/comments/1mkwxzk/operatorbased_machine_intelligence_a_hilbert/</a></li>
+<li>[2505.23723] ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering - arXiv, accessed August 12, 2025, <a href="https://arxiv.org/abs/2505.23723">https://arxiv.org/abs/2505.23723</a></li>
+<li>Getting Started with Papers With Code – IT Exams Training ..., accessed August 12, 2025, <a href="https://www.pass4sure.com/blog/getting-started-with-papers-with-code/">https://www.pass4sure.com/blog/getting-started-with-papers-with-code/</a></li>
+<li>Wolfram Mathematica: Modern Technical Computing, accessed August 12, 2025, <a href="https://www.wolfram.com/mathematica/">https://www.wolfram.com/mathematica/</a></li>
+<li>Mathematica &amp; Wolfram Language Tutorial: Fast Intro for Math Students, accessed August 12, 2025, <a href="https://www.wolfram.com/language/fast-introduction-for-math-students/en/">https://www.wolfram.com/language/fast-introduction-for-math-students/en/</a></li>
+<li>How to start a tech blog in 6 steps - Wix.com, accessed August 12, 2025, <a href="https://www.wix.com/blog/how-to-start-a-tech-blog">https://www.wix.com/blog/how-to-start-a-tech-blog</a></li>
+<li>How to Start a Tech Blog: Easy Guide for Beginners - WPZOOM, accessed August 12, 2025, <a href="https://www.wpzoom.com/blog/how-to-start-tech-blog/">https://www.wpzoom.com/blog/how-to-start-tech-blog/</a></li>
+<li>Networking for Engineers: 8 Strategies to Expand Your Professional ..., accessed August 12, 2025, <a href="https://staffing.trimech.com/networking-for-engineers-8-strategies-to-expand-your-professional-circle/">https://staffing.trimech.com/networking-for-engineers-8-strategies-to-expand-your-professional-circle/</a></li>
+<li>Mastering Networking as a Software Developer: Strategies for Success : r/software_soloprenures - Reddit, accessed August 12, 2025, <a href="https://www.reddit.com/r/software_soloprenures/comments/1m363gv/mastering_networking_as_a_software_developer/">https://www.reddit.com/r/software_soloprenures/comments/1m363gv/mastering_networking_as_a_software_developer/</a></li>
+<li>The Software Developer's Guide to Networking - Simple Programmer, accessed August 12, 2025, <a href="https://simpleprogrammer.com/software-developers-networking/">https://simpleprogrammer.com/software-developers-networking/</a></li>
+<li>Participating in Open Source Communities - Linux Foundation, accessed August 12, 2025, <a href="https://www.linuxfoundation.org/resources/open-source-guides/participating-in-open-source-communities">https://www.linuxfoundation.org/resources/open-source-guides/participating-in-open-source-communities</a></li>
+<li>How To Grow Your Career With a Software Engineering Mentor - Springboard, accessed August 12, 2025, <a href="https://www.springboard.com/blog/software-engineering/software-engineer-mentor/">https://www.springboard.com/blog/software-engineering/software-engineer-mentor/</a></li>
+<li>Where to Find a Software Engineer Mentor (and How to Benefit From Them) | HackerNoon, accessed August 12, 2025, <a href="https://hackernoon.com/where-to-find-a-software-engineer-mentor-and-how-to-benefit-from-them">https://hackernoon.com/where-to-find-a-software-engineer-mentor-and-how-to-benefit-from-them</a></li>
+<li>Improve your open source development impact | TODO Group // Talk ..., accessed August 12, 2025, <a href="https://todogroup.org/resources/guides/improve-your-open-source-development-impact/">https://todogroup.org/resources/guides/improve-your-open-source-development-impact/</a></li>
+<li>Self-Directed Learning: A Four-Step Process | Centre for Teaching ..., accessed August 12, 2025, <a href="https://uwaterloo.ca/centre-for-teaching-excellence/catalogs/tip-sheets/self-directed-learning-four-step-process">https://uwaterloo.ca/centre-for-teaching-excellence/catalogs/tip-sheets/self-directed-learning-four-step-process</a></li>
+<li>25 New Technology Trends for 2025 - Simplilearn.com, accessed August 12, 2025, <a href="https://www.simplilearn.com/top-technology-trends-and-jobs-article">https://www.simplilearn.com/top-technology-trends-and-jobs-article</a></li>
+<li>Emerging Technology Trends - J.P. Morgan, accessed August 12, 2025, <a href="https://www.jpmorgan.com/content/dam/jpmorgan/documents/technology/jpmc-emerging-technology-trends-report.pdf">https://www.jpmorgan.com/content/dam/jpmorgan/documents/technology/jpmc-emerging-technology-trends-report.pdf</a></li>
+<li>5 AI Trends Shaping Innovation and ROI in 2025 | Morgan Stanley, accessed August 12, 2025, <a href="https://www.morganstanley.com/insights/articles/ai-trends-reasoning-frontier-models-2025-tmt">https://www.morganstanley.com/insights/articles/ai-trends-reasoning-frontier-models-2025-tmt</a></li>
+<li>Llamaindex RAG Tutorial | IBM, accessed August 12, 2025, <a href="https://www.ibm.com/think/tutorials/llamaindex-rag">https://www.ibm.com/think/tutorials/llamaindex-rag</a></li>
+<li>Build Your First AI Application Using LlamaIndex! - DEV Community, accessed August 12, 2025, <a href="https://dev.to/pavanbelagatti/build-your-first-ai-application-using-llamaindex-1f9">https://dev.to/pavanbelagatti/build-your-first-ai-application-using-llamaindex-1f9</a></li>
+<li>LlamaIndex - LlamaIndex, accessed August 12, 2025, <a href="https://docs.llamaindex.ai/">https://docs.llamaindex.ai/</a></li>
+<li>Fine-Tuning LLMs: A Guide With Examples | DataCamp, accessed August 12, 2025, <a href="https://www.datacamp.com/tutorial/fine-tuning-large-language-models">https://www.datacamp.com/tutorial/fine-tuning-large-language-models</a></li>
+<li>The Ultimate Guide to LLM Fine Tuning: Best Practices &amp; Tools - Lakera AI, accessed August 12, 2025, <a href="https://www.lakera.ai/blog/llm-fine-tuning-guide">https://www.lakera.ai/blog/llm-fine-tuning-guide</a></li>
+<li>Fine-tuning LLMs Guide | Unsloth Documentation, accessed August 12, 2025, <a href="https://docs.unsloth.ai/get-started/fine-tuning-llms-guide">https://docs.unsloth.ai/get-started/fine-tuning-llms-guide</a></li>
+<li>Building AI Agents Using LangChain and OpenAI APIs: A Step-by ..., accessed August 12, 2025, <a href="https://sen-abby.medium.com/building-ai-agents-using-langchain-47ba4012a8a1">https://sen-abby.medium.com/building-ai-agents-using-langchain-47ba4012a8a1</a></li>
+<li>LangGraph - LangChain, accessed August 12, 2025, <a href="https://www.langchain.com/langgraph">https://www.langchain.com/langgraph</a></li>
+<li>Build an Agent - ️ LangChain, accessed August 12, 2025, <a href="https://python.langchain.com/docs/tutorials/agents/">https://python.langchain.com/docs/tutorials/agents/</a></li>
+<li>With AI at the core, Heizen has a new model for software development at scale, accessed August 12, 2025, <a href="https://economictimes.indiatimes.com/small-biz/security-tech/technology/with-ai-at-the-core-heizen-has-a-new-model-for-software-development-at-scale/articleshow/123156453.cms">https://economictimes.indiatimes.com/small-biz/security-tech/technology/with-ai-at-the-core-heizen-has-a-new-model-for-software-development-at-scale/articleshow/123156453.cms</a></li>
+<li>10 Best AI code generators in 2025 [Free &amp; Paid] - Pieces App, accessed August 12, 2025, <a href="https://pieces.app/blog/9-best-ai-code-generation-tools">https://pieces.app/blog/9-best-ai-code-generation-tools</a></li>
+<li>Generative AI In Software Development Life Cycle (SDLC) - V2Soft, accessed August 12, 2025, <a href="https://www.v2soft.com/blogs/generative-ai-in-sdlc">https://www.v2soft.com/blogs/generative-ai-in-sdlc</a></li>
+<li>How an AI-enabled software product development life cycle will fuel innovation - McKinsey, accessed August 12, 2025, <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation">https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation</a></li>
+<li>Generative AI in SDLC: Can GenAI Be Utilized throughout the Software Development Life Cycle? - EPAM Startups &amp; SMBs, accessed August 12, 2025, <a href="https://startups.epam.com/blog/generative-ai-in-sdlc">https://startups.epam.com/blog/generative-ai-in-sdlc</a></li>
+<li>Future of Data Engineering: Trends for 2025 - Closeloop Technologies, accessed August 12, 2025, <a href="https://closeloop.com/blog/data-engineering-key-trends-to-watch/">https://closeloop.com/blog/data-engineering-key-trends-to-watch/</a></li>
+<li>Tutorial - MLflow, accessed August 12, 2025, <a href="https://www.mlflow.org/docs/2.7.1/tutorials-and-examples/tutorial.html">https://www.mlflow.org/docs/2.7.1/tutorials-and-examples/tutorial.html</a></li>
+<li>10 MLOps Projects Ideas for Beginners to Practice in 2025 - ProjectPro, accessed August 12, 2025, <a href="https://www.projectpro.io/article/mlops-projects-ideas/486">https://www.projectpro.io/article/mlops-projects-ideas/486</a></li>
+<li>Tutorials and Examples - MLflow, accessed August 12, 2025, <a href="https://mlflow.org/docs/latest/ml/tutorials-and-examples/">https://mlflow.org/docs/latest/ml/tutorials-and-examples/</a></li>
+<li>Your First MLflow Model: Complete Tutorial, accessed August 12, 2025, <a href="https://mlflow.org/docs/latest/ml/getting-started/logging-first-model/">https://mlflow.org/docs/latest/ml/getting-started/logging-first-model/</a></li>
+<li>End-to-End MLOps Pipeline: A Comprehensive Project ..., accessed August 12, 2025, <a href="https://www.geeksforgeeks.org/machine-learning/end-to-end-mlops-pipeline-a-comprehensive-project/">https://www.geeksforgeeks.org/machine-learning/end-to-end-mlops-pipeline-a-comprehensive-project/</a></li>
+<li>Snowflake Data Mesh: The Ultimate Setup Guide (2025) - Atlan, accessed August 12, 2025, <a href="https://atlan.com/snowflake-data-mesh-how-to-guide/">https://atlan.com/snowflake-data-mesh-how-to-guide/</a></li>
+<li>What Is Data Mesh? Complete Tutorial - Confluent Developer, accessed August 12, 2025, <a href="https://developer.confluent.io/courses/data-mesh/intro/">https://developer.confluent.io/courses/data-mesh/intro/</a></li>
+<li>Data Mesh Implementation: Your Blueprint for a Successful Launch - Ascend.io, accessed August 12, 2025, <a href="https://www.ascend.io/blog/data-mesh-implementation-your-blueprint-for-a-successful-launch">https://www.ascend.io/blog/data-mesh-implementation-your-blueprint-for-a-successful-launch</a></li>
+<li>Ten More Top Emerging Technologies In 2025 - Forrester, accessed August 12, 2025, <a href="https://www.forrester.com/report/ten-more-top-emerging-technologies-in-2025/RES183100">https://www.forrester.com/report/ten-more-top-emerging-technologies-in-2025/RES183100</a></li>
+<li>What Is Quantum Computing? | IBM, accessed August 12, 2025, <a href="https://www.ibm.com/think/topics/quantum-computing">https://www.ibm.com/think/topics/quantum-computing</a></li>
+<li>Introduction to Qiskit | IBM Quantum Documentation, accessed August 12, 2025, <a href="https://quantum.cloud.ibm.com/docs/guides/">https://quantum.cloud.ibm.com/docs/guides/</a></li>
+<li>Quantum computing - Wikipedia, accessed August 12, 2025, <a href="https://en.wikipedia.org/wiki/Quantum_computing">https://en.wikipedia.org/wiki/Quantum_computing</a></li>
+<li>Introduction to quantum computing, accessed August 12, 2025, <a href="https://thequantuminsider.com/introduction-to-quantum-computing/">https://thequantuminsider.com/introduction-to-quantum-computing/</a></li>
+<li>Introduction to Qiskit | IBM Quantum Documentation, accessed August 12, 2025, <a href="https://quantum.cloud.ibm.com/docs/guides">https://quantum.cloud.ibm.com/docs/guides</a></li>
+<li>How do people do Open Source Contributions ? : r/csharp - Reddit, accessed August 12, 2025, <a href="https://www.reddit.com/r/csharp/comments/1bxprbo/how_do_people_do_open_source_contributions/">https://www.reddit.com/r/csharp/comments/1bxprbo/how_do_people_do_open_source_contributions/</a></li>
+<li>Good First Issue: Make your first open-source contribution, accessed August 12, 2025, <a href="https://goodfirstissue.dev/">https://goodfirstissue.dev/</a></li>
+<li>For Good First Issue | Make your next open-source contribution matter. - GitHub, accessed August 12, 2025, <a href="https://forgoodfirstissue.github.com/">https://forgoodfirstissue.github.com/</a></li>
+<li>MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects. - GitHub, accessed August 12, 2025, <a href="https://github.com/MunGell/awesome-for-beginners">https://github.com/MunGell/awesome-for-beginners</a></li>
+<li>For Good First Issue: Introducing a new way to contribute - The GitHub Blog, accessed August 12, 2025, <a href="https://github.blog/open-source/social-impact/for-good-first-issue-introducing-a-new-way-to-contribute/">https://github.blog/open-source/social-impact/for-good-first-issue-introducing-a-new-way-to-contribute/</a></li>
+<li>How to Contribute to Open Source, accessed August 12, 2025, <a href="https://opensource.guide/how-to-contribute/">https://opensource.guide/how-to-contribute/</a></li>
+<li>Find Open Source Projects to Contribute: A Developer's Guide, accessed August 12, 2025, <a href="https://osssoftware.org/blog/find-open-source-projects-to-contribute-a-developers-guide/">https://osssoftware.org/blog/find-open-source-projects-to-contribute-a-developers-guide/</a></li>
+<li>A Software Developer's Guide to Writing - DEV Community, accessed August 12, 2025, <a href="https://dev.to/tyaga001/a-software-developers-guide-to-writing-bgj">https://dev.to/tyaga001/a-software-developers-guide-to-writing-bgj</a></li>
+<li>Building an Online Presence In Tech 101 - SheCanCode, accessed August 12, 2025, <a href="https://shecancode.io/building-an-online-presence-in-tech-101/">https://shecancode.io/building-an-online-presence-in-tech-101/</a></li>
+<li>How to write a coding tutorial | Yost's Posts, accessed August 12, 2025, <a href="https://www.ryanjyost.com/how-to-write-a-coding-tutorial/">https://www.ryanjyost.com/how-to-write-a-coding-tutorial/</a></li>
+<li>Creating the Best Video Programming Tutorials | Vue Mastery, accessed August 12, 2025, <a href="https://www.vuemastery.com/blog/creating-the-best-video-programming-tutorials/">https://www.vuemastery.com/blog/creating-the-best-video-programming-tutorials/</a></li>
+<li>A tutorial on creating coding tutorials - LogRocket Blog, accessed August 12, 2025, <a href="https://blog.logrocket.com/a-tutorial-on-creating-front-end-tutorials-2b13d8e94df9/">https://blog.logrocket.com/a-tutorial-on-creating-front-end-tutorials-2b13d8e94df9/</a></li>
+<li>How to Create a Technical Video Tutorial | Elastic Blog, accessed August 12, 2025, <a href="https://www.elastic.co/blog/elastic-contributor-program-how-to-create-a-video-tutorial">https://www.elastic.co/blog/elastic-contributor-program-how-to-create-a-video-tutorial</a></li>
+<li>How to Make Engaging Programming Videos - Real Python, accessed August 12, 2025, <a href="https://realpython.com/how-to-make-programming-videos/">https://realpython.com/how-to-make-programming-videos/</a></li>
+<li>One-on-one mentorship with software engineers - CodePath, accessed August 12, 2025, <a href="https://www.codepath.org/career-services/mentorship">https://www.codepath.org/career-services/mentorship</a></li>
+<li>Find a Software Engineering mentor - MentorCruise, accessed August 12, 2025, <a href="https://mentorcruise.com/filter/softwareengineering/">https://mentorcruise.com/filter/softwareengineering/</a></li>
+<li>Logseq vs. Obsidian: first impressions - Share &amp; showcase, accessed August 13, 2025, <a href="https://forum.obsidian.md/t/logseq-vs-obsidian-first-impressions/56854">https://forum.obsidian.md/t/logseq-vs-obsidian-first-impressions/56854</a></li>
+<li>6 ways Logseq is the perfect Obsidian alternative - XDA Developers, accessed August 13, 2025, <a href="https://www.xda-developers.com/ways-logseq-is-the-perfect-obsidian-alternative/">https://www.xda-developers.com/ways-logseq-is-the-perfect-obsidian-alternative/</a></li>
+<li>Electron vs Tauri - Coditation, accessed August 13, 2025, <a href="https://www.coditation.com/blog/electron-vs-tauri">https://www.coditation.com/blog/electron-vs-tauri</a></li>
+<li>Framework Wars: Tauri vs Electron vs Flutter vs React Native - Moon Technolabs, accessed August 13, 2025, <a href="https://www.moontechnolabs.com/blog/tauri-vs-electron-vs-flutter-vs-react-native/">https://www.moontechnolabs.com/blog/tauri-vs-electron-vs-flutter-vs-react-native/</a></li>
+<li>Modular: A Fast, Scalable Gen AI Inference Platform, accessed August 13, 2025, <a href="https://www.modular.com/">https://www.modular.com/</a></li>
+<li>MAX: AI Compute Platform - Modular, accessed August 13, 2025, <a href="https://www.modular.com/max">https://www.modular.com/max</a></li>
+<li>apache beam vs apache kafka: Which Tool is Better for Your Next Project? - ProjectPro, accessed August 13, 2025, <a href="https://www.projectpro.io/compare/apache-beam-vs-apache-kafka">https://www.projectpro.io/compare/apache-beam-vs-apache-kafka</a></li>
+<li>Apache Beam over Apache Kafka Stream processing - Codemia, accessed August 13, 2025, <a href="https://codemia.io/knowledge-hub/path/apache_beam_over_apache_kafka_stream_processing">https://codemia.io/knowledge-hub/path/apache_beam_over_apache_kafka_stream_processing</a></li>
+<li>Apache Beam: Introduction to Batch and Stream Data Processing - Confluent, accessed August 13, 2025, <a href="https://www.confluent.io/learn/apache-beam/">https://www.confluent.io/learn/apache-beam/</a></li>
+<li>Quantum Programming Languages: A Beginner's Guide for 2025 - BlueQubit, accessed August 13, 2025, <a href="https://www.bluequbit.io/quantum-programming-languages">https://www.bluequbit.io/quantum-programming-languages</a></li>
+<li>What are the best-known quantum programming languages (e.g., Qiskit, Quipper, Cirq)?, accessed August 13, 2025, <a href="https://milvus.io/ai-quick-reference/what-are-the-bestknown-quantum-programming-languages-eg-qiskit-quipper-cirq">https://milvus.io/ai-quick-reference/what-are-the-bestknown-quantum-programming-languages-eg-qiskit-quipper-cirq</a></li>
+<li>Hello Many Worlds in Seven Quantum Languages - IonQ, accessed August 13, 2025, <a href="https://ionq.com/docs/hello-many-worlds-seven-quantum-languages">https://ionq.com/docs/hello-many-worlds-seven-quantum-languages</a></li>
+<li>Neuromorphic Hardware Guide, accessed August 13, 2025, <a href="https://open-neuromorphic.org/neuromorphic-computing/hardware/">https://open-neuromorphic.org/neuromorphic-computing/hardware/</a></li>
+<li>Embedded Neuromorphic Computing Systems - MCSoC-2025, accessed August 13, 2025, <a href="https://mcsoc-forum.org/site/index.php/embedded-neuromorphic-computing-systems/">https://mcsoc-forum.org/site/index.php/embedded-neuromorphic-computing-systems/</a></li>
+<li>OpenBCI – Open-source EEG, accessed August 13, 2025, <a href="https://www.opensourceimaging.org/project/openbci/">https://www.opensourceimaging.org/project/openbci/</a></li>
+<li>Community Page Projects - OpenBCI Documentation, accessed August 13, 2025, <a href="https://docs.openbci.com/Examples/CommunityPageProjects/">https://docs.openbci.com/Examples/CommunityPageProjects/</a></li>
+<li>Example Projects - OpenBCI Documentation, accessed August 13, 2025, <a href="https://docs.openbci.com/Examples/ExamplesLanding/">https://docs.openbci.com/Examples/ExamplesLanding/</a></li>
+<li>EEG Headsets and Software for Education - EMOTIV, accessed August 13, 2025, <a href="https://www.emotiv.com/pages/education">https://www.emotiv.com/pages/education</a></li>
+<li>EEG Monitoring – EMOTIV, accessed August 13, 2025, <a href="https://www.emotiv.com/blogs/glossary/eeg-monitoring">https://www.emotiv.com/blogs/glossary/eeg-monitoring</a></li>
+<li>EEG Headset - Emotiv, accessed August 13, 2025, <a href="https://www.emotiv.com/blogs/glossary/eeg-headset">https://www.emotiv.com/blogs/glossary/eeg-headset</a></li>
+<li>Developing AR/VR/MR/XR Apps with WebXR, Unity &amp; Unreal - Coursera, accessed August 13, 2025, <a href="https://www.coursera.org/learn/develop-augmented-virtual-mixed-extended-reality-applications-webxr-unity-unreal">https://www.coursera.org/learn/develop-augmented-virtual-mixed-extended-reality-applications-webxr-unity-unreal</a></li>
+<li>WebXR Academy, accessed August 13, 2025, <a href="https://webxracademy.com/">https://webxracademy.com/</a></li>
+<li>Top VR Education Companies in 2025 - Axon Park, accessed August 13, 2025, <a href="https://www.axonpark.com/top-vr-education-companies-in-2025/">https://www.axonpark.com/top-vr-education-companies-in-2025/</a></li>
+<li>The Future of VR in Education: Immersive Learning Experiences, accessed August 13, 2025, <a href="https://www.immersivelearning.news/2025/06/19/the-future-of-vr-in-education-immersive-learning-experiences/">https://www.immersivelearning.news/2025/06/19/the-future-of-vr-in-education-immersive-learning-experiences/</a></li>
+<li>Streamlit vs FastAPI: Choosing the Right Tool for Deploying Your Machine Learning Model | by Pelumi Ogunlusi | Jul, 2025 | Medium, accessed August 13, 2025, <a href="https://medium.com/@samuelogunlusi07/streamlit-vs-fastapi-choosing-the-right-tool-for-deploying-your-machine-learning-model-1d16d427e130">https://medium.com/@samuelogunlusi07/streamlit-vs-fastapi-choosing-the-right-tool-for-deploying-your-machine-learning-model-1d16d427e130</a></li>
+<li>Compare Streamlit vs. Tauri in 2025, accessed August 13, 2025, <a href="https://slashdot.org/software/comparison/Streamlit-vs-Tauri/">https://slashdot.org/software/comparison/Streamlit-vs-Tauri/</a></li>
+<li>Monica: Personal CRM done right, accessed August 13, 2025, <a href="https://www.monicahq.com/">https://www.monicahq.com/</a></li>
+<li>monicahq/monica: Personal CRM. Remember everything about your friends, family and business relationships. - GitHub, accessed August 13, 2025, <a href="https://github.com/monicahq/monica">https://github.com/monicahq/monica</a></li>
+<li>rust-lang/mdBook: Create book from markdown files. Like Gitbook but implemented in Rust, accessed August 13, 2025, <a href="https://github.com/rust-lang/mdBook">https://github.com/rust-lang/mdBook</a></li>
+<li>Freelancer API for Developers, accessed August 13, 2025, <a href="https://developers.freelancer.com/">https://developers.freelancer.com/</a></li>
+<li>API Developer Freelance Jobs: Work Remote &amp; Earn Online - Upwork, accessed August 13, 2025, <a href="https://www.upwork.com/freelance-jobs/api-development/">https://www.upwork.com/freelance-jobs/api-development/</a></li>
+<li>How to Start a Podcast: Step-by-Step Guide &amp; Free Checklist - Riverside, accessed August 13, 2025, <a href="https://riverside.com/blog/how-to-start-a-podcast">https://riverside.com/blog/how-to-start-a-podcast</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,6 +1,6 @@
-# Manifesto
-
 # **100-Day Plan: Personal Knowledge Engineering mdBook**
+
+*The document listed below was developed as a starting point; it's listed here is for ARCHIVE purposes ... the 100-Day Plan is currently *in-progress* at [https://markbruns.github.io/PKE/](https://markbruns.github.io/PKE/).
 
 This document presents a 100-module strategic curriculum for a highly experienced multi-disciplinary systems engineer. It provides a systematic framework to accelerate autodidactic education, understand the details of research at the forefront of technological innovation, foster meaningful new professional connections and friendships across different disciplines, and enhance the capacity to contribute to significant work in extensible open-source technologies. The primary focus is on the journey of **continual learning and meeting new colleagues**, with technology serving as the enabling toolkit rather than the end goal itself.
 

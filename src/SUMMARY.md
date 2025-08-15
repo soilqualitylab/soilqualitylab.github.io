@@ -4,8 +4,6 @@
 
   - [Phase 1](1.md)
       - [Module 1](./nested/001.md) ... Defining the Philosophy
-        - [Resource Management Methodologies In Personal Knowledge Engineering](./nested/001_1.md)
-        - [Note Capturing Systems In Personal Knowledge Management](./nested/001_2.md)
       - [Module 2](./nested/002.md) ... 
       - [Module 3](./nested/003.md) ...   
       - [Module 4](./nested/004.md) ... 
@@ -29,4 +27,12 @@
   - [Phase 3](3.md)
   - [Phase 4](4.md)
 
-- [References](References.md)
+- [Deliverables](DELIVERABLES.md)
+  - [Methodology](./nested/METHODOLOGY.md)
+    - [Projects](./1.Projects/Template.md)
+    - [Areas](./2.Areas/Template.md)
+    - [Resources](./3.Resources/Template.md)
+    - [Archive](./4.Archive/Template.md)
+  - [References](References.md)
+      - [Resource Management Methodologies In Personal Knowledge Engineering](./nested/nested/001_1.md)
+      - [Note Capturing Systems In Personal Knowledge Management](./nested/nested/001_2.md)

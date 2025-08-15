@@ -4,8 +4,8 @@
 
   - [Phase 1](1.md)
       - [Module 1](./nested/001.md) ... Defining the Philosophy
-        - [Resource Mgmt For Project-Based Work](./nested/001_1.md)
-        - [Idea Generation For Technical Knowledge](./nested/001_2.md)
+        - [Resource Management Methodologies In Personal Knowledge Engineering](./nested/001_1.md)
+        - [Note Capturing Systems In Personal Knowledge Management](./nested/001_2.md)
       - [Module 2](./nested/002.md) ... 
       - [Module 3](./nested/003.md) ...   
       - [Module 4](./nested/004.md) ... 

@@ -30,9 +30,7 @@ Furthermore, we will examine forward-looking concepts like "AI-aware" kernels, w
 
 ### **Section 1.2: Bare-Metal Development with Rust: no\_std, Core Primitives, and Unsafe Code (Modules 4-6)**
 
-Rust is selected as the implementation language for its unique combination of performance, comparable to C/C++, and strong compile-time safety guarantees that eliminate entire classes of bugs like dangling pointers and data races.8 A key feature for OS development is Rust's standard library structure, which is split into
-
-core and alloc. The core library contains platform-independent primitives and can be used in a "freestanding" (\#\!\[no\_std\]) environment without an underlying OS, which is precisely our starting point.9
+Rust is selected as the implementation language for its unique combination of performance, comparable to C/C++, and strong compile-time safety guarantees that eliminate entire classes of bugs like dangling pointers and data races.8 A key feature for OS development is Rust's standard library structure, which is split into [core](https://doc.rust-lang.org/core/) and [alloc](https://doc.rust-lang.org/alloc/). The [core library](https://doc.rust-lang.org/core/) contains platform-independent primitives and can be used in a "freestanding" environment, ie a Rust environment with **#[no_std]** attribute, without an underlying OS, which is precisely our starting point.
 
 This section focuses on the practicalities of bare-metal Rust. While the ownership model provides safety, kernel development inherently requires unsafe operations: direct memory-mapped I/O, manipulation of page tables, and handling raw pointers for DMA. A naive approach would wrap large sections of the kernel in unsafe blocks, negating Rust's benefits. The correct approach, and a central pedagogical theme of this course, is to master the art of building *safe abstractions over unsafe operations*. We will study patterns where minimal, well-documented unsafe code is encapsulated within a module that exposes a completely safe public API. This pattern is crucial for building a robust and maintainable kernel.
 

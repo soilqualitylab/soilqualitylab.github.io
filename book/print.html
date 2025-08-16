@@ -356,11 +356,196 @@
 <p>As you will recall, the Building a Second Brain <a href="https://fortelabs.com/blog/category/building-a-second-brain/">BASB</a> method systematically manages information differently than just notetaking apps ... <strong>PROJECTS</strong>, have goals, reqmts and deadlines ... <strong>AREAS</strong> are about roles/responsibilities or obligations or capabilities that need to be earnestly developed ... <strong>RESOURCES</strong>, mostly finished AREAS, but also ongoing interests, assets, future inspiration, may req continual maintenance and refactoring but, for now, are <em>backburner</em>able  ... <strong>ARCHIVES</strong>, inactive matl from P A R that shouldn't be used, except for informational purposes.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="module-3-tool-selection--core-setup---mdbook-as-the-core-1"><a class="header" href="#module-3-tool-selection--core-setup---mdbook-as-the-core-1"><a href="nested/./nested/003.html"><strong>Module 3: Tool Selection &amp; Core Setup - mdBook as the Core</strong></a></a></h1>
 <h2 id="deliverables-2"><a class="header" href="#deliverables-2"><strong>Deliverables</strong></a></h2>
-<p>The mdBook project is now a minimally-functional work-in-progress at https://markbruns.github.io/PKE/ ... as such, it is version-controlled with a public GitHub repository at https://github.com/MarkBruns/PKE.</p>
-<p>It includes ROADMAP.md chapter outlines the architecture of this specific PKE project itself, as well as the future development path outlined in the more intensive year-long CLOUDKERNEL.md development course for putting together pivotally-important  AI/ML ops infrastructure that PKES will be use as the base of all its development.</p>
-<h2 id="-tasks"><a class="header" href="#-tasks">* <strong>Tasks</strong></a></h2>
-<p>Install Rust and mdBook. Initialize a new book project which will become your central PKES. Familiarize yourself with the core components: the book.toml configuration file, the src directory for Markdown content, and the SUMMARY.md file that defines the book's structure. This "publication-first" approach aligns with the goal of moving directly from notes to a shareable format. As part of this module, create an ARCHITECTURE_ROADMAP.md chapter to brainstorm future extensions, such as building custom Rust-based preprocessors for mdBook to add new features (e.g., special syntax for callouts, dynamic content generation) or exploring high-performance stacks like <strong>Modular's Mojo/Max platform</strong> for future AI integrations.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="module-4-automating-capture---the-editorial-funnel-1"><a class="header" href="#module-4-automating-capture---the-editorial-funnel-1"><a href="nested/./nested/004.html"><strong>Module 4: Automating Capture - The Editorial Funnel</strong></a></a></h1>
+<p>The mdBook project is now a minimally-functional work-in-progress at https://markbruns.github.io/PKE/ ... as such, it is version-controlled with a public GitHub repository at <a href="https://github.com/MarkBruns/PKE">https://github.com/MarkBruns/PKE</a>.</p>
+<p>It includes <a href="nested/./ROADMAP.html">ROADMAP.md</a> chapter outlines the architecture of this specific PKE project itself, as well as the future development path outlined in the more intensive year-long <a href="nested/./CLOUDKERNEL.html">CLOUDKERNEL.md</a> development course for putting together pivotally-important  AI/ML ops infrastructure that PKES will be use as the base of all its development.</p>
+<h2 id="tasks-2"><a class="header" href="#tasks-2"><strong>Tasks</strong></a></h2>
+<p>Explore the Rust ecoystem, particularly <a href="https://github.com/hermit-os">Hermit OS</a> and various AI-aware Rust-based development communities to brainstorm future extensions, such as building custom Rust-based preprocessors for mdBook to add new features (e.g., special syntax for callouts, dynamic content generation).</p>
+<h3 id="ai-aware-rust-based-development-communities-for-mlai-infrastructure"><a class="header" href="#ai-aware-rust-based-development-communities-for-mlai-infrastructure">AI-Aware Rust-Based Development Communities for ML/AI Infrastructure</a></h3>
+<p>Rust's ecosystem is increasingly supporting AI/ML through its focus on performance, safety, and concurrency, making it ideal for infrastructure that enhances ML/AI operations (MLOps) in areas like speed (e.g., via efficient computation and unikernels), security (e.g., memory safety and verifiable code), monitoring (e.g., observability tools), robustness (e.g., reliable pipelines), and predictability (e.g., deterministic execution). Below, I list as many distinct communities as possible, drawn from active open-source projects, forums, and curated resources. These are "AI-aware" in that they explicitly target or integrate ML/AI workloads, often with extensions for GPUs, distributed systems, or MLOps tools. Each entry includes the community's focus, relation to ML/AI ops improvements, and engagement details (e.g., GitHub activity, contributors, discussions).</p>
+<p>I've prioritized diversity across infrastructure layers: kernels/unikernels (for secure, lightweight execution), frameworks/libraries (for model building/training), tools (for MLOps pipelines), and meta-communities (curated lists/forums). Communities are serious, with ongoing development, contributors, and issues/discussions.</p>
+<h4 id="1-hermit-os-community-example-provided"><a class="header" href="#1-hermit-os-community-example-provided">1. Hermit OS Community (Example Provided)</a></h4>
+<ul>
+<li><strong>Focus:</strong> Rust-based lightweight unikernel for scalable, virtual execution environments, including kernel, bootloader, and hypervisors like uhyve.</li>
+<li><strong>AI/ML Relation:</strong> Enhances speed and security for AI/ML via GPU acceleration (e.g., Cricket for RustyHermit) and minimal attack surfaces; suitable for predictable, robust cloud/edge AI ops.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/hermit-os) with 102+ issues (5 "help wanted"), 45 in uhyve; active contributors (~10-20 across repos); discussions via Zulip (https://hermit.zulipchat.com/); RWTH Aachen University-backed, open for PRs.</li>
+</ul>
+<h4 id="2-linfa-community"><a class="header" href="#2-linfa-community">2. Linfa Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Comprehensive Rust ML framework with algorithms for clustering, regression, and more; akin to scikit-learn but optimized for Rust's safety.</li>
+<li><strong>AI/ML Relation:</strong> Improves robustness and predictability via type-safe, performant implementations; supports monitoring through integrated metrics; used for faster ML ops in production (e.g., 25x speedup over Python equivalents).</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/rust-ml/linfa) with 740+ issues (28% open), 150+ contributors; active forks (450+); discussions on Rust forums (e.g., https://users.rust-lang.org/t/is-rust-good-for-deep-learning-and-artificial-intelligence/22866); tutorials and workshops encourage contributions.</li>
+</ul>
+<h4 id="3-burn-community"><a class="header" href="#3-burn-community">3. Burn Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Dynamic deep learning framework in Rust, supporting tensors, autodiff, and GPU backends.</li>
+<li><strong>AI/ML Relation:</strong> Boosts speed (GPU/CPU optimization) and security (memory-safe); enables robust, monitorable training pipelines; targets MLOps for scalable AI inference.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/burn-rs/burn) with 740+ issues (28% open), 150+ contributors; Discord for discussions; integrated with Rust ML working group; high activity (9.1K stars, regular updates).</li>
+</ul>
+<h4 id="4-candle-community-hugging-face-rust-ml"><a class="header" href="#4-candle-community-hugging-face-rust-ml">4. Candle Community (Hugging Face Rust ML)</a></h4>
+<ul>
+<li><strong>Focus:</strong> Minimalist ML framework by Hugging Face, emphasizing ease and performance for inference.</li>
+<li><strong>AI/ML Relation:</strong> Enhances speed (GPU support) and predictability (static compilation); secure for edge AI ops; used in MLOps for lightweight, monitorable deployments.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/huggingface/candle) with active issues/PRs; part of Hugging Face's Rust ecosystem (e.g., tokenizers-rs); discussions on Hugging Face forums and Rust ML channels; 150+ contributors.</li>
+</ul>
+<h4 id="5-tract-community-onnx-runtime-in-rust"><a class="header" href="#5-tract-community-onnx-runtime-in-rust">5. Tract Community (ONNX Runtime in Rust)</a></h4>
+<ul>
+<li><strong>Focus:</strong> Rust implementation of ONNX runtime for model inference.</li>
+<li><strong>AI/ML Relation:</strong> Improves speed and robustness for cross-framework AI ops; secure, predictable execution; supports monitoring via perf tools.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/snipsco/tract) with issues/PRs; integrated with Rust ML lists; discussions on Rust users forum; smaller but active (280+ stars).</li>
+</ul>
+<h4 id="6-df-dx-community"><a class="header" href="#6-df-dx-community">6. DF DX Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Shape-checked tensors and neural networks in Rust.</li>
+<li><strong>AI/ML Relation:</strong> Enhances predictability (compile-time checks) and security (no runtime errors); faster for DL ops; robust for MLOps pipelines.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/coreylowman/dfdx) with 1.7K stars, issues; Rust ML Discord; contributions via PRs (1.7K stars, active).</li>
+</ul>
+<h4 id="7-unikraft-community"><a class="header" href="#7-unikraft-community">7. Unikraft Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Posix-like unikernel with Rust support, modular for custom OS builds.</li>
+<li><strong>AI/ML Relation:</strong> Faster, secure AI ops via minimal kernels; GPU extensions for ML; robust, monitorable for cloud AI.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/unikraft/unikraft) with 140+ issues (31% open), 28 contributors; Xen Project incubator; Discord for discussions; active (growing community).</li>
+</ul>
+<h4 id="8-rustyhermit-community"><a class="header" href="#8-rustyhermit-community">8. RustyHermit Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Extension of Hermit with enhanced features like GPU support.</li>
+<li><strong>AI/ML Relation:</strong> Secure, predictable unikernel for AI/ML; focuses on robustness in HPC/AI environments.</li>
+<li><strong>Community Details:</strong> GitHub forks/extensions of Hermit; discussions in Rust internals (https://internals.rust-lang.org/t/unikernels-in-rust/2494); community via Zulip; academic contributions.</li>
+</ul>
+<h4 id="9-enzyme-community"><a class="header" href="#9-enzyme-community">9. Enzyme Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> High-performance auto-differentiation for LLVM/MLIR in Rust.</li>
+<li><strong>AI/ML Relation:</strong> Speeds up ML training (autodiff); robust for predictable gradients; secure via no_std.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/EnzymeAD/Enzyme) with 1.3K stars, issues; Rust ML forums; contributions encouraged (1.3K stars).</li>
+</ul>
+<h4 id="10-rain-community"><a class="header" href="#10-rain-community">10. Rain Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Framework for large distributed pipelines in Rust.</li>
+<li><strong>AI/ML Relation:</strong> Robust, monitorable ML ops; faster distributed training; secure for scalable AI.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/rain-ml/rain) with 750 stars, issues; part of Rust ML ecosystem; discussions on forums.</li>
+</ul>
+<h4 id="11-rust-ml-working-group"><a class="header" href="#11-rust-ml-working-group">11. Rust ML Working Group</a></h4>
+<ul>
+<li><strong>Focus:</strong> Unofficial group advancing ML in Rust, curating resources.</li>
+<li><strong>AI/ML Relation:</strong> Oversees infrastructure for faster, secure ML ops; promotes robustness via standards.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/rust-ml); forums (https://users.rust-lang.org/c/domain/machine-learning); active threads on AI/Rust integration.</li>
+</ul>
+<h4 id="12-awesome-rust-machinelearning-community"><a class="header" href="#12-awesome-rust-machinelearning-community">12. Awesome-Rust-MachineLearning Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Curated list of Rust ML libraries, blogs, and resources.</li>
+<li><strong>AI/ML Relation:</strong> Aggregates tools for secure, fast MLOps; aids predictability via best practices.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/vaaaaanquish/Awesome-Rust-MachineLearning); contributions via PRs; discussions on Reddit/Rust forums; 1K+ stars.</li>
+</ul>
+<h4 id="13-best-of-ml-rust-community"><a class="header" href="#13-best-of-ml-rust-community">13. Best-of-ML-Rust Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Ranked awesome list of Rust ML libraries.</li>
+<li><strong>AI/ML Relation:</strong> Highlights tools for robust, monitorable AI infra; focuses on performance/security.</li>
+<li><strong>Community Details:</strong> GitHub (https://github.com/e-tornike/best-of-ml-rust); PRs for updates; tied to Rust ML discussions; 230+ projects curated.</li>
+</ul>
+<h4 id="14-arewelearningyet-community"><a class="header" href="#14-arewelearningyet-community">14. AreWeLearningYet Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Comprehensive guide to Rust ML ecosystem.</li>
+<li><strong>AI/ML Relation:</strong> Catalogs frameworks/tools for faster, secure ops; emphasizes robustness.</li>
+<li><strong>Community Details:</strong> Website (https://www.arewelearningyet.com/); GitHub for contributions; forums for ecosystem growth.</li>
+</ul>
+<h4 id="additional-notes"><a class="header" href="#additional-notes">Additional Notes</a></h4>
+<ul>
+<li><strong>Trends (as of Aug 2025):</strong> Rust's ML adoption is growing (e.g., xAI uses Rust for AI infra); communities emphasize unikernels for edge AI security/speed.</li>
+<li><strong>Engagement Tips:</strong> Join Rust Discord/ML channels or Reddit (r/rust, r/MachineLearning with Rust tags) for cross-community discussions.</li>
+<li><strong>Table of Infrastructure Layers:</strong></li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>Layer</th><th>Communities</th><th>Key Improvements</th></tr></thead><tbody>
+<tr><td>Kernels/Unikernels</td><td>Hermit, Unikraft, RustyHermit</td><td>Speed (minimal overhead), Security (isolated), Predictability (deterministic boot)</td></tr>
+<tr><td>Frameworks/Libraries</td><td>Linfa, Burn, Candle, Tract, DF DX, Enzyme</td><td>Robustness (type safety), Monitoring (metrics), Speed (GPU/autodiff)</td></tr>
+<tr><td>Tools/Pipelines</td><td>Rain</td><td>Monitorable (distributed), Robust (fault-tolerant)</td></tr>
+<tr><td>Meta/Curated</td><td>Rust ML WG, Awesome-Rust-ML, Best-of-ML-Rust, AreWeLearningYet</td><td>Overall ecosystem for secure, efficient MLOps</td></tr>
+</tbody></table>
+</div>
+<h3 id="ai-aware-development-communities-for-modular-platform-mojo-max-and-mlir"><a class="header" href="#ai-aware-development-communities-for-modular-platform-mojo-max-and-mlir">AI-Aware Development Communities for Modular Platform, Mojo, Max, and MLIR</a></h3>
+<p>The ecosystem around Modular AI's technologies (Mojo programming language, Max inference platform, and the broader Modular Platform) and MLIR (Multi-Level Intermediate Representation, foundational to many AI compilers) is focused on unifying AI infrastructure. These communities emphasize performance (e.g., GPU/CPU optimizations), security (e.g., verifiable code transformations), monitoring (e.g., traceable compilations), robustness (e.g., extensible dialects), and predictability (e.g., deterministic optimizations). Mojo, as a Python superset, targets seamless AI development; Max accelerates deployment; MLIR enables reusable compiler stacks. Communities are active but emerging, with Modular's tools launched in 2023-2025 and MLIR since 2019 ... the following dev communities are active as of August 2025.</p>
+<h4 id="1-modular-forum-community"><a class="header" href="#1-modular-forum-community">1. Modular Forum Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Official discussion hub for Mojo, Max, and Modular Platform; covers language features, inference optimizations, and ecosystem tools.</li>
+<li><strong>AI/ML Relation:</strong> Drives faster AI ops via Mojo's 35,000x Python speedups and Max's GPU scaling; enhances security/robustness through community-driven patches; monitorable via integrated tracing in compilations.</li>
+<li><strong>Community Details:</strong> https://forum.modular.com/; 100+ categories (e.g., Installation, Community Projects); active with 1K+ threads, monthly meetings; contributions via PRs to GitHub.</li>
+</ul>
+<h4 id="2-modular-discord-community"><a class="header" href="#2-modular-discord-community">2. Modular Discord Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Real-time chat for developers building with Mojo/Max; includes channels for debugging, feature requests, and hackathons.</li>
+<li><strong>AI/ML Relation:</strong> Supports predictable AI workflows (e.g., porting PyTorch to Mojo); secure via shared best practices; robust for distributed training/inference.</li>
+<li><strong>Community Details:</strong> Linked from forum.modular.com; 10K+ members; channels like #mojo-general, #max-support; high activity with daily discussions and Q&amp;A.</li>
+</ul>
+<h4 id="3-modular-github-organization"><a class="header" href="#3-modular-github-organization">3. Modular GitHub Organization</a></h4>
+<ul>
+<li><strong>Focus:</strong> Open-source repos for Modular Platform (includes Max &amp; Mojo); collaborative development of AI libraries/tools.</li>
+<li><strong>AI/ML Relation:</strong> Accelerates ML ops with open-sourced code (450K+ lines in 2025); robust/predictable via MLIR-based transformations; monitorable through benchmarks.</li>
+<li><strong>Community Details:</strong> https://github.com/modular; 5K+ stars across repos; 200+ issues/PRs; contributors ~100; tied to community license for extensions.</li>
+</ul>
+<h4 id="4-modular-community-meetings-youtubeforum"><a class="header" href="#4-modular-community-meetings-youtubeforum">4. Modular Community Meetings (YouTube/Forum)</a></h4>
+<ul>
+<li><strong>Focus:</strong> Monthly livestreams/recaps on updates like Mojo regex optimizations, GSplat kernels, Apple GPU support.</li>
+<li><strong>AI/ML Relation:</strong> Focuses on faster/more robust AI (e.g., large-scale batch inference); predictable via roadmaps; monitorable with demos/benchmarks.</li>
+<li><strong>Community Details:</strong> YouTube channel (e.g., Modular Community Meeting #15); forum announcements; 2-5K views per video; interactive Q&amp;A.</li>
+</ul>
+<h4 id="5-reddit-rmodularai-unofficial"><a class="header" href="#5-reddit-rmodularai-unofficial">5. Reddit r/ModularAI (Unofficial)</a></h4>
+<ul>
+<li><strong>Focus:</strong> Discussions on Mojo in real projects, comparisons to Julia/Rust, and Max licensing.</li>
+<li><strong>AI/ML Relation:</strong> Explores secure/robust AI frameworks; community critiques hype vs. performance for predictable ops.</li>
+<li><strong>Community Details:</strong> https://www.reddit.com/r/modularai/; 1K+ members; threads like "Mojo/Modular in real projects" (Sep 2024); cross-posts from r/MachineLearning.</li>
+</ul>
+<h4 id="6-mlir-llvm-community"><a class="header" href="#6-mlir-llvm-community">6. MLIR LLVM Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Core MLIR development under LLVM; dialects, optimizations, and integrations.</li>
+<li><strong>AI/ML Relation:</strong> Foundational for AI compilers (e.g., TensorFlow/XLA); enables faster ops via multi-level transformations; secure/robust with meritocratic contributions; monitorable through tracepoints.</li>
+<li><strong>Community Details:</strong> https://mlir.llvm.org/community/; Discourse forums, mailing lists (mlir-dev@lists.llvm.org), Discord; GitHub (llvm/llvm-project); 1K+ contributors; monthly meetings.</li>
+</ul>
+<h4 id="7-openxla-community"><a class="header" href="#7-openxla-community">7. OpenXLA Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> Collaborative MLIR-based compiler for AI (e.g., JAX/TensorFlow/PyTorch).</li>
+<li><strong>AI/ML Relation:</strong> Democratizes AI compute with hardware-independent optimizations; faster/secure via open partnerships; robust for GenAI.</li>
+<li><strong>Community Details:</strong> https://openxla.org/; GitHub (openxla/xla); monthly meetings; partners like Google/AMD; active issues/PRs.</li>
+</ul>
+<h4 id="8-tensorflow-mlir-integration-community"><a class="header" href="#8-tensorflow-mlir-integration-community">8. TensorFlow MLIR Integration Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> MLIR dialects for TensorFlow graphs, quantization, and deployment.</li>
+<li><strong>AI/ML Relation:</strong> Boosts predictable/monitorable ML ops (e.g., perf counters); robust for edge AI; secure via unified IR.</li>
+<li><strong>Community Details:</strong> https://www.tensorflow.org/mlir; GitHub (tensorflow/mlir); forums tied to TensorFlow Discourse; 500+ contributors.</li>
+</ul>
+<h4 id="9-tenstorrent-mlir-compiler-community-tt-mlir"><a class="header" href="#9-tenstorrent-mlir-compiler-community-tt-mlir">9. Tenstorrent MLIR Compiler Community (tt-mlir)</a></h4>
+<ul>
+<li><strong>Focus:</strong> MLIR dialects for Tenstorrent AI accelerators; graph transformations.</li>
+<li><strong>AI/ML Relation:</strong> Speeds up AI hardware abstraction; robust/predictable for custom chips; monitorable via compiler tools.</li>
+<li><strong>Community Details:</strong> https://github.com/tenstorrent/tt-mlir; 100+ stars; issues/PRs; part of broader MLIR users.</li>
+</ul>
+<h4 id="10-amd-mlir-aie-community"><a class="header" href="#10-amd-mlir-aie-community">10. AMD MLIR-AIE Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> MLIR for AMD AI Engines (AIE); configurable compute.</li>
+<li><strong>AI/ML Relation:</strong> Enhances robust/scalable AI on FPGAs; faster via hardware-specific opts; predictable with end-to-end flows.</li>
+<li><strong>Community Details:</strong> Part of mlir.llvm.org/users; GitHub extensions; papers/forums on AMD devs.</li>
+</ul>
+<h4 id="11-polymage-labs-community"><a class="header" href="#11-polymage-labs-community">11. PolyMage Labs Community</a></h4>
+<ul>
+<li><strong>Focus:</strong> MLIR-based PolyBlocks for AI frameworks (PyTorch/TensorFlow/JAX).</li>
+<li><strong>AI/ML Relation:</strong> Modular compiler blocks for faster/multi-hardware AI; secure/robust via abstractions.</li>
+<li><strong>Community Details:</strong> https://www.polymagelabs.com/; GitHub repos; community-driven extensions; IISc-incubated.</li>
+</ul>
+<h4 id="12-google-mlir-usersresearchers"><a class="header" href="#12-google-mlir-usersresearchers">12. Google MLIR Users/Researchers</a></h4>
+<ul>
+<li><strong>Focus:</strong> MLIR in XLA/TFLite; research on AI infrastructure.</li>
+<li><strong>AI/ML Relation:</strong> Addresses Moore's Law end with reusable stacks; faster/secure for billions of devices.</li>
+<li><strong>Community Details:</strong> Google Blog posts; arXiv papers; tied to LLVM/MLIR forums; collaborative with Modular.</li>
+</ul>
+<h4 id="additional-notes-1"><a class="header" href="#additional-notes-1">Additional Notes</a></h4>
+<ul>
+<li><strong>Trends (August 2025):</strong> Modular's 25.5 release emphasizes scalable inference; MLIR sees growth in GenAI (e.g., CUDA alternatives). Communities overlap (e.g., Modular uses MLIR); X discussions highlight Mojo's Python edge for AI.</li>
+<li><strong>Engagement Tips:</strong> Join Modular Forum/Discord for starters; LLVM Discourse for MLIR deep dives.</li>
+<li><strong>Table of Infrastructure Layers:</strong></li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th>Layer</th><th>Communities</th><th>Key Improvements</th></tr></thead><tbody>
+<tr><td>Language/Platform (Mojo/Max)</td><td>Modular Forum, Discord, GitHub, Community Meetings, Reddit r/ModularAI</td><td>Speed (35Kx Python), Robustness (extensible), Predictability (roadmaps)</td></tr>
+<tr><td>Compiler Infrastructure (MLIR)</td><td>MLIR LLVM, OpenXLA, TensorFlow MLIR, tt-mlir, MLIR-AIE, PolyMage</td><td>Security (verifiable IR), Monitoring (traceable opts), Scalability (hardware-agnostic)</td></tr>
+<tr><td>Research/Extensions</td><td>Google MLIR Users</td><td>Overall AI ops unification for efficiency/robustness</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="module-4-automating-capture---the-editorial-funnel-1"><a class="header" href="#module-4-automating-capture---the-editorial-funnel-1"><a href="nested/./nested/004.html"><strong>Module 4: Automating Capture - The Editorial Funnel</strong></a></a></h1>
 <ul>
 <li>
 <p><strong>Tasks:</strong> Engineer a pipeline to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
@@ -796,8 +981,7 @@ Other departments (Marketing, Sales, HR, Legal): Recognize potential input on pr
 <li><strong>Module 3: The AI-Native Kernel Concept.</strong> Exploring academic research on integrating AI directly into the kernel space.1 Defining the scope of our project as a high-performance host, with an eye toward future AI-native optimizations.</li>
 </ul>
 <h3 id="section-12-bare-metal-development-with-rust-no_std-core-primitives-and-unsafe-code-modules-4-6"><a class="header" href="#section-12-bare-metal-development-with-rust-no_std-core-primitives-and-unsafe-code-modules-4-6"><strong>Section 1.2: Bare-Metal Development with Rust: no_std, Core Primitives, and Unsafe Code (Modules 4-6)</strong></a></h3>
-<p>Rust is selected as the implementation language for its unique combination of performance, comparable to C/C++, and strong compile-time safety guarantees that eliminate entire classes of bugs like dangling pointers and data races.8 A key feature for OS development is Rust's standard library structure, which is split into</p>
-<p>core and alloc. The core library contains platform-independent primitives and can be used in a "freestanding" (#![no_std]) environment without an underlying OS, which is precisely our starting point.9</p>
+<p>Rust is selected as the implementation language for its unique combination of performance, comparable to C/C++, and strong compile-time safety guarantees that eliminate entire classes of bugs like dangling pointers and data races.8 A key feature for OS development is Rust's standard library structure, which is split into <a href="https://doc.rust-lang.org/core/">core</a> and <a href="https://doc.rust-lang.org/alloc/">alloc</a>. The <a href="https://doc.rust-lang.org/core/">core library</a> contains platform-independent primitives and can be used in a "freestanding" environment, ie a Rust environment with <strong>#[no_std]</strong> attribute, without an underlying OS, which is precisely our starting point.</p>
 <p>This section focuses on the practicalities of bare-metal Rust. While the ownership model provides safety, kernel development inherently requires unsafe operations: direct memory-mapped I/O, manipulation of page tables, and handling raw pointers for DMA. A naive approach would wrap large sections of the kernel in unsafe blocks, negating Rust's benefits. The correct approach, and a central pedagogical theme of this course, is to master the art of building <em>safe abstractions over unsafe operations</em>. We will study patterns where minimal, well-documented unsafe code is encapsulated within a module that exposes a completely safe public API. This pattern is crucial for building a robust and maintainable kernel.</p>
 <p>The curriculum will follow the initial steps laid out in the "Writing an OS in Rust" blog series, beginning with the creation of a freestanding binary.10 Students will set up the development environment using</p>
 <p>rustup to manage toolchains and cargo as the build system and package manager.11 We will configure a custom cross-compilation target and survey essential libraries from the Rust OSDev ecosystem, such as the</p>
@@ -1597,10 +1781,10 @@ Other departments (Marketing, Sales, HR, Legal): Recognize potential input on pr
 <p><strong>Narrative-Based PKM</strong> – All notes written as if telling a future story to someone else. Selling point: improves recall and engagement by making knowledge memorable through narrative framing.</p>
 </li>
 </ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="note-capturing-systems-in-personal-knowledge-management"><a class="header" href="#note-capturing-systems-in-personal-knowledge-management">Note Capturing Systems In Personal Knowledge Management</a></h1>
-<p>The Zettelkasten method revolutionized personal knowledge management (PKM) through atomic notes, bidirectional linking, and emergent knowledge networks but it's certain not the only the pattern in personal knowledgement system worth exploring. The principles underlying modern Zettelkasten implementations have deep historical roots spanning millennia of human knowledge organization.</p>
-<p>The following comprehensive survey identifies 100 distinct systems across history and domains that share these core principles of idea generation, concept linking, and networked knowledge building. These examples span from ancient memory techniques to cutting-edge AI-powered knowledge graphs, demonstrating the universal human drive to organize, connect, and build upon ideas.</p>
-<p>It's perhaps worth pointing out that note capturing approaches matter in the world of AI, particularly for Human In The Loop (HITL) AI because data annotation adds important context, particularly as the human changes the approach of the AI ... so the development of note-<strong>capturing</strong> technologies become more important than ever, even as note-formating, grammar-checking and stylistic-prettification are things that be delegated to AI ... or "<em>Ship it</em> ...<a href="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/roll_camera_fix_it_in_post.png"><em>we'll fix it in post!</em></a>"</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="note-capturing-systems-in-personal-knowledge-management-pkm"><a class="header" href="#note-capturing-systems-in-personal-knowledge-management-pkm">Note Capturing Systems In Personal Knowledge Management (PKM)</a></h1>
+<p>The <a href="https://zettelkasten.de/overview/">Zettelkasten (Zkn) Method</a> revolutionized personal knowledge management (PKM) through <a href="https://zettelkasten.de/posts/create-zettel-from-reading-notes/">atomic notes</a>, the <a href="https://zettelkasten.de/posts/luhmann-folgezettel-truth/">"folgezettel" principle of note connectivity</a>, and <a href="https://docs.zettlr.com/en/getting-started/get-involved/">a variety of emergent open source development communities built around Zkn</a> and all kinds of <a href="https://docs.zettlr.com/en/advanced/pomodoro/">advanced Zkn PKM tools/plugins, eg Zkn using the pomodoro technique</a> ... Zkn is certainly not the only the pattern in personal knowledgement system worth exploring. The principles underlying modern Zettelkasten implementations have deep historical roots spanning millennia of human knowledge organization and the innovations like Zkn in the realm of PKM will certainly continue and maybe proliferate even more now.</p>
+<p>Electronic note capturing approaches certainly matter, perhaps more than ever, in the world of AI, particularly for Human In The Loop (HITL) AI because data annotation adds important context, particularly as the human changes the approach of the AI ... so the development of note-<strong>capturing</strong> technologies become more important than ever, even as note-formating, grammar-checking and stylistic-prettification are things that be delegated to AI ... or "<em>Ship it</em> ...<a href="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/roll_camera_fix_it_in_post.png"><em>we'll fix it in post!</em></a>"</p>
+<p>As one might expect, there is a significant amount of <em><strong>current</strong></em> interest in the latest, greatest <a href="https://www.reddit.com/r/PromptEngineering/comments/1mqvte7/top_ai_knowledge_management_tools/"><em><strong>AI-assisted</strong></em> PKM tools</a>, but the interest in PKM is not new -- it has been a really big deal for humans for at least 2500 years, ever since humans started using the printed word or moving beyond the limitations of storytelling and human memory which had limited the sustained development of knowledge in earlier philosophical traditions. The following comprehensive survey identifies 100 distinct systems across history and domains that share these core principles of idea generation, concept linking, and networked knowledge building. These examples span from ancient memory techniques to cutting-edge AI-powered knowledge graphs, demonstrating the universal human drive to organize, connect, and build upon ideas.</p>
 <h2 id="historical-foundations-pre-digital-knowledge-systems"><a class="header" href="#historical-foundations-pre-digital-knowledge-systems">Historical foundations: Pre-digital knowledge systems</a></h2>
 <h3 id="ancient-and-classical-systems"><a class="header" href="#ancient-and-classical-systems">Ancient and classical systems</a></h3>
 <p><strong>1. Ancient Greek Hypomnema (5th Century BCE)</strong> - Personal memory aids combining notes, reminders, and philosophical commentary for self-improvement and knowledge rediscovery, presaging modern reflective note-taking practices. Unlike the purely oral tradition that preceded it, the hypomnema represented the first systematic approach to externalizing memory for personal intellectual development rather than public performance. This innovation allowed Greeks to build cumulative personal knowledge over time, moving beyond the limitations of human memory that constrained earlier philosophical traditions.</p>

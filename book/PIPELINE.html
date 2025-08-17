@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pipeline - 100-Day Personal Knowledge Engineering Curriculum</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">100-Day Personal Knowledge Engineering Curriculum</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="pipeline"><a class="header" href="#pipeline">Pipeline</a></h1>
+<p><em>At first, this page will just lay out the roadmap or thinking for completing the assingment.</em></p>
+<p>In general, the assignment is to engineer an <a href="./PIPELINE.html">automated information capture pipeline</a> to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
+<p>Four approaches are being considered.  I am leaning toward <a href="#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a>, but I would like to capture as much of the advantages as possible from the other three approaches as I adapt <a href="#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a> going forward.</p>
+<h3 id="approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives"><a class="header" href="#approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives">Approach 1: Adapt an Existing Open-Source Self-Hosted RSS Reader (e.g., NewsBlur or Alternatives)</a></h3>
+<p><a href="https://github.com/samuelclay/NewsBlur">NewsBlur</a> can be seen as a potential starting point or stalking horse for a starting point until something better is identified, this approach focuses on self-hosting it or a similar tool, then extending it with custom scripts for Markdown export and GitHub integration. NewsBlur is a Python/Django-based RSS reader that supports feed aggregation, story filtering (e.g., by tags, keywords, authors), and self-hosting via Docker. While it doesn't natively export to Markdown, its open-source nature allows modification. Alternatives like FreshRSS (PHP-based, lightweight, customizable with extensions) or Miniflux (Go-based, minimalistic, supports OPML imports and API for exports) could be easier to adapt if the development of NewsBlur feels too heavy.</p>
+<h4 id="steps"><a class="header" href="#steps">Steps:</a></h4>
+<ol>
+<li><strong>Set Up the Reader</strong>: Clone and deploy NewsBlur using Docker (run <code>make nb</code> for containers including databases and web servers). For alternatives, install FreshRSS via Docker or a web server—it's simpler with built-in mobile app support.</li>
+<li><strong>Configure Feeds</strong>: Add RSS sources for articles, paper abstracts (e.g., arXiv feeds), and newsletters. Use filters to auto-tag or highlight relevant content.</li>
+<li><strong>Extend for Export</strong>: Write a custom Python script (using libraries like feedparser for RSS parsing and markdownify for HTML-to-Markdown conversion) to query the reader's API/database, convert saved/favorited items to raw Markdown files. Schedule this with cron jobs to run periodically.</li>
+<li><strong>Push to Inbox</strong>: Use the GitHub API (via PyGitHub library) in the script to commit Markdown files to your PKE repo's <code>src/1.Projects/inbox</code> subfolder (create it if needed). This keeps it outside the main src but within Projects for development.</li>
+<li><strong>Curation Workflow</strong>: Manually review files in the inbox, refine them (e.g., add metadata like tags or links to SUMMARY.md), and move to appropriate src sections. For automation, integrate an LLM script (e.g., using Hugging Face models) to summarize or classify content before pushing.</li>
+<li><strong>AI Integration Path</strong>: Once stable, hook into your MCP vision by treating the inbox as a RAG (Retrieval-Augmented Generation) source for AI agents that curate and suggest additions to the mdBook.</li>
+</ol>
+<h4 id="pros"><a class="header" href="#pros">Pros:</a></h4>
+<ul>
+<li>Leverages proven RSS functionality (e.g., NewsBlur's social features for potential collaboration).</li>
+<li>Fully open-source and customizable, aligning with your PKE principles of extensibility.</li>
+<li>Alternatives like Miniflux have APIs that make scripting easier than NewsBlur's setup.</li>
+</ul>
+<h4 id="cons"><a class="header" href="#cons">Cons:</a></h4>
+<ul>
+<li>Self-hosting requires server resources (e.g., VPS for Docker); NewsBlur's setup involves multiple containers, which might be overkill initially.</li>
+<li>Initial extension work needed for Markdown export.</li>
+</ul>
+<p>This builds on existing wheels like NewsBlur, as you suggested, and fits your preference for open-source tools similar to Feedly.</p>
+<h3 id="approach-2-use-no-code-integrations-with-iftttzapier-for-rss-to-github-automation"><a class="header" href="#approach-2-use-no-code-integrations-with-iftttzapier-for-rss-to-github-automation">Approach 2: Use No-Code Integrations with IFTTT/Zapier for RSS-to-GitHub Automation</a></h3>
+<p>If you want a quicker start without heavy coding, use no-code platforms like IFTTT or Zapier to handle RSS ingestion and file creation in GitHub. These can act as your "editorial funnel" by triggering on new feed items and saving them as Markdown. For a free alternative, use Actionsflow (a GitHub Actions-based Zapier clone) to keep everything in your repo ecosystem.</p>
+<h4 id="steps-1"><a class="header" href="#steps-1">Steps:</a></h4>
+<ol>
+<li><strong>Set Up Triggers</strong>: In Zapier/IFTTT, create a "Zap" or "Applet" with RSS as the trigger (e.g., new item in a feed from arXiv or newsletters). Filter by keywords to capture only pertinent content.</li>
+<li><strong>Convert to Markdown</strong>: Use built-in formatters or a intermediate step (e.g., Zapier's code block with JavaScript) to extract title, summary, and content, then format as basic Markdown (e.g., <code># Title\n\nExcerpt...</code>).</li>
+<li><strong>Push to GitHub</strong>: Connect to GitHub integration to create a new file in your PKE repo (e.g., <code>src/1.Projects/inbox/new-article.md</code>). IFTTT has direct RSS-to-GitHub applets for creating issues or commits; Zapier can append to files or create pull requests.</li>
+<li><strong>Inbox Management</strong>: Files land in the inbox for manual review. Use GitHub Actions in your repo to auto-label or notify you of new files.</li>
+<li><strong>Enhance with Scripts</strong>: For better Markdown quality, add a custom GitHub Action (e.g., from repos like keiranlovett/rss-feed-to-markdown) that runs on push to refine files.</li>
+<li><strong>Towards Automation</strong>: Upgrade to AI-assisted curation by integrating Zapier with an LLM API (e.g., OpenAI) to summarize/refine before saving. This aligns with your MCP goal, where the mdBook becomes context for AI-driven filtering.</li>
+</ol>
+<h4 id="pros-1"><a class="header" href="#pros-1">Pros:</a></h4>
+<ul>
+<li>Minimal setup time; no self-hosting needed.</li>
+<li>Handles automation like saving abstracts or newsletters out-of-the-box.</li>
+<li>Free tiers available (e.g., IFTTT for basic RSS triggers); Actionsflow is fully free and GitHub-native.</li>
+</ul>
+<h4 id="cons-1"><a class="header" href="#cons-1">Cons:</a></h4>
+<ul>
+<li>Limited customization (e.g., Zapier might not handle complex Markdown conversion perfectly).</li>
+<li>Dependency on third-party services, which contrasts with your open-source preference—mitigate with Actionsflow.</li>
+</ul>
+<p>This is ideal for prototyping your funnel before building custom elements.</p>
+<h3 id="approach-3-build-a-custom-script-based-pipeline-with-python-and-github-actions"><a class="header" href="#approach-3-build-a-custom-script-based-pipeline-with-python-and-github-actions">Approach 3: Build a Custom Script-Based Pipeline with Python and GitHub Actions</a></h3>
+<p>For full control within your mdBook ecosystem, create a bespoke pipeline using Python scripts and GitHub Actions. This leverages your PKE repo directly, treating the inbox as a staging area in <code>src/1.Projects</code>. Tools like feedparser (for RSS) and GitHub Actions ensure it's automated and extensible.</p>
+<h4 id="steps-2"><a class="header" href="#steps-2">Steps:</a></h4>
+<ol>
+<li><strong>Script Development</strong>: Write a Python script using feedparser to fetch RSS feeds, markdownify to convert HTML content to Markdown, and frontmatter to add metadata (e.g., source URL, date). Save as individual .md files locally.</li>
+<li><strong>Scheduling</strong>: Run the script via cron on a local machine/server or as a GitHub Action workflow (e.g., scheduled daily). Use repos like myquay/feedmd as a base—it's a CLI for converting feeds to Markdown digests.</li>
+<li><strong>GitHub Integration</strong>: In the script or Action, use Git commands or the GitHub API to push files to <code>src/1.Projects/inbox</code>. Configure the workflow to commit only if new content matches criteria (e.g., via regex filters).</li>
+<li><strong>Review Process</strong>: Use mdBook's preview server to view inbox files separately. Manually move refined files to src and update SUMMARY.md.</li>
+<li><strong>Automation Evolution</strong>: Add AI layers (e.g., integrate with torch or sympy for content analysis) to auto-curate: classify relevance, generate summaries, or even propose SUMMARY.md updates. This directly supports your vision of the mdBook as a foundation model, where scripts feed into MCP for AI-assisted engineering.</li>
+<li><strong>Expansion</strong>: Incorporate email newsletters via IMAP parsing in the script, or web scraping for non-RSS sources.</li>
+</ol>
+<h4 id="pros-2"><a class="header" href="#pros-2">Pros:</a></h4>
+<ul>
+<li>Highly tailored to PKE's structure (e.g., P.A.R.A. organization) and your AI goals.</li>
+<li>No external hosting; runs on GitHub for free.</li>
+<li>Easy to version-control the pipeline itself in the repo.</li>
+</ul>
+<h4 id="cons-2"><a class="header" href="#cons-2">Cons:</a></h4>
+<ul>
+<li>Requires scripting knowledge, though starting with existing repos minimizes this.</li>
+<li>Manual setup for feeds and filters initially.</li>
+</ul>
+<p>This approach emphasizes deliberate workflow, as mdBook lacks plugins, and scales to your automated curation objective.</p>
+<h3 id="approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing"><a class="header" href="#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4: Hybrid mdBook-Centric System with Browser Clippers and AI Preprocessing</a></h3>
+<p>To stay as close as possible to mdBook without external readers, use browser-based clippers combined with scripts for ingestion. This treats your toolchain as an "editorial funnel" extension of mdBook, potentially forking mdBook for custom preprocessors later.</p>
+<h4 id="steps-3"><a class="header" href="#steps-3">Steps:</a></h4>
+<ol>
+<li><strong>Clipping Tools</strong>: Use open-source clippers like MarkDownload (browser extension that saves web pages as Markdown) or adapt Obsidian's web clipper. Configure to save clips to a local folder synced with GitHub (e.g., via Git).</li>
+<li><strong>RSS Integration</strong>: Pair with a simple RSS poller script (Python with feedparser) that fetches items, uses requests to get full content, converts to Markdown, and saves to the synced inbox.</li>
+<li><strong>GitHub Sync</strong>: Use GitHub Desktop or Actions to pull/push the inbox folder in <code>src/1.Projects</code>.</li>
+<li><strong>Preprocessing</strong>: Develop a Rust-based mdBook preprocessor (as hinted in your curriculum's Phase 4) to scan the inbox, apply AI filters (e.g., via local models), and suggest integrations into SUMMARY.md.</li>
+<li><strong>Full Automation</strong>: Evolve to use IFTTT for clipping triggers or Zapier for RSS, but route everything through scripts that enforce curation rules.</li>
+<li><strong>MCP Tie-In</strong>: Design the pipeline to output structured data (e.g., YAML frontmatter in MD files) that serves as context for AI models in your MCP infrastructure.</li>
+</ol>
+<h4 id="pros-3"><a class="header" href="#pros-3">Pros:</a></h4>
+<ul>
+<li>Keeps everything within mdBook's ecosystem, per your preference.</li>
+<li>Flexible for non-RSS sources like emails or abstracts.</li>
+<li>Directly advances your AI-assisted knowledge engineering goal.</li>
+</ul>
+<h4 id="cons-3"><a class="header" href="#cons-3">Cons:</a></h4>
+<ul>
+<li>More fragmented initially (clipper + scripts vs. unified reader).</li>
+<li>Requires building/forking mdBook extensions for seamless integration.</li>
+</ul>
+<p>These approaches start simple (no-code) and scale to complex (custom AI), aligning with your 100-day PKE curriculum's phases—e.g., foundation in Phase 1, deep learning in Phase 2, and synthesis in Phase 4. Begin with Approach 2 for quick wins, then transition to 3 or 1 for longevity.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="DELIVERABLES.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="nested/METHODOLOGY.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="DELIVERABLES.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="nested/METHODOLOGY.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -549,14 +549,10 @@
 <tr><td>Research/Extensions</td><td>Google MLIR Users</td><td>Overall AI ops unification for efficiency/robustness</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="module-4-automating-capture---the-editorial-funnel-1"><a class="header" href="#module-4-automating-capture---the-editorial-funnel-1"><a href="nested/./nested/004.html"><strong>Module 4: Automating Capture - The Editorial Funnel</strong></a></a></h1>
-<ul>
-<li>
-<p><strong>Tasks:</strong> Engineer a pipeline to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
-</li>
-<li>
-<p><strong>Deliverable:</strong> An automated information capture pipeline that centralizes external content into a dedicated inbox folder, ready for editorial review and integration into the main mdBook project.</p>
-</li>
-</ul>
+<h2 id="deliverable"><a class="header" href="#deliverable"><strong>Deliverable:</strong></a></h2>
+<p>Lay out the specifics of most rudimentary beginnings of thinking on an <a href="nested/./PIPELINE.html">automated information capture pipeline</a> that will eventually centralize external content into a dedicated inbox folder, ready for editorial review and integration into the main mdBook project.</p>
+<h2 id="tasks-3"><a class="header" href="#tasks-3"><strong>Tasks:</strong></a></h2>
+<p>In general, the assignment is to engineer an <a href="nested/./PIPELINE.html">automated information capture pipeline</a> to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="module-5-of-modules-5-6-building-the-public-face---github-and-huggingface"><a class="header" href="#module-5-of-modules-5-6-building-the-public-face---github-and-huggingface"><strong>Module 5 of Modules 5-6: Building the Public Face</strong> - <strong>GitHub and HuggingFace</strong></a></h1>
 <ul>
 <li>
@@ -869,6 +865,102 @@ README.md on GitHub for the project, explaining the architecture, setup instruct
 <li><strong>Module 100: The 100-Day Review &amp; The Next 100 Days:</strong> Conduct a final, formal review of the entire 100-day journey. Use your PKES to write a detailed retrospective. Analyze the system you have built, the new skills you have acquired, the portfolio of artifacts you have created, and the new relationships you have formed. The ultimate measure of success for this curriculum is not its completion, but its continuation. Use the final day to leverage the full power of your new Personal Knowledge Engineering System to plan the <em>next</em> 100 days of learning, creating, and connecting.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deliverables-3"><a class="header" href="#deliverables-3">Deliverables</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pipeline"><a class="header" href="#pipeline">Pipeline</a></h1>
+<p><em>At first, this page will just lay out the roadmap or thinking for completing the assingment.</em></p>
+<p>In general, the assignment is to engineer an <a href="./PIPELINE.html">automated information capture pipeline</a> to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
+<p>Four approaches are being considered.  I am leaning toward <a href="PIPELINE.html#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a>, but I would like to capture as much of the advantages as possible from the other three approaches as I adapt <a href="PIPELINE.html#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a> going forward.</p>
+<h3 id="approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives"><a class="header" href="#approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives">Approach 1: Adapt an Existing Open-Source Self-Hosted RSS Reader (e.g., NewsBlur or Alternatives)</a></h3>
+<p><a href="https://github.com/samuelclay/NewsBlur">NewsBlur</a> can be seen as a potential starting point or stalking horse for a starting point until something better is identified, this approach focuses on self-hosting it or a similar tool, then extending it with custom scripts for Markdown export and GitHub integration. NewsBlur is a Python/Django-based RSS reader that supports feed aggregation, story filtering (e.g., by tags, keywords, authors), and self-hosting via Docker. While it doesn't natively export to Markdown, its open-source nature allows modification. Alternatives like FreshRSS (PHP-based, lightweight, customizable with extensions) or Miniflux (Go-based, minimalistic, supports OPML imports and API for exports) could be easier to adapt if the development of NewsBlur feels too heavy.</p>
+<h4 id="steps"><a class="header" href="#steps">Steps:</a></h4>
+<ol>
+<li><strong>Set Up the Reader</strong>: Clone and deploy NewsBlur using Docker (run <code>make nb</code> for containers including databases and web servers). For alternatives, install FreshRSS via Docker or a web server—it's simpler with built-in mobile app support.</li>
+<li><strong>Configure Feeds</strong>: Add RSS sources for articles, paper abstracts (e.g., arXiv feeds), and newsletters. Use filters to auto-tag or highlight relevant content.</li>
+<li><strong>Extend for Export</strong>: Write a custom Python script (using libraries like feedparser for RSS parsing and markdownify for HTML-to-Markdown conversion) to query the reader's API/database, convert saved/favorited items to raw Markdown files. Schedule this with cron jobs to run periodically.</li>
+<li><strong>Push to Inbox</strong>: Use the GitHub API (via PyGitHub library) in the script to commit Markdown files to your PKE repo's <code>src/1.Projects/inbox</code> subfolder (create it if needed). This keeps it outside the main src but within Projects for development.</li>
+<li><strong>Curation Workflow</strong>: Manually review files in the inbox, refine them (e.g., add metadata like tags or links to SUMMARY.md), and move to appropriate src sections. For automation, integrate an LLM script (e.g., using Hugging Face models) to summarize or classify content before pushing.</li>
+<li><strong>AI Integration Path</strong>: Once stable, hook into your MCP vision by treating the inbox as a RAG (Retrieval-Augmented Generation) source for AI agents that curate and suggest additions to the mdBook.</li>
+</ol>
+<h4 id="pros"><a class="header" href="#pros">Pros:</a></h4>
+<ul>
+<li>Leverages proven RSS functionality (e.g., NewsBlur's social features for potential collaboration).</li>
+<li>Fully open-source and customizable, aligning with your PKE principles of extensibility.</li>
+<li>Alternatives like Miniflux have APIs that make scripting easier than NewsBlur's setup.</li>
+</ul>
+<h4 id="cons"><a class="header" href="#cons">Cons:</a></h4>
+<ul>
+<li>Self-hosting requires server resources (e.g., VPS for Docker); NewsBlur's setup involves multiple containers, which might be overkill initially.</li>
+<li>Initial extension work needed for Markdown export.</li>
+</ul>
+<p>This builds on existing wheels like NewsBlur, as you suggested, and fits your preference for open-source tools similar to Feedly.</p>
+<h3 id="approach-2-use-no-code-integrations-with-iftttzapier-for-rss-to-github-automation"><a class="header" href="#approach-2-use-no-code-integrations-with-iftttzapier-for-rss-to-github-automation">Approach 2: Use No-Code Integrations with IFTTT/Zapier for RSS-to-GitHub Automation</a></h3>
+<p>If you want a quicker start without heavy coding, use no-code platforms like IFTTT or Zapier to handle RSS ingestion and file creation in GitHub. These can act as your "editorial funnel" by triggering on new feed items and saving them as Markdown. For a free alternative, use Actionsflow (a GitHub Actions-based Zapier clone) to keep everything in your repo ecosystem.</p>
+<h4 id="steps-1"><a class="header" href="#steps-1">Steps:</a></h4>
+<ol>
+<li><strong>Set Up Triggers</strong>: In Zapier/IFTTT, create a "Zap" or "Applet" with RSS as the trigger (e.g., new item in a feed from arXiv or newsletters). Filter by keywords to capture only pertinent content.</li>
+<li><strong>Convert to Markdown</strong>: Use built-in formatters or a intermediate step (e.g., Zapier's code block with JavaScript) to extract title, summary, and content, then format as basic Markdown (e.g., <code># Title\n\nExcerpt...</code>).</li>
+<li><strong>Push to GitHub</strong>: Connect to GitHub integration to create a new file in your PKE repo (e.g., <code>src/1.Projects/inbox/new-article.md</code>). IFTTT has direct RSS-to-GitHub applets for creating issues or commits; Zapier can append to files or create pull requests.</li>
+<li><strong>Inbox Management</strong>: Files land in the inbox for manual review. Use GitHub Actions in your repo to auto-label or notify you of new files.</li>
+<li><strong>Enhance with Scripts</strong>: For better Markdown quality, add a custom GitHub Action (e.g., from repos like keiranlovett/rss-feed-to-markdown) that runs on push to refine files.</li>
+<li><strong>Towards Automation</strong>: Upgrade to AI-assisted curation by integrating Zapier with an LLM API (e.g., OpenAI) to summarize/refine before saving. This aligns with your MCP goal, where the mdBook becomes context for AI-driven filtering.</li>
+</ol>
+<h4 id="pros-1"><a class="header" href="#pros-1">Pros:</a></h4>
+<ul>
+<li>Minimal setup time; no self-hosting needed.</li>
+<li>Handles automation like saving abstracts or newsletters out-of-the-box.</li>
+<li>Free tiers available (e.g., IFTTT for basic RSS triggers); Actionsflow is fully free and GitHub-native.</li>
+</ul>
+<h4 id="cons-1"><a class="header" href="#cons-1">Cons:</a></h4>
+<ul>
+<li>Limited customization (e.g., Zapier might not handle complex Markdown conversion perfectly).</li>
+<li>Dependency on third-party services, which contrasts with your open-source preference—mitigate with Actionsflow.</li>
+</ul>
+<p>This is ideal for prototyping your funnel before building custom elements.</p>
+<h3 id="approach-3-build-a-custom-script-based-pipeline-with-python-and-github-actions"><a class="header" href="#approach-3-build-a-custom-script-based-pipeline-with-python-and-github-actions">Approach 3: Build a Custom Script-Based Pipeline with Python and GitHub Actions</a></h3>
+<p>For full control within your mdBook ecosystem, create a bespoke pipeline using Python scripts and GitHub Actions. This leverages your PKE repo directly, treating the inbox as a staging area in <code>src/1.Projects</code>. Tools like feedparser (for RSS) and GitHub Actions ensure it's automated and extensible.</p>
+<h4 id="steps-2"><a class="header" href="#steps-2">Steps:</a></h4>
+<ol>
+<li><strong>Script Development</strong>: Write a Python script using feedparser to fetch RSS feeds, markdownify to convert HTML content to Markdown, and frontmatter to add metadata (e.g., source URL, date). Save as individual .md files locally.</li>
+<li><strong>Scheduling</strong>: Run the script via cron on a local machine/server or as a GitHub Action workflow (e.g., scheduled daily). Use repos like myquay/feedmd as a base—it's a CLI for converting feeds to Markdown digests.</li>
+<li><strong>GitHub Integration</strong>: In the script or Action, use Git commands or the GitHub API to push files to <code>src/1.Projects/inbox</code>. Configure the workflow to commit only if new content matches criteria (e.g., via regex filters).</li>
+<li><strong>Review Process</strong>: Use mdBook's preview server to view inbox files separately. Manually move refined files to src and update SUMMARY.md.</li>
+<li><strong>Automation Evolution</strong>: Add AI layers (e.g., integrate with torch or sympy for content analysis) to auto-curate: classify relevance, generate summaries, or even propose SUMMARY.md updates. This directly supports your vision of the mdBook as a foundation model, where scripts feed into MCP for AI-assisted engineering.</li>
+<li><strong>Expansion</strong>: Incorporate email newsletters via IMAP parsing in the script, or web scraping for non-RSS sources.</li>
+</ol>
+<h4 id="pros-2"><a class="header" href="#pros-2">Pros:</a></h4>
+<ul>
+<li>Highly tailored to PKE's structure (e.g., P.A.R.A. organization) and your AI goals.</li>
+<li>No external hosting; runs on GitHub for free.</li>
+<li>Easy to version-control the pipeline itself in the repo.</li>
+</ul>
+<h4 id="cons-2"><a class="header" href="#cons-2">Cons:</a></h4>
+<ul>
+<li>Requires scripting knowledge, though starting with existing repos minimizes this.</li>
+<li>Manual setup for feeds and filters initially.</li>
+</ul>
+<p>This approach emphasizes deliberate workflow, as mdBook lacks plugins, and scales to your automated curation objective.</p>
+<h3 id="approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing"><a class="header" href="#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4: Hybrid mdBook-Centric System with Browser Clippers and AI Preprocessing</a></h3>
+<p>To stay as close as possible to mdBook without external readers, use browser-based clippers combined with scripts for ingestion. This treats your toolchain as an "editorial funnel" extension of mdBook, potentially forking mdBook for custom preprocessors later.</p>
+<h4 id="steps-3"><a class="header" href="#steps-3">Steps:</a></h4>
+<ol>
+<li><strong>Clipping Tools</strong>: Use open-source clippers like MarkDownload (browser extension that saves web pages as Markdown) or adapt Obsidian's web clipper. Configure to save clips to a local folder synced with GitHub (e.g., via Git).</li>
+<li><strong>RSS Integration</strong>: Pair with a simple RSS poller script (Python with feedparser) that fetches items, uses requests to get full content, converts to Markdown, and saves to the synced inbox.</li>
+<li><strong>GitHub Sync</strong>: Use GitHub Desktop or Actions to pull/push the inbox folder in <code>src/1.Projects</code>.</li>
+<li><strong>Preprocessing</strong>: Develop a Rust-based mdBook preprocessor (as hinted in your curriculum's Phase 4) to scan the inbox, apply AI filters (e.g., via local models), and suggest integrations into SUMMARY.md.</li>
+<li><strong>Full Automation</strong>: Evolve to use IFTTT for clipping triggers or Zapier for RSS, but route everything through scripts that enforce curation rules.</li>
+<li><strong>MCP Tie-In</strong>: Design the pipeline to output structured data (e.g., YAML frontmatter in MD files) that serves as context for AI models in your MCP infrastructure.</li>
+</ol>
+<h4 id="pros-3"><a class="header" href="#pros-3">Pros:</a></h4>
+<ul>
+<li>Keeps everything within mdBook's ecosystem, per your preference.</li>
+<li>Flexible for non-RSS sources like emails or abstracts.</li>
+<li>Directly advances your AI-assisted knowledge engineering goal.</li>
+</ul>
+<h4 id="cons-3"><a class="header" href="#cons-3">Cons:</a></h4>
+<ul>
+<li>More fragmented initially (clipper + scripts vs. unified reader).</li>
+<li>Requires building/forking mdBook extensions for seamless integration.</li>
+</ul>
+<p>These approaches start simple (no-code) and scale to complex (custom AI), aligning with your 100-day PKE curriculum's phases—e.g., foundation in Phase 1, deep learning in Phase 2, and synthesis in Phase 4. Begin with Approach 2 for quick wins, then transition to 3 or 1 for longevity.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="methodology"><a class="header" href="#methodology">Methodology</a></h1>
 <p>This document, other than following <a href="https://rust-lang.github.io/mdBook/">the mdBook documentation</a>, will detail the repository specific rules for creating new pages in this mdBook, the strategy for structuring chapters, and the lifecycle of information as it moves from a rough draft to a published chapter.</p>
 <p>Specifically, the purpose of this page is to describe the design of the mdBook which catalogs the process of developing of the AI-assisted PKE system per our <a href="nested//Manifesto.html">Manifesto</a>.</p>

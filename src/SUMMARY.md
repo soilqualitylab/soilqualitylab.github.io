@@ -28,6 +28,7 @@
   - [Phase 4](4.md)
 
 - [Deliverables](DELIVERABLES.md)
+  - [Pipeline](./PIPELINE.md)
   - [Methodology](./nested/METHODOLOGY.md)
     - [Projects](./1.Projects/Template.md)
     - [Areas](./2.Areas/Template.md)

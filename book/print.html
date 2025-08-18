@@ -615,16 +615,11 @@
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="module-10-of-modules-7-10-the-ai-powered-research-assistant"><a class="header" href="#module-10-of-modules-7-10-the-ai-powered-research-assistant">##Module 10 of Modules 7-10: The AI-Powered Research Assistant**</a></h1>
+<h2 id="deliverable-1"><a class="header" href="#deliverable-1"><strong>Deliverable:</strong></a></h2>
+<p>A <a href="nested/RESEARCH_DASHBOARD.html">Research Dashboard</a> for coordinating a semi-automated system for identifying, capturing, summarizing, and tracking relevant scientific literature, feeding a structured editorial pipeline for your knowledge book.</p>
+<h2 id="tasks-4"><a class="header" href="#tasks-4"><strong>Tasks:</strong></a></h2>
 <ul>
-<li>
-<p><strong>Tasks:</strong></p>
-<ul>
-<li><strong>Day 10 <a href="nested/./nested/010.html">(Building the Research Dashboard)</a>:</strong> Create a Research Dashboard.md chapter in your mdBook. Since there's no dynamic plugin like Dataview, write a simple Python or shell script that scans your inbox directory for new files or files with a #summarize tag in their frontmatter, and generates a summary list. This script can be run manually to update the dashboard page.</li>
-</ul>
-</li>
-<li>
-<p><strong>Deliverable:</strong> A semi-automated system for identifying, capturing, summarizing, and tracking relevant scientific literature, feeding a structured editorial pipeline for your knowledge book.</p>
-</li>
+<li>Create the <a href="nested/RESEARCH_DASHBOARD.html">Research Dashboard</a> chapter in your mdBook. Since there's no dynamic plugin like Dataview, write a simple Python or shell script that scans your inbox directory for new files or files with a #summarize tag in their frontmatter, and generates a summary list. This script can be run manually to update the dashboard page.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="module-11-of-modules-11-15-skill-refreshment--foundational-tooling"><a class="header" href="#module-11-of-modules-11-15-skill-refreshment--foundational-tooling"><strong>Module 11 of Modules 11-15: Skill Refreshment &amp; Foundational Tooling</strong></a></h1>
 <ul>
@@ -868,7 +863,7 @@ README.md on GitHub for the project, explaining the architecture, setup instruct
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deliverables-3"><a class="header" href="#deliverables-3">Deliverables</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pipeline"><a class="header" href="#pipeline">Pipeline</a></h1>
 <p><em>At first, this page will just lay out the roadmap or thinking for completing the assingment.</em></p>
-<p>In general, the assignment is to engineer an <a href="./PIPELINE.html">automated information capture pipeline</a> to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
+<p>In general, the assignment was to engineer an <a href="./PIPELINE.html">automated information capture pipeline</a> to capture external information for potential inclusion in your book. Since mdBook lacks a direct clipper plugin ecosystem, the workflow will be more deliberate. Create a separate inbox directory outside the mdBook src folder. Configure tools like an RSS reader (e.g., Feedly) with IFTTT/Zapier or custom scripts to automatically save interesting articles, paper abstracts, or email newsletters as raw Markdown files into this inbox. This creates an "editorial funnel." The manual process of reviewing these drafts, refining them, and then consciously moving them into the src directory and adding them to SUMMARY.md becomes a key part of the engineering process, ensuring only curated content makes it into the final publication.</p>
 <p>Four approaches are being considered.  I am leaning toward <a href="PIPELINE.html#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a>, but I would like to capture as much of the advantages as possible from the other three approaches as I adapt <a href="PIPELINE.html#approach-4-hybrid-mdbook-centric-system-with-browser-clippers-and-ai-preprocessing">Approach 4</a> going forward.</p>
 <h3 id="approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives"><a class="header" href="#approach-1-adapt-an-existing-open-source-self-hosted-rss-reader-eg-newsblur-or-alternatives">Approach 1: Adapt an Existing Open-Source Self-Hosted RSS Reader (e.g., NewsBlur or Alternatives)</a></h3>
 <p><a href="https://github.com/samuelclay/NewsBlur">NewsBlur</a> can be seen as a potential starting point or stalking horse for a starting point until something better is identified, this approach focuses on self-hosting it or a similar tool, then extending it with custom scripts for Markdown export and GitHub integration. NewsBlur is a Python/Django-based RSS reader that supports feed aggregation, story filtering (e.g., by tags, keywords, authors), and self-hosting via Docker. While it doesn't natively export to Markdown, its open-source nature allows modification. Alternatives like FreshRSS (PHP-based, lightweight, customizable with extensions) or Miniflux (Go-based, minimalistic, supports OPML imports and API for exports) could be easier to adapt if the development of NewsBlur feels too heavy.</p>
@@ -962,6 +957,127 @@ README.md on GitHub for the project, explaining the architecture, setup instruct
 <li>Requires building/forking mdBook extensions for seamless integration.</li>
 </ul>
 <p>These approaches start simple (no-code) and scale to complex (custom AI), aligning with your 100-day PKE curriculum's phases—e.g., foundation in Phase 1, deep learning in Phase 2, and synthesis in Phase 4. Begin with Approach 2 for quick wins, then transition to 3 or 1 for longevity.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="research-dashboard"><a class="header" href="#research-dashboard">Research Dashboard</a></h1>
+<p><em>At first, this page will just lay out the roadmap or thinking for completing the assingment.</em></p>
+<p>In general, the assignment was to create the <a href="RESEARCH_DASHBOARD.html">Research Dashboard</a> chapter in your mdBook. Since there's no dynamic plugin like Dataview, write a simple Python or shell script that scans your inbox directory for new files or files with a #summarize tag in their frontmatter, and generates a summary list. This script can be run manually to update the dashboard page.</p>
+<p><a href="https://grok.com/share/c2hhcmQtMg%3D%3D_a61a9454-813a-482d-bb1c-1e1e257dbc39">Grok was asked to give suggestions on how to complete this task of building a research dashboard.</a></p>
+<h3 id="existing-developments"><a class="header" href="#existing-developments">Existing Developments</a></h3>
+<p>While there isn't a direct equivalent to Obsidian's Dataview plugin specifically for mdBook (which would allow querying Markdown files like a database and generating dynamic views such as tables or lists), some related tools and plugins are in development or available that could serve as starting points or inspirations for your Personal Knowledge Engineering (PKE) system. Based on recent searches:</p>
+<ul>
+<li>
+<p><a href="https://crates.io/crates/mdbook-template"><strong>mdbook-template</strong></a>: This is a prototypical method for building preprocessor plugin that enables dynamic text generation by allowing you to include Markdown files with customizable arguments (e.g., passing variables to templates for conditional or parameterized content). A simple <a href="https://github.com/topics/mdbook-preprocessor">mdbook-preprocessor</a> or <a href="https://github.com/topics/mdbook-plugins">mdbook-plugins</a> for rendering content in interactive tabs, which adds a layer of dynamic presentation to static Markdown. This isn't query-based but demonstrates how plugins can manipulate content structure during build. This does not immediately yield a full query engine like Dataview, but it supports basic dynamic inclusion and could be extended for metadata-based generation. <a href="https://crates.io/crates/mdbook-template"><strong>mdbook-template</strong></a> was actively maintained <a href="https://crates.io/">as a crate on <strong>crates.io</strong></a> and available on GitHub as the<a href="https://github.com/sgoudham/mdbook-template"><strong>mdbook-template</strong> archive repo</a>. One feasible approach would be to fork archived GH repo for your PKE repo to add query-like features, such as scanning frontmatter or tags.</p>
+</li>
+<li>
+<p>Community discussions on extending mdBook (e.g., via preprocessors for custom features) are ongoing, but no full Dataview clone is under active open development as of mid-2025. Anyone interested in collaborating or forking extending mdBook should check Rust forums or GitHub issues for mdBook extensions.</p>
+</li>
+</ul>
+<p>For a comprehensive list of mdBook plugins, refer to the official third-party plugins wiki, though it doesn't highlight any exact Dataview matches. If none fit, building your own is feasible given mdBook's extensible architecture.</p>
+<h3 id="approaches-to-building-a-custom-mdbook-dynamic-plugin"><a class="header" href="#approaches-to-building-a-custom-mdbook-dynamic-plugin">Approaches to Building a Custom mdBook Dynamic Plugin</a></h3>
+<p>Here are several practical approaches to create Dataview-like functionality in mdBook for your PKE system. These build on mdBook's preprocessor system (which processes content before rendering) and can handle dynamic generation based on metadata, tags, or queries in your Markdown files. Your PKE repo appears to be a GitHub Pages-hosted mdBook site focused on knowledge management concepts, so these could integrate via custom chapters or automated builds.</p>
+<h4 id="1-custom-preprocessor-with-query-syntax-server-side-build-time-generation"><a class="header" href="#1-custom-preprocessor-with-query-syntax-server-side-build-time-generation">1. Custom Preprocessor with Query Syntax (Server-Side Build-Time Generation)</a></h4>
+<p>This is the most direct way to mimic Dataview: Create a preprocessor that scans your book's Markdown files, parses queries, and generates content during the <code>mdbook build</code> process.</p>
+<ul>
+<li><strong>Steps</strong>:
+<ul>
+<li>Define a custom syntax in your Markdown, e.g., fenced code blocks like:
+<pre><code>```pke-query
+TABLE title, tags, summary
+FROM folder:notes WHERE tags CONTAINS #project
+</code></pre>
+<pre><code></code></pre>
+</li>
+<li>Write the preprocessor in Rust (or any language, e.g., Python via a script) that:
+<ul>
+<li>Receives the book's JSON structure via stdin.</li>
+<li>Scans all chapters for frontmatter (YAML metadata like tags, dates) or inline elements.</li>
+<li>Parses the query (use libraries like <code>serde</code> for JSON/YAML, or <code>pest</code> for query parsing in Rust).</li>
+<li>Queries the content (e.g., filter files by tags, folders, or properties).</li>
+<li>Generates Markdown/HTML output (e.g., a table) and replaces the query block.</li>
+</ul>
+</li>
+<li>Configure in <code>book.toml</code>:
+<pre><code>[preprocessor.pke-dataview]
+command = "./target/release/mdbook-pke-dataview"  # Or path to your script
+</code></pre>
+</li>
+</ul>
+</li>
+<li><strong>Pros</strong>: Fully integrated, no runtime overhead; works offline.</li>
+<li><strong>Cons</strong>: Build-time only (not live updates); requires recompiling for changes.</li>
+<li><strong>Tools/Libs</strong>: In Rust, use <code>mdbook::preprocess</code> crate; for Python, parse JSON input and use <code>pandas</code> for querying data.</li>
+<li><strong>Extension for PKE</strong>: Start by extracting metadata from your existing notes in the repo, then generate index pages dynamically.</li>
+</ul>
+<h4 id="2-javascript-based-client-side-dynamics-post-render-manipulation"><a class="header" href="#2-javascript-based-client-side-dynamics-post-render-manipulation">2. JavaScript-Based Client-Side Dynamics (Post-Render Manipulation)</a></h4>
+<p>For interactive queries without rebuilding the book each time, embed JavaScript to query and manipulate the DOM after the HTML is generated.</p>
+<ul>
+<li><strong>Steps</strong>:
+<ul>
+<li>In your mdBook theme (customize <code>theme/index.hbs</code> or add JS via <code>additional-js</code> in <code>book.toml</code>), include a script that loads all page data (e.g., via a pre-generated JSON index of metadata).</li>
+<li>Pre-build a metadata index: Use a script to scan Markdown files and output a <code>data.json</code> with entries like <code>{ "path": "notes/project.md", "tags": ["#project"], "summary": "..." }</code>.</li>
+<li>In Markdown, add placeholders like <code>&lt;div class="pke-query" data-query="FROM #project"&gt;&lt;/div&gt;</code>.</li>
+<li>JS code (e.g., with vanilla JS or a lib like DataTables) fetches the JSON, filters based on the query, and injects tables/lists.</li>
+<li>Example JS snippet:
+<pre><code class="language-javascript">document.querySelectorAll('.pke-query').forEach(el =&gt; {
+  const query = el.dataset.query;
+  fetch('/data.json').then(res =&gt; res.json()).then(data =&gt; {
+    // Filter data based on query logic
+    const results = data.filter(item =&gt; item.tags.includes('#project'));
+    // Generate and insert table HTML
+    el.innerHTML = generateTable(results);
+  });
+});
+</code></pre>
+</li>
+</ul>
+</li>
+<li><strong>Pros</strong>: Interactive (e.g., sortable tables); no full rebuild needed for minor changes.</li>
+<li><strong>Cons</strong>: Requires JS enabled; heavier for large books; data must be static or pre-indexed.</li>
+<li><strong>Tools/Libs</strong>: Use <code>lunr.js</code> for search indexing or <code>alasql</code> for SQL-like queries on JSON.</li>
+<li><strong>Extension for PKE</strong>: This could add real-time filtering to your GitHub Pages site, enhancing knowledge navigation.</li>
+</ul>
+<h4 id="3-hybrid-pre-build-scripting-with-external-tools"><a class="header" href="#3-hybrid-pre-build-scripting-with-external-tools">3. Hybrid Pre-Build Scripting with External Tools</a></h4>
+<p>Run scripts before <code>mdbook build</code> to generate dynamic content, treating your Markdown as a database.</p>
+<ul>
+<li><strong>Steps</strong>:
+<ul>
+<li>Use tools like <code>jq</code> (for JSON) or <code>awk</code> to process files, or a full script in Python/Node.js.</li>
+<li>Example: A bash/Python script that:
+<ul>
+<li>Recursively scans <code>.md</code> files for frontmatter/tags.</li>
+<li>Builds a database (e.g., SQLite or JSON).</li>
+<li>Executes queries and outputs generated Markdown files (e.g., auto-create an "index.md" with tables).</li>
+</ul>
+</li>
+<li>Integrate via a Makefile or GitHub Actions workflow: <code>make generate &amp;&amp; mdbook build</code>.</li>
+<li>For queries, mimic Dataview with a custom DSL parsed by your script.</li>
+</ul>
+</li>
+<li><strong>Pros</strong>: Flexible; leverage existing tools (e.g., combine with <code>pandoc</code> for advanced processing).</li>
+<li><strong>Cons</strong>: Adds build steps; not as seamless as a native plugin.</li>
+<li><strong>Tools/Libs</strong>: Python with <code>frontmatter</code> lib for metadata; <code>sqlite3</code> for querying.</li>
+<li><strong>Extension for PKE</strong>: Automate this in your repo's CI to regenerate views on push, keeping your knowledge base up-to-date.</li>
+</ul>
+<h4 id="4-integration-with-external-frameworks-or-generators"><a class="header" href="#4-integration-with-external-frameworks-or-generators">4. Integration with External Frameworks or Generators</a></h4>
+<p>Embed mdBook within a larger system for advanced dynamics, especially if your PKE evolves beyond static sites.</p>
+<ul>
+<li><strong>Steps</strong>:
+<ul>
+<li>Use mdBook as a content source, but render via a dynamic framework like Next.js (with MDX for Markdown).
+<ul>
+<li>Example: Fork something like "MDNext" (a Next.js starter for MDX) to add query layers.</li>
+<li>Parse mdBook output into a Next.js site, adding server-side querying.</li>
+</ul>
+</li>
+<li>Or, sync your Markdown to a tool like Obsidian (for Dataview) and export back, but this is roundabout.</li>
+<li>For GitHub Pages, use Jekyll plugins if migrating, but stick to mdBook for Rust ecosystem benefits.</li>
+</ul>
+</li>
+<li><strong>Pros</strong>: Scales to full apps; adds features like search APIs.</li>
+<li><strong>Cons</strong>: Increases complexity; may require rewriting parts of your PKE setup.</li>
+<li><strong>Tools/Libs</strong>: Next.js with <code>next-mdx-remote</code>; or Rust alternatives like Leptos for web apps.</li>
+<li><strong>Extension for PKE</strong>: If your system grows, this could turn your static book into a web app with user queries.</li>
+</ul>
+<p>Start with the preprocessor approach for closest integration, as it's mdBook-native and aligns with your provided example. Test on a branch of your repo, and consider open-sourcing the plugin to attract contributors. If I need code snippets or help with implementation, all that I need to doe is provide more details to Grok, when I understand the specifics of what I need!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="methodology"><a class="header" href="#methodology">Methodology</a></h1>
 <p>This document, other than following <a href="https://rust-lang.github.io/mdBook/">the mdBook documentation</a>, will detail the repository specific rules for creating new pages in this mdBook, the strategy for structuring chapters, and the lifecycle of information as it moves from a rough draft to a published chapter.</p>
 <p>Specifically, the purpose of this page is to describe the design of the mdBook which catalogs the process of developing of the AI-assisted PKE system per our <a href="nested//Manifesto.html">Manifesto</a>.</p>

@@ -29,6 +29,7 @@
 
 - [Deliverables](DELIVERABLES.md)
   - [Pipeline](./PIPELINE.md)
+  - [Research Dashboard](RESEARCH_DASHBOARD.md)
   - [Methodology](./nested/METHODOLOGY.md)
     - [Projects](./1.Projects/Template.md)
     - [Areas](./2.Areas/Template.md)

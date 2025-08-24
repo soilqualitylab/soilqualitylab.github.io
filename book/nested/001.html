@@ -157,6 +157,233 @@
                     <main>
                         <h1 id="module-1-soil-data-heterogeneity--standardization-protocols"><a class="header" href="#module-1-soil-data-heterogeneity--standardization-protocols"><strong>Module 1: Soil Data Heterogeneity &amp; Standardization Protocols</strong></a></h1>
 <p>Master the challenge of integrating data from wet chemistry, spectroscopy, sequencing, and field sensors. Learn to build data pipelines that handle missing values, measurement uncertainty, and method-specific biases inherent in soil datasets.</p>
+<p>This first intensive 15-hour program provides the essential foundation for all subsequent modules in the Foundation Phase, ensuring students can handle the unique challenges of soil data heterogeneity that will recur throughout modules 002-025.  Students are encourage to peruse modules 002-025 or to refer to them for context.</p>
+<p>Of course, it would be impossible to study EVERYTHING mentioned in a given time slot -- the objective of each time slot, is to spend all of the time in the deepest dive possible in autodidactic study, using that time to delve as deeply as possible into the given topics mentioned, with an eye to applying the material over the entire course, in order to be as familiar as possible with the content, so that one may readily come back to it as material is applied in future work.</p>
+<hr />
+<h3 id="hour-1-2-the-soil-data-landscape--complexity-challenge"><a class="header" href="#hour-1-2-the-soil-data-landscape--complexity-challenge"><strong>Hour 1-2: The Soil Data Landscape &amp; Complexity Challenge</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the unique complexity of soil as Earth's most heterogeneous natural body</li>
+<li>Map the four primary data streams: wet chemistry, spectroscopy, sequencing, and field sensors</li>
+<li>Identify why soil data integration is fundamentally different from other environmental domains</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The 10-Orders Problem</strong>: From DNA sequences (nanometers) to satellite imagery (kilometers)</li>
+<li><strong>Temporal Scales</strong>: Enzymatic reactions (seconds) to pedogenesis (millennia)</li>
+<li><strong>The Heterogeneity Matrix</strong>: How a single gram of soil contains billions of organisms, thousands of chemical reactions, and countless physical interactions</li>
+<li><strong>Case Study</strong>: Failed integration attempts - why 70% of soil databases remain siloed</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Analyze real soil datasets from 5 different sources (NCSS, ISRIC, JGI, NEON, commercial labs)</li>
+<li>Document incompatibilities in units, methods, metadata, and quality indicators</li>
+<li>Create a "data chaos map" showing integration barriers</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-wet-chemistry-data---the-traditional-foundation"><a class="header" href="#hour-3-4-wet-chemistry-data---the-traditional-foundation"><strong>Hour 3-4: Wet Chemistry Data - The Traditional Foundation</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Master standard soil analytical methods and their data characteristics</li>
+<li>Understand method-specific biases and inter-laboratory variation</li>
+<li>Build parsers for common laboratory report formats</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Core Analyses</strong>: pH, organic matter, CEC, NPK, texture, micronutrients</li>
+<li><strong>Method Proliferation</strong>: Why "available phosphorus" has 47 different measurement protocols</li>
+<li><strong>Laboratory Workflows</strong>: From sample receipt to LIMS to report generation</li>
+<li><strong>Quality Flags &amp; Detection Limits</strong>: Handling censored data and "below detection"</li>
+</ul>
+<p><strong>Hands-On Lab:</strong></p>
+<ul>
+<li>Parse 10 different laboratory report formats (PDF, CSV, XML, proprietary LIMS exports)</li>
+<li>Build a unified schema that preserves method information</li>
+<li>Implement automated detection of impossible values and outliers</li>
+<li>Create transformation functions between common methods (Mehlich-3 to Olsen P)</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-spectroscopic-data---the-high-dimensional-challenge"><a class="header" href="#hour-5-6-spectroscopic-data---the-high-dimensional-challenge"><strong>Hour 5-6: Spectroscopic Data - The High-Dimensional Challenge</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Process continuous spectra from VIS-NIR, MIR, XRF, and Raman instruments</li>
+<li>Handle instrument-specific artifacts and calibration transfer</li>
+<li>Build spectral libraries with proper metadata</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Spectral Characteristics</strong>: Resolution, range, and information content by technique</li>
+<li><strong>The Curse of Dimensionality</strong>: 2000+ wavelengths vs. 100 reference samples</li>
+<li><strong>Preprocessing Pipeline</strong>: Baseline correction, smoothing, derivative transforms, SNV</li>
+<li><strong>The Quartz Problem</strong>: Why soil spectra differ from pure chemical spectra</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Implement a complete preprocessing pipeline for VIS-NIR soil spectra</li>
+<li>Build instrument-agnostic data structures for multi-technique integration</li>
+<li>Create spectral matching algorithms for library searches</li>
+<li>Handle water peaks, particle size effects, and atmospheric corrections</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-genomic--metagenomic-data---the-biological-explosion"><a class="header" href="#hour-7-8-genomic--metagenomic-data---the-biological-explosion"><strong>Hour 7-8: Genomic &amp; Metagenomic Data - The Biological Explosion</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Integrate sequence data from amplicon, shotgun, and long-read platforms</li>
+<li>Handle the extreme diversity of soil microbiomes</li>
+<li>Link sequence data to functional predictions</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Data Volumes</strong>: From 16S amplicons (MB) to deep metagenomes (TB)</li>
+<li><strong>The Diversity Problem</strong>: 50,000+ OTUs per gram, 90% uncultured</li>
+<li><strong>Quality Challenges</strong>: Chimeras, contamination, humic acid interference</li>
+<li><strong>Functional Annotation</strong>: From sequences to metabolic pathways</li>
+</ul>
+<p><strong>Bioinformatics Lab:</strong></p>
+<ul>
+<li>Build parsers for FASTQ, FASTA, and annotation formats</li>
+<li>Implement quality filtering specific to soil samples (high humic content)</li>
+<li>Create data structures linking taxonomy to function</li>
+<li>Design storage strategies for 10TB+ metagenomic datasets</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-field-sensor-networks---the-real-time-stream"><a class="header" href="#hour-9-10-field-sensor-networks---the-real-time-stream"><strong>Hour 9-10: Field Sensor Networks - The Real-Time Stream</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Handle continuous data streams from in-situ sensors</li>
+<li>Manage irregular timestamps, drift, and missing values</li>
+<li>Implement automated QA/QC for unattended sensors</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Sensor Types</strong>: Moisture, temperature, EC, pH, redox, gas flux</li>
+<li><strong>Deployment Realities</strong>: Power failures, biofouling, animal damage, extreme weather</li>
+<li><strong>Calibration Drift</strong>: Why factory calibrations fail in soil</li>
+<li><strong>The Timestamp Problem</strong>: UTC vs. local, daylight savings, clock drift</li>
+</ul>
+<p><strong>Stream Processing Exercise:</strong></p>
+<ul>
+<li>Build ingestion pipelines for common sensor formats (Campbell Scientific, HOBO, custom IoT)</li>
+<li>Implement spike detection and drift correction algorithms</li>
+<li>Create automated flags for sensor malfunction</li>
+<li>Design backfilling strategies for data gaps</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-data-integration-architecture--schema-design"><a class="header" href="#hour-11-12-data-integration-architecture--schema-design"><strong>Hour 11-12: Data Integration Architecture &amp; Schema Design</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design unified schemas that preserve source-specific information</li>
+<li>Build crosswalks between different classification systems</li>
+<li>Implement hierarchical data models for multi-scale integration</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Schema Evolution</strong>: How to design for unknown future data types</li>
+<li><strong>The Ontology Challenge</strong>: AGROVOC, SoilML, and domain vocabularies</li>
+<li><strong>Hierarchical Indexing</strong>: From plot to field to farm to landscape</li>
+<li><strong>Preserving Provenance</strong>: Why lineage tracking is critical for soil data</li>
+</ul>
+<p><strong>Database Design Project:</strong></p>
+<ul>
+<li>Create a PostgreSQL schema with PostGIS for spatial data</li>
+<li>Implement JSON columns for flexible metadata storage</li>
+<li>Build materialized views for common query patterns</li>
+<li>Design indices optimized for spatio-temporal queries</li>
+</ul>
+<hr />
+<h3 id="hour-13-uncertainty-quantification--error-propagation"><a class="header" href="#hour-13-uncertainty-quantification--error-propagation"><strong>Hour 13: Uncertainty Quantification &amp; Error Propagation</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Quantify measurement uncertainty for different analytical methods</li>
+<li>Propagate uncertainty through data transformations</li>
+<li>Build probabilistic data pipelines</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Sources of Uncertainty</strong>: Sampling, subsampling, analytical, and temporal</li>
+<li><strong>Method-Specific Errors</strong>: Why clay content uncertainty differs by method</li>
+<li><strong>Error Propagation</strong>: Monte Carlo vs. analytical approaches</li>
+<li><strong>The Missing Data Problem</strong>: MCAR, MAR, and MNAR in soil datasets</li>
+</ul>
+<p><strong>Statistical Implementation:</strong></p>
+<ul>
+<li>Build uncertainty models for common soil measurements</li>
+<li>Implement multiple imputation for missing values</li>
+<li>Create visualization tools for uncertainty communication</li>
+<li>Design sensitivity analyses for pipeline validation</li>
+</ul>
+<hr />
+<h3 id="hour-14-building-production-ready-data-pipelines"><a class="header" href="#hour-14-building-production-ready-data-pipelines"><strong>Hour 14: Building Production-Ready Data Pipelines</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement robust ETL pipelines with error handling</li>
+<li>Design for scalability and fault tolerance</li>
+<li>Create monitoring and alerting systems</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Pipeline Orchestration</strong>: Apache Airflow for complex workflows</li>
+<li><strong>Parallel Processing</strong>: Distributing computation across soil samples</li>
+<li><strong>Checkpoint &amp; Recovery</strong>: Handling failures in long-running processes</li>
+<li><strong>Performance Optimization</strong>: Profiling and bottleneck identification</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Build an end-to-end pipeline from raw data to analysis-ready format</li>
+<li>Implement parallel processing for batch operations</li>
+<li>Add comprehensive logging and monitoring</li>
+<li>Create automated tests for data quality assertions</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-integration-project"><a class="header" href="#hour-15-capstone-integration-project"><strong>Hour 15: Capstone Integration Project</strong></a></h3>
+<p><strong>Final Challenge:</strong>
+Build a complete data integration system that:</p>
+<ol>
+<li>Ingests data from all four primary sources (chemistry, spectroscopy, sequencing, sensors)</li>
+<li>Performs automated quality control and flagging</li>
+<li>Handles missing values and uncertainty</li>
+<li>Produces standardized, analysis-ready datasets</li>
+<li>Maintains complete provenance and metadata</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>Functioning pipeline code (Python/R)</li>
+<li>Documentation of data transformations</li>
+<li>Quality control report generation</li>
+<li>API for data access</li>
+<li>Presentation of integration challenges and solutions</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Completeness of integration</li>
+<li>Robustness to edge cases</li>
+<li>Performance with large datasets</li>
+<li>Quality of documentation</li>
+<li>Reproducibility of results</li>
+</ul>
+<hr />
+<h3 id="supporting-resources--pre-requisites"><a class="header" href="#supporting-resources--pre-requisites"><strong>Supporting Resources &amp; Pre-requisites</strong></a></h3>
+<p><strong>Required Background:</strong></p>
+<ul>
+<li>Python or R programming proficiency</li>
+<li>Basic statistics and linear algebra</li>
+<li>Familiarity with SQL and NoSQL databases</li>
+<li>Understanding of version control (Git)</li>
+</ul>
+<p><strong>Software Stack:</strong></p>
+<ul>
+<li>Python: pandas, numpy, scikit-learn, BioPython</li>
+<li>Databases: PostgreSQL, MongoDB, Redis</li>
+<li>Pipeline tools: Apache Airflow, Prefect</li>
+<li>Cloud platforms: AWS S3, Google Cloud Storage</li>
+</ul>
+<p><strong>Datasets for Practice:</strong></p>
+<ul>
+<li>NCSS Soil Characterization Database</li>
+<li>ISRIC World Soil Information Service</li>
+<li>NEON Soil Microbe and Chemistry Data</li>
+<li>Custom sensor network from LTER sites</li>
+</ul>
 
                     </main>
 

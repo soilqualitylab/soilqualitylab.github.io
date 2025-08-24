@@ -157,6 +157,232 @@
                     <main>
                         <h1 id="module-17-semantic-data-integration-using-soil-ontologies"><a class="header" href="#module-17-semantic-data-integration-using-soil-ontologies"><strong>Module 17: Semantic Data Integration Using Soil Ontologies</strong></a></h1>
 <p>Master AGROVOC, SoilML, and domain ontologies for automated data harmonization. Build knowledge graphs linking soil properties, processes, and management practices.</p>
+<p>The course objective is to master the principles and technologies of the Semantic Web to achieve true, automated data harmonization at scale. Students will use domain-specific ontologies like AGROVOC and the Environment Ontology (ENVO) to transform disparate data into a unified, machine-readable knowledge graph. The course will culminate in building a system that can link soil properties, biological processes, and management practices, enabling complex, cross-domain queries and logical inference.</p>
+<p>This module is the "universal translator" of the <strong>Foundation Phase</strong>. It addresses the core challenge of data heterogeneity (Module 1) not at the structural level, but at the <em>semantic</em> level—the level of meaning. It elevates the graph databases from Module 12 into formal knowledge graphs and provides the semantically rich, integrated data layer required to train the most ambitious foundation models, such as those that need to understand the relationship between a management practice, a microbial gene, and a biogeochemical outcome. [cite: FoundationModelTopics.md]</p>
+<hr />
+<h3 id="hour-1-2-the-semantic-tower-of-babel-babel"><a class="header" href="#hour-1-2-the-semantic-tower-of-babel-babel"><strong>Hour 1-2: The Semantic Tower of Babel</strong> Babel</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Differentiate between syntactic and semantic interoperability.</li>
+<li>Identify the sources of semantic ambiguity in soil and agricultural data.</li>
+<li>Understand how ontologies solve this ambiguity by creating a shared, formal vocabulary.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Problem of Meaning</strong>: We've cleaned our data, but what does it <em>mean</em>?
+<ul>
+<li><strong>Synonyms</strong>: <code>SOC</code>, <code>Soil Organic Carbon</code>, <code>Walkley-Black C</code>.</li>
+<li><strong>Homonyms</strong>: <code>Clay</code> (the particle size) vs. <code>Clay</code> (the mineralogy).</li>
+<li><strong>Implicit Context</strong>: A column <code>N</code> could mean Nitrate-N, Ammonium-N, or Total N.</li>
+</ul>
+</li>
+<li><strong>Syntactic vs. Semantic</strong>:
+<ul>
+<li><strong>Syntactic Interoperability</strong> (what we've done so far): The data is in a clean, readable format like Parquet.</li>
+<li><strong>Semantic Interoperability</strong> (our goal): The <em>meaning</em> of the data is explicit and machine-readable, regardless of how it was originally labeled.</li>
+</ul>
+</li>
+<li><strong>Ontologies as the Solution</strong>: An ontology is more than a dictionary; it's a formal specification of a domain's concepts and the relationships between them. It provides a shared "map of meaning" that both humans and computers can understand.</li>
+</ul>
+<p><strong>Exercise:</strong></p>
+<ul>
+<li>Given a list of 20 real-world soil data column headers from different labs (e.g., <code>WB_C_pct</code>, <code>CEC_meq_100g</code>, <code>P_Bray1</code>, <code>texture</code>).</li>
+<li>In groups, students will attempt to manually map these headers to a standardized list of concepts.</li>
+<li>The exercise will reveal ambiguities and disagreements, demonstrating the need for a formal, computational approach.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-semantic-web-stack-rdf-owl-and-sparql-"><a class="header" href="#hour-3-4-the-semantic-web-stack-rdf-owl-and-sparql-"><strong>Hour 3-4: The Semantic Web Stack: RDF, OWL, and SPARQL</strong> 🕸️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the core components of the Semantic Web technology stack.</li>
+<li>Grasp the structure of the Resource Description Framework (RDF) as the foundation for representing knowledge.</li>
+<li>Learn the role of the Web Ontology Language (OWL) in defining the rules and axioms of a domain.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Web of Data, Not Documents</strong>: The vision of the Semantic Web.</li>
+<li><strong>The Three Pillars</strong>:
+<ol>
+<li><strong>RDF (Resource Description Framework)</strong>: The data model. All knowledge is represented as a set of simple statements called "triples": <strong>(Subject, Predicate, Object)</strong>. Example: <code>(Sample_123, has_pH, 7.2)</code>.</li>
+<li><strong>OWL (Web Ontology Language)</strong>: The schema language. It allows us to define classes (<code>Soil</code>, <code>Mollisol</code>), properties (<code>has_pH</code>), and relationships (<code>Mollisol</code> is a <code>subClassOf</code> <code>Soil</code>).</li>
+<li><strong>SPARQL (SPARQL Protocol and RDF Query Language)</strong>: The query language. It's the "SQL for graphs," allowing us to ask complex questions of our RDF data.</li>
+</ol>
+</li>
+<li><strong>Key Ontologies for Soil Science</strong>: Introduction to major resources like <strong>AGROVOC</strong> (the FAO's massive agricultural thesaurus) and the <strong>Environment Ontology (ENVO)</strong>.</li>
+</ul>
+<p><strong>Conceptual Lab:</strong></p>
+<ul>
+<li>Using a visual tool like WebVOWL, students will explore a subset of the ENVO ontology.</li>
+<li>They will navigate the class hierarchy (e.g., from <code>environmental material</code> down to <code>soil</code>) and identify different types of relationships (e.g., <code>part_of</code>, <code>has_quality</code>).</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-hands-on-with-rdf-the-rdflib-library-"><a class="header" href="#hour-5-6-hands-on-with-rdf-the-rdflib-library-"><strong>Hour 5-6: Hands-On with RDF: The <code>rdflib</code> Library</strong> 🐍</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Represent soil data as RDF triples using the Python <code>rdflib</code> library.</li>
+<li>Serialize RDF graphs into standard formats like Turtle and JSON-LD.</li>
+<li>Load and parse existing RDF data from external sources.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong><code>rdflib</code></strong>: The primary Python library for working with RDF.</li>
+<li><strong>Core Components in <code>rdflib</code></strong>:
+<ul>
+<li><strong><code>Graph</code></strong>: The container for our set of triples.</li>
+<li><strong><code>URIRef</code></strong>: A unique identifier for a subject, predicate, or object (e.g., a URL to an ontology term).</li>
+<li><strong><code>Literal</code></strong>: A data value, like a string or a number.</li>
+<li><strong><code>BNode</code></strong>: A blank node, for representing entities without a specific name.</li>
+</ul>
+</li>
+<li><strong>Serialization Formats</strong>: We'll practice saving our graphs in human-readable formats like <strong>Turtle (<code>.ttl</code>)</strong>, which is much cleaner than the original XML format.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Write a Python script using <code>rdflib</code> to create a small knowledge graph for a single soil sample.</li>
+<li>The graph must represent the sample's ID, its pH, its organic carbon content, and its texture class.</li>
+<li>The script will then serialize this graph and print it to the console in Turtle format. This exercise makes the abstract concept of a triple concrete.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-querying-the-knowledge-graph-with-sparql-"><a class="header" href="#hour-7-8-querying-the-knowledge-graph-with-sparql-"><strong>Hour 7-8: Querying the Knowledge Graph with SPARQL</strong> ❓</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Write basic SPARQL <code>SELECT</code> queries to retrieve data from an RDF graph.</li>
+<li>Use <code>WHERE</code> clauses to specify graph patterns.</li>
+<li>Filter results using <code>FILTER</code> and perform aggregations.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>SPARQL as Graph Pattern Matching</strong>: Like Cypher, SPARQL is about describing the shape of the data you want to find.</li>
+<li><strong>Basic SPARQL Syntax</strong>:
+<pre><code class="language-sparql">PREFIX ex: &lt;http://example.org/&gt;
+SELECT ?sample ?ph
+WHERE {
+  ?sample ex:has_pH ?ph .
+  FILTER(?ph &gt; 7.0)
+}
+</code></pre>
+</li>
+<li><strong>Querying with <code>rdflib</code></strong>: How to execute a SPARQL query directly from a Python script against an in-memory graph.</li>
+<li><strong>Public SPARQL Endpoints</strong>: We'll practice by running queries against live, public endpoints like the one for Wikidata to get a feel for real-world knowledge graphs.</li>
+</ul>
+<p><strong>SPARQL Lab:</strong></p>
+<ul>
+<li>Load a pre-built RDF graph of soil data into an <code>rdflib</code> Graph object.</li>
+<li>Write a series of increasingly complex SPARQL queries to answer:
+<ol>
+<li>"Find the pH of all samples."</li>
+<li>"Find all samples with a clay loam texture."</li>
+<li>"Find the average organic carbon content for all samples classified as Mollisols."</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-the-harmonization-pipeline-mapping-csv-to-rdf-"><a class="header" href="#hour-9-10-the-harmonization-pipeline-mapping-csv-to-rdf-"><strong>Hour 9-10: The Harmonization Pipeline: Mapping CSV to RDF</strong> ➡️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a mapping strategy to convert a tabular dataset into a rich RDF graph.</li>
+<li>Use an ontology (AGROVOC) to provide canonical URIs for concepts.</li>
+<li>Build a Python pipeline that performs this "semantic uplift."</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The "Uplift" Process</strong>: This is the core of semantic integration. We take a "dumb" CSV and make it "smart" by linking its contents to a formal ontology.</li>
+<li><strong>The Mapping Dictionary</strong>: The key is a simple Python dictionary that maps our messy CSV column headers to the precise URIs of terms in an ontology.
+<code>{'soc_pct': 'http://aims.fao.org/aos/agrovoc/c_33095'}</code> (<code>soil organic carbon content</code>)</li>
+<li><strong>Generating URIs</strong>: A strategy for creating unique, persistent URIs for our own data entities, like individual soil samples.</li>
+<li><strong>The R2RML Standard</strong>: A brief introduction to the W3C standard for mapping relational databases to RDF, as a more formal alternative to custom scripts.</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Take a clean CSV file of soil data (output from Module 16).</li>
+<li>Create a mapping dictionary that links at least 5 columns to AGROVOC terms.</li>
+<li>Write a Python script that iterates through the CSV, and for each row, generates a set of RDF triples using the mapping.</li>
+<li>The script should output a single, harmonized RDF graph in Turtle format.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-the-power-of-inference-the-reasoner-"><a class="header" href="#hour-11-12-the-power-of-inference-the-reasoner-"><strong>Hour 11-12: The Power of Inference: The Reasoner</strong> 🧠</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand how an OWL reasoner can infer new knowledge that is not explicitly stated in the data.</li>
+<li>Differentiate between class hierarchies, transitive properties, and inverse properties.</li>
+<li>Use a triplestore with a built-in reasoner to materialize inferred triples.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Making the Implicit Explicit</strong>: A reasoner is a program that applies the logical rules defined in an ontology (OWL) to your data (RDF) to infer new triples.</li>
+<li><strong>Key Inference Types</strong>:
+<ul>
+<li><strong>Subclass Inference</strong>: If <code>Mollisol subClassOf Soil</code> and <code>Sample_A type Mollisol</code>, then a reasoner infers <code>Sample_A type Soil</code>.</li>
+<li><strong>Transitivity</strong>: If <code>Iowa partOf USA</code> and <code>USA partOf NorthAmerica</code>, a reasoner can infer <code>Iowa partOf NorthAmerica</code> if <code>partOf</code> is defined as a transitive property.</li>
+<li><strong>Inverse Properties</strong>: If <code>Sample_A hasHorizon Horizon_B</code> and <code>hasHorizon</code> is the inverse of <code>isHorizonOf</code>, a reasoner infers <code>Horizon_B isHorizonOf Sample_A</code>.</li>
+</ul>
+</li>
+<li><strong>Triplestores</strong>: We will use a database like <strong>Apache Jena Fuseki</strong> (run in Docker) which includes a reasoner. We load our ontology and data, and the reasoner automatically adds the new, inferred knowledge.</li>
+</ul>
+<p><strong>Inference Lab:</strong></p>
+<ul>
+<li>Set up Apache Jena Fuseki via Docker.</li>
+<li>Create a simple ontology in Turtle format that defines <code>Corn</code> as a subclass of <code>Plant</code>.</li>
+<li>Load this ontology into Jena.</li>
+<li>Load a separate data file that states <code>Zea_mays_plot_1</code> is of type <code>Corn</code>.</li>
+<li>Write a SPARQL query for <code>?x type Plant</code>. Without reasoning, this returns nothing. With reasoning enabled in Jena, the query correctly returns <code>Zea_mays_plot_1</code>.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-building-the-soil-knowledge-graph-"><a class="header" href="#hour-13-14-building-the-soil-knowledge-graph-"><strong>Hour 13-14: Building the Soil Knowledge Graph</strong> 🌐</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Integrate multiple, heterogeneous data sources into a single, unified knowledge graph.</li>
+<li>Link our local knowledge graph to external Linked Open Data resources.</li>
+<li>Perform federated queries that span multiple knowledge graphs.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Connecting the Dots</strong>: We will now combine the outputs of our previous work:
+<ul>
+<li>The harmonized lab data (from this module).</li>
+<li>The biological network data (from Module 12).</li>
+<li>The management practice data.</li>
+</ul>
+</li>
+<li><strong>The <code>owl:sameAs</code> Bridge</strong>: The key to linking datasets. We can state that our local node for <code>Corn</code> is the <code>owl:sameAs</code> the node for "maize" in Wikidata, effectively merging the two graphs.</li>
+<li><strong>Federated Queries</strong>: Using the <code>SERVICE</code> keyword in SPARQL to execute a part of a query against a remote endpoint (like Wikidata) and join the results with our local data. This allows us to enrich our data on the fly.</li>
+</ul>
+<p><strong>Knowledge Graph Lab:</strong></p>
+<ul>
+<li>Extend the knowledge graph from the Harmonization lab.</li>
+<li>Write a SPARQL query that finds all soil samples where corn was grown.</li>
+<li>Then, modify this query to be <strong>federated</strong>. It should use the <code>SERVICE</code> clause to query Wikidata to find the scientific name (<code>Zea mays</code>) for corn and use that in the final query against your local data.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-the-cross-domain-harmonization-challenge-"><a class="header" href="#hour-15-capstone-the-cross-domain-harmonization-challenge-"><strong>Hour 15: Capstone: The Cross-Domain Harmonization Challenge</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are given two datasets about a single farm, from two completely different domains, with their own terminologies. Your mission is to build a unified knowledge graph that harmonizes them, allowing a single query to answer a complex, cross-domain question.</p>
+<p><strong>The Datasets:</strong></p>
+<ol>
+<li><strong><code>farm_management.csv</code></strong>: A simple table with <code>field_id</code>, <code>crop_planted</code>, and <code>tillage_practice</code> (e.g., "no-till", "conventional").</li>
+<li><strong><code>soil_microbes.csv</code></strong>: A list of microbial genera found in soil samples from each field, with <code>field_id</code> and <code>genus_name</code>.</li>
+</ol>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Select &amp; Map</strong>: Find a simple, relevant ontology (or create a mini-ontology) that defines concepts like <code>Tillage</code>, <code>NoTill</code>, <code>Crop</code>, <code>Corn</code>, <code>MicrobialGenus</code>, etc., and the relationships between them (e.g., <code>hasPractice</code>, <code>locatedIn</code>). Map both CSVs to this ontology.</li>
+<li><strong>Build the Knowledge Graph</strong>: Write a Python script to ingest both CSVs and generate a single, unified RDF graph.</li>
+<li><strong>Enable Inference</strong>: Load the graph into a triplestore with a reasoner. Ensure your ontology defines a simple rule, e.g., <code>NoTill</code> is a <code>subClassOf</code> <code>ConservationTillage</code>.</li>
+<li><strong>Ask the Big Question</strong>: Write a single SPARQL query that can answer a question that requires information from <em>both</em> original tables and the ontology's logic. <strong>Example Query</strong>: "List all microbial genera found in fields that used a practice which is a type of <code>ConservationTillage</code> and where the planted crop was <code>Corn</code>."</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>The mini-ontology file in Turtle format.</li>
+<li>The complete, documented Python ingestion script.</li>
+<li>The final SPARQL query.</li>
+<li>A brief report explaining how the semantic approach made this query possible, whereas it would have been a complex, multi-step <code>JOIN</code> and lookup process with traditional methods.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The logical correctness of the ontology and mappings.</li>
+<li>The robustness of the ingestion pipeline.</li>
+<li>The elegance and correctness of the final SPARQL query.</li>
+<li>The clarity of the report in articulating the value of semantic integration for answering complex scientific questions.</li>
+</ul>
 
                     </main>
 

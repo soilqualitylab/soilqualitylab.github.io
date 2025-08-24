@@ -157,6 +157,232 @@
                     <main>
                         <h1 id="module-24-benchmark-dataset-curation-for-soil-models"><a class="header" href="#module-24-benchmark-dataset-curation-for-soil-models"><strong>Module 24: Benchmark Dataset Curation for Soil Models</strong></a></h1>
 <p>Create standardized test sets spanning diverse pedological conditions. Implement stratified sampling to ensure representation of rare soil types and extreme conditions.</p>
+<p>The course objective is to master the science and engineering of creating fair, robust, and challenging benchmark datasets for evaluating soil models. Students will move beyond simple random splits to implement advanced stratified and geospatial sampling techniques. The core focus is on curating standardized test sets that are truly representative of diverse global soil conditions, with explicit inclusion of rare soil types and environmental extremes to prevent model over-optimism and drive true scientific progress.</p>
+<p>This is a crucial capstone module for the <strong>Foundation Phase</strong>, ensuring the scientific rigor of the entire program. While Module 23 focused on augmenting <em>training</em> data, this module is about creating pristine, untouchable <em>test</em> data. The quality of the foundation models we develop later will be judged against the benchmarks created here. This module provides the tools to build the standardized "common yardstick" called for in the <strong>Manifesto</strong>, enabling fair comparison and fostering a collaborative, competitive research ecosystem.</p>
+<hr />
+<h3 id="hour-1-2-the-evaluators-dilemma-why-most-benchmarks-fail-"><a class="header" href="#hour-1-2-the-evaluators-dilemma-why-most-benchmarks-fail-"><strong>Hour 1-2: The Evaluator's Dilemma: Why Most Benchmarks Fail</strong> 🎯</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the critical role of standardized benchmarks in advancing an entire scientific field.</li>
+<li>Identify the common pitfalls in test set creation: data leakage, distributional shift, and evaluation bias.</li>
+<li>Define the characteristics of a "gold-standard" scientific benchmark dataset.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The ImageNet Moment for Soil</strong>: We'll discuss how benchmarks like ImageNet (for computer vision) and GLUE (for NLP) catalyzed progress by creating a common, difficult target for the entire research community. Our goal is to create the "SoilNet."</li>
+<li><strong>Common Failure Modes</strong>:
+<ul>
+<li><strong>Data Leakage</strong>: The cardinal sin. Training data (or very similar data) accidentally contaminates the test set, leading to inflated and completely invalid performance scores.</li>
+<li><strong>Distributional Mismatch</strong>: The test set does not reflect the diversity and challenges of the real-world environments where the model will be deployed.</li>
+<li><strong>Evaluation Hacking</strong>: Models become over-optimized to the specific quirks of a single test set, rather than learning to generalize.</li>
+</ul>
+</li>
+<li><strong>Principles of a Good Benchmark</strong>: It must be <strong>representative</strong>, <strong>challenging</strong>, <strong>independent</strong>, <strong>well-documented</strong>, and <strong>stable</strong> (versioned).</li>
+</ul>
+<p><strong>Critique Lab:</strong></p>
+<ul>
+<li>Students will be presented with three anonymized descriptions of how real-world soil science papers created their test sets.</li>
+<li>In groups, they will critique each methodology, identifying potential sources of bias, data leakage, or lack of representativeness. This builds a critical mindset before they start building their own.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-foundation-of-fairness-stratified-sampling-"><a class="header" href="#hour-3-4-the-foundation-of-fairness-stratified-sampling-"><strong>Hour 3-4: The Foundation of Fairness: Stratified Sampling</strong> 📊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement stratified sampling to create representative data splits.</li>
+<li>Understand why simple random sampling is insufficient for heterogeneous soil datasets.</li>
+<li>Use Python's <code>scikit-learn</code> to perform stratified train-test splits.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Training, Validation, and Test Sets</strong>: A rigorous definition of the purpose of each data split. The test set is the "final exam"—it is held in a vault and only used sparingly to evaluate the final model.</li>
+<li><strong>The Flaw of Randomness</strong>: In a dataset where 90% of samples are Alfisols and 1% are Andisols, a simple random split will likely result in a test set with very few (or zero!) Andisols, making it impossible to evaluate the model's performance on that rare class.</li>
+<li><strong>Stratified Sampling to the Rescue</strong>: The core technique. We first group the data into "strata" (e.g., by soil order, land use, or climate zone). Then, we sample from within each stratum, ensuring that the proportions of each class in the test set perfectly match the proportions in the overall population.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Using an imbalanced soil dataset from the <code>imbalanced-learn</code> library.</li>
+<li><strong>Step 1</strong>: Create a test set using <code>train_test_split</code> with simple random sampling. Plot the class distribution of the test set.</li>
+<li><strong>Step 2</strong>: Create a second test set using <code>train_test_split</code> and passing the labels to the <code>stratify</code> parameter. Plot its class distribution.</li>
+<li><strong>Step 3</strong>: Compare the two plots. The stratified split will have perfectly representative proportions, while the random split will be skewed, demonstrating the superiority of stratification.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-accounting-for-space-geospatial-splitting-"><a class="header" href="#hour-5-6-accounting-for-space-geospatial-splitting-"><strong>Hour 5-6: Accounting for Space: Geospatial Splitting</strong> 🗺️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand how spatial autocorrelation can cause hidden data leakage.</li>
+<li>Implement spatially-aware train-test splitting techniques.</li>
+<li>Use clustering to create spatially independent data folds.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Tobler's First Law Strikes Again</strong>: "Near things are more related than distant things." If a test sample is only 10 meters away from a training sample, it's not a fair test of the model's ability to generalize to a new, unseen location. This is a subtle but severe form of data leakage.</li>
+<li><strong>The Solution: Spatial Holdouts</strong>: We must ensure that our test set is geographically separated from our training set.</li>
+<li><strong>Techniques for Geospatial Splitting</strong>:
+<ul>
+<li><strong>Buffered Holdouts</strong>: Create a geographic buffer zone around all test points and exclude any training points from falling within it.</li>
+<li><strong>Spatial Clustering (Block Cross-Validation)</strong>: Use a clustering algorithm (like k-means on the coordinates) to group the data into spatial blocks. Then, ensure that all points from a given block are either in the training set or the test set, but never both.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Geospatial Lab:</strong></p>
+<ul>
+<li>Using <code>geopandas</code> and <code>scikit-learn</code>, take a dataset of soil sample locations.</li>
+<li><strong>Step 1</strong>: Use <code>KMeans</code> on the latitude/longitude coordinates to assign each sample to one of 10 spatial clusters.</li>
+<li><strong>Step 2</strong>: Use <code>GroupKFold</code> or <code>StratifiedGroupKFold</code>, passing the cluster IDs as the <code>groups</code> parameter, to create train/test splits.</li>
+<li><strong>Step 3</strong>: Create a map plot that visualizes one of the splits, coloring the training and testing points differently. This will clearly show entire geographic regions being held out for testing.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-curating-for-the-extremes-beyond-representation-"><a class="header" href="#hour-7-8-curating-for-the-extremes-beyond-representation-"><strong>Hour 7-8: Curating for the Extremes: Beyond Representation</strong> 🔥🧊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a curation strategy that explicitly includes rare classes and "edge cases."</li>
+<li>Implement a hybrid sampling approach that combines stratification with targeted oversampling.</li>
+<li>Build a test set designed to challenge models, not just confirm their performance on common data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Benchmark Should Be Hard</strong>: A test set that only contains "easy," common examples is a poor benchmark. We need to intentionally include the difficult cases that will stress-test our models.</li>
+<li><strong>Active Curation</strong>: This is a manual or semi-automated process of ensuring the benchmark includes data from:
+<ul>
+<li><strong>Rare Soil Orders</strong>: Gelisols (permafrost), Histosols (organic), Andisols (volcanic).</li>
+<li><strong>Extreme Conditions</strong>: pH &lt; 4.0 or &gt; 9.0, high salinity (EC &gt; 8 dS/m), low organic matter (&lt; 0.5%).</li>
+<li><strong>Challenging Matrices</strong>: Soils known to cause problems for spectral models (e.g., high quartz, high carbonates).</li>
+</ul>
+</li>
+<li><strong>Hybrid Sampling Strategy</strong>: A multi-step process. First, use stratified sampling to get a representative baseline. Second, identify which challenge categories are still underrepresented. Third, perform a targeted search in the remaining data pool to add more examples from those categories until a minimum quota is met.</li>
+</ul>
+<p><strong>Curation Lab:</strong></p>
+<ul>
+<li>You are given a large, aggregated soil dataset.</li>
+<li>Your goal is to create a 1,000-point test set that is both stratified by soil order AND meets the following quotas: must contain at least 25 Histosols and at least 40 samples with a pH &gt; 8.5.</li>
+<li>Write a Python script that implements a hybrid sampling strategy to achieve this, documenting the steps taken to build the final, curated test set.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-assembling-the-multimodal-benchmark-package-"><a class="header" href="#hour-9-10-assembling-the-multimodal-benchmark-package-"><strong>Hour 9-10: Assembling the Multimodal Benchmark Package</strong> 📦</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design the data schema and file structure for a multimodal benchmark dataset.</li>
+<li>Implement a workflow to ensure that all data modalities are correctly paired for each sample.</li>
+<li>Version the complete benchmark dataset using DVC.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>More Than a CSV</strong>: A modern benchmark needs to support modern, multimodal models. For each sample ID in the test set, we need to provide the complete, paired data package.</li>
+<li><strong>The Benchmark Asset Structure</strong>: A well-organized directory, managed by DVC:
+<pre><code>soil-benchmark-v1.0/
+├── dvc.yaml
+├── data/
+│   ├── main_properties.csv   # The ground truth labels
+│   ├── spectra/              # Folder of spectral files
+│   ├── sequences/            # Folder of FASTQ files
+│   └── imagery/              # Folder of satellite image chips
+├── datasheet.md
+└── evaluation_script.py
+</code></pre>
+</li>
+<li><strong>Data Integrity Checks</strong>: A crucial step is to run a script that verifies that every sample in <code>main_properties.csv</code> has a corresponding file in the other data folders, preventing missing data in the final package.</li>
+<li><strong>Versioning with DVC</strong>: Using DVC ensures that the large data files are not stored in Git, but their versions are tracked, making the entire benchmark reproducible and shareable.</li>
+</ul>
+<p><strong>DVC Lab:</strong></p>
+<ul>
+<li>Create the directory structure outlined above.</li>
+<li>Populate it with a small amount of dummy data.</li>
+<li>Initialize a DVC repository.</li>
+<li>Use <code>dvc add</code> to place the <code>data/</code> directory under DVC control.</li>
+<li>Write a short <code>README.md</code> that explains how a new user would use <code>dvc pull</code> to download the full dataset.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-defining-tasks-metrics-and-leaderboards-"><a class="header" href="#hour-11-12-defining-tasks-metrics-and-leaderboards-"><strong>Hour 11-12: Defining Tasks, Metrics, and Leaderboards</strong> 🏆</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Define a clear set of prediction tasks that the benchmark will be used to evaluate.</li>
+<li>Select appropriate, robust evaluation metrics for each task.</li>
+<li>Design the structure for a public leaderboard to track model performance.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Benchmark = Data + Tasks + Metrics</strong>: The data alone is not enough.</li>
+<li><strong>Defining the Official Tasks</strong>:
+<ul>
+<li><strong>Task 1: Regression</strong>: Predict Soil Organic Carbon from MIR spectra. <strong>Primary Metric</strong>: Root Mean Squared Error (RMSE).</li>
+<li><strong>Task 2: Classification</strong>: Predict Soil Order from lab properties. <strong>Primary Metric</strong>: Macro-Averaged F1-Score (to handle class imbalance correctly).</li>
+<li><strong>Task 3: Geospatial Prediction</strong>: Predict clay percentage at unsampled locations (spatial holdout task). <strong>Primary Metric</strong>: Spatial RMSE.</li>
+</ul>
+</li>
+<li><strong>The Evaluation Harness</strong>: The benchmark package must include an official <code>evaluation_script.py</code>. This script takes a user's prediction file as input and outputs the official scores, ensuring that everyone calculates the metrics in the exact same way.</li>
+<li><strong>The Leaderboard</strong>: We'll design the schema for a public website that shows the performance of different models on the benchmark, fostering healthy competition and tracking the state of the art.</li>
+</ul>
+<p><strong>Evaluation Script Lab:</strong></p>
+<ul>
+<li>Write the official <code>evaluation_script.py</code> for the benchmark.</li>
+<li>It should be a command-line tool that takes two arguments: <code>--predictions &lt;file.csv&gt;</code> and <code>--ground_truth &lt;file.csv&gt;</code>.</li>
+<li>The script must calculate the official metrics for at least two of the defined tasks and print the results in a clean, standardized JSON format.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-documentation-and-governance-datasheets-for-datasets-"><a class="header" href="#hour-13-14-documentation-and-governance-datasheets-for-datasets-"><strong>Hour 13-14: Documentation and Governance: "Datasheets for Datasets"</strong> 📜</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Author a high-quality "datasheet" to document a benchmark's creation and limitations.</li>
+<li>Select an appropriate open data license.</li>
+<li>Outline a governance plan for the long-term maintenance of the benchmark.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>If it's not documented, it doesn't exist</strong>: A benchmark requires extensive documentation. We'll follow the <strong>"Datasheets for Datasets"</strong> framework.</li>
+<li><strong>Key Datasheet Sections</strong>:
+<ul>
+<li><strong>Motivation</strong>: Why was this dataset created?</li>
+<li><strong>Composition</strong>: What is in the dataset? What are the schemas?</li>
+<li><strong>Collection Process</strong>: How, when, and where was the data collected?</li>
+<li><strong>Curation/Preprocessing</strong>: What steps were taken to clean and sample the data? (This is where we document our stratification).</li>
+<li><strong>Uses &amp; Limitations</strong>: What is this dataset suitable for? What are its known biases?</li>
+</ul>
+</li>
+<li><strong>Licensing and Governance</strong>:
+<ul>
+<li><strong>Data Licenses</strong>: Choosing a license (e.g., Creative Commons) that promotes open access while requiring attribution.</li>
+<li><strong>Governance Plan</strong>: Who is responsible for the benchmark? How are errors reported and corrected? When will <code>v2.0</code> be released? A benchmark is a living product.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Documentation Lab:</strong></p>
+<ul>
+<li>Students will write a complete <code>datasheet.md</code> for the benchmark they have been curating throughout the module's labs.</li>
+<li>The datasheet must follow the specified framework and be comprehensive enough for a new researcher to understand exactly what the dataset contains and how it was made.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-curating-the-global-soil-diversity-benchmark-v10-"><a class="header" href="#hour-15-capstone-curating-the-global-soil-diversity-benchmark-v10-"><strong>Hour 15: Capstone: Curating the "Global Soil Diversity Benchmark v1.0"</strong> 🌐</a></h3>
+<p><strong>Final Challenge:</strong>
+You are the lead curator for the first official benchmark release of the "Global Soil Data Commons." Your task is to design and execute a complete curation pipeline to produce a challenging, fair, and well-documented test set from a massive, aggregated global dataset.</p>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Define the Curation Strategy</strong>: You are given a large global dataset with soil taxonomy, Köppen climate class, and land use for each sample. You must design a multi-layered stratification strategy that accounts for all three variables.</li>
+<li><strong>Implement the Geospatial Curation Pipeline</strong>: Write a single, robust Python script that:
+a.  Performs a geospatial train-test split to create a held-out pool of candidate test points.
+b.  From this pool, implements your multi-layered stratification to create a representative sample.
+c.  Implements a final curation step to ensure the test set meets specific diversity quotas (e.g., must contain samples from at least 5 continents, 10 soil orders, and 15 climate zones).</li>
+<li><strong>Package the Final Benchmark</strong>: Using DVC, package the final curated dataset along with its complete documentation into a distributable format. This package must include:
+<ul>
+<li>The final test data (<code>.csv</code> and <code>.gpkg</code> for geometries).</li>
+<li>A comprehensive <code>datasheet.md</code> describing your entire process.</li>
+<li>The official <code>evaluation_script.py</code> that defines the benchmark's primary tasks and metrics.</li>
+</ul>
+</li>
+<li><strong>Write the Justification</strong>: Author a final report that defends your curation strategy. It must explain how your approach mitigates bias, prevents data leakage, and results in a benchmark that is a fair but challenging test for next-generation soil foundation models.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A Git repository managed with DVC that contains the complete, final benchmark package (<code>v1.0</code>).</li>
+<li>The fully-documented Python script used to perform the sampling and curation.</li>
+<li>The final report and justification document.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The sophistication and appropriateness of the stratification and curation strategy.</li>
+<li>The correctness and robustness of the implementation script.</li>
+<li>The quality and completeness of the final benchmark package, especially the datasheet.</li>
+<li>The clarity and strength of the justification for why this benchmark is a valuable scientific tool.</li>
+</ul>
 
                     </main>
 

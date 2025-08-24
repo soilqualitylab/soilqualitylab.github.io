@@ -157,6 +157,231 @@
                     <main>
                         <h1 id="module-16-automated-data-quality-assessment-for-soil-samples"><a class="header" href="#module-16-automated-data-quality-assessment-for-soil-samples"><strong>Module 16: Automated Data Quality Assessment for Soil Samples</strong></a></h1>
 <p>Build ML-based anomaly detection to identify mislabeled samples, contamination, and analytical errors. Implement statistical process control for laboratory data streams.</p>
+<p>The course objective is to build an intelligent "immune system" for a soil data platform. Students will implement automated pipelines that use both classical Statistical Process Control (SPC) and modern Machine Learning-based anomaly detection to identify a wide range of data quality issues, including mislabeled samples, instrument drift, contamination, and analytical errors. The goal is to ensure that only high-quality, trustworthy data is propagated to the foundation models.</p>
+<p>This module is the quality gatekeeper of the <strong>Foundation Phase</strong>. It operationalizes the uncertainty concepts from Module 9 and acts directly on the data streams from Module 11 and the data lake from Module 15. A robust, automated DQ system is non-negotiable for building trustworthy foundation models. The ability to automatically flag and quarantine suspicious data is essential for maintaining the integrity of the entire "Global Soil Data Commons" and preventing the "garbage in, garbage out" problem at a petabyte scale.</p>
+<hr />
+<h3 id="hour-1-2-the-garbage-in-garbage-out-imperative-"><a class="header" href="#hour-1-2-the-garbage-in-garbage-out-imperative-"><strong>Hour 1-2: The "Garbage In, Garbage Out" Imperative</strong> 🗑️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the profound impact of poor data quality on scientific conclusions and model performance.</li>
+<li>Categorize the common types of errors found in soil sample data.</li>
+<li>Differentiate between data validation, data verification, and data quality assessment.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Data Quality is Paramount</strong>: We'll start with a motivating disaster story: how a single mislabeled soil sample (e.g., an organic-rich Histosol labeled as a mineral-rich Mollisol) can corrupt an entire spectral calibration model, leading to wildly incorrect predictions for thousands of other samples.</li>
+<li><strong>A Taxonomy of Soil Data Errors</strong>:
+<ul>
+<li><strong>Gross Errors</strong>: Sample swaps in the lab, incorrect sample ID entry, catastrophic instrument failure.</li>
+<li><strong>Systematic Errors</strong>: Persistent instrument miscalibration, consistent procedural errors by a technician, sensor drift.</li>
+<li><strong>Random Errors</strong>: The natural, unavoidable noise in any measurement process.</li>
+</ul>
+</li>
+<li><strong>The Need for Automation</strong>: Manually inspecting thousands of daily data points is impossible. We need an automated, systematic approach to data quality that can operate at the scale of our data lakehouse.</li>
+</ul>
+<p><strong>Discussion Exercise:</strong></p>
+<ul>
+<li>Review the data generation processes from previous modules (LIMS, sensors, spectroscopy, legacy data).</li>
+<li>For each process, brainstorm and list at least three potential sources of data quality errors.</li>
+<li>Discuss which types of errors would be easiest and hardest to detect automatically.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-statistical-process-control-spc-for-laboratory-streams-"><a class="header" href="#hour-3-4-statistical-process-control-spc-for-laboratory-streams-"><strong>Hour 3-4: Statistical Process Control (SPC) for Laboratory Streams</strong> 📈</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the principles of SPC and its application to laboratory data.</li>
+<li>Implement Shewhart control charts (I-MR charts) to monitor lab standards.</li>
+<li>Interpret control chart rules to distinguish between normal variation and a process that is "out of control."</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>From the Factory Floor to the Soil Lab</strong>: SPC was developed to monitor manufacturing processes, but its principles are perfectly suited for a high-throughput soil lab. The goal: detect problems <em>as they happen</em>.</li>
+<li><strong>The Voice of the Process</strong>: A control chart helps us understand the natural, "common cause" variation of a stable process.</li>
+<li><strong>Shewhart Charts for Lab Control Samples</strong>: We will focus on the <strong>Individuals and Moving Range (I-MR)</strong> chart, which is ideal for tracking the measurement of a Certified Reference Material (CRM) or a lab control sample over time.</li>
+<li><strong>Detecting Trouble</strong>: We will implement the <strong>Western Electric Rules</strong> (or similar rule sets) to automatically flag out-of-control conditions, such as a single point outside the ±3σ limits or eight consecutive points on one side of the mean, which indicates a process shift.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>You are given a time-series dataset from a LIMS showing the daily measured phosphorus value for a stable lab control sample.</li>
+<li>Using a Python library like <code>spc</code> or <code>pandas</code>, you will:
+<ol>
+<li>Create an I-MR control chart.</li>
+<li>Calculate the center line (mean) and the upper and lower control limits.</li>
+<li>Write a function to apply a set of control chart rules to the data.</li>
+<li>Generate a plot that visualizes the control chart and highlights the out-of-control points.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-unsupervised-anomaly-detection-i-finding-univariate-outliers-"><a class="header" href="#hour-5-6-unsupervised-anomaly-detection-i-finding-univariate-outliers-"><strong>Hour 5-6: Unsupervised Anomaly Detection I: Finding Univariate Outliers</strong> 🎯</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement robust statistical methods for detecting outliers in a single variable.</li>
+<li>Understand the strengths and weaknesses of different univariate methods.</li>
+<li>Apply pedological rules to validate data plausibility.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Beyond Known Standards</strong>: SPC is great for CRMs, but how do we find errors in the unknown samples that make up the bulk of our data? We start by looking for values that are unusual on their own.</li>
+<li><strong>The Statistical Toolkit</strong>:
+<ul>
+<li><strong>Z-Score</strong>: Simple and effective, but sensitive to the very outliers it's trying to find.</li>
+<li><strong>Modified Z-Score</strong>: Uses the median instead of the mean, making it much more robust.</li>
+<li><strong>Interquartile Range (IQR) Method</strong>: A non-parametric method that is also highly robust to extreme values.</li>
+</ul>
+</li>
+<li><strong>Sanity-Checking with Domain Knowledge</strong>: The most powerful first line of defense is often a set of simple rules based on soil science, for example:
+<ul>
+<li><code>(sand % + silt % + clay %) must be between 98 and 102.</code></li>
+<li><code>pH must be between 2 and 11.</code></li>
+<li><code>Bulk density cannot be greater than 2.65 g/cm³.</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Data Cleaning Lab:</strong></p>
+<ul>
+<li>Given a large soil dataset, write a Python script that:
+<ol>
+<li>Applies the Modified Z-score and IQR methods to flag potential outliers in at least three key properties (e.g., pH, CEC, organic carbon).</li>
+<li>Implements a function that applies at least three pedological validation rules.</li>
+<li>Generates a "data quality report" DataFrame that lists each sample ID and the specific quality checks it failed.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-unsupervised-anomaly-detection-ii-finding-multivariate-anomalies-"><a class="header" href="#hour-7-8-unsupervised-anomaly-detection-ii-finding-multivariate-anomalies-"><strong>Hour 7-8: Unsupervised Anomaly Detection II: Finding Multivariate Anomalies</strong> 🧬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why multivariate methods are essential for finding "unusual combinations" of values.</li>
+<li>Implement both proximity-based and tree-based unsupervised anomaly detection algorithms.</li>
+<li>Visualize high-dimensional anomalies using dimensionality reduction.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Contextual Anomaly</strong>: A single value might be normal, but its combination with other values is not. <strong>Example</strong>: A soil with 80% clay content is plausible. A soil with a cation exchange capacity (CEC) of 5 cmol/kg is also plausible. But a soil with 80% clay and a CEC of 5 is a major anomaly that univariate methods will miss.</li>
+<li><strong>The Machine Learning Toolkit (<code>scikit-learn</code>)</strong>:
+<ul>
+<li><strong>Isolation Forest</strong>: A fast and efficient algorithm that works by building random trees. Anomalies are points that are easier to "isolate" from the rest of the data.</li>
+<li><strong>Local Outlier Factor (LOF)</strong>: A density-based method that identifies anomalies by comparing a point's local density to the densities of its neighbors.</li>
+</ul>
+</li>
+<li><strong>Visualizing the Anomalies</strong>: Using techniques like Principal Component Analysis (PCA) to project the high-dimensional data into 2D and color-code the points flagged as anomalies to see if they form distinct clusters.</li>
+</ul>
+<p><strong>Machine Learning Lab:</strong></p>
+<ul>
+<li>Using the same soil dataset, apply the <strong>Isolation Forest</strong> algorithm from <code>scikit-learn</code> to a set of 5-10 chemical properties.</li>
+<li>Generate a list of the top 1% most anomalous samples as identified by the model.</li>
+<li>For the top 5 anomalies, print out their full chemical profiles and write a short interpretation of <em>why</em> the model likely flagged them as having an unusual combination of properties.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-domain-specific-anomaly-detection-spectra-time-series--maps-"><a class="header" href="#hour-9-10-domain-specific-anomaly-detection-spectra-time-series--maps-"><strong>Hour 9-10: Domain-Specific Anomaly Detection: Spectra, Time Series &amp; Maps</strong> 🛰️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Develop specialized anomaly detection techniques for the unique data types in soil science.</li>
+<li>Build a neural network autoencoder to detect anomalous soil spectra.</li>
+<li>Apply anomaly detection methods to time-series and geospatial data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>No One-Size-Fits-All Solution</strong>: The best DQ checks are tailored to the data's structure.</li>
+<li><strong>Anomalous Spectra (Module 4)</strong>: A "bad" spectrum might have a massive spike, a strange baseline, or be saturated. An <strong>autoencoder</strong> is a neural network trained to compress and then reconstruct its input. When trained only on "good" spectra, it will have a high reconstruction error for anomalous ones, making it an excellent anomaly detector.</li>
+<li><strong>Anomalous Time Series (Module 7)</strong>: Detecting sudden spikes, level shifts, or changes in variance in sensor data streams using algorithms designed for sequential data.</li>
+<li><strong>Anomalous Spatial Data (Module 6)</strong>: Finding a "spatial outlier"—a location whose value is wildly different from all of its geographic neighbors.</li>
+</ul>
+<p><strong>Deep Learning Lab:</strong></p>
+<ul>
+<li>Using TensorFlow or PyTorch, build and train a simple autoencoder on a dataset of soil MIR spectra.</li>
+<li>Create a function that calculates the mean squared reconstruction error for any new spectrum fed through the trained model.</li>
+<li>Test the function on a mix of "good" spectra and artificially created "bad" spectra (e.g., with a large spike added).</li>
+<li>Use the reconstruction error as an anomaly score to flag the bad spectra.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-supervised-methods-learning-from-past-mistakes-"><a class="header" href="#hour-11-12-supervised-methods-learning-from-past-mistakes-"><strong>Hour 11-12: Supervised Methods: Learning from Past Mistakes</strong> 🧠</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Frame data quality checking as a supervised machine learning problem when labels are available.</li>
+<li>Implement techniques to handle the severe class imbalance inherent in anomaly detection.</li>
+<li>Build a classifier to predict if a sample is likely erroneous based on historical data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Using Labeled Data</strong>: Often, a lab will have historical records of known errors (e.g., "this batch was contaminated," "this instrument was miscalibrated"). This labeled data is gold.</li>
+<li><strong>The Imbalance Problem</strong>: In any DQ dataset, 99.9% of samples will be "normal" and 0.1% will be "anomalous." Standard classifiers will fail, achieving high accuracy by simply predicting "normal" every time.</li>
+<li><strong>Techniques for Imbalanced Learning</strong>:
+<ul>
+<li><strong>Resampling</strong>: SMOTE (Synthetic Minority Over-sampling TEchnique) to create more examples of the rare class.</li>
+<li><strong>Algorithmic</strong>: Using models with <code>class_weight</code> parameters (like Random Forest, SVM) to penalize misclassifications of the minority class more heavily.</li>
+</ul>
+</li>
+<li><strong>Choosing the Right Metrics</strong>: Accuracy is useless. We will focus on <strong>Precision, Recall, F1-Score</strong>, and the <strong>AUC-PR</strong> (Area Under the Precision-Recall Curve).</li>
+</ul>
+<p><strong>Classification Lab:</strong></p>
+<ul>
+<li>You are given a soil dataset with a small number of samples pre-labeled as "error."</li>
+<li>Train a Gradient Boosting classifier (like LightGBM or XGBoost) on this data.</li>
+<li>Implement both SMOTE and class weighting to handle the imbalance.</li>
+<li>Evaluate the models using a Precision-Recall curve and select the best-performing model based on its F1-score.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-building-a-production-data-quality-pipeline-"><a class="header" href="#hour-13-14-building-a-production-data-quality-pipeline-"><strong>Hour 13-14: Building a Production Data Quality Pipeline</strong> 🏭</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a multi-stage, automated data quality pipeline architecture.</li>
+<li>Integrate DQ checks into a version-controlled workflow (DVC).</li>
+<li>Create a "human-in-the-loop" feedback system for continuous improvement.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Automated DQ Architecture</strong>:
+<ol>
+<li><strong>Ingestion</strong>: New data arrives in the data lake's "landing" zone.</li>
+<li><strong>DQ Job</strong>: A scheduled Kubernetes Job triggers a containerized application that runs a suite of DQ checks.</li>
+<li><strong>The Suite</strong>: The job runs SPC, univariate checks, an Isolation Forest model, and the spectral autoencoder in sequence.</li>
+<li><strong>Tag &amp; Route</strong>: Each row/sample is enriched with a JSON column containing DQ flags. Based on the severity of the flags, the entire record is routed to one of three locations: a <code>clean</code> table, a <code>quarantine</code> table, or a <code>rejected</code> table.</li>
+</ol>
+</li>
+<li><strong>The Feedback Loop</strong>: Data in the <code>quarantine</code> table is surfaced to a data steward via a dashboard. The steward's decision ("this is a real error" or "this is a valid but unusual sample") is logged and used as new labeled data to retrain the supervised models.</li>
+</ul>
+<p><strong>Pipeline Engineering Sprint:</strong></p>
+<ul>
+<li>Using the DVC framework from Module 8, create a <code>dvc.yaml</code> that defines a two-stage pipeline.</li>
+<li><strong>Stage 1 (<code>generate_data</code>)</strong>: A script that produces a new batch of messy data.</li>
+<li><strong>Stage 2 (<code>run_dq_checks</code>)</strong>: A Python script that takes the raw data as input. It runs at least two of the DQ methods learned in this course. It produces two outputs: <code>clean_data.csv</code> and <code>quarantined_data.csv</code>.</li>
+<li>Run <code>dvc repro</code> to execute the full pipeline.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-the-automated-daily-data-audit-system-"><a class="header" href="#hour-15-capstone-the-automated-daily-data-audit-system-"><strong>Hour 15: Capstone: The Automated Daily Data Audit System</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are the lead MLOps engineer responsible for the integrity of a national soil data repository. Every day, you receive a batch of data from dozens of collaborating labs. Your task is to build the automated system that audits this data and decides whether to accept it.</p>
+<p><strong>The Mission:</strong>
+You will build a Python application that simulates the daily audit for an incoming batch of data. The data includes both unknown samples and measurements of a Certified Reference Material (CRM).</p>
+<p><strong>The Audit Pipeline Must:</strong></p>
+<ol>
+<li><strong>Check for Process Stability (SPC)</strong>: First, analyze the new CRM measurement. If it causes the lab's SPC chart to go into an "out-of-control" state, the <em>entire batch</em> is immediately flagged for quarantine, and no further checks are run.</li>
+<li><strong>Find Univariate Errors</strong>: If the process is stable, apply robust (Modified Z-score) checks to all numerical columns in the unknown sample data.</li>
+<li><strong>Find Multivariate Anomalies</strong>: Apply a pre-trained Isolation Forest model to the data to find unusual combinations of properties.</li>
+<li><strong>Generate a Quality Report</strong>: The final output must be a single, clear markdown report that includes:
+<ul>
+<li>The status of the SPC check (e.g., "PASS: CRM within control limits").</li>
+<li>A table listing any samples that failed univariate checks and which rules they violated.</li>
+<li>A table listing the top 5 most anomalous samples identified by the Isolation Forest model.</li>
+<li>A final, automated recommendation: <strong>"ACCEPT"</strong>, <strong>"ACCEPT_WITH_WARNINGS"</strong> (if some anomalies are found), or <strong>"QUARANTINE"</strong> (if the SPC check fails).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A complete, documented Python script that implements the entire audit pipeline.</li>
+<li>The generated markdown report for a sample input batch.</li>
+<li>A short, reflective essay on how you would implement the "human-in-the-loop" feedback mechanism and use the quarantined data to make the ML-based checks more intelligent over time.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The logical correctness and robustness of the multi-stage audit pipeline.</li>
+<li>The correct application of both SPC and unsupervised ML techniques.</li>
+<li>The clarity, conciseness, and actionability of the final generated report.</li>
+<li>The strategic thinking demonstrated in the essay on continuous improvement.</li>
+</ul>
 
                     </main>
 

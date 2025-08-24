@@ -157,6 +157,227 @@
                     <main>
                         <h1 id="module-19-distributed-computing-for-soil-process-simulation"><a class="header" href="#module-19-distributed-computing-for-soil-process-simulation"><strong>Module 19: Distributed Computing for Soil Process Simulation</strong></a></h1>
 <p>Parallelize computationally intensive soil models using MPI and distributed frameworks. Handle load balancing for heterogeneous workloads across HPC clusters.</p>
+<p>The course objective is to parallelize and scale computationally intensive soil process models for execution on High-Performance Computing (HPC) clusters. Students will master both high-level distributed frameworks like Dask for data parallelism and the low-level Message Passing Interface (MPI) for tightly-coupled model parallelism. A key focus will be on designing and implementing load-balancing strategies to handle the heterogeneous workloads characteristic of real-world soil simulations.</p>
+<p>This module provides the computational horsepower for the physics-based modeling aspects of the curriculum. While Module 14 focused on cloud-native infrastructure for data-driven ML, this module tackles the different but equally critical challenge of large-scale scientific simulation. The ability to run complex models of water flow, nutrient cycling, and carbon dynamics in parallel is essential for creating the synthetic data for <strong>Physics-Informed Neural Networks</strong> (Module 53) and for running the large-scale "what-if" scenarios needed for <strong>Policy Decision Support Tools</strong> (Module 88).</p>
+<hr />
+<h3 id="hour-1-2-the-computational-wall-why-and-when-to-go-parallel-"><a class="header" href="#hour-1-2-the-computational-wall-why-and-when-to-go-parallel-"><strong>Hour 1-2: The Computational Wall: Why and When to Go Parallel</strong> 🧱</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Differentiate between data parallelism and model parallelism.</li>
+<li>Understand the architectural differences between a cloud-native K8s cluster and a traditional HPC cluster.</li>
+<li>Analyze a soil simulation problem and determine the appropriate parallelization strategy.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Simulation Bottleneck</strong>: Many critical soil models (e.g., HYDRUS for water flow, DNDC for biogeochemistry) are too slow or memory-intensive to run for large areas or long time periods on a single computer.</li>
+<li><strong>Two Flavors of Parallelism</strong>:
+<ul>
+<li><strong>Data Parallelism (Pleasingly Parallel)</strong>: Running the <em>same model</em> thousands of times with different inputs (e.g., different climate scenarios, different soil types). This is like having thousands of researchers working independently.</li>
+<li><strong>Model Parallelism (Tightly Coupled)</strong>: Splitting a <em>single, large simulation</em> across many computers that must constantly communicate. This is like a large team of researchers that needs to have meetings every five minutes.</li>
+</ul>
+</li>
+<li><strong>HPC vs. Cloud</strong>: A comparison of the two dominant paradigms for large-scale computing.
+<ul>
+<li><strong>HPC (Slurm/PBS)</strong>: Optimized for long-running, tightly-coupled jobs with high-speed interconnects.</li>
+<li><strong>Cloud (Kubernetes)</strong>: Optimized for services, elasticity, and fault tolerance.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Conceptual Design Lab:</strong></p>
+<ul>
+<li>You are given two tasks:
+<ol>
+<li>A Monte Carlo analysis that requires running a soil carbon model 10,000 times with different randomized parameters.</li>
+<li>A high-resolution 3D simulation of water infiltrating a single, large field plot.</li>
+</ol>
+</li>
+<li>For each task, you must design a parallelization strategy, choose the appropriate paradigm (data vs. model parallelism), and justify whether an HPC cluster or a Kubernetes cluster would be a better fit.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-easy-wins-data-parallelism-with-dask-"><a class="header" href="#hour-3-4-easy-wins-data-parallelism-with-dask-"><strong>Hour 3-4: Easy Wins: Data Parallelism with Dask</strong> 🚀</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the core concepts of Dask: lazy evaluation and task graphs.</li>
+<li>Use <code>dask.delayed</code> to parallelize existing, single-threaded Python code with minimal changes.</li>
+<li>Visualize a parallel computation using the Dask dashboard.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Dask: Parallel Python in Python</strong>: A native Python library for distributed computing that integrates seamlessly with libraries like NumPy, pandas, and scikit-learn.</li>
+<li><strong>The Power of Laziness</strong>: Dask builds a graph of all the computations you <em>want</em> to do, and only executes it when you explicitly ask for the result. This allows it to optimize the entire workflow.</li>
+<li><strong>The <code>@dask.delayed</code> Decorator</strong>: The magic wand for custom functions. By adding this single line of code to your existing soil simulation function, you can instantly turn it into a building block for a parallel Dask graph, without needing to rewrite the function's internal logic.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Take a simple (but artificially slow) Python function that simulates one year of soil organic matter decomposition.</li>
+<li>Write a standard <code>for</code> loop to run this simulation for 100 different soil plots, and time it.</li>
+<li>Now, using <code>dask.delayed</code> and a Dask <code>LocalCluster</code>, rewrite the loop to build a list of delayed tasks.</li>
+<li>Execute the tasks in parallel with <code>dask.compute()</code> and time the result.</li>
+<li>Use the Dask dashboard (available at <code>localhost:8787</code>) to watch the tasks being executed across all your CPU cores.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-the-hard-core-introduction-to-the-message-passing-interface-mpi-"><a class="header" href="#hour-5-6-the-hard-core-introduction-to-the-message-passing-interface-mpi-"><strong>Hour 5-6: The Hard Core: Introduction to the Message Passing Interface (MPI)</strong> 💬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the MPI programming model of communicating sequential processes.</li>
+<li>Write a basic <code>mpi4py</code> application that uses rank and size.</li>
+<li>Implement fundamental point-to-point communication with <code>send</code> and <code>recv</code>.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>When You Need Full Control</strong>: For model parallelism, where different parts of a simulation must precisely exchange information, high-level tools like Dask are not enough. We need direct control over the network messages.</li>
+<li><strong>MPI: The Lingua Franca of HPC</strong>: A standardized API for passing messages between processes running on different nodes of a cluster.</li>
+<li><strong>Core MPI Concepts</strong>:
+<ul>
+<li><strong>World / Communicator</strong>: The group of all processes working on a job.</li>
+<li><strong>Rank</strong>: The unique ID of a single process, from <code>0</code> to <code>N-1</code>.</li>
+<li><strong>Size</strong>: The total number of processes (<code>N</code>).</li>
+</ul>
+</li>
+<li><strong>Point-to-Point Communication</strong>:
+<ul>
+<li><code>comm.send(data, dest=rank)</code>: Send a Python object to a specific destination process.</li>
+<li><code>data = comm.recv(source=rank)</code>: Block and wait to receive an object from a specific source process.</li>
+</ul>
+</li>
+<li><strong>Running MPI Code</strong>: <code>mpiexec -n 8 python my_script.py</code></li>
+</ul>
+<p><strong>MPI "Hello, World!" Lab:</strong></p>
+<ul>
+<li>Write a Python script using <code>mpi4py</code>.</li>
+<li>The script will have each process get its rank and the world size.</li>
+<li>Each process will print a message like <code>"Hello from rank 3 of 8!"</code>.</li>
+<li>Then, implement a simple exchange: rank 0 will create a dictionary and send it to rank 1. Rank 1 will receive it and print its contents.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-model-parallelism-domain-decomposition--halo-exchange-"><a class="header" href="#hour-7-8-model-parallelism-domain-decomposition--halo-exchange-"><strong>Hour 7-8: Model Parallelism: Domain Decomposition &amp; Halo Exchange</strong> ⚃</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement the domain decomposition strategy to split a spatial problem across MPI processes.</li>
+<li>Understand the concept of "ghost cells" or "halo regions."</li>
+<li>Implement a halo exchange to communicate boundary conditions between neighboring processes.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Splitting the World</strong>: The most common pattern for parallelizing spatial simulations. If you have a 100x100 grid, you can give a 25x100 strip to each of 4 MPI processes.</li>
+<li><strong>The Boundary Problem</strong>: To calculate the next time step for a cell at the edge of its strip, a process needs to know the value of the cell in the neighboring strip (which is owned by another process).</li>
+<li><strong>The Halo Exchange</strong>: Each process allocates extra memory cells around its local domain—the "ghost cells" or "halo." Before each time step, processes engage in a highly choreographed <code>send</code> and <code>recv</code> dance to populate these halos with the data from their neighbors.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Implement a 1D domain decomposition for a simple heat diffusion model using <code>mpi4py</code>.</li>
+<li>Each MPI process will manage a sub-section of a 1D array representing a metal rod.</li>
+<li>The core of the lab is to write the halo exchange logic: each process <code>i</code> (except the ends) will send its leftmost cell to process <code>i-1</code> and its rightmost cell to process <code>i+1</code>, while simultaneously receiving data from them to populate its own halo.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-the-unbalanced-world-handling-heterogeneous-workloads-"><a class="header" href="#hour-9-10-the-unbalanced-world-handling-heterogeneous-workloads-"><strong>Hour 9-10: The Unbalanced World: Handling Heterogeneous Workloads</strong> ⚖️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Identify the causes and consequences of load imbalance in parallel simulations.</li>
+<li>Differentiate between static and dynamic load-balancing strategies.</li>
+<li>Implement a dynamic task-based approach to naturally balance workloads.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Straggler Problem</strong>: If one process is given a much harder piece of work (e.g., simulating a complex clay soil vs. a simple sand), all other processes will finish their work and sit idle, waiting for the one "straggler." This kills parallel efficiency.</li>
+<li><strong>Static Balancing</strong>: If you know the cost distribution beforehand, you can do a smarter domain decomposition, giving smaller regions to the processes that will simulate complex areas. This is difficult to get right.</li>
+<li><strong>Dynamic Balancing (The Manager/Worker Pattern)</strong>: A more robust approach. Break the problem into many small tasks. A "manager" process hands out tasks to "worker" processes. When a worker finishes, it requests a new task. This ensures that fast workers simply do more tasks, and no one sits idle. High-level frameworks like Dask and Ray have this built-in.</li>
+</ul>
+<p><strong>Dynamic Load Balancing Lab:</strong></p>
+<ul>
+<li>Create a Dask application where the work is a list of 1000 tasks.</li>
+<li>The runtime of each task will be drawn from a skewed distribution (e.g., a log-normal distribution), so some tasks are 10x longer than others.</li>
+<li>Use the Dask dashboard to visualize the execution. You will see that as soon as a worker core finishes a short task, the scheduler immediately gives it another one, ensuring all cores stay busy and the total job finishes as quickly as possible.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-running-on-a-cluster-the-slurm-scheduler-"><a class="header" href="#hour-11-12-running-on-a-cluster-the-slurm-scheduler-"><strong>Hour 11-12: Running on a Cluster: The Slurm Scheduler</strong> 🖥️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the role of a workload manager like Slurm in an HPC environment.</li>
+<li>Write a Slurm batch script to request resources and launch a parallel job.</li>
+<li>Use tools like <code>dask-jobqueue</code> to programmatically create Dask clusters on an HPC system.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Gatekeeper of the HPC</strong>: You don't just run code on an HPC cluster; you submit a "job" to a scheduler like Slurm, which decides when and where to run it.</li>
+<li><strong>The Slurm Batch Script</strong>: A shell script containing <code>#SBATCH</code> directives that request resources:
+<ul>
+<li><code>--nodes=4</code>: "I need 4 machines."</li>
+<li><code>--ntasks-per-node=32</code>: "I want to run 32 processes on each of those machines."</li>
+<li><code>--time=01:30:00</code>: "My job will run for at most 1 hour and 30 minutes."</li>
+</ul>
+</li>
+<li><strong>Launching Jobs</strong>: <code>sbatch my_script.sh</code> to submit, <code>squeue</code> to check status, <code>scancel</code> to kill.</li>
+<li><strong>Dynamic Clusters with <code>dask-jobqueue</code></strong>: A powerful library that lets your Python script act as a client that submits jobs to Slurm to start Dask workers, creating an elastic cluster tailored to your computation.</li>
+</ul>
+<p><strong>Slurm Lab:</strong></p>
+<ul>
+<li>Write a simple Slurm batch script (<code>#SBATCH ...</code>) that uses <code>mpiexec</code> to launch the MPI "Hello, World!" script from Hour 6.</li>
+<li>Then, write a Python script that uses <code>dask-jobqueue</code> to create a <code>SLURMCluster</code> object. The script will then connect a client to this cluster, run a simple Dask computation, and scale the cluster down.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-measuring-performance-scaling-and-profiling-"><a class="header" href="#hour-13-14-measuring-performance-scaling-and-profiling-"><strong>Hour 13-14: Measuring Performance: Scaling and Profiling</strong> ⏱️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Define and measure strong and weak scaling for a parallel application.</li>
+<li>Understand Amdahl's Law and the limits of parallel speedup.</li>
+<li>Use profiling tools to identify performance bottlenecks in parallel code.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Is It Worth It?</strong> We need to rigorously measure if our parallelization effort was successful.</li>
+<li><strong>Scaling Analysis</strong>:
+<ul>
+<li><strong>Strong Scaling</strong>: "I keep the problem size fixed and add more processors. How much faster does it get?"</li>
+<li><strong>Weak Scaling</strong>: "I increase the problem size and the number of processors together. Can I solve a 10x bigger problem with 10x the cores in the same amount of time?"</li>
+</ul>
+</li>
+<li><strong>Amdahl's Law</strong>: The fundamental theorem of parallel computing. The speedup of a program is ultimately limited by the fraction of the code that must be run serially.</li>
+<li><strong>Profiling</strong>: Identifying the slowest parts of your code. For MPI, this means identifying if the bottleneck is computation on the nodes or communication between them.</li>
+</ul>
+<p><strong>Performance Analysis Lab:</strong></p>
+<ul>
+<li>Take the 1D MPI heat diffusion code from the halo exchange lab.</li>
+<li>Run it on 1, 2, 4, 8, and 16 processes for a fixed problem size.</li>
+<li>For each run, record the total execution time.</li>
+<li>Plot the <strong>speedup</strong> (<code>Time(1) / Time(N)</code>) and <strong>efficiency</strong> (<code>Speedup / N</code>) as a function of the number of processes.</li>
+<li>Analyze the plot: Does it scale linearly? When does the efficiency start to drop off, and why?</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-parallelizing-a-heterogeneous-watershed-simulation-"><a class="header" href="#hour-15-capstone-parallelizing-a-heterogeneous-watershed-simulation-"><strong>Hour 15: Capstone: Parallelizing a Heterogeneous Watershed Simulation</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are given a single-threaded Python model that simulates nutrient transport across a 2D landscape. The landscape is defined by a grid, where each cell has a different soil type. The computational cost of the simulation is highly dependent on the soil type, with clay soils being 10 times slower to simulate than sandy soils. The model is too slow to run at the desired resolution.</p>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Analyze and Strategize</strong>: Examine the model's code. Is communication between adjacent grid cells required at every time step? Based on this, choose a parallelization strategy: a high-level, dynamic task-based approach (Dask) or a low-level, tightly-coupled domain decomposition (MPI). Write a clear justification for your choice.</li>
+<li><strong>Implement the Parallelization</strong>:
+<ul>
+<li><strong>If Dask</strong>: Decompose the landscape into many small, independent patches. Use <code>dask.delayed</code> to create a task graph. Dask's scheduler will handle the load balancing automatically.</li>
+<li><strong>If MPI</strong>: Implement a 2D domain decomposition and halo exchange. You must also implement a simple <strong>static load balancing</strong> scheme by giving smaller grid regions to the MPI ranks that will be handling the slow, clay-heavy areas.</li>
+</ul>
+</li>
+<li><strong>Deploy on a Cluster</strong>: Write a launch script (e.g., a Slurm batch script or a Python script using <code>dask-jobqueue</code>) to run your parallel simulation on a multi-node cluster environment.</li>
+<li><strong>Benchmark and Analyze</strong>: Perform a scaling analysis. Run the simulation on an increasing number of cores and measure the speedup. Create a plot to visualize the performance and efficiency of your parallel implementation.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>All documented Python code for the parallelized model.</li>
+<li>The launch script(s).</li>
+<li>A final report in a Jupyter Notebook or markdown format that includes:
+<ul>
+<li>Your justification for the chosen parallelization strategy.</li>
+<li>The scaling plot and a detailed analysis of its performance, including a discussion of any bottlenecks.</li>
+<li>A critical comparison of how your implementation specifically addressed the load-balancing challenge posed by the heterogeneous soil types.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The correctness and quality of the parallel implementation.</li>
+<li>The strategic justification for the chosen parallelization approach.</li>
+<li>The rigor and insight of the performance and scaling analysis.</li>
+<li>The effectiveness of the solution in handling the specified load-balancing problem.</li>
+</ul>
 
                     </main>
 

@@ -157,6 +157,242 @@
                     <main>
                         <h1 id="module-25-continuous-integration-for-scientific-model-development"><a class="header" href="#module-25-continuous-integration-for-scientific-model-development"><strong>Module 25: Continuous Integration for Scientific Model Development</strong></a></h1>
 <p>Set up CI/CD pipelines that automatically test models against new data, track performance metrics, and flag distribution shifts in incoming soil samples.</p>
+<p>The course objective is to automate the entire scientific machine learning lifecycle using Continuous Integration and Continuous Delivery (CI/CD) practices. Students will build pipelines in GitHub Actions that automatically validate data, train models, track performance metrics, and detect harmful shifts in data distributions. This capstone module for the Foundation Phase integrates all previous concepts to create a robust, reproducible, and rapidly iterating model development system.</p>
+<p>This is the engine of reproducibility for the entire program. It automates the versioning from Module 8, runs on the infrastructure from Module 14, tests against the benchmarks from Module 24, and ultimately delivers the validated models that will be served by the APIs in Module 20. This module operationalizes the <strong>Manifesto's</strong> call for a virtuous cycle between modeling and experimentation by creating a system where every proposed change is automatically and rigorously tested, ensuring that the project's models are always improving and always trustworthy.</p>
+<hr />
+<h3 id="hour-1-2-beyond-the-notebook-why-science-needs-cicd-"><a class="header" href="#hour-1-2-beyond-the-notebook-why-science-needs-cicd-"><strong>Hour 1-2: Beyond the Notebook: Why Science Needs CI/CD</strong> ⚙️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Differentiate between traditional software CI/CD and Continuous Machine Learning (CML).</li>
+<li>Articulate the key benefits of automating the ML workflow: speed, reliability, and reproducibility.</li>
+<li>Identify the triggers for a CML pipeline: code changes, data changes, and model changes.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Manual Workflow &amp; Its Perils</strong>: We'll start by diagramming a typical, manual ML workflow: a researcher clones a repo, changes a script, retrains a model in a Jupyter notebook, and manually reports the results. We will identify the many points of failure and non-reproducibility.</li>
+<li><strong>Continuous Integration (CI)</strong>: The practice of automatically testing every code change. Goal: The code is not broken.</li>
+<li><strong>Continuous Delivery (CD)</strong>: The practice of automatically deploying every validated change. Goal: The system is always deployable.</li>
+<li><strong>Continuous Machine Learning (CML)</strong>: The extension of these ideas to ML. A CML pipeline tests not just the code, but the <em>data</em> and the <em>model</em> as well. A pipeline can be triggered when new data arrives, not just when code is pushed.</li>
+</ul>
+<p><strong>Conceptual Lab:</strong></p>
+<ul>
+<li>Students will create a detailed flowchart comparing a manual ML experiment workflow to an automated CML workflow.</li>
+<li>They will label the specific steps where automation prevents common errors like "it worked on my machine," using the wrong data version, or forgetting to run a crucial evaluation step.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-cicd-workbench-introduction-to-github-actions-"><a class="header" href="#hour-3-4-the-cicd-workbench-introduction-to-github-actions-"><strong>Hour 3-4: The CI/CD Workbench: Introduction to GitHub Actions</strong> 🚀</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the core concepts of GitHub Actions: workflows, events, jobs, steps, and runners.</li>
+<li>Write a basic GitHub Actions workflow in YAML to automate a simple task.</li>
+<li>Interpret the logs and status checks of a workflow run in the GitHub UI.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>What is GitHub Actions?</strong> A powerful, integrated CI/CD platform built directly into GitHub.</li>
+<li><strong>Anatomy of a Workflow</strong>:
+<ul>
+<li><strong>Workflow</strong>: The top-level automated process, defined in a <code>.github/workflows/my-workflow.yaml</code> file.</li>
+<li><strong>Event</strong>: The trigger that starts the workflow (e.g., <code>on: [push, pull_request]</code>).</li>
+<li><strong>Job</strong>: A task that runs on a fresh virtual machine (<strong>runner</strong>).</li>
+<li><strong>Step</strong>: An individual command or a pre-packaged <strong>Action</strong> from the marketplace.</li>
+</ul>
+</li>
+<li><strong>The Marketplace Advantage</strong>: We can reuse actions built by the community for common tasks like checking out code, setting up Python, or caching dependencies.</li>
+</ul>
+<p><strong>"Hello, CI!" Lab:</strong></p>
+<ul>
+<li>Create a new GitHub repository.</li>
+<li>Add a simple Python script and a <code>pytest</code> test for it.</li>
+<li>Create a <code>.github/workflows/test-pipeline.yaml</code> file.</li>
+<li>This workflow will trigger on every push, check out the code, set up a Python environment, install dependencies from <code>requirements.txt</code>, and run <code>pytest</code>.</li>
+<li>Students will then push a change, watch the workflow run automatically, and see the green checkmark appear on their commit.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-connecting-to-data-dvc--cml-in-the-pipeline-"><a class="header" href="#hour-5-6-connecting-to-data-dvc--cml-in-the-pipeline-"><strong>Hour 5-6: Connecting to Data: DVC &amp; CML in the Pipeline</strong> 📦</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Solve the problem of accessing large, versioned datasets within a stateless CI runner.</li>
+<li>Integrate DVC commands into a GitHub Actions workflow.</li>
+<li>Use the CML (Continuous Machine Learning) open-source library to simplify the integration.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Stateless Runner Problem</strong>: The GitHub Actions runner is a blank slate. How does it get the 10GB of soil spectra needed to train our model? We can't store it in Git.</li>
+<li><strong>The DVC + CI Pattern</strong>:
+<ol>
+<li>The CI job checks out the Git repo, which contains the small <code>dvc.yaml</code> and <code>.dvc</code> files.</li>
+<li>The job then runs <code>dvc pull</code> to download the specific data version associated with that commit from our cloud storage.</li>
+<li>The job now has both the correct code and the correct data.</li>
+</ol>
+</li>
+<li><strong>CML: The Easy Button</strong>: An open-source toolkit and GitHub Action from the DVC team that streamlines this process. It handles setting up DVC, configuring cloud credentials securely, and provides functions for generating reports.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Take a DVC-managed project from a previous module.</li>
+<li>Create a GitHub Actions workflow that uses the <code>iterative/cml</code> action.</li>
+<li>The workflow will be triggered on a pull request, and its steps will:
+<ol>
+<li>Check out the code.</li>
+<li>Use the CML action to <code>dvc pull</code> the data.</li>
+<li>Run <code>dvc repro</code> to execute the entire data processing and training pipeline.</li>
+<li>Use a CML command to post a simple "✅ Pipeline successful!" comment back to the pull request.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-automated-model-evaluation--reporting-"><a class="header" href="#hour-7-8-automated-model-evaluation--reporting-"><strong>Hour 7-8: Automated Model Evaluation &amp; Reporting</strong> 📊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Automatically evaluate a newly trained model against a standardized benchmark dataset.</li>
+<li>Extract performance metrics from the pipeline run.</li>
+<li>Generate a rich, comparative report as a comment in a pull request.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>CI for Models</strong>: The goal is not just to see if the training script runs without error, but to answer the question: "Did this change make the model better or worse?"</li>
+<li><strong>The Evaluation Step</strong>: The CI pipeline must have a step that runs the newly trained model against the official benchmark test set we curated in Module 24.</li>
+<li><strong>Comparative Reporting with CML</strong>: This is the killer feature. CML can automatically find the performance metrics from the current run (in the pull request) and compare them to the metrics from the <code>main</code> branch.</li>
+<li><strong>Visual Reports</strong>: CML can also take image files (like a confusion matrix or a plot of feature importance) generated during the pipeline run and embed them directly into the pull request comment.</li>
+</ul>
+<p><strong>Reporting Lab:</strong></p>
+<ul>
+<li>Extend the previous lab's workflow.</li>
+<li>The <code>dvc repro</code> pipeline now generates a <code>metrics.json</code> file and a <code>confusion_matrix.png</code>.</li>
+<li>Add steps to the end of the CI workflow using CML functions:
+<ul>
+<li>Read the metrics file and generate a markdown table comparing the PR's metrics to the <code>main</code> branch's metrics.</li>
+<li>Publish the <code>confusion_matrix.png</code> and include it in the report.</li>
+</ul>
+</li>
+<li>Students will create a pull request, and see a rich, visual report automatically posted by the CML bot.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-detecting-data-drift-the-automated-quality-gate-"><a class="header" href="#hour-9-10-detecting-data-drift-the-automated-quality-gate-"><strong>Hour 9-10: Detecting Data Drift: The Automated Quality Gate</strong> 🌊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the concept of data distribution shift (or "data drift") as a major source of model failure.</li>
+<li>Implement a statistical test within a CI pipeline to detect drift between new data and a reference dataset.</li>
+<li>Configure the pipeline to fail or warn a user when significant drift is detected.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Silent Killer</strong>: Your model's code hasn't changed, but its performance in the real world is degrading. Why? The incoming data has changed. A lab may have changed an instrument, or new samples may be coming from a different geography.</li>
+<li><strong>Drift Detection as a CI Gate</strong>: We will add a new, early stage to our CI pipeline.
+<ol>
+<li><strong>Input</strong>: The new batch of data.</li>
+<li><strong>Reference</strong>: A "golden" dataset, typically the validation set the model was originally trained on.</li>
+<li><strong>Test</strong>: Perform statistical tests (e.g., <strong>Kolmogorov-Smirnov test</strong> for numerical features, <strong>Chi-Squared test</strong> for categorical features) to compare the distributions.</li>
+</ol>
+</li>
+<li><strong>Action</strong>: If the p-value from a test is below a threshold, the distributions are significantly different. The pipeline should then either fail, preventing a potentially bad model from being trained, or post a strong warning on the pull request.</li>
+</ul>
+<p><strong>Data Drift Lab:</strong></p>
+<ul>
+<li>Using a library like <code>scipy.stats</code> or the more specialized <code>evidently</code>, write a Python script <code>check_drift.py</code>.</li>
+<li>The script will take two CSV files (reference and new) as input and compare the distributions of a key soil property.</li>
+<li>It will exit with an error code if drift is detected.</li>
+<li>Integrate this script as the first step in your GitHub Actions workflow after pulling the data. Demonstrate that the pipeline passes for similar data but fails when you introduce a new dataset with a different distribution.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-the-model-registry-versioning-and-staging-models-"><a class="header" href="#hour-11-12-the-model-registry-versioning-and-staging-models-"><strong>Hour 11-12: The Model Registry: Versioning and Staging Models</strong> 📚</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the role of a Model Registry as the source of truth for trained model artifacts.</li>
+<li>Integrate the CI/CD pipeline with a registry like MLflow.</li>
+<li>Tag models with stages like "Staging" and "Production."</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Beyond a Pickle File</strong>: A production model is more than just a file; it's an artifact with versioning, metadata, metrics, and a link to the data and code that produced it. A <strong>Model Registry</strong> manages all of this.</li>
+<li><strong>MLflow as a Registry</strong>: We will use the open-source MLflow platform. It provides:
+<ul>
+<li><strong>Experiment Tracking</strong>: Logging parameters and metrics.</li>
+<li><strong>Model Artifact Storage</strong>: Storing the actual model files.</li>
+<li><strong>Model Versioning and Staging</strong>: A formal system for promoting models (e.g., from "Staging" to "Production").</li>
+</ul>
+</li>
+<li><strong>CI/CD Integration</strong>: The final step of a successful CI run on the <code>main</code> branch will be to automatically publish the newly trained model to the Model Registry and tag it as "Staging."</li>
+</ul>
+<p><strong>Registry Lab:</strong></p>
+<ul>
+<li>Set up a local MLflow server using Docker.</li>
+<li>Modify your DVC pipeline's training stage to also be an MLflow run, logging parameters and metrics.</li>
+<li>Add a final step to your GitHub Actions workflow for the <code>main</code> branch. This step will use the MLflow client library to register the model artifact produced by the DVC pipeline, creating "Version X" of the "Soil Carbon Model."</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-continuous-delivery-automating-deployment-to-kubernetes-"><a class="header" href="#hour-13-14-continuous-delivery-automating-deployment-to-kubernetes-"><strong>Hour 13-14: Continuous Delivery: Automating Deployment to Kubernetes</strong> 🚢</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a safe, progressive model deployment strategy.</li>
+<li>Differentiate between Continuous Delivery and Continuous Deployment.</li>
+<li>Automate the deployment of a model API service to a staging environment in Kubernetes.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Closing the Loop</strong>:
+<ul>
+<li><strong>Continuous Delivery</strong>: Every validated change is automatically deployed to a <em>staging/testing</em> environment. A human gives the final approval for production. (This is what we will build).</li>
+<li><strong>Continuous Deployment</strong>: Every validated change is automatically pushed all the way to <em>production</em>. (More advanced and risky).</li>
+</ul>
+</li>
+<li><strong>The GitOps Flow for Models</strong>:
+<ol>
+<li>A PR is merged to <code>main</code>.</li>
+<li>The CI pipeline runs, validates, and pushes a new model version to the Model Registry.</li>
+<li>A CD pipeline (e.g., a separate GitHub Actions workflow triggered by the first) then automatically deploys this new model to a <strong>staging Kubernetes cluster</strong>.</li>
+</ol>
+</li>
+<li><strong>Blue/Green Deployments</strong>: A safe deployment strategy where you deploy the new version alongside the old one, run final tests on it, and then switch the live traffic over.</li>
+</ul>
+<p><strong>Deployment Lab:</strong></p>
+<ul>
+<li>You will create a second GitHub Actions workflow, <code>deploy_staging.yaml</code>.</li>
+<li>This workflow will be triggered <em>only</em> on pushes to the <code>main</code> branch.</li>
+<li>Its job will be to:
+<ol>
+<li>Check out a separate repository containing the Kubernetes manifests for your API service.</li>
+<li>Fetch the latest "Staging" model version from the MLflow registry.</li>
+<li>Update the Kubernetes <code>deployment.yaml</code> to use the new model version tag.</li>
+<li>Commit the change to the manifest repository.</li>
+</ol>
+</li>
+<li>(This uses a GitOps approach, where changes to the Git repo automatically trigger a deployment tool like ArgoCD in the cluster).</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-the-soil-intelligence-continuous-validation-pipeline-"><a class="header" href="#hour-15-capstone-the-soil-intelligence-continuous-validation-pipeline-"><strong>Hour 15: Capstone: The "Soil Intelligence" Continuous Validation Pipeline</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are the lead MLOps engineer for the Soil Quality Foundation Models project. Your task is to build a comprehensive CI pipeline that serves as the central quality and validation gate for all proposed changes to a key model.</p>
+<p><strong>The Mission:</strong>
+You will start with a complete DVC-managed project for a soil property prediction model. You will create a single, powerful GitHub Actions workflow that is triggered on every pull request.</p>
+<p><strong>The Automated Workflow Must:</strong></p>
+<ol>
+<li><strong>Provision Runner and Data</strong>: Check out the code and use CML to pull the correct version of the data from cloud storage.</li>
+<li><strong>Validate Incoming Data</strong>: Run a <strong>data drift detection</strong> step. The pipeline must compare the distribution of the PR's training data to a trusted reference dataset and fail if a significant shift is detected.</li>
+<li><strong>Train and Evaluate Model</strong>: Run <code>dvc repro</code> to execute the full training and evaluation pipeline against the official benchmark test set.</li>
+<li><strong>Generate a Data-Driven PR Comment</strong>: The final and most critical step. The workflow must use CML to post a single, comprehensive comment on the pull request that includes:
+<ul>
+<li>A <strong>metrics comparison table</strong> showing the performance of the proposed model vs. the model on the <code>main</code> branch (e.g., "RMSE: 1.5 -&gt; 1.3 (-0.2)").</li>
+<li>An <strong>embedded plot</strong> showing the new model's prediction error distribution.</li>
+<li>A <strong>status badge</strong> from the data drift check (e.g., "✅ Data Drift Check: Passed").</li>
+</ul>
+</li>
+<li><strong>Enable Decision-Making</strong>: The report must be clear and concise enough for a project lead to look at it and make an immediate, informed decision to either <strong>approve</strong>, <strong>reject</strong>, or <strong>request changes</strong> for the pull request.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A GitHub repository containing the complete DVC project and the final, multi-stage GitHub Actions workflow YAML file.</li>
+<li>A link to a Pull Request in that repository where you have made a change, showing the final, rich report automatically generated by your pipeline.</li>
+<li>A short, written "Standard Operating Procedure" (SOP) for your team, explaining how they should interpret the automated report in a PR and what the criteria are for merging a change.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The correctness and robustness of the multi-stage GitHub Actions workflow.</li>
+<li>The successful integration of all key components: DVC, CML, data drift checks, and model evaluation.</li>
+<li>The quality, clarity, and utility of the final, automatically generated report on the pull request.</li>
+<li>The strategic thinking demonstrated in the SOP, showing an understanding of how CI/CD changes the human workflow of a scientific team.</li>
+</ul>
 
                     </main>
 

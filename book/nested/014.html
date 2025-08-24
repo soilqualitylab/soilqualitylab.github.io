@@ -157,6 +157,215 @@
                     <main>
                         <h1 id="module-14-cloud-native-architecture-for-soil-model-training"><a class="header" href="#module-14-cloud-native-architecture-for-soil-model-training"><strong>Module 14: Cloud-Native Architecture for Soil Model Training</strong></a></h1>
 <p>Design auto-scaling Kubernetes clusters optimized for soil model workloads. Balance CPU-intensive sequence analysis with GPU-accelerated spectral processing.</p>
+<p>The course objective is to design and manage elastic, cloud-native infrastructure capable of handling the diverse and demanding computational needs of training large-scale soil foundation models. Students will master Kubernetes to build auto-scaling clusters that can efficiently balance computationally intensive workloads, such as CPU-heavy metagenomic assemblies and GPU-accelerated deep learning for spectral analysis, ensuring both performance and cost-effectiveness.</p>
+<p>This module is the power plant of the <strong>Foundation Phase</strong>. It takes the containerized applications and pipelines from previous modules (especially Modules 5, 8, and 12) and provides a scalable, resilient, and reproducible environment in which to run them. The skills learned here are the direct prerequisite for the intensive <strong>Model Development Phase</strong>, providing the robust, on-demand compute resources needed to train the dozens of foundation models outlined in the curriculum.</p>
+<hr />
+<h3 id="hour-1-2-why-your-laptop-isnt-enough-intro-to-cloud-native--kubernetes-"><a class="header" href="#hour-1-2-why-your-laptop-isnt-enough-intro-to-cloud-native--kubernetes-"><strong>Hour 1-2: Why Your Laptop Isn't Enough: Intro to Cloud-Native &amp; Kubernetes</strong> ☁️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Articulate the need for elastic, on-demand computing for training large soil models.</li>
+<li>Understand the core principles of cloud-native architecture: containers and orchestration.</li>
+<li>Get hands-on with Kubernetes, the "operating system for the cloud," using <code>kubectl</code>.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Computational Cliff</strong>: Training a model like <code>SoilMetaGen</code> on terabytes of data requires more compute power than a single machine can provide. We need a way to harness a fleet of machines.</li>
+<li><strong>Containers as the Unit of Work (Docker Refresher)</strong>: How containers package our code (e.g., a Python training script and its dependencies) into a portable, reproducible unit.</li>
+<li><strong>Kubernetes (K8s) Core Concepts</strong>:
+<ul>
+<li><strong>Cluster</strong>: A set of worker machines, called <strong>Nodes</strong>.</li>
+<li><strong>Control Plane</strong>: The "brain" that manages the cluster.</li>
+<li><strong>Pod</strong>: The smallest deployable unit, consisting of one or more containers.</li>
+</ul>
+</li>
+<li><strong>Imperative vs. Declarative</strong>: We don't tell Kubernetes <em>how</em> to do something; we give it a YAML file describing the <em>desired state</em>, and it works to make it a reality.</li>
+</ul>
+<p><strong>Practical Exercise: Your First Deployment</strong></p>
+<ul>
+<li>Using a local Kubernetes environment like Minikube or Docker Desktop, you will:
+<ol>
+<li>Take a pre-built Docker image.</li>
+<li>Use the imperative command <code>kubectl create deployment</code> to deploy it.</li>
+<li>Use <code>kubectl get pods</code> to see your application running.</li>
+<li>Use <code>kubectl expose</code> to create a network service and access the application. This provides a tangible feel for interacting with a K8s cluster.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-challenge-balancing-cpu--gpu-workloads-"><a class="header" href="#hour-3-4-the-challenge-balancing-cpu--gpu-workloads-"><strong>Hour 3-4: The Challenge: Balancing CPU &amp; GPU Workloads</strong> 🧠💪</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Identify the different computational profiles of various soil modeling tasks.</li>
+<li>Design a Kubernetes cluster with heterogeneous hardware (CPU and GPU nodes).</li>
+<li>Use Kubernetes scheduling mechanisms to direct specific workloads to the appropriate hardware.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Tale of Two Workloads</strong>:
+<ul>
+<li><strong>CPU-Bound</strong>: Metagenomic assembly (Module 5), geospatial analysis (Module 6). These need many CPU cores and lots of RAM.</li>
+<li><strong>GPU-Bound</strong>: Deep learning on spectral data (Module 4), training transformer models (Module 51). These need powerful GPUs.</li>
+</ul>
+</li>
+<li><strong>Solution: Heterogeneous Node Pools</strong>: We'll design a cluster with a <code>cpu-pool</code> (many standard VMs) and a <code>gpu-pool</code> (fewer, more expensive VMs with GPUs attached).</li>
+<li><strong>Directing Traffic: Kubernetes Schedulers</strong>:
+<ul>
+<li><strong><code>nodeSelector</code></strong>: The simplest way to tell a pod to run on a node with a specific label (e.g., <code>hardware: gpu</code>).</li>
+<li><strong>Taints and Tolerations</strong>: A more robust method where we "taint" the expensive GPU nodes so that no pods can run on them <em>unless</em> they have a specific "toleration." This reserves the GPUs for only the jobs that need them.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>In a managed cloud Kubernetes environment (GKE, EKS, AKS):
+<ol>
+<li>Create two node pools: <code>general-purpose</code> and <code>gpu-enabled</code>.</li>
+<li>Write two <code>deployment.yaml</code> files.</li>
+<li>The first deploys a simple CPU-bound application and uses a <code>nodeSelector</code> to place it on the <code>general-purpose</code> pool.</li>
+<li>The second deploys an application using a CUDA base image and uses <code>taints</code> and <code>tolerations</code> to ensure it lands exclusively on the <code>gpu-enabled</code> pool.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-automatic-scaling-i-the-horizontal-pod-autoscaler-hpa-"><a class="header" href="#hour-5-6-automatic-scaling-i-the-horizontal-pod-autoscaler-hpa-"><strong>Hour 5-6: Automatic Scaling I: The Horizontal Pod Autoscaler (HPA)</strong> ↔️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the principle of scaling "out" (adding more pods) vs. scaling "up" (using a bigger machine).</li>
+<li>Implement the Horizontal Pod Autoscaler to automatically adjust the number of application replicas based on load.</li>
+<li>Stress-test a deployment to trigger an auto-scaling event.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Pay for What You Use</strong>: The core principle of cloud cost-effectiveness. We need to automatically add pods when our application is busy and remove them when it's idle.</li>
+<li><strong>The HPA Loop</strong>: The HPA controller periodically checks metrics (like CPU utilization) from the <strong>Metrics Server</strong>. If the average CPU across all pods is higher than the target, it adds more replicas. If it's lower, it removes them.</li>
+<li><strong>Defining the HPA</strong>: We'll create an <code>HPA.yaml</code> file that specifies the target deployment, the metric to monitor (e.g., <code>cpuAverageUtilization</code>), and the minimum/maximum number of replicas.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Deploy a sample web application that is intentionally CPU-intensive.</li>
+<li>Configure an HPA to maintain an average CPU utilization of 50%, with a range of 1 to 10 replicas.</li>
+<li>Use a load-testing tool (like <code>hey</code> or <code>wrk</code>) to generate traffic to the application's service.</li>
+<li>In a separate terminal, run <code>kubectl get hpa -w</code> and watch in real-time as the HPA detects the increased load and scales the number of pods from 1 up to 10, then scales them back down after the test.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-automatic-scaling-ii-the-cluster-autoscaler-ca-"><a class="header" href="#hour-7-8-automatic-scaling-ii-the-cluster-autoscaler-ca-"><strong>Hour 7-8: Automatic Scaling II: The Cluster Autoscaler (CA)</strong> ↕️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand what happens when there is no more room on existing nodes for new pods.</li>
+<li>Implement the Cluster Autoscaler to dynamically add or remove entire VMs (nodes) from the cluster.</li>
+<li>Observe the interplay between the HPA and the CA.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Next Level of Elasticity</strong>: The HPA can create more pods, but if the underlying nodes are full, the pods will be stuck in a "Pending" state. The Cluster Autoscaler solves this.</li>
+<li><strong>How it Works</strong>: The CA is a cloud-provider-specific component that watches for "Pending" pods. If it sees a pod that can't be scheduled due to a lack of resources, it makes an API call to the cloud provider (e.g., AWS, Google Cloud) to provision a new VM and add it to the cluster.</li>
+<li><strong>Scaling Down for Cost Savings</strong>: The CA is also responsible for identifying underutilized nodes, safely draining their pods onto other nodes, and then terminating the empty node to save money.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Using your cloud-based cluster, ensure the Cluster Autoscaler is enabled for your node pools.</li>
+<li>Re-run the load test from the previous lab, but this time configure the pod's CPU <code>request</code> to be very high (e.g., 90% of a single machine's CPU).</li>
+<li>When the HPA tries to scale up, the new pods will become "Pending."</li>
+<li>Watch in your cloud provider's console as the Cluster Autoscaler automatically provisions a new VM, adds it to the node pool, and the pending pods become "Running" on the new machine.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-running-batch-workloads-kubernetes-jobs--cronjobs-"><a class="header" href="#hour-9-10-running-batch-workloads-kubernetes-jobs--cronjobs-"><strong>Hour 9-10: Running Batch Workloads: Kubernetes Jobs &amp; CronJobs</strong> 🏃</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Differentiate between long-running services (<code>Deployments</code>) and finite tasks (<code>Jobs</code>).</li>
+<li>Write a Kubernetes <code>Job</code> manifest to run a model training script to completion.</li>
+<li>Schedule recurring tasks using <code>CronJobs</code>.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Services vs. Tasks</strong>: A web server is a service; it should run forever. A data preprocessing script or a model training run is a task; it should run once and then terminate successfully. Using a <code>Deployment</code> for a task is an anti-pattern.</li>
+<li><strong>The <code>Job</code> Object</strong>: A K8s object that creates one or more pods and ensures they run to successful completion. You can configure retries and parallelism.</li>
+<li><strong>The <code>CronJob</code> Object</strong>: This object creates <code>Jobs</code> on a repeating schedule, defined using the classic cron syntax (e.g., <code>0 5 * * *</code> for 5 AM daily). This is perfect for daily data ingestion or model retraining pipelines.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Create a simple Docker container that simulates a training script (e.g., it prints "Training...", sleeps for 60 seconds, and then prints "Training complete!" before exiting).</li>
+<li>Write a <code>job.yaml</code> file to run this container as a K8s Job. Use <code>kubectl</code> to apply it, watch the pod run to completion, and inspect the logs.</li>
+<li>Wrap the <code>Job</code> in a <code>cronjob.yaml</code> manifest that is scheduled to run every two minutes. Apply it and watch as Kubernetes automatically creates new jobs on schedule.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-persistent-storage-for-data--models-"><a class="header" href="#hour-11-12-persistent-storage-for-data--models-"><strong>Hour 11-12: Persistent Storage for Data &amp; Models</strong> 💾</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why pod storage is ephemeral and the need for persistent storage solutions.</li>
+<li>Use <code>PersistentVolumeClaims</code> (PVCs) and <code>PersistentVolumes</code> (PVs) to attach durable cloud storage to pods.</li>
+<li>Learn how to access large datasets from cloud object storage (e.g., S3, GCS).</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Stateless Pod</strong>: Pods are designed to be cattle, not pets. When a pod is deleted, its internal filesystem is destroyed.</li>
+<li><strong>The PV/PVC Abstraction</strong>: A developer requests storage with a <code>PersistentVolumeClaim</code> (e.g., "I need 100GB of fast storage"). An administrator provides the storage with a <code>PersistentVolume</code> (e.g., an AWS EBS Volume or a Google Persistent Disk) that satisfies the claim. This decouples the application from the underlying storage technology.</li>
+<li><strong>Accessing the Data Lake</strong>: For the petabyte-scale datasets used in our foundation models, we don't copy the data. We use a <strong>Container Storage Interface (CSI) driver</strong> to mount the object storage bucket directly into the pod's filesystem, providing high-speed, scalable access.</li>
+</ul>
+<p><strong>Storage Lab:</strong></p>
+<ol>
+<li>Define a <code>pvc.yaml</code> file to request 1GB of storage.</li>
+<li>Write a <code>pod.yaml</code> file for a pod that mounts the volume defined by this PVC.</li>
+<li>The pod's command will be <code>sh -c "echo 'Hello from persistent storage!' &gt; /data/hello.txt &amp;&amp; sleep 3600"</code>.</li>
+<li>After the pod is running, <code>kubectl exec</code> into it and verify the file exists.</li>
+<li>Delete the pod. Create a new pod that mounts the <em>same</em> PVC and verify that the <code>hello.txt</code> file is still there.</li>
+</ol>
+<hr />
+<h3 id="hour-13-14-orchestrating-ml-workflows-with-kubeflow-pipelines-"><a class="header" href="#hour-13-14-orchestrating-ml-workflows-with-kubeflow-pipelines-"><strong>Hour 13-14: Orchestrating ML Workflows with Kubeflow Pipelines</strong> 🌊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the need for a higher-level tool to manage multi-step ML pipelines.</li>
+<li>Learn the core concepts of Kubeflow Pipelines: Components, Pipelines, and Experiments.</li>
+<li>Build a simple, multi-step training pipeline and execute it on Kubernetes.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Beyond Single Jobs</strong>: A real ML workflow is a Directed Acyclic Graph (DAG) of tasks: download data -&gt; preprocess -&gt; featurize -&gt; train -&gt; evaluate -&gt; deploy.</li>
+<li><strong>Introduction to Kubeflow Pipelines</strong>: A platform for building and deploying portable, scalable ML workflows on Kubernetes.</li>
+<li><strong>Components</strong>: Each step in your pipeline is a self-contained "component," defined as a containerized application with specified inputs and outputs.</li>
+<li><strong>The Pipeline DSL</strong>: We'll use the Kubeflow Pipelines SDK for Python to define the pipeline's structure and the dependencies between components.</li>
+<li><strong>The Kubeflow UI</strong>: A web-based interface for uploading, running, and inspecting your ML experiments, providing full visibility and reproducibility.</li>
+</ul>
+<p><strong>Kubeflow Lab:</strong></p>
+<ul>
+<li>Write two simple Python functions: one for "preprocessing" and one for "training."</li>
+<li>Use the Kubeflow Pipelines SDK to convert these functions into reusable components.</li>
+<li>Define a Python script that creates a pipeline where the output of the preprocessing component is fed as an input to the training component.</li>
+<li>Compile the pipeline and upload it to a Kubeflow UI, then trigger a run and monitor its execution.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-an-elastic-heterogeneous-training-platform-"><a class="header" href="#hour-15-capstone-building-an-elastic-heterogeneous-training-platform-"><strong>Hour 15: Capstone: Building an Elastic, Heterogeneous Training Platform</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+Your mission is to build a single, unified, auto-scaling Kubernetes cluster capable of efficiently executing the two primary workloads for our soil modeling initiative: a large-scale, CPU-intensive data processing service and a GPU-intensive batch training job.</p>
+<p><strong>Your Infrastructure as Code Must:</strong></p>
+<ol>
+<li><strong>Provision the Cluster</strong>: Using Terraform or cloud-native CLI scripts, define and create a managed Kubernetes cluster with two auto-scaling node pools: a cost-effective <code>cpu-pool</code> (e.g., using spot instances) and an on-demand <code>gpu-pool</code>.</li>
+<li><strong>Configure for Workloads</strong>:
+<ul>
+<li>Deploy a multi-replica, CPU-bound "data API" service (simulated) using a <code>Deployment</code> and <code>Service</code>. Ensure it is scheduled only to the <code>cpu-pool</code>.</li>
+<li>Configure a <code>HorizontalPodAutoscaler</code> for this service.</li>
+<li>Deploy a GPU-intensive "model training" task (simulated) using a <code>Job</code>. Ensure it is scheduled only to the <code>gpu-pool</code>.</li>
+</ul>
+</li>
+<li><strong>Demonstrate Full Elasticity</strong>:
+<ul>
+<li><strong>Scenario 1 (GPU Job)</strong>: Start with 0 nodes in the <code>gpu-pool</code>. Submit the training <code>Job</code>. Watch the Cluster Autoscaler provision a GPU node, run the job to completion, and then terminate the expensive GPU node automatically.</li>
+<li><strong>Scenario 2 (CPU Service)</strong>: Start with 1 node in the <code>cpu-pool</code>. Subject the data API service to a high load. Watch the HPA scale up the pods, which then triggers the Cluster Autoscaler to add more CPU nodes to the pool. When the load stops, watch the entire system scale back down to its minimal state.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>All the infrastructure-as-code (Terraform/shell scripts) and Kubernetes YAML manifests in a Git repository.</li>
+<li>A screencast or detailed markdown report with screenshots that provides a narrative of the demonstration, showing the cluster metrics and node counts changing in response to the workloads.</li>
+<li>A final analysis of the Total Cost of Ownership (TCO) benefits of this elastic architecture compared to a statically provisioned cluster sized for peak load.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The correctness and elegance of the infrastructure and Kubernetes configurations.</li>
+<li>The successful and clear demonstration of both pod-level (HPA) and node-level (CA) auto-scaling for both CPU and GPU workloads.</li>
+<li>The quality of the documentation and the insight shown in the cost-benefit analysis.</li>
+</ul>
 
                     </main>
 

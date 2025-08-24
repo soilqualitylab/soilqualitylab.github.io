@@ -157,6 +157,218 @@
                     <main>
                         <h1 id="module-10-etl-for-legacy-soil-databases"><a class="header" href="#module-10-etl-for-legacy-soil-databases"><strong>Module 10: ETL for Legacy Soil Databases</strong></a></h1>
 <p>Extract and transform data from decades-old formats including punch cards, FORTRAN outputs, and scanned laboratory notebooks. Build OCR pipelines specialized for handwritten soil descriptions.</p>
+<p>The course objective to understand what is necessary to become a "data archaeologist," capable of resurrecting valuable soil information from decades-old, non-digital, and obscure formats. Students will build robust Extract, Transform, and Load (ETL) pipelines to handle mainframe outputs, scanned documents, and even punch cards. A key focus will be on developing specialized Optical Character Recognition (OCR) workflows to digitize handwritten laboratory notebooks and soil profile descriptions.</p>
+<p>This module confronts the "long tail" of data history. While previous modules focused on modern data streams, much of our understanding of long-term soil dynamics (e.g., carbon sequestration, pedogenesis) is locked away in archives. This module provides the critical, often painstaking, engineering skills needed to unlock this historical data, providing the essential long-term validation datasets required for the foundation models. It underscores the <strong>Manifesto's</strong> goal of reversing "millennia of soil destruction" by first understanding the data from past decades.</p>
+<hr />
+<h3 id="hour-1-2-the-soil-data-archaeologist-"><a class="header" href="#hour-1-2-the-soil-data-archaeologist-"><strong>Hour 1-2: The Soil Data Archaeologist 🕵️‍♀️</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Appreciate the immense scientific value locked in legacy soil datasets.</li>
+<li>Identify the common categories of archaic data formats, from physical media to mainframe text files.</li>
+<li>Frame the ETL process as a form of digital forensics and historical reconstruction.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Bother with Old Data?</strong> The irreplaceable value of long-term experiments (LTEs). We'll examine archives like the Rothamsted Research station (UK, since 1843) and the Morrow Plots (USA, since 1876), where historical data is the only ground truth for validating climate-scale soil models.</li>
+<li><strong>A Taxonomy of the Archaic</strong>:
+<ul>
+<li><strong>Physical Media</strong>: Punch cards, magnetic tapes.</li>
+<li><strong>Mainframe Outputs</strong>: Fixed-width text files, proprietary binary formats.</li>
+<li><strong>Analog Records</strong>: Scanned lab notebooks, handwritten field notes, printed reports, and soil survey maps.</li>
+</ul>
+</li>
+<li><strong>The ETL Philosophy for Legacy Data</strong>: This isn't just data entry; it's an exercise in interpretation, requiring domain knowledge, historical context, and defensive programming. We must preserve the original artifact while creating a modern, usable version.</li>
+</ul>
+<p><strong>Case Study Analysis:</strong></p>
+<ul>
+<li>Examine the data lifecycle of a major long-term soil survey.</li>
+<li>Trace how data for a single location was recorded in the 1960s (handwritten notes, typed reports), 1980s (mainframe database, fixed-width export), and 2000s (relational database). This highlights the need for a multi-faceted ETL strategy.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-decoding-the-mainframe-fortran--fixed-width-files-"><a class="header" href="#hour-3-4-decoding-the-mainframe-fortran--fixed-width-files-"><strong>Hour 3-4: Decoding the Mainframe: FORTRAN &amp; Fixed-Width Files</strong> ⌨️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Read and interpret FORTRAN <code>FORMAT</code> statements to understand fixed-width data layouts.</li>
+<li>Write Python scripts to parse fixed-width text files into structured dataframes.</li>
+<li>Handle common legacy data issues like implied decimal points and character-based nulls.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Rosetta Stone</strong>: Understanding the FORTRAN <code>FORMAT</code> statement (e.g., <code>FORMAT(I4, 2X, F8.2, A20)</code>). This is the metadata that defines the structure of the data.</li>
+<li><strong>The "Invisible" Structure</strong>: Fixed-width files have no delimiters. The column position is the only thing that defines the data. We'll learn to handle this rigid structure.</li>
+<li><strong>Legacy Quirks</strong>:
+<ul>
+<li><strong>Implied Decimals</strong>: A value <code>1234</code> with a <code>F4.2</code> format is actually <code>12.34</code>.</li>
+<li><strong>Null Values</strong>: Identifying and standardizing character-based nulls (e.g., <code>-999</code>, <code>9999</code>, <code>NA</code>).</li>
+<li><strong>Character Encoding</strong>: The EBCDIC vs. ASCII problem and how to detect and convert between them.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Given a real fixed-width soil dataset and its accompanying FORTRAN format description.</li>
+<li>Write a Python script using string slicing (or the <code>struct</code> module for a challenge) to parse the text file into a clean Pandas DataFrame, correctly handling data types, implied decimals, and null values.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-optical-character-recognition-ocr-fundamentals-"><a class="header" href="#hour-5-6-optical-character-recognition-ocr-fundamentals-"><strong>Hour 5-6: Optical Character Recognition (OCR) Fundamentals</strong> 📄</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the core principles of how OCR technology converts images of text into machine-readable text.</li>
+<li>Use off-the-shelf OCR engines like Tesseract and cloud-based services.</li>
+<li>Evaluate the accuracy and limitations of standard OCR on different types of soil science documents.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>How OCR Works</strong>: A conceptual overview of the pipeline: image preprocessing -&gt; layout analysis -&gt; character segmentation -&gt; character recognition -&gt; language modeling.</li>
+<li><strong>The OCR Toolkit</strong>:
+<ul>
+<li><strong>Tesseract</strong>: The leading open-source OCR engine.</li>
+<li><strong>Cloud Services</strong>: Google Cloud Vision, Amazon Textract, Azure Cognitive Services. We'll discuss their APIs, strengths (e.g., table recognition), and cost structures.</li>
+</ul>
+</li>
+<li><strong>The Document Spectrum</strong>: Analyzing why OCR performs well on a clean, typed lab report but struggles with a faded, handwritten field note with sketches and soil stains.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Take a high-quality scanned image of a <em>typed</em> soil analysis report.</li>
+<li>Process it using both the <code>pytesseract</code> Python library and a free tier of a cloud OCR service.</li>
+<li>Compare the raw text outputs. Analyze the accuracy, the preservation of formatting (tables, columns), and the ease of use of each tool.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-advanced-ocr-pipelines-for-structured-forms-"><a class="header" href="#hour-7-8-advanced-ocr-pipelines-for-structured-forms-"><strong>Hour 7-8: Advanced OCR: Pipelines for Structured Forms</strong> 📋</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Build a multi-stage pipeline for extracting data from structured, template-based documents.</li>
+<li>Use computer vision techniques to preprocess images for improved OCR accuracy.</li>
+<li>Implement "zonal OCR" to extract specific data points from known locations on a form.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Beyond "Dumping" Text</strong>: The goal isn't just to get the text; it's to get the <em>value</em> associated with the <em>field</em>.</li>
+<li><strong>The Zonal OCR Pipeline</strong>:
+<ol>
+<li><strong>Image Preprocessing (OpenCV)</strong>: Deskewing (straightening the image), binarization (converting to black and white), and noise removal.</li>
+<li><strong>Template Registration/Layout Analysis</strong>: Identifying the coordinates of key fields (e.g., the box labeled "Soil pH"). This can be done with static templates or simple computer vision.</li>
+<li><strong>Targeted Extraction</strong>: Running OCR only on the specific regions of interest (ROIs) identified in the previous step.</li>
+<li><strong>Data Structuring</strong>: Assembling the extracted key-value pairs into a clean JSON object or CSV row.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Using Python with <strong>OpenCV</strong> and <strong>Tesseract</strong>, build a script that:
+<ol>
+<li>Loads a scanned image of a standardized soil submission form.</li>
+<li>Applies automatic deskewing and thresholding.</li>
+<li>Given a predefined set of coordinates, extracts the text from only the "Organic Matter (%)" and "Sample ID" fields.</li>
+<li>Prints the structured result: <code>{'sample_id': 'AX-201', 'organic_matter_pct': 3.4}</code>.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-the-final-frontier-handwritten-text-recognition-htr-"><a class="header" href="#hour-9-10-the-final-frontier-handwritten-text-recognition-htr-"><strong>Hour 9-10: The Final Frontier: Handwritten Text Recognition (HTR)</strong> ✍️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why traditional OCR fails on handwriting and why deep learning models are necessary.</li>
+<li>Use pre-trained Transformer-based models for handwriting recognition.</li>
+<li>Scope the requirements for fine-tuning an HTR model on domain-specific scientific handwriting.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Handwriting is Not Print</strong>: The immense variability in character shapes, ligatures, and layouts makes handwriting an entirely different problem class.</li>
+<li><strong>The Transformer Revolution in OCR</strong>: Introducing modern models like Microsoft's <strong>TrOCR</strong> or other models from the Hugging Face Hub, which treat OCR as a sequence-to-sequence translation problem (image patches to text).</li>
+<li><strong>The Power of Fine-Tuning</strong>: A general-purpose HTR model may struggle with soil science jargon ("mottles," "platy," "friable") and specific symbols. We'll discuss how to create a small, labeled dataset to fine-tune a model, dramatically improving its accuracy for a specific archive (e.g., a particular scientist's notebooks).</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Select a pre-trained handwriting recognition model from the Hugging Face Hub.</li>
+<li>Use it to transcribe several examples of scanned handwritten soil profile descriptions.</li>
+<li>Analyze the errors. Note how the model often fails on domain-specific terms or unusual letter formations.</li>
+<li>Create a small "mock" dataset (5-10 labeled lines) and outline the steps you would take to fine-tune the model with it.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-the-t-in-etl-transforming--harmonizing-legacy-data-"><a class="header" href="#hour-11-12-the-t-in-etl-transforming--harmonizing-legacy-data-"><strong>Hour 11-12: The "T" in ETL: Transforming &amp; Harmonizing Legacy Data</strong> ✨</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design and implement robust data cleaning and validation rules for messy, extracted data.</li>
+<li>Build mapping dictionaries and rule-based systems to translate legacy terminology into modern, standardized codes.</li>
+<li>Structure the transformation logic to be maintainable and auditable.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>From Raw Text to Clean Data</strong>: The extracted data is a starting point, not an end product. It needs validation, type casting, and normalization.</li>
+<li><strong>Semantic Harmonization</strong>: The most difficult step. This involves translating the <em>meaning</em> of the old data.
+<ul>
+<li><strong>Unit Conversion</strong>: "lbs/acre" to "kg/ha".</li>
+<li><strong>Terminology Mapping</strong>: <code>{'sl l': 'sandy_loam', 's. loam': 'sandy_loam'}</code>.</li>
+<li><strong>Implicit Knowledge Extraction</strong>: A note saying "v. stony" might need to be converted to a quantitative <code>rock_fragment_pct</code> of <code>&gt;60%</code> based on historical soil survey manuals.</li>
+</ul>
+</li>
+<li><strong>The Transformation Toolkit</strong>: Using regular expressions, fuzzy string matching, and custom functions to systematically clean the data.</li>
+</ul>
+<p><strong>Data Cleaning Lab:</strong></p>
+<ul>
+<li>You are given a raw CSV file produced by an OCR process on handwritten notes. It's full of errors: <code>pH</code> is read as a string, <code>SOC</code> has values like <code>2..1</code> and <code>~3</code>, and <code>texture</code> is a free-text field with inconsistent abbreviations.</li>
+<li>Write a Python script using <code>pandas</code> and regular expressions to:
+<ol>
+<li>Clean and convert numeric columns to the correct data type, handling errors.</li>
+<li>Standardize the <code>texture</code> column using a mapping dictionary.</li>
+<li>Generate a report of all transformations applied, ensuring provenance.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-the-physical-archive-punch-cards--digitization-"><a class="header" href="#hour-13-14-the-physical-archive-punch-cards--digitization-"><strong>Hour 13-14: The Physical Archive: Punch Cards &amp; Digitization</strong> 🗃️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the historical context and data encoding of Hollerith punch cards.</li>
+<li>Conceptualize the physical-to-digital workflow for card-based archives.</li>
+<li>Write a program to decode a digital representation of a punch card.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Brief History of the Hole</strong>: How 80-column punch cards worked and became the dominant data storage medium for decades.</li>
+<li><strong>The Digitization Process</strong>: This is primarily a hardware and computer vision challenge. The process involves high-resolution scanning and then locating the presence/absence of holes in a grid.</li>
+<li><strong>The Hollerith Code</strong>: Understanding the mapping from punch positions in a column (zones 12, 11, 0 and digits 1-9) to specific characters.</li>
+<li><strong>Building a Virtual Card Reader</strong>: The logic for taking a binary representation of a card column and looking up the corresponding character.</li>
+</ul>
+<p><strong>Virtual Punch Card Reader Lab:</strong></p>
+<ul>
+<li>You are given a 2D NumPy array representing a scanned and binarized punch card (80 columns x 12 rows).</li>
+<li>You are also given a dictionary mapping the Hollerith punch codes to ASCII characters.</li>
+<li>Write a Python function that iterates through each column of the array, determines which positions are "punched," and uses the dictionary to decode the entire card into a human-readable string.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-resurrecting-the-north-meadow-experiment-1975-"><a class="header" href="#hour-15-capstone-resurrecting-the-north-meadow-experiment-1975-"><strong>Hour 15: Capstone: Resurrecting the North Meadow Experiment (1975)</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+A long-lost box from the university archives contains the complete data for a pivotal 1975 nitrogen fertilizer experiment. Your mission is to build a complete ETL pipeline to rescue this data and make it usable for modern analysis.</p>
+<p><strong>The Archive Contains:</strong></p>
+<ol>
+<li><strong>A Deck of Punch Cards</strong>: Containing the 80 plot IDs and their assigned fertilizer treatments (N0, N1, N2).</li>
+<li><strong>A Mainframe Printout</strong>: A fixed-width file containing crop yields for all 80 plots, with known null values and implied decimals.</li>
+<li><strong>A Scanned Lab Notebook</strong>: Handwritten notes from the lead technician with the final soil organic matter percentage for each plot at the end of the experiment. The handwriting is messy.</li>
+</ol>
+<p><strong>Your Integrated Pipeline Must:</strong></p>
+<ol>
+<li><strong>Decode the Treatments</strong>: Use your virtual punch card reader to create a plot-to-treatment mapping.</li>
+<li><strong>Parse the Yields</strong>: Use your fixed-width file parser to extract the crop yields.</li>
+<li><strong>Extract the Soil Data</strong>: Use a pre-trained HTR model to get a raw extraction of the soil organic matter data. <strong>Crucially, you must then perform a manual validation/correction step on the model's output</strong>, simulating the essential "human-in-the-loop" process.</li>
+<li><strong>Transform and Merge</strong>: Clean all three data sources, harmonize them using the plot ID, and produce a single, tidy CSV file with the columns: <code>plot_id</code>, <code>nitrogen_treatment</code>, <code>crop_yield_kg_ha</code>, <code>final_som_pct</code>.</li>
+<li><strong>Reflect</strong>: Write a short report detailing the challenges, the time spent on manual correction vs. automated processing, and the justification for your data cleaning decisions.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>The complete, documented Python pipeline code.</li>
+<li>The final, analysis-ready CSV dataset.</li>
+<li>The reflection report, emphasizing the importance of appreciating the effort involved in working with legacy data.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Successful implementation of all three distinct extraction methods.</li>
+<li>The robustness and quality of the data transformation and cleaning logic.</li>
+<li>The clarity and insight of the reflection report.</li>
+<li>The final dataset must be 100% clean, correct, and reproducible from the source artifacts.</li>
+</ul>
 
                     </main>
 

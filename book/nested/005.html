@@ -157,6 +157,195 @@
                     <main>
                         <h1 id="module-5-metagenomic-sequence-processing-at-scale"><a class="header" href="#module-5-metagenomic-sequence-processing-at-scale"><strong>Module 5: Metagenomic Sequence Processing at Scale</strong></a></h1>
 <p>Build bioinformatics pipelines optimized for soil's extreme diversity. Handle 10TB+ metagenomes, implement quality filtering for high-humic samples, and manage chimeric sequences from complex communities.</p>
+<p>The course objective is to build scalable, end-to-end bioinformatics pipelines specifically optimized for the extreme diversity and unique biochemical challenges of soil metagenomes. Students will master techniques to handle terabyte-scale datasets, implement robust quality control for samples with high humic acid content, and manage complex assembly artifacts like chimeric sequences.</p>
+<p>This module is a cornerstone of the <strong>Foundation Phase</strong>. It directly follows the establishment of data architecture (Module 2) and spectral processing (Module 4), and provides the clean, annotated biological data required to train powerful foundation models like <strong>SoilMetaGen</strong> and <strong>NitrogenCycler</strong>. Successfully processing this data is fundamental to the vision of transforming soil science from a descriptive to a predictive discipline.</p>
+<hr />
+<h3 id="hour-1-2-the-soil-metagenome-a-universe-of-challenges-"><a class="header" href="#hour-1-2-the-soil-metagenome-a-universe-of-challenges-"><strong>Hour 1-2: The Soil Metagenome: A Universe of Challenges</strong> 🌌</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why soil's microbial diversity is unparalleled and why this creates unique computational problems.</li>
+<li>Identify the major sources of error and bias in soil DNA sequencing.</li>
+<li>Conceptualize the storage and compute requirements for a 10TB+ metagenome project.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The "Long Tail" of Diversity</strong>: Soil ecosystems are characterized by a few dominant taxa and hundreds of thousands of rare ones. This extreme diversity leads to fragmented assemblies and makes genome reconstruction incredibly difficult.</li>
+<li><strong>The 10TB+ Problem</strong>: We'll map out the data lifecycle of a large soil project—from raw reads (terabytes) to assembled contigs (gigabytes) to annotated genes (megabytes)—and discuss the I/O and RAM bottlenecks at each stage.</li>
+<li><strong>Biochemical Interference</strong>: Focus on <strong>humic acids</strong>, natural polymers in soil that co-extract with DNA. They inhibit PCR enzymes and sequencing reactions, leading to low-quality reads, biased community representation, and failed sequencing runs.</li>
+<li><strong>The Chimera Problem</strong>: High diversity and PCR amplification can cause DNA fragments from different organisms to incorrectly join, creating artificial "chimeric" sequences that corrupt downstream analysis.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Analyze the metadata and species richness estimates from the Earth Microbiome Project and JGI's IMG/M database.</li>
+<li>Write a script to plot a rank-abundance curve for a soil sample versus a human gut sample to visually demonstrate the difference in diversity.</li>
+<li>Calculate the projected cloud storage and compute costs for a hypothetical 10TB soil metagenomics project.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-raw-read-quality-control--filtering-"><a class="header" href="#hour-3-4-raw-read-quality-control--filtering-"><strong>Hour 3-4: Raw Read Quality Control &amp; Filtering</strong> 💧</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Master the use of standard bioinformatics tools for cleaning raw sequencing reads.</li>
+<li>Develop a filtering strategy specifically for low-quality, humic-rich samples.</li>
+<li>Remove contaminating host DNA from soil datasets.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Reading the Tea Leaves of FASTQ</strong>: A deep dive into Phred quality scores and how to interpret them in the context of soil data.</li>
+<li><strong>The QC Toolkit</strong>: Using industry-standard tools like <strong>FastQC</strong> for diagnostics and <strong>fastp</strong> or <strong>Trimmomatic</strong> for:
+<ul>
+<li>Adapter trimming.</li>
+<li>Quality-score based trimming and filtering.</li>
+<li>Length filtering.</li>
+</ul>
+</li>
+<li><strong>Strategy for High-Humic Samples</strong>: Instead of discarding entire low-quality datasets, we'll learn adaptive trimming strategies that salvage usable reads while aggressively removing error-prone regions.</li>
+<li><strong>Decontamination</strong>: Techniques for identifying and removing non-microbial DNA (e.g., from plant roots or soil fauna) by mapping reads to a host genome.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Run <strong>FastQC</strong> on a raw soil metagenome dataset known to have humic acid contamination.</li>
+<li>Use <strong>fastp</strong> to implement a multi-step cleaning process: adapter removal, stringent quality trimming, and length filtering.</li>
+<li>Compare the "before" and "after" FastQC reports to quantify the improvements and justify the parameter choices.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-assembly-at-scale-from-reads-to-contigs-"><a class="header" href="#hour-5-6-assembly-at-scale-from-reads-to-contigs-"><strong>Hour 5-6: Assembly at Scale: From Reads to Contigs</strong> 🧩</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the principles of De Bruijn graph assembly.</li>
+<li>Select the appropriate assembly strategy (co-assembly vs. individual).</li>
+<li>Implement computational strategies to make terabyte-scale assembly feasible.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Metagenome Assemblers</strong>: Focus on tools built for complexity, such as <strong>MEGAHIT</strong> and <strong>metaSPAdes</strong>. We'll discuss how their algorithms are designed to handle uneven coverage and high diversity.</li>
+<li><strong>The Memory Wall</strong>: Why assembling a 10TB dataset can require terabytes of RAM, and why this is often the single biggest bottleneck.</li>
+<li><strong>Taming the Beast</strong>:
+<ul>
+<li><strong>Digital Normalization</strong>: A crucial pre-step to discard redundant, high-coverage reads and reduce the dataset size and complexity before assembly.</li>
+<li><strong>Workflow Managers</strong>: Using <strong>Nextflow</strong> or <strong>Snakemake</strong> to script and automate the entire QC-and-assembly process, making it reproducible and scalable.</li>
+<li><strong>Cloud Architectures</strong>: Designing a cloud environment (AWS, GCP) with high-memory instances and parallel file systems to handle the workload.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Write a <strong>Nextflow</strong> pipeline that automates the workflow from raw reads to assembled contigs, incorporating QC and digital normalization.</li>
+<li>Execute the pipeline on a small sample dataset locally.</li>
+<li>Modify the pipeline's configuration file to enable its deployment on a cloud or HPC cluster, specifying resource requirements (CPU, RAM) for each step.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-post-assembly-cleanup-hunting-for-chimeras--artifacts-"><a class="header" href="#hour-7-8-post-assembly-cleanup-hunting-for-chimeras--artifacts-"><strong>Hour 7-8: Post-Assembly Cleanup: Hunting for Chimeras &amp; Artifacts</strong> 🔬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement algorithms to detect and remove chimeric contigs.</li>
+<li>Screen assemblies for lab-derived contaminants.</li>
+<li>Understand how to validate the structural integrity of an assembly.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Chimera Detection</strong>: Using tools like <strong>VSEARCH</strong> and <strong>UCHIME</strong> which identify sequences that appear to be stitched together from two or more distinct phylogenetic lineages.</li>
+<li><strong>Contaminant Screening</strong>: A systematic process of using <strong>BLAST</strong> or <strong>DIAMOND</strong> to search assembled contigs against databases of common lab contaminants, such as cloning vectors and PhiX (a control used in Illumina sequencing).</li>
+<li><strong>Assembly Metrics</strong>: Moving beyond simple N50 values to evaluate an assembly's quality using read-mapping validation (how many of the original reads map back to the assembly?).</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Take a raw metagenome assembly and use <strong>VSEARCH</strong> to identify and flag potential chimeric contigs.</li>
+<li>Run a BLAST search against a vector database to find and remove any contigs that are lab artifacts.</li>
+<li>Map the original QC'd reads back to the cleaned assembly using <strong>BWA-MEM</strong> and calculate the mapping percentage as a measure of assembly success.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-gene-prediction--functional-annotation-"><a class="header" href="#hour-9-10-gene-prediction--functional-annotation-"><strong>Hour 9-10: Gene Prediction &amp; Functional Annotation</strong> 🧬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Identify protein-coding genes within the assembled contigs.</li>
+<li>Assign putative functions to genes using large-scale sequence homology searches.</li>
+<li>Summarize the metabolic potential of the entire microbial community.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Finding the Genes</strong>: Using <strong>Prodigal</strong>, an unsupervised gene prediction tool optimized for metagenomic data.</li>
+<li><strong>The Annotation Cascade</strong>: A tiered approach to annotation:
+<ol>
+<li><strong>Fast Homology Search</strong>: Use <strong>DIAMOND</strong> to search predicted proteins against comprehensive databases like <strong>KEGG</strong> or <strong>RefSeq</strong>.</li>
+<li><strong>Domain/Family Search</strong>: Use <strong>HMMER</strong> to search for conserved protein domains in databases like <strong>Pfam</strong>. This can often assign function even when a full-length match isn't found.</li>
+</ol>
+</li>
+<li><strong>Pathway Reconstruction</strong>: Mapping annotated genes to metabolic pathway maps (like those in KEGG) to understand the community's collective capabilities (e.g., "Does this soil have the genes for denitrification?").</li>
+</ul>
+<p><strong>Bioinformatics Lab:</strong></p>
+<ul>
+<li>Use <strong>Prodigal</strong> to predict protein sequences from a set of assembled contigs.</li>
+<li>Annotate the proteins using <strong>DIAMOND</strong> against the <strong>KEGG</strong> database.</li>
+<li>Write a Python script to parse the DIAMOND output and generate a summary table counting the number of genes in each major metabolic pathway.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-reconstructing-genomes-from-the-mix-metagenome-assembled-genomes-"><a class="header" href="#hour-11-12-reconstructing-genomes-from-the-mix-metagenome-assembled-genomes-"><strong>Hour 11-12: Reconstructing Genomes from the Mix (Metagenome-Assembled Genomes)</strong> 👾</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the concept of metagenomic "binning".</li>
+<li>Use leading software to cluster contigs into putative genomes (MAGs).</li>
+<li>Assess the quality of the reconstructed MAGs.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Binning Principle</strong>: Grouping contigs that likely belong to the same organism. This is done by clustering contigs with similar <strong>sequence composition</strong> (k-mer frequencies) and <strong>coverage patterns</strong> across multiple samples.</li>
+<li><strong>The Binning Trio</strong>: <strong>MetaBAT2</strong>, <strong>MaxBin2</strong>, and <strong>CONCOCT</strong> are popular binning algorithms. We'll learn how to use them and then reconcile their results with a tool like <strong>DAS Tool</strong>.</li>
+<li><strong>Quality Control is Everything</strong>: Using <strong>CheckM</strong> to evaluate the quality of MAGs. CheckM scans for a set of universal single-copy marker genes to estimate a MAG's <strong>completeness</strong> and <strong>contamination</strong>. A high-quality MAG might be &gt;90% complete with &lt;5% contamination.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Use <strong>MetaBAT2</strong>, along with coverage depth information, to bin an assembly into dozens or hundreds of MAGs.</li>
+<li>Run <strong>CheckM</strong> on the resulting MAGs.</li>
+<li>Filter the MAGs based on the CheckM report to create a final set of high-quality genomes for further analysis.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-taxonomic-classification-whos-there-"><a class="header" href="#hour-13-14-taxonomic-classification-whos-there-"><strong>Hour 13-14: Taxonomic Classification: Who's There?</strong> 🌳</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Assign robust taxonomic labels to reconstructed MAGs.</li>
+<li>Classify raw reads for a quick, assembly-free overview of the community.</li>
+<li>Appreciate the challenges of taxonomy in a domain where most species are uncultured.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Gold Standard for MAGs</strong>: Using <strong>GTDB-Tk</strong>, which uses a curated set of marker genes and a reference taxonomy (the Genome Taxonomy Database) to provide highly accurate and standardized classifications for MAGs.</li>
+<li><strong>The "Good Enough" Standard for Reads</strong>: Using <strong>Kraken2</strong>, a very fast k-mer based classifier that can assign taxonomy to millions of raw reads in minutes, providing a rapid snapshot of community composition.</li>
+<li><strong>"Unclassified" is an Answer</strong>: Recognizing that in soil, a large fraction of sequences will not match anything in current databases, highlighting the novelty and discovery potential.</li>
+</ul>
+<p><strong>Taxonomy Workshop:</strong></p>
+<ul>
+<li>Take the set of high-quality MAGs from the previous lab and classify them using <strong>GTDB-Tk</strong>.</li>
+<li>Separately, run <strong>Kraken2</strong> on the raw reads from one of the samples.</li>
+<li>Generate a bar chart of the community composition at the Phylum level from both outputs. Compare and contrast the results and discuss the strengths and weaknesses of each method.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-the-automated-soil-metagenome-pipeline-"><a class="header" href="#hour-15-capstone-building-the-automated-soil-metagenome-pipeline-"><strong>Hour 15: Capstone: Building the Automated Soil Metagenome Pipeline</strong> 🚀</a></h3>
+<p><strong>Final Challenge:</strong>
+Design, build, and document a complete, portable, and scalable bioinformatics pipeline using <strong>Nextflow</strong>. The pipeline must take raw FASTQ files as input and produce a full suite of analysis-ready outputs for a soil foundation model.</p>
+<p><strong>Pipeline Stages to Implement:</strong></p>
+<ol>
+<li><strong>Input</strong>: Read in a set of paired-end FASTQ files.</li>
+<li><strong>QC</strong>: Run FastQC and fastp.</li>
+<li><strong>Assembly</strong>: Assemble reads with MEGAHIT.</li>
+<li><strong>Binning</strong>: Generate MAGs using MetaBAT2.</li>
+<li><strong>Quality Assessment</strong>: Evaluate MAGs with CheckM and filter for high-quality bins.</li>
+<li><strong>Taxonomy</strong>: Classify MAGs with GTDB-Tk.</li>
+<li><strong>Functional Annotation</strong>: Predict genes with Prodigal and annotate the entire community with DIAMOND against KEGG.</li>
+<li><strong>Output</strong>: Organize all key results (High-Quality MAGs, taxonomic profiles, functional summaries) into a clean output directory.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>The complete, runnable <strong>Nextflow pipeline code</strong>, well-documented and with configurable resource parameters.</li>
+<li>A markdown report explaining the design choices, particularly how the pipeline is optimized for the scale and complexity of soil metagenomes.</li>
+<li>A summary presentation interpreting the results from running the pipeline on a provided test dataset, highlighting key biological findings pertinent to soil health.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li><strong>Robustness &amp; Scalability</strong>: Does the pipeline run without errors and is it structured to scale to a 10TB+ project?</li>
+<li><strong>Reproducibility</strong>: Is the pipeline fully reproducible and easy for another user to run?</li>
+<li><strong>Scientific Soundness</strong>: Are the chosen tools and parameters appropriate for soil metagenomics?</li>
+<li><strong>Clarity of Interpretation</strong>: Can the student translate the pipeline's output into meaningful biological insights?</li>
+</ul>
 
                     </main>
 

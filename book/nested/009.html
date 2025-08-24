@@ -157,6 +157,250 @@
                     <main>
                         <h1 id="module-9-uncertainty-quantification-in-soil-measurements"><a class="header" href="#module-9-uncertainty-quantification-in-soil-measurements"><strong>Module 9: Uncertainty Quantification in Soil Measurements</strong></a></h1>
 <p>Build probabilistic frameworks to propagate measurement uncertainty through model pipelines. Handle detection limits, censored data, and inter-laboratory variation in soil analyses.</p>
+<p>The course objective is to build robust probabilistic frameworks for quantifying and propagating uncertainty throughout the entire soil data lifecycle. Students will master the statistical and computational techniques required to handle the inherent uncertainty in soil measurements, including inter-laboratory variation, censored data (detection limits), and sampling error, producing analysis-ready datasets where every value is a probability distribution, not a single number.</p>
+<p>This module provides the statistical foundation for scientific integrity across the entire curriculum. It moves beyond the simple "missing values" of Module 1 to a formal treatment of "unknown values." It builds upon the version-controlled pipelines from Module 8 by teaching how to manage probabilistic, rather than deterministic, data artifacts. The uncertainty distributions generated here are the essential inputs for advanced models like <strong>Ensemble Methods</strong> (Module 61) and <strong>Bayesian Neural Networks</strong> (Module 74), enabling them to produce trustworthy predictions with confidence intervals.</p>
+<hr />
+<h3 id="hour-1-2-the-certainty-of-uncertainty-a-paradigm-shift-"><a class="header" href="#hour-1-2-the-certainty-of-uncertainty-a-paradigm-shift-"><strong>Hour 1-2: The Certainty of Uncertainty: A Paradigm Shift</strong> 🤔</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Articulate why representing a soil property as a single number is insufficient and often misleading.</li>
+<li>Differentiate between accuracy, precision, and the sources of error in soil analysis.</li>
+<li>Understand the real-world consequences of ignoring uncertainty in applications like carbon markets and environmental regulation.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Beyond the Mean</strong>: Shifting from a deterministic mindset (SOC is 2.1%) to a probabilistic one (SOC is likely between 1.9% and 2.3%).</li>
+<li><strong>A Taxonomy of Error</strong>:
+<ul>
+<li><strong>Systematic Error (Bias)</strong>: Consistent, repeatable error (e.g., a miscalibrated instrument).</li>
+<li><strong>Random Error (Noise)</strong>: Unpredictable fluctuations (e.g., electronic noise, minor variations in pipetting).</li>
+</ul>
+</li>
+<li><strong>The Error Budget</strong>: Deconstructing the total uncertainty of a final value (e.g., Mg C/ha) into its constituent sources: field sampling, subsampling, lab analysis, and calculation. Which part contributes the most? (Hint: It's almost always sampling).</li>
+<li><strong>Case Study</strong>: How failing to account for uncertainty in soil carbon measurements can make a carbon sequestration project appear successful when it's statistically indistinguishable from zero change.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Given a set of replicate measurements for a single soil sample, use Python's <code>numpy</code> and <code>matplotlib</code> to calculate the mean, standard deviation, and standard error.</li>
+<li>Plot a histogram of the replicates and overlay a fitted normal distribution curve to visualize the measurement's probability distribution.</li>
+<li>Discuss: What does the width of this distribution tell us about the measurement's precision?</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-representing-uncertainty-from-numbers-to-distributions-"><a class="header" href="#hour-3-4-representing-uncertainty-from-numbers-to-distributions-"><strong>Hour 3-4: Representing Uncertainty: From Numbers to Distributions</strong> 🎲</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Represent a single measurement as a probability distribution object.</li>
+<li>Select appropriate probability distributions for different soil properties.</li>
+<li>Generate random samples from these distributions to represent the range of plausible true values.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Measurement as a Distribution</strong>: A measurement of "10.5 ± 0.8" is shorthand for a Gaussian distribution with a mean of 10.5 and a standard deviation of 0.8.</li>
+<li><strong>The Distribution Toolkit</strong>:
+<ul>
+<li><strong>Normal (Gaussian)</strong>: Good for many chemical measurements that are far from zero.</li>
+<li><strong>Log-Normal</strong>: Essential for properties that cannot be negative and are often skewed (e.g., trace element concentrations, hydraulic conductivity).</li>
+<li><strong>Uniform</strong>: Represents a value known to be within a range but with no other information (e.g., a manufacturer's tolerance).</li>
+</ul>
+</li>
+<li><strong>The Power of Sampling</strong>: Using code to draw thousands of random samples from a measurement's distribution. This collection of samples <em>is</em> our representation of the uncertain value.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Use Python's <code>scipy.stats</code> library to create distribution objects for several soil measurements (e.g., pH as Normal, lead concentration as Log-Normal).</li>
+<li>For each measurement, draw 10,000 random samples.</li>
+<li>Plot the histograms of these samples to visually confirm they match the intended distributions.</li>
+<li>Store these arrays of samples; they will be the inputs for the next lab.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-error-propagation-via-monte-carlo-simulation-"><a class="header" href="#hour-5-6-error-propagation-via-monte-carlo-simulation-"><strong>Hour 5-6: Error Propagation via Monte Carlo Simulation</strong> 🎰</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the principles of Monte Carlo error propagation.</li>
+<li>Implement a Monte Carlo simulation to propagate uncertainty through a mathematical formula.</li>
+<li>Calculate the final value and its uncertainty from the simulation results.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Analytical Error Propagation is Hard</strong>: The traditional "rules" for propagating error are complex and only work for simple equations.</li>
+<li><strong>The Monte Carlo Alternative (The "Guesstimate" Method)</strong>: A brilliantly simple and powerful technique:
+<ol>
+<li>Represent each input variable as an array of random samples (from the previous lab).</li>
+<li>Apply your calculation to these arrays, element by element.</li>
+<li>The result is a new array of samples that represents the probability distribution of your final answer.</li>
+</ol>
+</li>
+<li><strong>Summarizing the Output</strong>: The mean of the output array is your best estimate, and the standard deviation is its uncertainty.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li><strong>Goal</strong>: Calculate the uncertainty of a soil carbon stock (in Mg/ha).</li>
+<li><strong>Inputs</strong>: You are given the mean and standard deviation for three uncertain measurements:
+<ol>
+<li>Bulk Density (g/cm³)</li>
+<li>Soil Organic Carbon concentration (%)</li>
+<li>Horizon Depth (cm)</li>
+</ol>
+</li>
+<li><strong>Task</strong>:
+<ol>
+<li>Represent each input as an array of 100,000 random samples.</li>
+<li>Write the formula for carbon stock, applying it to your sample arrays.</li>
+<li>Plot a histogram of the resulting carbon stock distribution.</li>
+<li>Report the final carbon stock as <code>mean ± standard deviation</code>.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-the-elephant-in-the-lab-handling-censored-data-"><a class="header" href="#hour-7-8-the-elephant-in-the-lab-handling-censored-data-"><strong>Hour 7-8: The Elephant in the Lab: Handling Censored Data</strong> 📉</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why values reported as "Below Detection Limit" (BDL) are a form of censored data.</li>
+<li>Recognize why common substitution methods (using 0, DL/2, or DL) are statistically invalid and introduce bias.</li>
+<li>Implement robust methods for handling censored data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>What BDL Really Means</strong>: It's not a value of zero. It's an <em>un-measured value</em> that is known to be somewhere between 0 and the detection limit.</li>
+<li><strong>Why Substitution is Wrong</strong>: We'll demonstrate how substituting a single value systematically biases the mean and underestimates the true variance of the dataset.</li>
+<li><strong>Correct Approaches</strong>:
+<ul>
+<li><strong>Maximum Likelihood Estimation (MLE)</strong>: A statistical method that finds the parameters of a distribution (e.g., the mean and variance) that are most likely to have produced the observed data, including the censored values.</li>
+<li><strong>Regression on Order Statistics (ROS)</strong>: A practical method that fits a distribution to the detected values and uses it to impute plausible values for the BDLs.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Use the Python library <code>NADA</code> (Nondetects And Data Analysis) which is designed for this problem.</li>
+<li>Take a dataset of trace metal concentrations containing BDL values.</li>
+<li>First, calculate the mean and variance using the three incorrect substitution methods.</li>
+<li>Then, use ROS to estimate the mean and variance correctly.</li>
+<li>Compare the results and quantify the bias introduced by the naive methods.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-taming-the-beast-inter-laboratory-variation-"><a class="header" href="#hour-9-10-taming-the-beast-inter-laboratory-variation-"><strong>Hour 9-10: Taming the Beast: Inter-Laboratory Variation</strong> 🏢</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Analyze data from laboratory ring trials to quantify inter-lab bias and precision.</li>
+<li>Implement a random effects model to synthesize data from multiple labs.</li>
+<li>Generate a "consensus value" and uncertainty for a property measured by different sources.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Multi-Lab Problem</strong>: Lab A consistently reads 5% higher than Lab B. How do you combine their datasets?</li>
+<li><strong>Ring Trials</strong>: The gold standard for assessing lab performance, where a homogenized sample is sent to many labs for analysis.</li>
+<li><strong>Modeling the Variation</strong>:
+<ul>
+<li><strong>Fixed Effects</strong>: The (incorrect) assumption that all labs are measuring the same "true" value, and differences are just random noise.</li>
+<li><strong>Random Effects Model</strong>: The correct approach, which models the overall mean value, the variance <em>within</em> each lab, and the variance <em>between</em> labs. This explicitly accounts for systematic bias.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Statistical Modeling Lab:</strong></p>
+<ul>
+<li>Given a dataset from a ring trial (e.g., 20 labs measuring pH on the same soil sample).</li>
+<li>Use Python's <code>statsmodels</code> library to fit a random effects model.</li>
+<li>Extract the key outputs:
+<ol>
+<li>The estimated overall mean pH (the consensus value).</li>
+<li>The within-lab variance component.</li>
+<li>The between-lab variance component.</li>
+</ol>
+</li>
+<li>Discuss the implications: If the between-lab variance is large, it means lab choice is a major source of uncertainty.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-probabilistic-data-structures--pipelines-"><a class="header" href="#hour-11-12-probabilistic-data-structures--pipelines-"><strong>Hour 11-12: Probabilistic Data Structures &amp; Pipelines</strong> 🏗️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design data schemas and file formats to store probabilistic data.</li>
+<li>Modify a DVC pipeline to track and process uncertain data.</li>
+<li>Understand the trade-offs between storing full distributions vs. parametric representations.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Storing Uncertainty</strong>:
+<ul>
+<li><strong>Parametric</strong>: Store the distribution parameters (e.g., <code>mean</code>, <code>stdev</code>, <code>distribution_type</code>) in database columns or a CSV. (Efficient, but loses some info).</li>
+<li><strong>Ensemble</strong>: Store the full array of Monte Carlo samples for each measurement. (Complete, but uses much more storage). A common format is NetCDF or HDF5.</li>
+</ul>
+</li>
+<li><strong>DVC for Probabilistic Workflows</strong>:
+<ul>
+<li>The output of a processing step is no longer a single <code>data.csv</code>.</li>
+<li>The output is now a directory <code>data_ensemble/</code> containing 1,000 CSVs, each one a plausible realization of the true dataset.</li>
+<li>DVC tracks the entire directory. <code>dvc repro</code> will re-generate the entire ensemble if an input changes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Take the DVC pipeline from Module 8.</li>
+<li>Modify the <code>process.py</code> script: instead of outputting a single CSV, it should now perform a Monte Carlo simulation for a calculated property and output an ensemble of 100 CSVs.</li>
+<li>Update the <code>dvc.yaml</code> file to track the output directory.</li>
+<li>Run <code>dvc repro</code> and verify that the ensemble is created and tracked correctly.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-communicating-uncertainty-beyond-the-error-bar-"><a class="header" href="#hour-13-14-communicating-uncertainty-beyond-the-error-bar-"><strong>Hour 13-14: Communicating Uncertainty: Beyond the Error Bar</strong> 📊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Create effective visualizations that communicate uncertainty to non-experts.</li>
+<li>Differentiate between confidence intervals and prediction intervals.</li>
+<li>Generate "probability of exceedance" maps and charts for decision support.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Visualizing Distributions</strong>: Moving beyond simple error bars to more informative plots like violin plots, gradient plots, and spaghetti plots (for time series or spatial ensembles).</li>
+<li><strong>Confidence vs. Prediction Intervals</strong>:
+<ul>
+<li><strong>Confidence Interval</strong>: "We are 95% confident that the true mean value lies within this range."</li>
+<li><strong>Prediction Interval</strong>: "We are 95% confident that the <em>next measurement</em> will fall within this (wider) range."</li>
+</ul>
+</li>
+<li><strong>Decision Support</strong>: The most powerful use of uncertainty. Instead of asking "What is the carbon stock?", we ask "What is the probability the carbon stock is above the threshold for selling credits?". This is calculated directly from the output of a Monte Carlo simulation.</li>
+</ul>
+<p><strong>Visualization Workshop:</strong></p>
+<ul>
+<li>Using the carbon stock ensemble from the Hour 5-6 lab:
+<ol>
+<li>Create a histogram and a violin plot of the output distribution.</li>
+<li>Calculate and report the 95% confidence interval.</li>
+<li>Calculate and report the probability that the carbon stock is greater than a specific target value (e.g., 50 Mg/ha).</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-a-fully-probabilistic-soil-carbon-audit-"><a class="header" href="#hour-15-capstone-a-fully-probabilistic-soil-carbon-audit-"><strong>Hour 15: Capstone: A Fully Probabilistic Soil Carbon Audit</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are given a heterogeneous dataset for a single farm, compiled from two different commercial labs. The dataset includes soil carbon, bulk density, and detection limit flags for a heavy metal contaminant. One lab is known to have a slight positive bias from a ring trial. Your task is to perform a complete, end-to-end probabilistic analysis to determine the farm's carbon stock and assess if the contaminant exceeds a regulatory threshold.</p>
+<p><strong>Your Pipeline Must:</strong></p>
+<ol>
+<li><strong>Ingest &amp; Model Uncertainty</strong>: Read the data. For each measurement, create a statistical distribution that accounts for analytical precision.</li>
+<li><strong>Handle Censored Data</strong>: Use Regression on Order Statistics (ROS) to properly handle the BDL values for the contaminant.</li>
+<li><strong>Correct for Bias</strong>: Apply a correction to the data from the biased lab, incorporating the uncertainty of that correction.</li>
+<li><strong>Propagate Uncertainty</strong>: Use a Monte Carlo simulation (with at least 10,000 iterations) to propagate all sources of uncertainty through the carbon stock calculation.</li>
+<li><strong>Deliver Probabilistic Intelligence</strong>: Produce a final report that includes:
+<ul>
+<li>The farm's total carbon stock, reported as a mean and a 95% confidence interval.</li>
+<li>A histogram visualizing the final distribution of the carbon stock.</li>
+<li>The estimated mean concentration of the contaminant, with its confidence interval.</li>
+<li>A clear statement of the <strong>probability</strong> that the contaminant concentration exceeds the regulatory threshold.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A fully documented script or Jupyter Notebook that executes the entire probabilistic workflow.</li>
+<li>The final report in markdown format, presenting the results and visualizations in a clear, understandable way for a non-statistician (e.g., the farm manager).</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Correct implementation of all statistical methods (censored data, bias correction, Monte Carlo).</li>
+<li>The robustness and reproducibility of the code.</li>
+<li>The clarity and correctness of the final report and visualizations.</li>
+<li>The ability to translate complex statistical outputs into actionable, probability-based statements for decision-making.</li>
+</ul>
 
                     </main>
 

@@ -157,6 +157,233 @@
                     <main>
                         <h1 id="module-15-data-lake-design-for-multimodal-soil-information"><a class="header" href="#module-15-data-lake-design-for-multimodal-soil-information"><strong>Module 15: Data Lake Design for Multimodal Soil Information</strong></a></h1>
 <p>Implement Apache Iceberg or Delta Lake for managing petabyte-scale soil data with ACID transactions. Optimize for both batch training and real-time inference workloads.</p>
+<p>The course objective is to design and implement a modern data lakehouse capable of managing petabyte-scale, multimodal soil information with the reliability of a traditional data warehouse. Students will master open table formats like Apache Iceberg to provide ACID transactions, schema evolution, and time travel capabilities on top of cloud object storage. The course will focus on building a unified architecture optimized for both large-scale batch model training and low-latency, real-time inference workloads.</p>
+<p><strong>Context:</strong> This module is the capstone of the data engineering portion of the <strong>Foundation Phase</strong>. It provides the central storage architecture that the Kubernetes compute clusters from Module 14 will rely on. This is where the "Global Soil Data Commons" transitions from a concept to a concrete implementation. The reliable, scalable, and queryable data lake built here will serve as the single source of truth for all subsequent modeling, analysis, and application development in the curriculum.</p>
+<hr />
+<h3 id="hour-1-2-the-data-swamp-and-the-rise-of-the-lakehouse-"><a class="header" href="#hour-1-2-the-data-swamp-and-the-rise-of-the-lakehouse-"><strong>Hour 1-2: The Data Swamp and the Rise of the Lakehouse</strong> 🐊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the limitations of a traditional data lake and why they often devolve into "data swamps."</li>
+<li>Grasp the "Lakehouse" paradigm: combining the low-cost scalability of a data lake with the reliability and performance of a data warehouse.</li>
+<li>Learn how open table formats like Apache Iceberg and Delta Lake enable this paradigm.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Problem with "Just a Bunch of Files"</strong>: A classic data lake (e.g., folders of Parquet files in Amazon S3) suffers from critical flaws:
+<ul>
+<li><strong>No ACID Transactions</strong>: A failed write job can leave the data in a corrupted, inconsistent state.</li>
+<li><strong>No Schema Enforcement</strong>: Different jobs can write data with different schemas, leading to chaos.</li>
+<li><strong>Slow Performance</strong>: Listing millions of files in object storage is incredibly slow.</li>
+</ul>
+</li>
+<li><strong>The Lakehouse Solution</strong>: We'll introduce <strong>open table formats</strong> (Iceberg/Delta) as a metadata layer that sits on top of open file formats (Parquet/ORC) in open cloud storage. This brings database-like features to the data lake.</li>
+<li><strong>Key Features that Fix the Swamp</strong>:
+<ul>
+<li><strong>ACID Transactions</strong>: Guarantee data integrity and consistency.</li>
+<li><strong>Schema Evolution</strong>: Safely change a table's schema without rewriting all the data.</li>
+<li><strong>Time Travel</strong>: Query the exact state of your data at a previous point in time, ensuring reproducibility.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Using Apache Spark, write a script that attempts to write a large Parquet dataset to a directory.</li>
+<li>Manually kill the job halfway through.</li>
+<li>Observe the corrupted output: a mix of temporary files and partial data that makes the entire dataset unusable. This demonstrates the problem that table formats solve.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-apache-iceberg-a-deep-dive-into-the-architecture-"><a class="header" href="#hour-3-4-apache-iceberg-a-deep-dive-into-the-architecture-"><strong>Hour 3-4: Apache Iceberg: A Deep Dive into the Architecture</strong> 🧊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the multi-layer metadata architecture of an Apache Iceberg table.</li>
+<li>Create, write to, and read from your first Iceberg table using Apache Spark.</li>
+<li>Demonstrate Iceberg's transactional guarantees.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>How Iceberg Works</strong>: A conceptual walkthrough of the three layers of metadata that make Iceberg powerful:
+<ol>
+<li><strong>Metadata File</strong>: A pointer to the current state of the table.</li>
+<li><strong>Manifest List</strong>: A list of all <code>manifest files</code> that make up a snapshot of the table.</li>
+<li><strong>Manifest Files</strong>: A list of the actual data files (<code>.parquet</code>), along with statistics about the data within them (min/max values, null counts).</li>
+</ol>
+</li>
+<li><strong>Atomic Operations</strong>: An update to an Iceberg table is a simple, atomic swap of one metadata file pointer for another. This is how ACID transactions are achieved.</li>
+<li><strong>The Catalog</strong>: Where the pointer to the current metadata file is stored (e.g., AWS Glue, Hive Metastore, or even just HDFS).</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Take the failed Parquet write job from the previous lab.</li>
+<li>Now, write the same data to a new <strong>Iceberg table</strong> using Spark.</li>
+<li>Again, kill the job halfway through.</li>
+<li>Show that the Iceberg table is completely unaffected and remains in its previous valid state. Read the table to prove its consistency. This is a direct demonstration of ACID transactions on a data lake.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-schema-evolution--time-travel-the-pillars-of-reproducibility-"><a class="header" href="#hour-5-6-schema-evolution--time-travel-the-pillars-of-reproducibility-"><strong>Hour 5-6: Schema Evolution &amp; Time Travel: The Pillars of Reproducibility</strong> ⏳</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Use Iceberg's schema evolution capabilities to add, drop, and rename columns without rewriting data.</li>
+<li>Use "time travel" queries to access previous versions of a table for reproducibility and auditing.</li>
+<li>Understand how these features support long-term data management and agile development.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Ever-Changing Schema</strong>: In soil science, our understanding and measurement capabilities evolve. A new sensor is added, a new lab method is adopted. Your data tables must be able to adapt gracefully.</li>
+<li><strong>Safe Schema Evolution</strong>: Unlike traditional systems, Iceberg handles schema changes with simple, fast metadata operations. You can add a column without affecting historical data or queries.</li>
+<li><strong>The Ultimate Undo Button</strong>: Every change to an Iceberg table creates a new, versioned snapshot. This allows for powerful "time travel" queries:
+<ul>
+<li><code>SELECT * FROM soil_table VERSION AS OF '...'</code></li>
+<li><code>SELECT * FROM soil_table TIMESTAMP AS OF '...'</code></li>
+</ul>
+</li>
+<li><strong>Use Case</strong>: This is a killer feature for machine learning. You can pin a model version to an Iceberg table version, guaranteeing you can always reproduce the exact data the model was trained on.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Using Spark, perform the following operations on an Iceberg table:
+<ol>
+<li>Add a new column (<code>nitrate_ppm</code>).</li>
+<li>Rename an existing column.</li>
+<li>Run a query to show the current schema.</li>
+<li>Run a time travel query using the snapshot ID from <em>before</em> the schema change to show the data in its original form.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-performance-tuning-partitioning-compaction-and-z-ordering-"><a class="header" href="#hour-7-8-performance-tuning-partitioning-compaction-and-z-ordering-"><strong>Hour 7-8: Performance Tuning: Partitioning, Compaction, and Z-Ordering</strong> 🚀</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement Iceberg's "hidden partitioning" to dramatically speed up queries.</li>
+<li>Run maintenance jobs to compact small files into larger, more efficient ones.</li>
+<li>Apply Z-ordering to optimize queries with multi-column predicates.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The "Small File Problem"</strong>: Ingesting streaming data often creates thousands of small files, which is highly inefficient for query engines.</li>
+<li><strong>Hidden Partitioning</strong>: A major Iceberg innovation. You define a partition based on a raw column (e.g., <code>event_timestamp</code>), and Iceberg automatically creates human-readable partitions behind the scenes (e.g., <code>/year=2025/month=08/</code>). Your users query by the timestamp, and Iceberg handles the partition pruning automatically.</li>
+<li><strong>Table Maintenance</strong>:
+<ul>
+<li><strong>Compaction</strong>: Running an <code>OPTIMIZE</code> job to combine small files into larger ones.</li>
+<li><strong>Z-Ordering</strong>: A technique that physically co-locates related data across multiple dimensions, dramatically speeding up queries with multiple <code>WHERE</code> clauses (e.g., <code>WHERE region = 'midwest' AND soil_type = 'mollisol'</code>).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Optimization Lab:</strong></p>
+<ul>
+<li>Create a large (simulated) Iceberg table of sensor readings with a <code>timestamp</code> and <code>sensor_id</code> column.</li>
+<li>Create the table with hidden partitioning on the <code>timestamp</code> column (e.g., <code>PARTITIONED BY days(timestamp)</code>).</li>
+<li>Run a query with a time filter (e.g., <code>WHERE timestamp &gt; '...-01-01'</code>) and examine the Spark UI to see how many files were scanned (partition pruning).</li>
+<li>Now run a compaction job and verify that the number of data files has decreased.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-unifying-batch--streaming-in-the-lakehouse-"><a class="header" href="#hour-9-10-unifying-batch--streaming-in-the-lakehouse-"><strong>Hour 9-10: Unifying Batch &amp; Streaming in the Lakehouse</strong> 🔄</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a single architecture that serves both batch ETL and real-time streaming data.</li>
+<li>Implement a Spark Structured Streaming job that writes a Kafka stream into an Iceberg table.</li>
+<li>Understand how this architecture supports real-time inference workloads.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Lambda Architecture is Dead</strong>: We no longer need separate, complex systems for batch and real-time. The Lakehouse can handle both.</li>
+<li><strong>Streaming Ingestion</strong>: Using Spark Structured Streaming or Apache Flink, we can read directly from the Kafka topics we designed in Module 11 and write to an Iceberg table.</li>
+<li><strong>Upserts and CDC</strong>: Iceberg supports <code>MERGE INTO</code> operations, allowing you to efficiently handle updates and deletes from your streams (Change Data Capture).</li>
+<li><strong>Serving Fresh Data</strong>: Because Iceberg updates are atomic, a machine learning model performing real-time inference can continuously query the same table that the streaming job is writing to, always getting the latest consistent snapshot of the data.</li>
+</ul>
+<p><strong>Streaming Lab:</strong></p>
+<ul>
+<li>Using Docker, set up Kafka and Spark.</li>
+<li>Reuse the Kafka producer from Module 11 to generate a stream of sensor data.</li>
+<li>Write a Spark Structured Streaming application that reads from the Kafka topic and writes the data to an Iceberg table using a 1-minute trigger.</li>
+<li>While the stream is running, open a separate Spark shell and run batch queries on the Iceberg table, observing that new data appears every minute.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-managing-multimodal-data-beyond-the-single-table-"><a class="header" href="#hour-11-12-managing-multimodal-data-beyond-the-single-table-"><strong>Hour 11-12: Managing Multimodal Data: Beyond the Single Table</strong> 🗺️🧬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a data lake structure that can manage tabular, geospatial, genomic, and unstructured data.</li>
+<li>Understand how to use Iceberg as a metadata catalog for non-tabular data formats.</li>
+<li>Implement a solution using GeoParquet within an Iceberg-managed data lake.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Multimodal Challenge</strong>: Soil data is diverse. We have tabular sensor readings, geospatial vector data, satellite imagery, and metagenomic sequences.</li>
+<li><strong>A Unified Catalog Approach</strong>: We use Iceberg to manage the primary, structured metadata, which can then point to data stored in other specialized formats.</li>
+<li><strong>The Architecture</strong>:
+<ul>
+<li><strong>Tabular (Lab, Sensor)</strong>: Store directly in Iceberg tables with Parquet file format.</li>
+<li><strong>Geospatial (Vector)</strong>: Store the vector data as <strong>GeoParquet</strong> files in the data lake. Create an Iceberg table that catalogs these files, perhaps with summary statistics and a URI to the file's location.</li>
+<li><strong>Unstructured (Images, Notebooks)</strong>: Store the raw files (e.g., <code>.jpg</code>, <code>.pdf</code>) in object storage. Create an Iceberg table that acts as a searchable index with metadata and a URI to each file.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Design Exercise:</strong></p>
+<ul>
+<li>Design the schemas for a set of three interconnected Iceberg tables for a comprehensive soil survey:
+<ol>
+<li><code>samples</code>: Core lab analysis results (tabular).</li>
+<li><code>pedon_descriptions</code>: Metadata about scanned field notebooks, with a URI to the PDF file.</li>
+<li><code>sample_locations</code>: A table where each row corresponds to a sample and contains a URI to a GeoParquet file holding the detailed site boundary polygon.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-governance-the-data-catalog--access-control-"><a class="header" href="#hour-13-14-governance-the-data-catalog--access-control-"><strong>Hour 13-14: Governance: The Data Catalog &amp; Access Control</strong> 🏛️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the role of a central data catalog in managing a large-scale data lake.</li>
+<li>Configure Spark and Iceberg to use a catalog like the AWS Glue Data Catalog.</li>
+<li>Discuss strategies for implementing data security and access control in the lakehouse.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Card Catalog for Your Data Lake</strong>: Without a central catalog, your data lake is just a collection of files that no one can find or trust.</li>
+<li><strong>The Catalog's Job</strong>: It stores the authoritative mapping from a table name (e.g., <code>prod.soil_sensors</code>) to the location of its current Iceberg metadata file.</li>
+<li><strong>Popular Catalogs</strong>: Hive Metastore, AWS Glue, Project Nessie (which adds Git-like semantics).</li>
+<li><strong>Securing the Lake</strong>: Integrating with tools like Apache Ranger or cloud IAM policies to define fine-grained permissions: "This user can read the <code>soil_sensors</code> table, but only for <code>region=iowa</code> and cannot see the <code>sample_provider_id</code> column."</li>
+</ul>
+<p><strong>Governance Lab:</strong></p>
+<ul>
+<li>Using Docker, set up a local Hive Metastore service.</li>
+<li>Configure your Spark environment to use this Hive Metastore as its catalog.</li>
+<li>Create a new Iceberg table.</li>
+<li>Use a database tool (like DBeaver) or the Spark Catalog API to show that the table is now registered in the central catalog and is discoverable.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-the-soil-data-commons-lakehouse-"><a class="header" href="#hour-15-capstone-building-the-soil-data-commons-lakehouse-"><strong>Hour 15: Capstone: Building the Soil Data Commons Lakehouse</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are the lead data architect for the "Global Soil Data Commons" project. Your task is to build a proof-of-concept data lakehouse on your local machine that demonstrates the key capabilities required for this global-scale, multi-user platform.</p>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Provision the Infrastructure</strong>: Using <code>docker-compose</code>, create a complete, self-contained environment with Spark, MinIO (for S3-compatible object storage), Kafka, and a Hive Metastore.</li>
+<li><strong>Design and Create the Core Table</strong>: Create a multimodal, partitioned Iceberg table named <code>global_soil_data</code>. It must be partitioned by country and year and contain columns for lab measurements plus a URI column for associated raw data files (e.g., spectra).</li>
+<li><strong>Unify Batch and Streaming Ingestion</strong>:
+<ul>
+<li>Write a Spark job to perform a bulk load of a large historical CSV dataset into the table.</li>
+<li>Write a Spark Structured Streaming job that ingests real-time data from a Kafka topic and merges it into the same table.</li>
+</ul>
+</li>
+<li><strong>Demonstrate Advanced Features for a Global Audience</strong>:
+<ul>
+<li><strong>Time Travel</strong>: A new partner provides corrected data for a past batch load. Use Iceberg's capabilities to replace a specific historical partition without taking the system offline. Then, run a query to show the data <em>before</em> and <em>after</em> the correction.</li>
+<li><strong>Schema Evolution</strong>: The consortium agrees to add a new, standardized soil health metric. Evolve the table schema to add the new column <em>while the streaming ingest is running</em>.</li>
+<li><strong>Performance</strong>: Run a maintenance job to compact the small, streaming-ingested files to ensure query performance for other users.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A Git repository containing the <code>docker-compose</code> file and all Spark scripts needed to build and operate the lakehouse.</li>
+<li>A Jupyter Notebook that acts as a user's guide, containing the queries that demonstrate the successful batch/stream unification, the data correction via time travel, and the live schema evolution.</li>
+<li>A final architecture diagram and a short report explaining how your Lakehouse design addresses the core challenges of data reliability, scalability, and reproducibility required by the Soil Data Commons.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The correctness and robustness of the containerized infrastructure.</li>
+<li>The successful implementation of both batch and streaming ingestion into a single Iceberg table.</li>
+<li>The clear and effective demonstration of Iceberg's advanced features (ACID, time travel, schema evolution).</li>
+<li>The quality of the documentation and the strategic vision articulated in the final report.</li>
+</ul>
 
                     </main>
 

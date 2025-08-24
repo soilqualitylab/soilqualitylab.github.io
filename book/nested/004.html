@@ -157,6 +157,223 @@
                     <main>
                         <h1 id="module-4-spectroscopic-data-processing-pipelines"><a class="header" href="#module-4-spectroscopic-data-processing-pipelines"><strong>Module 4: Spectroscopic Data Processing Pipelines</strong></a></h1>
 <p>Implement preprocessing for VIS-NIR, MIR, XRF, and Raman spectra. Master baseline correction, peak deconvolution, and spectral library matching specific to soil matrices with high quartz interference.</p>
+<p>This module builds directly on the principles of data heterogeneity (Module 1), multi-scale architecture (Module 2), and data ingestion (Module 3). It provides the critical data transformation layer required to convert raw, noisy spectral data into clean, information-rich features for the foundation models to be developed in later phases (Modules 51-75).</p>
+<hr />
+<h3 id="hour-1-2-the-physics-and-problems-of-soil-spectroscopy"><a class="header" href="#hour-1-2-the-physics-and-problems-of-soil-spectroscopy"><strong>Hour 1-2: The Physics and Problems of Soil Spectroscopy</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the physical principles behind VIS-NIR, MIR, XRF, and Raman spectroscopy and what they measure in soil.</li>
+<li>Identify common sources of noise and artifacts in soil spectra.</li>
+<li>Recognize the unique challenges posed by the soil matrix, including particle size, moisture, and mineralogical interference.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Spectroscopy Fundamentals</strong>:
+<ul>
+<li><strong>VIS-NIR</strong>: Overtones and combinations of molecular vibrations (C-H, O-H, N-H), indicating organic matter, water, and some clay minerals.</li>
+<li><strong>MIR</strong>: Fundamental molecular vibrations, providing a detailed fingerprint of minerals and organic functional groups.</li>
+<li><strong>XRF</strong>: Inner-shell electron transitions, revealing elemental composition (e.g., Si, Al, Fe, K, Ca).</li>
+<li><strong>Raman</strong>: Inelastic scattering of photons, identifying vibrational modes of minerals and organic molecules, highly complementary to MIR.</li>
+</ul>
+</li>
+<li><strong>The Soil Matrix Challenge</strong>:
+<ul>
+<li><strong>The Dilution Effect</strong>: How spectrally "dull" components like quartz (SiO₂) dominate the signal, masking features from important constituents like organic matter.</li>
+<li><strong>Physical Effects</strong>: How particle size, surface roughness, and compaction cause light scattering.</li>
+<li><strong>The Water Problem</strong>: How moisture (O-H bonds) creates large absorption peaks that can obscure other signals.</li>
+</ul>
+</li>
+<li><strong>Case Study</strong>: Visual analysis of raw spectra from a single soil sample measured by all four techniques. Identification of noise, water bands, quartz peaks, and other artifacts.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Load and visualize raw spectral datasets from different instruments (e.g., ASD FieldSpec, Bruker Alpha, portable XRF).</li>
+<li>Write a Python script to plot spectra and identify key features and common issues like cosmic rays (Raman), instrument noise, and water absorption bands.</li>
+<li>Document the differences in information content and signal quality across the techniques.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-foundational-preprocessing-scatter-correction--noise-reduction"><a class="header" href="#hour-3-4-foundational-preprocessing-scatter-correction--noise-reduction"><strong>Hour 3-4: Foundational Preprocessing: Scatter Correction &amp; Noise Reduction</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement standard algorithms to correct for physical light scattering.</li>
+<li>Apply noise reduction techniques without distorting the underlying signal.</li>
+<li>Standardize the spectral axis (wavelength/wavenumber) for instrument interoperability.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Scatter Correction (VIS-NIR/MIR)</strong>:
+<ul>
+<li><strong>Multiplicative Scatter Correction (MSC)</strong>: Corrects spectra based on an "ideal" mean spectrum.</li>
+<li><strong>Standard Normal Variate (SNV)</strong>: Normalizes each spectrum individually by centering and scaling.</li>
+</ul>
+</li>
+<li><strong>Noise Reduction</strong>:
+<ul>
+<li><strong>Savitzky-Golay Filtering</strong>: A polynomial smoothing filter that can also be used to calculate derivatives.</li>
+<li><strong>Moving Window Averages</strong>: A simpler smoothing method.</li>
+<li><strong>Wavelet Denoising</strong>: A more advanced technique for separating signal from noise at different frequencies.</li>
+</ul>
+</li>
+<li><strong>Spectral Standardization</strong>:
+<ul>
+<li><strong>Resampling &amp; Interpolation</strong>: Methods to align spectra measured on different instruments to a common wavelength grid.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Implement MSC and SNV on a set of VIS-NIR spectra and compare their effects on reducing baseline shifts.</li>
+<li>Apply a Savitzky-Golay filter to noisy Raman spectra, experimenting with different window sizes and polynomial orders to find the optimal balance between noise removal and signal preservation.</li>
+<li>Build a function to resample a spectral dataset to a new, standardized wavelength axis.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-advanced-preprocessing-baseline-correction"><a class="header" href="#hour-5-6-advanced-preprocessing-baseline-correction"><strong>Hour 5-6: Advanced Preprocessing: Baseline Correction</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the causes of baseline drift and fluorescence in soil spectra.</li>
+<li>Implement multiple baseline correction algorithms.</li>
+<li>Select the appropriate baseline correction method for different spectral types and problems.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Causes of Baseline Issues</strong>: Instrumental drift, sample heating, and background fluorescence (especially in Raman).</li>
+<li><strong>Correction Algorithms</strong>:
+<ul>
+<li><strong>Polynomial Fitting</strong>: Subtracting a low-order polynomial from the baseline.</li>
+<li><strong>Asymmetric Least Squares (ALS)</strong>: An iterative method that penalizes points above the baseline, effectively ignoring peaks.</li>
+<li><strong>Continuum Removal (Rubberband Correction)</strong>: Normalizes reflectance spectra by dividing by a convex hull fitted to the spectrum, isolating absorption feature characteristics.</li>
+</ul>
+</li>
+<li><strong>XRF Specifics</strong>: Background subtraction and normalization using Compton scatter peaks.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Apply polynomial, ALS, and continuum removal methods to a set of soil MIR spectra.</li>
+<li>Visually and quantitatively assess the performance of each method in removing baseline distortion while preserving peak shapes.</li>
+<li>Write a Python class that encapsulates several baseline correction methods.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-tackling-the-quartz-problem--matrix-effects"><a class="header" href="#hour-7-8-tackling-the-quartz-problem--matrix-effects"><strong>Hour 7-8: Tackling The Quartz Problem &amp; Matrix Effects</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Quantify the spectral contribution of quartz and other dominant minerals.</li>
+<li>Implement methods to digitally remove or suppress unwanted matrix signals.</li>
+<li>Understand and correct for matrix effects in XRF data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Quartz Challenge</strong>: Why the strong Si-O vibrations in quartz overwhelm the MIR spectrum, masking subtle clay and organic matter features.</li>
+<li><strong>Signal Suppression Strategies</strong>:
+<ul>
+<li><strong>Spectral Subtraction</strong>: Using a spectrum of pure quartz to digitally remove its contribution.</li>
+<li><strong>Orthogonal Signal Correction (OSC)</strong>: A multivariate method that removes variation in the spectral data that is orthogonal to the property of interest (e.g., soil carbon).</li>
+<li><strong>Generalized Least Squares Weighting (GLSW)</strong>: Down-weights spectral regions with high instrument noise or irrelevant variance (like quartz peaks).</li>
+</ul>
+</li>
+<li><strong>XRF Matrix Effects</strong>: Understanding absorption-enhancement effects and the use of Fundamental Parameters (FP) models for correction.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Attempt to remove the quartz signal from an MIR soil spectrum using direct spectral subtraction and analyze the resulting artifacts.</li>
+<li>Implement a simplified OSC algorithm to filter a spectral dataset, demonstrating how it enhances the correlation with a target variable.</li>
+<li>Discuss the data requirements for building robust FP models for XRF.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-feature-extraction-derivatives-and-peak-deconvolution"><a class="header" href="#hour-9-10-feature-extraction-derivatives-and-peak-deconvolution"><strong>Hour 9-10: Feature Extraction: Derivatives and Peak Deconvolution</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Use derivative spectroscopy to resolve overlapping peaks and remove baseline effects.</li>
+<li>Model complex spectral regions by fitting and deconvolving individual peaks.</li>
+<li>Extract quantitative information (area, height, position) from fitted peaks.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Derivative Spectroscopy</strong>: How first and second derivatives can enhance subtle features and separate adjacent peaks.</li>
+<li><strong>Peak Fitting Basics</strong>: Modeling spectral peaks using mathematical functions (Gaussian, Lorentzian, Voigt).</li>
+<li><strong>Deconvolution</strong>: Separating a broad, overlapping spectral feature into its constituent underlying peaks to quantify components (e.g., separating kaolinite and illite peaks).</li>
+<li><strong>Feature Engineering</strong>: Creating indices and band ratios from specific spectral regions to serve as inputs for machine learning models.</li>
+</ul>
+<p><strong>Deconvolution Lab:</strong></p>
+<pre><code class="language-python"># Use scipy.optimize to fit multiple Voigt profiles
+# to a complex region of a soil MIR or Raman spectrum.
+# 1. Define the model function (sum of peaks).
+# 2. Provide initial guesses for peak parameters.
+# 3. Run the optimization.
+# 4. Plot the original data, the fitted curve, and the individual deconvolved peaks.
+# 5. Calculate the area of each underlying peak.
+</code></pre>
+<hr />
+<h3 id="hour-11-12-spectral-library-matching--unmixing"><a class="header" href="#hour-11-12-spectral-library-matching--unmixing"><strong>Hour 11-12: Spectral Library Matching &amp; Unmixing</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design and build a spectral library for soil components.</li>
+<li>Implement algorithms to match an unknown soil spectrum against a library of pure minerals and organic compounds.</li>
+<li>Estimate the relative abundance of components using linear spectral unmixing.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Building a Library</strong>: The importance of using pure, well-characterized reference materials (e.g., clay minerals, humic acids) and maintaining consistent measurement conditions.</li>
+<li><strong>Matching Algorithms</strong>:
+<ul>
+<li><strong>Spectral Angle Mapper (SAM)</strong>: Treats spectra as vectors and calculates the angle between them, making it insensitive to illumination differences.</li>
+<li><strong>Correlation Matching</strong>: Calculates the correlation coefficient between the unknown and library spectra.</li>
+</ul>
+</li>
+<li><strong>Linear Spectral Unmixing</strong>: A method that models a mixed spectrum as a linear combination of pure "endmember" spectra, solving for the fractional abundance of each.</li>
+</ul>
+<p><strong>Library Matching Workshop:</strong></p>
+<ul>
+<li>Create a small spectral library of 5-10 common soil minerals (quartz, kaolinite, goethite, calcite, etc.).</li>
+<li>Implement the SAM algorithm in Python.</li>
+<li>Use your SAM implementation to identify the top three mineral constituents in a set of unknown soil spectra.</li>
+<li>Perform a simple linear unmixing to estimate the approximate percentage of each identified mineral.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-building-a-production-ready-pipeline"><a class="header" href="#hour-13-14-building-a-production-ready-pipeline"><strong>Hour 13-14: Building a Production-Ready Pipeline</strong></a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Integrate all preprocessing steps into a single, configurable, and reproducible pipeline.</li>
+<li>Manage parameters and track data provenance for every transformation.</li>
+<li>Design the pipeline for scalability to handle large datasets.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Modular Pipeline Design</strong>: Using object-oriented programming or tools like Scikit-learn's <code>Pipeline</code> object to chain preprocessing steps.</li>
+<li><strong>Configuration Management</strong>: Storing all parameters (e.g., filter window size, polynomial order) in a separate configuration file (e.g., YAML or JSON) for easy modification and reproducibility.</li>
+<li><strong>Provenance and Metadata</strong>: Recording the exact steps and parameters applied to each spectrum, linking back to the architectures in Module 2.</li>
+<li><strong>Scalability</strong>: Using libraries like Dask or PySpark to parallelize the application of the pipeline across thousands or millions of spectra.</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Refactor the code from all previous labs into a single, cohesive Python class or Scikit-learn pipeline.</li>
+<li>The pipeline should accept a raw spectrum and a configuration file and produce a fully processed spectrum or feature set.</li>
+<li>Add comprehensive logging to track each step.</li>
+<li>Use Dask to apply the pipeline to a directory of 1,000+ spectra in parallel.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-multi-modal-spectral-harmonization"><a class="header" href="#hour-15-capstone-multi-modal-spectral-harmonization"><strong>Hour 15: Capstone: Multi-Modal Spectral Harmonization</strong></a></h3>
+<p><strong>Final Challenge:</strong>
+Given a dataset where soil samples have been analyzed with VIS-NIR, MIR, and XRF, build a unified system to process all three data streams and fuse them into a single, analysis-ready feature matrix.</p>
+<p><strong>Tasks:</strong></p>
+<ol>
+<li><strong>Design &amp; Justify</strong>: For each spectral type, design a specific preprocessing pipeline, providing a clear rationale for each chosen step (e.g., "Used ALS for MIR baseline because of complex curvature; used continuum removal for VIS-NIR to normalize organic matter features").</li>
+<li><strong>Implement</strong>: Code the three pipelines using the production-ready techniques from Hour 13-14.</li>
+<li><strong>Extract &amp; Fuse</strong>: Process the raw data and extract meaningful features from each modality (e.g., elemental concentrations from XRF, clay/organic indices from MIR, moisture/iron oxide features from VIS-NIR).</li>
+<li><strong>Create Final Product</strong>: Combine all extracted features into a single Pandas DataFrame, with sample IDs as the index and features as columns, ready for machine learning.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A well-documented Jupyter Notebook or Python script containing the complete, end-to-end processing workflow.</li>
+<li>A final, fused CSV file of the analysis-ready dataset.</li>
+<li>A short presentation or markdown report summarizing the design decisions, challenges encountered, and how the final feature set provides a more holistic view of the soil than any single method alone.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Appropriateness and justification of preprocessing choices.</li>
+<li>Code quality, modularity, and documentation.</li>
+<li>Successful fusion of data from all three modalities.</li>
+<li>Clarity and insight in the final report.</li>
+</ul>
 
                     </main>
 

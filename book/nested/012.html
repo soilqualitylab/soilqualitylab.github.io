@@ -157,6 +157,255 @@
                     <main>
                         <h1 id="module-12-graph-databases-for-soil-food-web-networks"><a class="header" href="#module-12-graph-databases-for-soil-food-web-networks"><strong>Module 12: Graph Databases for Soil Food Web Networks</strong></a></h1>
 <p>Model trophic interactions, mycorrhizal networks, and metabolic pathways using Neo4j or similar platforms. Implement efficient queries for pathway analysis and community assembly rules.</p>
+<p>The course objective is to model the intricate web of biological and chemical relationships within the soil ecosystem using graph databases. Students will master the design of graph schemas and the implementation of efficient Cypher queries to analyze trophic interactions, mycorrhizal networks, and metabolic pathways. The goal is to transform disparate biological data into a unified, queryable knowledge graph that can reveal emergent properties of the soil system.</p>
+<p>This module represents a conceptual leap in the <strong>Foundation Phase</strong>. While previous modules focused on generating and cleaning tabular or spatial data, this module is about modeling the <em>connections between</em> data points. It directly utilizes the outputs of the metagenomics pipeline (Module 5) to build a relational data structure that is essential for foundation models like <strong>RhizosphereNet</strong>, <strong>MycorrhizalMapper</strong>, and <strong>SyntrophicNetworks</strong>. This is where we move from a parts list of the soil ecosystem to a circuit diagram of how it functions.</p>
+<hr />
+<h3 id="hour-1-2-why-relational-databases-fail-for-relationships-"><a class="header" href="#hour-1-2-why-relational-databases-fail-for-relationships-"><strong>Hour 1-2: Why Relational Databases Fail for Relationships</strong> 🤔</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the limitations of the relational (SQL) model for querying highly connected data.</li>
+<li>Grasp the core concepts of the Labeled Property Graph (LPG) model: Nodes, Relationships, and Properties.</li>
+<li>Set up a local Neo4j graph database and become familiar with the interactive browser.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The <code>JOIN</code> Nightmare</strong>: We'll start with a simple question: "Find all microbes that produce an enzyme that is part of a pathway that breaks down a compound that is excreted by another microbe." In SQL, this is a series of complex, slow, and brittle <code>JOIN</code>s. In a graph, it's a simple path.</li>
+<li><strong>The Graph Paradigm Shift</strong>: Thinking in terms of entities and the connections between them.
+<ul>
+<li><strong>Nodes</strong>: The "nouns" of your system (e.g., <code>Microbe</code>, <code>Gene</code>, <code>Compound</code>).</li>
+<li><strong>Relationships</strong>: The "verbs" that connect them (e.g., <code>ENCODES</code>, <code>CATALYZES</code>, <code>CONSUMES</code>).</li>
+<li><strong>Properties</strong>: The key-value attributes of nodes and relationships (e.g., <code>name: 'Pseudomonas'</code>, <code>rate: 2.5</code>).</li>
+</ul>
+</li>
+<li><strong>Introduction to Neo4j</strong>: The leading graph database platform. We will use Docker to launch a Neo4j instance and explore the Neo4j Browser, a powerful tool for interactive querying and visualization.</li>
+</ul>
+<p><strong>Practical Exercise: Your First Graph</strong></p>
+<ul>
+<li>In the Neo4j Browser, manually create a small, visual graph.</li>
+<li>Create nodes with labels <code>:Bacterium</code>, <code>:Fungus</code>, <code>:Nematode</code>, and <code>:OrganicMatter</code>.</li>
+<li>Create relationships between them like <code>(n:Nematode)-[:EATS]-&gt;(b:Bacterium)</code> and <code>(f:Fungus)-[:DECOMPOSES]-&gt;(om:OrganicMatter)</code>.</li>
+<li>This hands-on, visual task builds immediate intuition for the graph model.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-cypher-query-language-drawing-your-questions-"><a class="header" href="#hour-3-4-the-cypher-query-language-drawing-your-questions-"><strong>Hour 3-4: The Cypher Query Language: Drawing Your Questions</strong> ✍️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Learn the basic syntax and clauses of Cypher, Neo4j's declarative query language.</li>
+<li>Write queries to create, read, update, and delete data (CRUD).</li>
+<li>Master the art of pattern matching to ask complex questions of the graph.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Declarative &amp; Visual</strong>: Cypher is designed to look like "ASCII art." The pattern you draw is the pattern the database finds.</li>
+<li><strong>Core Clauses</strong>:
+<ul>
+<li><code>CREATE</code>: Create nodes and relationships.</li>
+<li><code>MATCH</code>: The workhorse for finding patterns in the data.</li>
+<li><code>WHERE</code>: Filtering results based on property values.</li>
+<li><code>RETURN</code>: Specifying what data to return.</li>
+<li><code>MERGE</code>: A combination of <code>MATCH</code> and <code>CREATE</code> to find a node or create it if it doesn't exist (critical for data ingestion).</li>
+</ul>
+</li>
+<li><strong>The Pattern is Everything</strong>: A deep dive into the <code>(node)-[:RELATIONSHIP]-&gt;(node)</code> syntax.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Write a Cypher script to programmatically create the food web from the previous lab.</li>
+<li>Write a series of <code>MATCH</code> queries to answer questions like:
+<ul>
+<li>"Find all organisms that eat Bacteria."</li>
+<li>"What does the Fungus decompose?"</li>
+<li>"Return the entire graph." (And see how Neo4j visualizes it).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-ingesting-metagenomic-data-into-a-knowledge-graph-"><a class="header" href="#hour-5-6-ingesting-metagenomic-data-into-a-knowledge-graph-"><strong>Hour 5-6: Ingesting Metagenomic Data into a Knowledge Graph</strong> 🧬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design a graph schema to represent the outputs of the metagenomics pipeline (Module 5).</li>
+<li>Use the <code>LOAD CSV</code> command to efficiently bulk-load data into Neo4j.</li>
+<li>Build the foundational layer of a soil bioinformatics knowledge graph.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>From Tables to Graph</strong>: We will design a schema to convert the tabular outputs (MAGs, gene annotations, pathway summaries) from Module 5 into a connected graph.</li>
+<li><strong>The Schema</strong>:
+<ul>
+<li><strong>Nodes</strong>: <code>:MAG</code> (Metagenome-Assembled Genome), <code>:Contig</code>, <code>:Gene</code>, <code>:Pathway</code>, <code>:Enzyme</code>.</li>
+<li><strong>Relationships</strong>: <code>(:MAG)-[:CONTAINS]-&gt;(:Contig)</code>, <code>(:Contig)-[:HAS_GENE]-&gt;(:Gene)</code>, <code>(:Gene)-[:CODES_FOR]-&gt;(:Enzyme)</code>, <code>(:Enzyme)-[:PARTICIPATES_IN]-&gt;(:Pathway)</code>.</li>
+</ul>
+</li>
+<li><strong><code>LOAD CSV</code></strong>: Neo4j's powerful, declarative command for high-speed data ingestion. We'll cover best practices for preparing CSV files and writing idempotent ingestion scripts using <code>MERGE</code>.</li>
+</ul>
+<p><strong>Engineering Sprint:</strong></p>
+<ul>
+<li>Take the final MAG quality table and the gene annotation table produced in the Module 5 capstone project.</li>
+<li>Write a single, well-documented Cypher script that uses <code>LOAD CSV</code> to:
+<ol>
+<li>Create a unique node for each MAG.</li>
+<li>Create a unique node for each gene.</li>
+<li>Create a unique node for each metabolic pathway.</li>
+<li>Create all the relationships connecting them.</li>
+</ol>
+</li>
+<li>Verify the ingestion by running queries to count the different node and relationship types.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-modeling-soil-food-webs--trophic-levels-"><a class="header" href="#hour-7-8-modeling-soil-food-webs--trophic-levels-"><strong>Hour 7-8: Modeling Soil Food Webs &amp; Trophic Levels</strong> 🕸️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Extend the graph schema to include higher trophic levels (protists, nematodes, fungi).</li>
+<li>Add properties to relationships to capture the strength or type of interaction.</li>
+<li>Write queries that traverse the food web to determine trophic position and food chain length.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Expanding the Ecosystem</strong>: Adding nodes for <code>:Protist</code> and <code>:Nematode</code> and relationships for <code>:CONSUMES</code>.</li>
+<li><strong>Rich Relationships</strong>: We can add properties to relationships to make them more descriptive, e.g., <code>(n:Nematode)-[:CONSUMES {preference: 0.9, method: 'piercing'}]-&gt;(f:Fungus)</code>.</li>
+<li><strong>Food Web Queries</strong>:
+<ul>
+<li><strong>Direct Interactions</strong>: "Which nematodes consume <em>Pseudomonas</em>?"</li>
+<li><strong>Variable-Length Paths</strong>: "Find all food chains up to 4 steps long starting from Cellulose." <code>MATCH p = (:Cellulose)&lt;-[:DECOMPOSES|EATS*1..4]-(predator) RETURN p</code>.</li>
+<li><strong>Trophic Level</strong>: Calculating a node's position in the food web.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Augment your existing graph by using <code>LOAD CSV</code> to import a list of known predator-prey interactions.</li>
+<li>Write a Cypher query to find the longest food chain in your dataset.</li>
+<li>Write a query to identify "omnivores": organisms that consume others at more than one trophic level.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-modeling-metabolic-pathways--mycorrhizal-networks-"><a class="header" href="#hour-9-10-modeling-metabolic-pathways--mycorrhizal-networks-"><strong>Hour 9-10: Modeling Metabolic Pathways &amp; Mycorrhizal Networks</strong> 🍄</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Model a biochemical pathway as a graph of compounds, reactions, and enzymes.</li>
+<li>Query the graph to perform pathway analysis, such as checking for completeness.</li>
+<li>Design a schema for the symbiotic exchange of nutrients in a mycorrhizal network.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Metabolic Pathways as Graphs</strong>: This is the most natural way to represent metabolism.
+<ul>
+<li><strong>Schema</strong>: <code>(:Compound)-[:IS_SUBSTRATE_FOR]-&gt;(:Reaction)</code>, <code>(:Reaction)-[:PRODUCES]-&gt;(:Compound)</code>, <code>(:Enzyme)-[:CATALYZES]-&gt;(:Reaction)</code>.</li>
+</ul>
+</li>
+<li><strong>Powerful Pathway Queries</strong>:
+<ul>
+<li>"Find the shortest biochemical path from Nitrate to N2 gas (denitrification)."</li>
+<li>"Given this MAG, does it possess all the enzymes necessary to complete this pathway?"</li>
+</ul>
+</li>
+<li><strong>Mycorrhizal Networks</strong>: Modeling the "fungal highway."
+<ul>
+<li><strong>Schema</strong>: <code>(:Plant {species: 'Corn'})-[:FORMS_SYMBIOSIS_WITH]-&gt;(:Fungus {species: 'G. intraradices'})</code>.</li>
+<li><strong>Exchange Relationships</strong>: <code>(f:Fungus)-[:TRANSPORTS {compound: 'Phosphate'}]-&gt;(p:Plant)</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Pathway Analysis Lab:</strong></p>
+<ul>
+<li>Import a subsection of the KEGG pathway database for nitrogen cycling.</li>
+<li>Write a Cypher query that accepts a <code>mag_id</code> as a parameter.</li>
+<li>The query must traverse the graph to determine if that MAG has a complete set of enzymes to perform the denitrification pathway and return <code>true</code> or <code>false</code>.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-graph-algorithms-for-ecological-insight-"><a class="header" href="#hour-11-12-graph-algorithms-for-ecological-insight-"><strong>Hour 11-12: Graph Algorithms for Ecological Insight</strong> 🧠</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Use the Neo4j Graph Data Science (GDS) library to run advanced algorithms.</li>
+<li>Identify ecologically important nodes using centrality algorithms.</li>
+<li>Discover functional groups of organisms using community detection algorithms.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The GDS Library</strong>: A powerful, parallelized library for executing graph algorithms directly within Neo4j.</li>
+<li><strong>Pathfinding</strong>: Finding the shortest or most efficient path for nutrient flow.</li>
+<li><strong>Centrality Algorithms</strong>:
+<ul>
+<li><strong>Degree Centrality</strong>: "Who is the most connected?" (Generalists).</li>
+<li><strong>Betweenness Centrality</strong>: "Who is the most important bridge between other groups?" (Keystone species).</li>
+</ul>
+</li>
+<li><strong>Community Detection</strong>:
+<ul>
+<li><strong>Louvain Modularity / Label Propagation</strong>: Algorithms that find clusters of nodes that are more densely connected to each other than to the rest of the graph. These often correspond to functional "guilds" (e.g., a cluster of cellulose decomposers).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Graph Data Science Workshop:</strong></p>
+<ul>
+<li>Using your integrated food web graph and the GDS library:
+<ol>
+<li>Run the <strong>PageRank</strong> algorithm to identify the most influential organisms in the food web.</li>
+<li>Run the <strong>Louvain</strong> community detection algorithm to partition the ecosystem into functional guilds.</li>
+<li>Visualize the results in the Neo4j Browser, coloring nodes by their community ID. Interpret what these communities might represent.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-connecting-the-graph-python-drivers--apis-"><a class="header" href="#hour-13-14-connecting-the-graph-python-drivers--apis-"><strong>Hour 13-14: Connecting the Graph: Python Drivers &amp; APIs</strong> 🐍</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Connect to and query a Neo4j database from a Python application.</li>
+<li>Structure your application code to cleanly separate queries from logic.</li>
+<li>Build a simple API function that exposes a complex graph query to other services.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Official Neo4j Driver</strong>: Using the <code>neo4j</code> Python library to establish a connection, manage sessions, and execute transactions.</li>
+<li><strong>Best Practices</strong>:
+<ul>
+<li>Using parameterized queries to prevent injection attacks.</li>
+<li>Managing transactions to ensure data integrity.</li>
+<li>Processing results returned by the driver.</li>
+</ul>
+</li>
+<li><strong>Building a Bridge to Foundation Models</strong>: Writing Python functions that encapsulate complex Cypher queries. This creates a simple API that other modules can call without needing to know Cypher. Example: a function <code>get_organisms_with_pathway(pathway_name)</code>.</li>
+</ul>
+<p><strong>Application Development Lab:</strong></p>
+<ul>
+<li>Write a Python script that uses the <code>neo4j</code> driver to connect to your database.</li>
+<li>Create a function that takes a nematode species name as an argument.</li>
+<li>The function should query the database to find all the bacteria that the nematode eats and return them as a list.</li>
+<li>This lab demonstrates how to programmatically interact with the graph, forming the basis for more complex applications.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-and-analyzing-an-integrated-soil-knowledge-graph-"><a class="header" href="#hour-15-capstone-building-and-analyzing-an-integrated-soil-knowledge-graph-"><strong>Hour 15: Capstone: Building and Analyzing an Integrated Soil Knowledge Graph</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are given a rich dataset for a single soil sample, designed to test your ability to integrate heterogeneous information into a single, powerful knowledge graph.</p>
+<p><strong>The Data Provided:</strong></p>
+<ol>
+<li><strong>Metagenomics (Module 5)</strong>: A list of MAGs and their annotated KEGG pathways.</li>
+<li><strong>Taxonomy (External DB)</strong>: A file mapping MAGs to taxonomic names and functional guilds (e.g., 'Cellulose Decomposer', 'Bacterivore').</li>
+<li><strong>Metabolomics (Conceptual)</strong>: A list of key chemical compounds detected in the soil sample.</li>
+<li><strong>Known Interactions (Literature)</strong>: A simple list of <code>(pathway, produces, compound)</code> and <code>(pathway, consumes, compound)</code> interactions.</li>
+</ol>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Design a Unified Schema</strong>: Create a graph schema diagram that models all these entities and their relationships. It should include nodes like <code>:MAG</code>, <code>:Pathway</code>, <code>:Compound</code>, <code>:FunctionalGuild</code> and relationships like <code>:HAS_PATHWAY</code>, <code>:PRODUCES</code>, <code>:CONSUMES</code>, <code>:IS_MEMBER_OF</code>.</li>
+<li><strong>Build the Ingestion Pipeline</strong>: Write a single, well-documented Cypher script that uses <code>LOAD CSV</code> to build the entire, multi-faceted knowledge graph.</li>
+<li><strong>Perform Hypothesis-Driven Queries</strong>: Write and execute Cypher queries to answer the following questions:
+a.  <strong>Resource Competition</strong>: "Find all compounds that are consumed by more than one metabolic pathway present in the sample. Which guilds compete for these resources?"
+b.  <strong>Syntrophy Detection</strong>: "Is there a potential syntrophic relationship? Find a pair of MAGs where MAG_A produces a compound that is consumed by a pathway present in MAG_B."
+c.  <strong>Trophic-Metabolic Link</strong>: "List all the bacterivore nematodes and, for each, list the metabolic pathways possessed by their potential prey."</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>The graph schema diagram.</li>
+<li>The runnable Cypher ingestion script.</li>
+<li>A Jupyter Notebook or Python script containing the analytical queries, their Cypher code, and the results, with clear interpretations.</li>
+<li>A brief report explaining how the graph model enabled the discovery of the syntrophic relationship—a query that would be exceptionally difficult in a relational model.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>The elegance and correctness of the graph schema.</li>
+<li>The robustness and efficiency of the ingestion script.</li>
+<li>The correctness and complexity of the analytical Cypher queries.</li>
+<li>The depth of insight and clarity of interpretation in the final analysis.</li>
+</ul>
 
                     </main>
 

@@ -157,6 +157,223 @@
                     <main>
                         <h1 id="module-8-version-control-for-scientific-datasets"><a class="header" href="#module-8-version-control-for-scientific-datasets"><strong>Module 8: Version Control for Scientific Datasets</strong></a></h1>
 <p>Implement Git-LFS, DVC, and specialized tools for versioning large scientific datasets. Handle incremental updates to soil surveys and maintain reproducibility across model iterations.</p>
+<p>The course objective is to implement and manage robust version control systems specifically designed for large, complex scientific datasets and machine learning models. Students will master Git-LFS for handling large files and DVC (Data Version Control) for creating reproducible, end-to-end data pipelines. The course will focus on practical workflows for managing incremental updates to soil datasets and ensuring complete reproducibility across model training iterations.</p>
+<p>This module is the lynchpin for ensuring reproducibility in the entire curriculum. It directly addresses the challenge of managing the large, heterogeneous data artifacts produced in Modules 4-7 (spectra, metagenomes, maps, time series). It provides the foundational engineering practice required for the iterative <strong>Model Development Phase</strong> (Modules 51-75) and the auditable, production-ready systems needed for the <strong>Deployment &amp; Applications Phase</strong> (Modules 76-100), turning the ad-hoc scripts of previous modules into traceable, versioned pipelines.</p>
+<hr />
+<h3 id="hour-1-2-the-reproducibility-crisis-why-git-is-not-enough-"><a class="header" href="#hour-1-2-the-reproducibility-crisis-why-git-is-not-enough-"><strong>Hour 1-2: The Reproducibility Crisis: Why <code>git</code> Is Not Enough</strong> 🔬</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why versioning data is fundamentally different and more complex than versioning code.</li>
+<li>Analyze the failure modes of using standard Git for large data files (e.g., repository bloat, performance collapse).</li>
+<li>Define the core principles of a reproducible scientific workflow: linking code, data, and outputs.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The <code>final_data_v2_Johns_edit_final.csv</code> Problem</strong>: A critical look at the ad-hoc "versioning" practices common in science.</li>
+<li><strong>Git's Blind Spot</strong>: Git versions <em>text</em>. We'll explore how it handles binary files and why storing a 1GB GeoTIFF file in Git is a recipe for disaster.</li>
+<li><strong>From Version Control to Provenance</strong>: Introducing the concept of a Directed Acyclic Graph (DAG) for a scientific workflow. We need to track not just the data, but the <em>code that produced it</em>.</li>
+<li><strong>Case Study</strong>: Deconstructing a published paper where a minor, untracked change in a dataset led to incorrect conclusions, highlighting the critical need for these tools.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Initialize a standard Git repository.</li>
+<li>Attempt to commit a 150MB file (e.g., a sample raster from Module 6).</li>
+<li>Observe the warning messages and the inflation of the <code>.git</code> directory size.</li>
+<li>Clone the repository to another location and note the slow transfer speed. This provides a tangible pain point that the rest of the module will solve.</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-a-first-step-git-large-file-storage-git-lfs-"><a class="header" href="#hour-3-4-a-first-step-git-large-file-storage-git-lfs-"><strong>Hour 3-4: A First Step: Git Large File Storage (Git-LFS)</strong> 📂</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the mechanics of Git-LFS: how it replaces large files with lightweight text pointers.</li>
+<li>Install and configure Git-LFS in a project.</li>
+<li>Track and manage large binary files without bloating the Git repository.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Pointer System</strong>: A conceptual walkthrough of how Git-LFS intercepts <code>git add</code>, checks if the file type should be tracked, and if so, uploads the file to a separate LFS store, leaving only a small pointer file in the Git history.</li>
+<li><strong>Installation and Setup</strong>: <code>git lfs install</code>.</li>
+<li><strong>Tracking Files</strong>: Using <code>git lfs track</code> to specify which file patterns (e.g., <code>*.tif</code>, <code>*.h5</code>) should be handled by LFS.</li>
+<li><strong>The LFS Cache</strong>: Understanding where the actual large files are stored locally and remotely.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Take the repository from the previous exercise.</li>
+<li>Install Git-LFS and configure it to track <code>*.tif</code> files.</li>
+<li>Use <code>git rm</code> to unstage the large file, then re-add and commit it.</li>
+<li>Inspect the file in the repository—it's now a small text pointer. Inspect the <code>.git/lfs</code> directory to see the actual stored object.</li>
+<li>Push the repository to a remote (like GitHub) and observe the separate LFS upload process.</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-beyond-files-introducing-dvc-data-version-control-"><a class="header" href="#hour-5-6-beyond-files-introducing-dvc-data-version-control-"><strong>Hour 5-6: Beyond Files: Introducing DVC (Data Version Control)</strong> 🔗</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the limitations of Git-LFS (it versions files, not pipelines or datasets).</li>
+<li>Grasp the core philosophy of DVC: using Git to version metadata while handling data in remote storage.</li>
+<li>Initialize a DVC project and configure a remote storage backend.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Missing Link</strong>: Git-LFS knows <em>what</em> your data is, but not <em>how it was made</em>. DVC is designed to version the entire pipeline.</li>
+<li><strong>DVC's Architecture</strong>:
+<ul>
+<li><strong>Git</strong>: Versions small <code>.dvc</code> metadata files and your code.</li>
+<li><strong>DVC Cache</strong>: A content-addressable storage for data files locally.</li>
+<li><strong>Remote Storage</strong>: Your S3, GCS, Azure Blob, or even SSH server where the actual data lives.</li>
+</ul>
+</li>
+<li><strong>Setting Up</strong>: <code>dvc init</code> and <code>dvc remote add</code>. We'll configure DVC to use a cloud storage backend.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Create a new project directory. Initialize both a Git and a DVC repository.</li>
+<li>Create a dummy 50MB data file (e.g., <code>soil_samples.csv</code>).</li>
+<li>Configure DVC to use a remote storage location (a local directory can simulate a cloud remote for this exercise).</li>
+<li>Use <code>dvc add</code> to start tracking the data file.</li>
+<li>Observe the new <code>.dvc</code> file created. <code>cat</code> this file to see that it's a small text file containing an MD5 hash and path.</li>
+<li>Commit the <code>.dvc</code> file to Git. Use <code>dvc push</code> to send the actual data to the remote storage.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-building-reproducible-pipelines-with-dvc-"><a class="header" href="#hour-7-8-building-reproducible-pipelines-with-dvc-"><strong>Hour 7-8: Building Reproducible Pipelines with DVC</strong> ⛓️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Use <code>dvc run</code> to define and execute stages in a data pipeline.</li>
+<li>Understand the structure and importance of the <code>dvc.yaml</code> file.</li>
+<li>Reproduce a pipeline and see how DVC intelligently skips unchanged stages.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Defining Stages</strong>: A pipeline stage consists of dependencies (data or code), outputs (new data), and a command to run.</li>
+<li><strong><code>dvc run</code></strong>: The command that executes a script and creates a DVC stage, tracking its inputs and outputs.</li>
+<li><strong>The <code>dvc.yaml</code> file</strong>: DVC automatically generates this file, which defines the entire workflow DAG. This file is committed to Git and is the key to reproducibility.</li>
+<li><strong><code>dvc repro</code></strong>: The command to re-run the pipeline. DVC checks the hashes of all dependencies; if nothing has changed, it does nothing. If a piece of code or data changes, it re-runs only that stage and all downstream stages.</li>
+</ul>
+<p><strong>Pipeline Lab:</strong></p>
+<ul>
+<li>Create a simple Python script <code>process.py</code> that takes an input CSV, filters it, and saves an output CSV.</li>
+<li>Use <code>dvc run</code> to execute this script, defining the input CSV as a dependency and the output CSV as an output.</li>
+<li>Inspect the generated <code>dvc.yaml</code>.</li>
+<li>Run <code>dvc repro</code>. Observe that DVC reports the pipeline is up to date.</li>
+<li>Now, modify the <code>process.py</code> script (e.g., change a filter threshold).</li>
+<li>Run <code>dvc repro</code> again. Observe that DVC now re-executes the stage because the code dependency has changed.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-managing-evolving-datasets--incremental-updates-"><a class="header" href="#hour-9-10-managing-evolving-datasets--incremental-updates-"><strong>Hour 9-10: Managing Evolving Datasets &amp; Incremental Updates</strong> 🔄</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Develop a workflow for versioning datasets that receive periodic updates (e.g., new soil survey data).</li>
+<li>Understand how DVC's caching mechanism efficiently handles large datasets with small changes.</li>
+<li>Use <code>dvc get</code> and <code>dvc import</code> to share and reuse versioned data across projects.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Soil Survey Problem</strong>: You have a 10GB dataset of soil samples. A new field campaign adds 50MB of new samples. How do you version this without duplicating the 10GB?</li>
+<li><strong>DVC's Caching Magic</strong>: DVC's content-addressable cache means it only needs to store and upload the <em>new</em> data. The version metadata is updated, but the underlying storage is highly efficient.</li>
+<li><strong>Workflow for Updates</strong>:
+<ol>
+<li><code>dvc pull</code> the existing data.</li>
+<li>Add the new data files.</li>
+<li><code>dvc add</code> the updated directory.</li>
+<li><code>git commit</code> the changed <code>.dvc</code> file.</li>
+<li><code>dvc push</code> only the new data chunks.</li>
+</ol>
+</li>
+<li><strong>Sharing Data</strong>: Using <code>dvc get</code> to download a specific version of a dataset from another repository without cloning the whole project.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Start with a DVC-tracked directory containing several large files.</li>
+<li>Simulate an update by adding a new file to the directory.</li>
+<li>Run <code>dvc add</code> on the directory and observe the changes in the <code>.dvc</code> file.</li>
+<li>Use <code>dvc status -c</code> to see that only the new file will be pushed to the remote.</li>
+<li>Push the changes and then use <code>git checkout HEAD~1</code> and <code>dvc pull</code> to revert the dataset to its previous version.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-experiment-tracking-for-model-iterations-"><a class="header" href="#hour-11-12-experiment-tracking-for-model-iterations-"><strong>Hour 11-12: Experiment Tracking for Model Iterations</strong> 📊</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Integrate model training into a DVC pipeline.</li>
+<li>Use DVC to track model metrics and parameters.</li>
+<li>Compare the results of different model experiments using DVC commands.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Versioning Models and Metrics</strong>: Extending the pipeline to include a training stage. The outputs are now the trained model file (<code>.pkl</code>, <code>.h5</code>) and a metrics file (<code>.json</code>).</li>
+<li><strong><code>dvc exp run</code></strong>: A powerful command that runs an experiment without creating a new Git commit for every run. It can be used to inject different parameters into your pipeline.</li>
+<li><strong><code>dvc params diff</code></strong>: Compare the hyperparameters (e.g., learning rate, tree depth) used in different experiments.</li>
+<li><strong><code>dvc metrics diff</code></strong>: Compare the resulting model performance metrics (e.g., accuracy, RMSE) side-by-side in your terminal.</li>
+</ul>
+<p><strong>ML Experiment Lab:</strong></p>
+<ul>
+<li>Create a <code>train.py</code> script that loads processed data, trains a simple scikit-learn model, and saves the model and a <code>metrics.json</code> file.</li>
+<li>Define a <code>params.yaml</code> file to hold hyperparameters.</li>
+<li>Add a training stage to your <code>dvc.yaml</code> that depends on the processed data and the <code>params.yaml</code> file.</li>
+<li>Run an initial experiment: <code>dvc exp run</code>.</li>
+<li>Change a hyperparameter in <code>params.yaml</code>.</li>
+<li>Run a second experiment: <code>dvc exp run</code>.</li>
+<li>Use <code>dvc exp show</code> to see a table comparing the parameters and metrics from both runs.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-advanced-workflows--collaboration-"><a class="header" href="#hour-13-14-advanced-workflows--collaboration-"><strong>Hour 13-14: Advanced Workflows &amp; Collaboration</strong> 🤝</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Structure a DVC project for team collaboration.</li>
+<li>Understand how to use Git branches with DVC to work on data and models in parallel.</li>
+<li>Integrate DVC with CI/CD systems for automated model validation.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>DVC and Git Branching</strong>: The standard workflow:
+<ol>
+<li><code>git checkout -b new-feature</code></li>
+<li>Make changes to data or code.</li>
+<li><code>dvc repro</code> or <code>dvc exp run</code>.</li>
+<li><code>git commit</code> and <code>dvc push</code>.</li>
+<li>Open a Pull Request. The PR will show the changes to code, params, and the <em>results</em> (metrics).</li>
+</ol>
+</li>
+<li><strong>Introduction to CML (Continuous Machine Learning)</strong>: An open-source library that extends CI/CD systems (like GitHub Actions) to work with DVC. It can automatically run your pipeline and post a report with performance metrics directly in a pull request.</li>
+<li><strong>Data Registries</strong>: Using DVC as a lightweight data registry to provide versioned, discoverable datasets to an entire organization.</li>
+</ul>
+<p><strong>Collaboration Simulation:</strong></p>
+<ul>
+<li>Work through a simulated pull request workflow. A teammate proposes a change to a data processing step.</li>
+<li>Review the PR, noting the changes in code and the <code>dvc.lock</code> file.</li>
+<li>Use <code>dvc metrics diff</code> to compare the performance of the model on the main branch versus the feature branch before merging.</li>
+<li>Set up a simple GitHub Action using CML that automatically runs <code>dvc repro</code> and posts a comment on a PR.</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-a-fully-versioned-soil-prediction-workflow-"><a class="header" href="#hour-15-capstone-building-a-fully-versioned-soil-prediction-workflow-"><strong>Hour 15: Capstone: Building a Fully Versioned Soil Prediction Workflow</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are given a complete but untracked soil modeling project. It contains raw data, a data processing script, a model training script, and configuration files. Your task is to bring this entire workflow under version control to ensure it is 100% reproducible.</p>
+<p><strong>The Project:</strong></p>
+<ul>
+<li><strong>Data</strong>: Raw soil sample CSVs and a GeoTIFF elevation model.</li>
+<li><strong>Code</strong>: <code>process.py</code> (merges and cleans data), <code>featurize.py</code> (extracts elevation for points), <code>train.py</code> (trains a model).</li>
+<li><strong>Config</strong>: <code>params.yaml</code> for model hyperparameters.</li>
+</ul>
+<p><strong>Your Mission:</strong></p>
+<ol>
+<li><strong>Initialize</strong>: Set up Git, Git-LFS (for the GeoTIFF), and DVC with a remote.</li>
+<li><strong>Version Data</strong>: Put the raw data under DVC control.</li>
+<li><strong>Build the Pipeline</strong>: Create a multi-stage <code>dvc.yaml</code> file that defines the entire workflow: <code>process</code> -&gt; <code>featurize</code> -&gt; <code>train</code>.</li>
+<li><strong>Run and Version</strong>: Execute the full pipeline with <code>dvc repro</code> and commit the results. Push everything (code to Git, data to DVC remote).</li>
+<li><strong>Iterate</strong>: You are asked to test a new hyperparameter. Use <code>dvc exp run</code> to launch the new experiment.</li>
+<li><strong>Report</strong>: Use <code>dvc exp show</code> to generate a comparison table of your experiments. Create a short markdown report explaining which experiment was better and why, and include the DVC table as proof.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A link to a Git repository containing the fully versioned project.</li>
+<li>The final markdown report comparing the model experiments.</li>
+<li>A short screencast or written walkthrough explaining how a collaborator could clone your repository, run <code>dvc pull</code>, and perfectly reproduce your final result with <code>dvc repro</code>.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Correct use of Git, Git-LFS, and DVC for their respective roles.</li>
+<li>A well-structured and functional <code>dvc.yaml</code> pipeline.</li>
+<li>Successful execution and comparison of model experiments.</li>
+<li>The clarity and completeness of the reproducibility instructions, proving the system works.</li>
+</ul>
 
                     </main>
 

@@ -157,6 +157,231 @@
                     <main>
                         <h1 id="module-6-geospatial-data-engineering-for-pedometrics"><a class="header" href="#module-6-geospatial-data-engineering-for-pedometrics"><strong>Module 6: Geospatial Data Engineering for Pedometrics</strong></a></h1>
 <p>Master coordinate system transformations, spatial interpolation methods, and uncertainty propagation in soil mapping. Build systems to handle irregular sampling, preferential sampling bias, and scale mismatches.</p>
+<p>The course objective is to master the engineering principles required to transform raw, scattered soil observations into spatially continuous, analysis-ready datasets. This module focuses on building robust systems for handling coordinate transformations, advanced spatial interpolation, and rigorous uncertainty quantification, with a special emphasis on overcoming the real-world challenges of irregular sampling, preferential bias, and multi-scale data fusion.</p>
+<p>This module is the spatial backbone of the <strong>Foundation Phase</strong>. It builds directly upon the multi-scale data architectures from Module 2 and the clean, point-based data generated in Modules 4 (Spectroscopy) and 5 (Metagenomics). The skills developed here are essential for creating the training data that will power landscape-scale foundation models like <strong>CarbonSequestrator</strong> and <strong>ErosionVulnerability</strong>, turning point data into predictive surfaces.</p>
+<hr />
+<h3 id="hour-1-2-the-foundation-coordinate-reference-systems-crs--projections-"><a class="header" href="#hour-1-2-the-foundation-coordinate-reference-systems-crs--projections-"><strong>Hour 1-2: The Foundation: Coordinate Reference Systems (CRS) &amp; Projections</strong> 🌍</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the fundamental difference between geographic and projected coordinate systems.</li>
+<li>Master the concepts of datums (e.g., WGS84, NAD83), ellipsoids, and projections (e.g., UTM, Albers Equal Area).</li>
+<li>Build robust pipelines for identifying, validating, and transforming CRS in heterogeneous datasets.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why CRS is the #1 Source of Error</strong>: How mismatched datums and projections can lead to spatial offsets of hundreds of meters, corrupting all downstream analysis.</li>
+<li><strong>The Anatomy of a CRS</strong>: Deconstructing EPSG codes and Well-Known Text (WKT) representations.</li>
+<li><strong>Choosing the Right Projection</strong>: Understanding the trade-offs between preserving area, distance, and shape for different soil mapping applications.</li>
+<li><strong>The Engineer's Toolkit</strong>: Using libraries like <strong>PROJ</strong>, <strong>GDAL/OGR</strong>, and Python's <strong>pyproj</strong> to build automated CRS transformation workflows.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>You are given three soil sample datasets for a single farm: one in geographic coordinates (lat/lon WGS84), one in UTM Zone 15N (NAD83), and one with an unknown CRS.</li>
+<li>Write a Python script using <code>geopandas</code> and <code>pyproj</code> to:
+<ol>
+<li>Identify the CRS of each file.</li>
+<li>Transform all datasets into a single, appropriate projected CRS.</li>
+<li>Create a validation plot showing all three datasets correctly aligned on a single map.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-geostatistical-theory-modeling-spatial-autocorrelation-"><a class="header" href="#hour-3-4-geostatistical-theory-modeling-spatial-autocorrelation-"><strong>Hour 3-4: Geostatistical Theory: Modeling Spatial Autocorrelation</strong> 📈</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand Tobler's First Law of Geography ("everything is related to everything else, but near things are more related than distant things").</li>
+<li>Quantify spatial autocorrelation using the experimental variogram.</li>
+<li>Model the variogram with mathematical functions to describe spatial structure.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>From Points to Patterns</strong>: The core concept of a random field and how we model soil properties as spatially continuous variables.</li>
+<li><strong>The Variogram Cloud</strong>: Visualizing the relationship between sample separation distance and variance.</li>
+<li><strong>Modeling the Variogram</strong>: A deep dive into the three key parameters that describe spatial dependency:
+<ul>
+<li><strong>Nugget</strong>: Represents measurement error and micro-scale variability.</li>
+<li><strong>Sill</strong>: The total variance in the data.</li>
+<li><strong>Range</strong>: The distance beyond which samples are no longer spatially correlated.</li>
+</ul>
+</li>
+<li><strong>Anisotropy</strong>: How to detect and model directional trends in spatial correlation (e.g., soil properties varying more along a slope than across it).</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Using a dataset of soil organic carbon point samples, write a script with the Python library <code>scikit-gstat</code> to:
+<ol>
+<li>Calculate and plot the experimental variogram.</li>
+<li>Fit spherical, exponential, and Gaussian models to the variogram.</li>
+<li>Justify which model best represents the spatial structure of the data and interpret the nugget, sill, and range.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-spatial-interpolation-i-deterministic--simple-approaches-"><a class="header" href="#hour-5-6-spatial-interpolation-i-deterministic--simple-approaches-"><strong>Hour 5-6: Spatial Interpolation I: Deterministic &amp; Simple Approaches</strong> 🗺️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Implement basic interpolation methods to understand the core concepts.</li>
+<li>Understand the limitations and appropriate use cases for non-statistical interpolators.</li>
+<li>Build a baseline model against which more advanced methods can be compared.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Inverse Distance Weighting (IDW)</strong>: A simple, intuitive method where the influence of a sample point decreases with distance. We'll discuss the critical choice of the "power" parameter.</li>
+<li><strong>Thiessen (Voronoi) Polygons</strong>: A method that assigns the value of the nearest point to an entire area, creating a mosaic of polygons.</li>
+<li><strong>Splines</strong>: Fitting a smooth surface through the data points, useful for gently varying properties.</li>
+<li><strong>Why These Aren't Enough</strong>: A critical discussion of their major flaw: they don't provide a measure of prediction uncertainty.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Using the same soil organic carbon dataset, create interpolated maps using IDW (with different power parameters) and Thiessen polygons.</li>
+<li>Perform a leave-one-out cross-validation to compare the accuracy of the methods.</li>
+<li>Critique the resulting maps, identifying artifacts and discussing their limitations.</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-spatial-interpolation-ii-kriging--geostatistical-prediction-"><a class="header" href="#hour-7-8-spatial-interpolation-ii-kriging--geostatistical-prediction-"><strong>Hour 7-8: Spatial Interpolation II: Kriging &amp; Geostatistical Prediction</strong> ✨</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the theory behind Kriging as the Best Linear Unbiased Estimator (BLUE).</li>
+<li>Perform Ordinary Kriging to produce a map of predicted soil properties.</li>
+<li>Generate a corresponding map of the kriging variance to quantify prediction uncertainty.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Kriging Estimator</strong>: How it uses the modeled variogram to determine the optimal weights for surrounding samples to predict a value at an un-sampled location.</li>
+<li><strong>Ordinary Kriging (OK)</strong>: The most common form, assuming a constant but unknown local mean.</li>
+<li><strong>The Power of Kriging</strong>: It's not just a map of predictions; it's also a map of <strong>confidence</strong>. The kriging variance is a direct output, showing where the predictions are reliable (near sample points) and where they are uncertain (far from data).</li>
+<li><strong>Block Kriging</strong>: How to predict the average value over an area (e.g., a 30x30m grid cell) instead of at a single point, which is crucial for matching scales with remote sensing data.</li>
+</ul>
+<p><strong>Kriging Implementation Lab:</strong></p>
+<ul>
+<li>Using the variogram model from Hour 3-4, implement Ordinary Kriging in Python using <code>pykrige</code> or <code>gstools</code>.</li>
+<li>Generate two raster maps:
+<ol>
+<li>The predicted soil organic carbon map.</li>
+<li>The kriging variance (uncertainty) map.</li>
+</ol>
+</li>
+<li>Analyze the relationship between the two maps and interpret the spatial patterns of uncertainty.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-the-real-world-handling-sampling-bias--irregularity-"><a class="header" href="#hour-9-10-the-real-world-handling-sampling-bias--irregularity-"><strong>Hour 9-10: The Real World: Handling Sampling Bias &amp; Irregularity</strong> 🚧</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Identify and visualize different types of sampling patterns (random, grid, clustered).</li>
+<li>Understand how <strong>preferential sampling</strong> (e.g., sampling easily accessible areas) can bias interpolation results.</li>
+<li>Implement methods to mitigate the effects of sampling bias.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Problem of Convenience</strong>: Why soil sampling often follows roads, field edges, or known "problem areas," violating the assumptions of many statistical models.</li>
+<li><strong>Detecting Bias</strong>: Using statistical tests and visual analysis to compare the distribution of sample locations to the distribution of covariates (like elevation or slope).</li>
+<li><strong>Mitigation Strategies</strong>:
+<ul>
+<li><strong>Declustering</strong>: Weighting samples in dense clusters less heavily to approximate a more random sample distribution.</li>
+<li><strong>Model-Based Approaches</strong>: Using covariates to explicitly model the trend in the data. <strong>Universal Kriging</strong> and <strong>Regression Kriging</strong> incorporate secondary information (e.g., satellite imagery, elevation models) to improve predictions and account for trends that may have guided sampling.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>Given a dataset of soil salinity samples known to be preferentially sampled in low-lying areas, first perform Ordinary Kriging and observe the biased result.</li>
+<li>Then, implement <strong>Regression Kriging</strong> using an elevation model as a covariate.</li>
+<li>Compare the two maps and the cross-validation statistics to demonstrate how incorporating the elevation data corrected the sampling bias.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-advanced-geostatistics--uncertainty-propagation-"><a class="header" href="#hour-11-12-advanced-geostatistics--uncertainty-propagation-"><strong>Hour 11-12: Advanced Geostatistics &amp; Uncertainty Propagation</strong> 🎲</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Move beyond a single "best" map to a probabilistic view of soil properties.</li>
+<li>Implement Gaussian Geostatistical Simulation (SGS) to generate multiple equally probable maps (realizations).</li>
+<li>Use the ensemble of realizations to calculate robust uncertainty metrics and probabilities.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Variance Isn't Enough</strong>: Kriging variance shows prediction error at a single point, but it doesn't capture the joint uncertainty across space (the "texture" of the spatial variability).</li>
+<li><strong>Sequential Gaussian Simulation (SGS)</strong>: An algorithm that generates multiple maps, each one honoring the sample data and the variogram. The set of these "realizations" represents the full uncertainty.</li>
+<li><strong>Post-Processing Simulations</strong>: From an ensemble of 100+ realizations, you can calculate:
+<ul>
+<li>The mean or median map (often more robust than a single kriging map).</li>
+<li>A variance map at every pixel.</li>
+<li>The probability of exceeding a critical threshold (e.g., "What is the probability that soil carbon is below 2%?").</li>
+</ul>
+</li>
+</ul>
+<p><strong>Simulation Workshop:</strong></p>
+<ul>
+<li>Implement SGS to generate 100 realizations of the soil organic carbon map.</li>
+<li>Write a script to process the stack of 100 output rasters to calculate and map:
+<ol>
+<li>The pixel-wise mean.</li>
+<li>The pixel-wise standard deviation (a more robust uncertainty map).</li>
+<li>The probability that carbon concentration exceeds a regulatory threshold.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-engineering-for-scale-mismatches--data-fusion-"><a class="header" href="#hour-13-14-engineering-for-scale-mismatches--data-fusion-"><strong>Hour 13-14: Engineering for Scale Mismatches &amp; Data Fusion</strong> 🧩</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the Modifiable Areal Unit Problem (MAUP) in soil science.</li>
+<li>Implement robust methods for upscaling and downscaling geospatial data.</li>
+<li>Build a data fusion pipeline that combines point data with raster covariates at different resolutions.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Scale Problem</strong>: You have point soil samples, a 10m elevation model, 30m satellite imagery, and a 4km climate grid. How do you combine them?</li>
+<li><strong>Upscaling (Points to Rasters)</strong>: This is the interpolation we've been doing, but now we focus on <strong>Block Kriging</strong> to correctly predict the average value for a grid cell.</li>
+<li><strong>Downscaling (Rasters to Points/Finer Rasters)</strong>: Using fine-scale covariates to disaggregate coarse-resolution data. This is key for creating high-resolution soil maps from global products like SoilGrids.</li>
+<li><strong>The Covariate Stack</strong>: The engineering practice of resampling all raster covariates to a single, standardized grid that serves as the basis for all modeling.</li>
+</ul>
+<p><strong>Data Fusion Sprint:</strong></p>
+<ul>
+<li>Create a standardized analysis grid (e.g., 30m resolution) for a study area.</li>
+<li>Write a Python script using <code>rasterio</code> and <code>gdal</code> to:
+<ol>
+<li>Resample a 90m elevation model and a 1km climate raster to the 30m grid.</li>
+<li>Extract the values of these covariates at your point sample locations.</li>
+<li>Combine the point data and raster data into a single, analysis-ready GeoDataFrame.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-a-production-pedometric-mapping-pipeline-"><a class="header" href="#hour-15-capstone-building-a-production-pedometric-mapping-pipeline-"><strong>Hour 15: Capstone: Building a Production Pedometric Mapping Pipeline</strong> 🏆</a></h3>
+<p><strong>Final Challenge:</strong>
+You are tasked with creating the definitive, reproducible map of plant-available phosphorus for a small watershed to guide fertilizer recommendations. You are given a messy collection of data:</p>
+<ul>
+<li>85 soil samples with phosphorus values, in a mix of CRS.</li>
+<li>A 10m resolution Digital Elevation Model (DEM).</li>
+<li>A 30m Landsat image showing vegetation patterns (NDVI).</li>
+<li>Known preferential sampling along streams.</li>
+</ul>
+<p><strong>Your Pipeline Must:</strong></p>
+<ol>
+<li><strong>Ingest &amp; Clean</strong>: Harmonize all data into a single projected CRS.</li>
+<li><strong>Exploratory Analysis</strong>: Model the variogram for phosphorus and test for anisotropy.</li>
+<li><strong>Handle Bias</strong>: Use the DEM and NDVI as covariates in a Regression Kriging model to account for the preferential sampling.</li>
+<li><strong>Quantify Uncertainty</strong>: Use geostatistical simulation (conditioned on the regression model) to generate 100 realizations of the phosphorus map.</li>
+<li><strong>Deliver Actionable Intelligence</strong>: Produce three final maps:
+<ul>
+<li>The best estimate (median) of plant-available phosphorus.</li>
+<li>A map of the 90% confidence interval width (a measure of uncertainty).</li>
+<li>A "management zone" map showing areas where there is a &gt;80% probability that phosphorus is below the agronomic threshold.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>A fully documented, runnable script or Jupyter Notebook that performs the entire workflow from raw data to final maps.</li>
+<li>The three final maps as GeoTIFF files.</li>
+<li>A brief report justifying your choice of model (Regression Kriging), interpreting the uncertainty map, and explaining how the final probability map can be used by a farm manager.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li>Correctness of the geoprocessing and geostatistical workflow.</li>
+<li>Robustness of the code and reproducibility of the results.</li>
+<li>Clarity of justification for methodological choices.</li>
+<li>Actionability and interpretation of the final uncertainty and probability maps.</li>
+</ul>
 
                     </main>
 

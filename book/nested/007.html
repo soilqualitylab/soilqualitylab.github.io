@@ -157,6 +157,227 @@
                     <main>
                         <h1 id="module-7-time-series-management-for-soil-monitoring"><a class="header" href="#module-7-time-series-management-for-soil-monitoring"><strong>Module 7: Time Series Management for Soil Monitoring</strong></a></h1>
 <p>Design databases for high-frequency sensor data with irregular timestamps, sensor drift, and missing values. Implement automated QA/QC for field-deployed sensors subject to biofouling and extreme conditions.</p>
+<p>The course objective is to design and implement resilient, scalable systems for managing high-frequency soil sensor data. This module focuses on the end-to-end engineering of time series pipelines, from database selection and data ingestion to the development of automated QA/QC routines that handle the harsh realities of field deployments, including sensor drift, biofouling, data gaps, and extreme environmental conditions.</p>
+<p>This module is a critical component of the <strong>Foundation Phase</strong>, directly addressing the fourth major data stream: field sensors. It builds on the multi-scale architectures from Module 2 and the spatial context from Module 6. The clean, continuous, and quality-assured time series data produced here is the essential fuel for the dynamic foundation models to be developed later, such as <strong>Temporal Convolutional Networks for Soil Monitoring</strong> (Module 55) and <strong>Neural Ordinary Differential Equations for Soil Dynamics</strong> (Module 56).</p>
+<hr />
+<h3 id="hour-1-2-the-reality-of-field-sensor-networks-chaos--complexity-"><a class="header" href="#hour-1-2-the-reality-of-field-sensor-networks-chaos--complexity-"><strong>Hour 1-2: The Reality of Field Sensor Networks: Chaos &amp; Complexity</strong> ⛈️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the unique challenges of managing high-frequency, autonomous sensor data compared to static lab data.</li>
+<li>Identify the common failure modes in field deployments and their data signatures.</li>
+<li>Map the data flow and potential bottlenecks from a sensor in the ground to a research database.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>The Data Tsunami</strong>: Calculating the data volume from a network of 100 sensors reporting every 5 minutes for a year. Why this requires a different approach than a spreadsheet.</li>
+<li><strong>The Rogues' Gallery of Field Problems</strong>:
+<ul>
+<li><strong>Biofouling</strong>: How roots, microbes, and insects physically interfere with sensors.</li>
+<li><strong>Environmental Extremes</strong>: The impact of freeze-thaw cycles, lightning strikes, and flooding.</li>
+<li><strong>The Animal Factor</strong>: From rodents chewing cables to livestock damaging installations.</li>
+<li><strong>The Human Element</strong>: Power failures, network outages, and configuration errors.</li>
+</ul>
+</li>
+<li><strong>Data Signatures of Failure</strong>: Learning to visually identify the patterns associated with a dying battery (gradual drift), a loose connection (intermittent noise), or a flooded sensor (flat-lining).</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>You are given raw, uncleaned time series data from a real-world soil sensor network (e.g., from the NEON or LTER network).</li>
+<li>Visually inspect the data using Python's <code>matplotlib</code> or <code>plotly</code>.</li>
+<li>Create an "issue log" by taking screenshots of data anomalies and hypothesizing the physical cause of each (e.g., "Sharp drop to zero suggests power loss," "Noisy signal in Sensor B suggests water intrusion").</li>
+</ul>
+<hr />
+<h3 id="hour-3-4-the-right-tool-for-the-job-time-series-databases-tsdb-"><a class="header" href="#hour-3-4-the-right-tool-for-the-job-time-series-databases-tsdb-"><strong>Hour 3-4: The Right Tool for the Job: Time Series Databases (TSDB)</strong> ⏱️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand why traditional relational databases (like PostgreSQL) are inefficient for time series workloads at scale.</li>
+<li>Master the core concepts and advantages of purpose-built Time Series Databases (TSDBs).</li>
+<li>Design an efficient database schema for a complex soil monitoring network.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Relational vs. Time Series</strong>: Comparing query performance for a typical temporal aggregation (e.g., "calculate the daily average temperature for all sensors last year"). Why TSDBs are orders of magnitude faster.</li>
+<li><strong>Introduction to the Leaders</strong>:
+<ul>
+<li><strong>TimescaleDB</strong>: An extension that adds time series power to PostgreSQL, blending familiarity with performance.</li>
+<li><strong>InfluxDB</strong>: A popular, standalone TSDB known for its high-speed ingestion and specialized query language (Flux/InfluxQL).</li>
+</ul>
+</li>
+<li><strong>Key TSDB Concepts</strong>:
+<ul>
+<li><strong>Hypertables &amp; Chunks (TimescaleDB)</strong>: Automatic partitioning of data by time for massive performance gains.</li>
+<li><strong>Measurements, Tags, and Fields (InfluxDB)</strong>: A data model that separates metadata (tags) from measured values (fields) for rapid indexing and querying.</li>
+</ul>
+</li>
+<li><strong>Schema Design</strong>: Modeling a network with multiple sites, profiles, depths, and measured variables (moisture, temp, EC) using a tag-based approach.</li>
+</ul>
+<p><strong>Database Design Lab:</strong></p>
+<ul>
+<li>Install PostgreSQL with the TimescaleDB extension.</li>
+<li>Write the SQL Data Definition Language (DDL) to create a hypertable for a soil sensor network.</li>
+<li>The schema must efficiently store data from 50 sites, each with 3 profiles, 5 depths, and 4 variables.</li>
+<li>Justify your choice of <code>tags</code> (for metadata like site_id, depth) and <code>fields</code> (for the sensor readings).</li>
+</ul>
+<hr />
+<h3 id="hour-5-6-ingestion--temporal-resampling-"><a class="header" href="#hour-5-6-ingestion--temporal-resampling-"><strong>Hour 5-6: Ingestion &amp; Temporal Resampling</strong> 📥</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Build a robust pipeline to parse and ingest data from common datalogger formats.</li>
+<li>Master the art of temporal resampling to handle irregular data and create standardized time steps.</li>
+<li>Implement bulletproof timezone management.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Parsing the Unruly</strong>: Writing parsers for non-standard formats, including multi-header CSVs from Campbell Scientific loggers and JSON payloads from IoT devices.</li>
+<li><strong>The Resampling Toolkit (Pandas)</strong>: A deep dive into the <code>.resample()</code> method.
+<ul>
+<li><strong>Downsampling</strong>: Aggregating high-frequency data to a coarser resolution (e.g., 1-minute data to hourly averages, max, min).</li>
+<li><strong>Upsampling &amp; Interpolation</strong>: Creating a regular time index from irregular measurements using methods like linear interpolation or forward/backward fill.</li>
+</ul>
+</li>
+<li><strong>The Cardinal Sin of Time Series</strong>: Why you <strong>must</strong> convert all incoming timestamps to UTC for storage and only convert to local time for display. We'll explore the chaos caused by daylight saving time.</li>
+</ul>
+<p><strong>Hands-on Lab:</strong></p>
+<ul>
+<li>Write a Python script using <code>pandas</code> to ingest a messy CSV file with irregular timestamps and mixed timezones.</li>
+<li>The script must:
+<ol>
+<li>Correctly parse the timestamps and convert everything to UTC.</li>
+<li>Resample the data to a regular 15-minute interval, calculating the mean for the period.</li>
+<li>Generate a plot comparing the raw, irregular data with the clean, resampled data.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-7-8-automated-qaqc-i-rule-based-flagging--spike-detection-"><a class="header" href="#hour-7-8-automated-qaqc-i-rule-based-flagging--spike-detection-"><strong>Hour 7-8: Automated QA/QC I: Rule-Based Flagging &amp; Spike Detection</strong> 🚩</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Design and implement the first layer of an automated data quality control system.</li>
+<li>Build robust tests for detecting physically implausible values and sudden spikes.</li>
+<li>Create a standardized, multi-level quality flagging system.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>A Tiered Flagging Schema</strong>: Designing a system (e.g., 0=Unchecked, 1=Good, 2=Suspect, 3=Bad) that can be applied at each stage of the QA/QC process.</li>
+<li><strong>Rule-Based Checks</strong>:
+<ul>
+<li><strong>Gross Range/Plausibility Check</strong>: Defining the physically possible range for each sensor (e.g., soil moisture cannot be &gt; 1.0 v/v).</li>
+<li><strong>Rate of Change/Spike Check</strong>: Identifying sudden jumps that are physically unlikely (e.g., soil temperature changing by 5°C in one minute). This is often implemented with a rolling window approach.</li>
+</ul>
+</li>
+<li><strong>Persisting Flags</strong>: Storing the quality flags alongside the data in the TSDB, ensuring that raw data is never altered, only annotated.</li>
+</ul>
+<p><strong>Technical Workshop:</strong></p>
+<ul>
+<li>Write a Python function that takes a pandas Series of sensor data and a set of configuration parameters (min/max plausible values, max rate of change).</li>
+<li>The function should return a corresponding Series of quality flags.</li>
+<li>Apply this function to a noisy dataset and create a plot that color-codes the data points by their assigned quality flag, visually highlighting the detected errors.</li>
+</ul>
+<hr />
+<h3 id="hour-9-10-automated-qaqc-ii-detecting--correcting-sensor-drift-"><a class="header" href="#hour-9-10-automated-qaqc-ii-detecting--correcting-sensor-drift-"><strong>Hour 9-10: Automated QA/QC II: Detecting &amp; Correcting Sensor Drift</strong> 📉</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Understand the physical and chemical causes of sensor calibration drift.</li>
+<li>Implement statistical methods to detect slow, gradual changes in sensor behavior.</li>
+<li>Build a workflow for applying drift corrections based on periodic field calibrations.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Sensors Lie Over Time</strong>: Exploring the mechanisms of drift, such as the degradation of an electrode's reference solution or the clouding of an optical sensor.</li>
+<li><strong>Detecting Drift</strong>:
+<ul>
+<li><strong>Paired Sensor Comparison</strong>: Comparing a field sensor to a freshly calibrated reference sensor during maintenance visits.</li>
+<li><strong>Statistical Drift Detection</strong>: Using methods like the Cumulative Sum (CUSUM) control chart to detect subtle, long-term deviations from expected behavior.</li>
+</ul>
+</li>
+<li><strong>Modeling the Correction</strong>: When field calibrations show a sensor has drifted, we can model this drift over time (e.g., with a linear or polynomial function) and apply a time-varying correction to the historical data.</li>
+<li><strong>The Importance of Provenance</strong>: Storing both the raw data and the drift-corrected data, with a clear audit trail of what correction was applied and when.</li>
+</ul>
+<p><strong>Practical Exercise:</strong></p>
+<ul>
+<li>You are given a time series from a sensor that is known to be drifting, along with three calibration events where the "true" value was recorded.</li>
+<li>Fit a linear regression between the sensor's readings and the time elapsed.</li>
+<li>Use this regression to calculate a time-varying correction factor.</li>
+<li>Apply the correction to the entire dataset and plot the raw (drifting) data against the corrected data.</li>
+</ul>
+<hr />
+<h3 id="hour-11-12-handling-data-gaps-advanced-imputation-"><a class="header" href="#hour-11-12-handling-data-gaps-advanced-imputation-"><strong>Hour 11-12: Handling Data Gaps: Advanced Imputation</strong> 🕳️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Classify different types of missing data and understand why the cause matters.</li>
+<li>Implement more advanced imputation techniques that leverage correlated variables.</li>
+<li>Evaluate the performance of different imputation methods.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Why Data is Missing</strong>: Differentiating between Missing Completely at Random (MCAR), Missing at Random (MAR), and Missing Not at Random (MNAR). Why a gap from a lightning strike (MCAR) is different from a sensor failing only in frozen soil (MNAR).</li>
+<li><strong>Beyond Linear Interpolation</strong>:
+<ul>
+<li><strong>Multivariate Imputation</strong>: Using relationships between variables to fill gaps. For example, using a linear model based on air temperature and solar radiation to impute missing surface soil temperature.</li>
+<li><strong>Machine Learning Approaches</strong>: Using algorithms like k-Nearest Neighbors or Random Forests for imputation.</li>
+</ul>
+</li>
+<li><strong>Validating Your Guess</strong>: Techniques for testing imputation methods by artificially creating gaps in a complete dataset and measuring how well the algorithms reconstruct the known values.</li>
+</ul>
+<p><strong>Imputation Lab:</strong></p>
+<ul>
+<li>Take a dataset with co-located soil moisture and precipitation data.</li>
+<li>Artificially remove a 24-hour block of soil moisture data.</li>
+<li>Attempt to fill the gap using three methods: linear interpolation, a simple forward-fill, and a linear regression model based on the precipitation data.</li>
+<li>Compare the imputed values from each method to the true, removed values and calculate the Root Mean Square Error (RMSE) for each to determine the best approach.</li>
+</ul>
+<hr />
+<h3 id="hour-13-14-from-clean-data-to-insight-time-series-feature-engineering-"><a class="header" href="#hour-13-14-from-clean-data-to-insight-time-series-feature-engineering-"><strong>Hour 13-14: From Clean Data to Insight: Time Series Feature Engineering</strong> 🛠️</a></h3>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Aggregate and transform time series data to extract meaningful environmental signals.</li>
+<li>Perform frequency analysis to identify dominant cycles.</li>
+<li>Create a feature set suitable for training dynamic machine learning models.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><strong>Temporal Aggregation</strong>: Calculating biologically relevant metrics like growing degree days, cumulative rainfall, or diurnal temperature range.</li>
+<li><strong>Window Functions</strong>: Using rolling windows to calculate statistics that capture the recent state of the system, such as the 7-day moving average of soil moisture.</li>
+<li><strong>Frequency Domain</strong>: Using a Fast Fourier Transform (FFT) to decompose a time series into its constituent frequencies, allowing you to quantify the strength of daily and annual cycles.</li>
+<li><strong>Feature Engineering for ML</strong>: Creating lagged variables (e.g., soil moisture from 24 hours ago) and interaction terms that will be critical inputs for predictive models.</li>
+</ul>
+<p><strong>Analysis Workshop:</strong></p>
+<ul>
+<li>Using a clean, hourly soil temperature dataset, write a script to:
+<ol>
+<li>Calculate the daily minimum, maximum, and average temperature.</li>
+<li>Calculate the 7-day rolling average.</li>
+<li>Perform an FFT and plot the resulting periodogram to show the dominant 24-hour cycle.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h3 id="hour-15-capstone-building-a-resilient-automated-sensor-pipeline-"><a class="header" href="#hour-15-capstone-building-a-resilient-automated-sensor-pipeline-"><strong>Hour 15: Capstone: Building a Resilient, Automated Sensor Pipeline</strong> 🏭</a></h3>
+<p><strong>Final Challenge:</strong>
+Design and build a complete, production-ready data pipeline that automatically ingests, cleans, and processes data from a network of soil sensors.</p>
+<p><strong>The Input</strong>: A directory of raw, messy, daily CSV files from a network of 10 sensors. The data contains gaps, spikes, drift, and irregular timestamps.</p>
+<p><strong>Your Pipeline Must:</strong></p>
+<ol>
+<li><strong>Ingest</strong>: Automatically detect and load new daily files.</li>
+<li><strong>Store</strong>: Write the raw data to a TimescaleDB database.</li>
+<li><strong>Clean &amp; Flag</strong>: Resample the data to a regular 1-hour interval. Apply a multi-stage QA/QC process to flag bad data (range checks, spike detection). Store these flags in the database.</li>
+<li><strong>Correct &amp; Impute</strong>: Apply a pre-defined drift correction function to two of the sensors. Impute any remaining data gaps shorter than 6 hours using linear interpolation.</li>
+<li><strong>Publish</strong>: Write the final, clean, analysis-ready data to a new table in the database.</li>
+<li><strong>Visualize</strong>: Create a simple dashboard (e.g., using Grafana or Dash) that plots the raw data, the quality flags, and the final cleaned data for any selected sensor.</li>
+</ol>
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>The complete, documented Python pipeline code.</li>
+<li>The SQL schema for the TimescaleDB database.</li>
+<li>A brief report justifying your QA/QC parameter choices and interpreting the results for one sensor, explaining how the cleaning process improved the data's reliability.</li>
+</ul>
+<p><strong>Assessment Criteria:</strong></p>
+<ul>
+<li><strong>Automation &amp; Robustness</strong>: The pipeline should run automatically and handle common errors gracefully.</li>
+<li><strong>Correctness</strong>: The QA/QC and imputation logic must be implemented correctly.</li>
+<li><strong>Database Design</strong>: The TSDB schema must be efficient and scalable.</li>
+<li><strong>Clarity &amp; Insight</strong>: The final report and visualization must clearly communicate the value and process of the data cleaning pipeline.</li>
+</ul>
 
                     </main>
 

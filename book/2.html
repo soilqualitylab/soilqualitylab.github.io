@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Phase 2 - 100-Day Personal Knowledge Engineering Curriculum</title>
+        <title>Phase 2 - Soil Quality Lab Foundation Models</title>
 
 
         <!-- Custom HTML head -->
@@ -123,7 +123,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">100-Day Personal Knowledge Engineering Curriculum</h1>
+                    <h1 class="menu-title">Soil Quality Lab Foundation Models</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -155,55 +155,166 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="phase-2-horizon-scanning--deep-learning-modules-21-50"><a class="header" href="#phase-2-horizon-scanning--deep-learning-modules-21-50"><strong>Phase 2: Horizon Scanning &amp; Deep Learning (Modules 21-50)</strong></a></h1>
-<p><strong>Objective:</strong> To systematically explore and gain hands-on proficiency in a curated set of emerging technologies. This phase emphasizes active, project-based learning over passive consumption, with a core tenet of embracing rapid failure as a learning mechanism. Each module is designed to produce a tangible artifact—a piece of code, a trained model, a working demo—which serves as both a learning tool and a potential portfolio piece, thereby energizing the PKES flywheel.</p>
-<h3 id="sub-theme-generative-ai--llms-modules-21-30"><a class="header" href="#sub-theme-generative-ai--llms-modules-21-30"><strong>Sub-theme: Generative AI &amp; LLMs (Modules 21-30)</strong></a></h3>
-<p>This sub-theme focuses on building practical skills in the dominant technology trend of the 2020s. The projects move from foundational theory to building and deploying sophisticated AI applications.</p>
-<ul>
-<li><strong>Module 21: Refresher: Linear Algebra with Python/Mathematica:</strong> Revisit Jupyter and Mathematica notebooks from Day 12-13. Focus specifically on the concepts underpinning transformer architectures: vector spaces, dot products (as a measure of similarity), matrix multiplication, and Singular Value Decomposition (SVD). Implement a simple attention mechanism calculation in a notebook to solidify the mathematical intuition.</li>
-<li><strong>Module 22: Building a RAG Application with LlamaIndex:</strong> Follow a tutorial to build a complete Retrieval-Augmented Generation (RAG) application.32 Use a personal dataset, such as a collection of past technical reports, articles, or even the notes from this 100-day plan. The goal is to create a question-answering system over this private data. Deploy it locally using a simple FastAPI wrapper. This project provides immediate personal utility and a powerful demonstration of context-augmented LLMs.</li>
-<li><strong>Module 23: Fine-Tuning a Foundational Model:</strong> Gain hands-on experience with model customization. Using a framework like Hugging Face's transformers library and a platform with free GPU access like Google Colab, fine-tune a small, open-source LLM (e.g., a member of the Llama 3 or Mistral family) on a specific, narrow task.35 A practical project is to create a dataset of your own commit messages from a key project and fine-tune the model to generate new commit messages in your personal style. This demonstrates an understanding of the full training and tuning loop.</li>
-<li><strong>Module 24: Building an AI Agent with LangChain:</strong> Construct a basic autonomous agent that can reason and use tools. Using LangChain or LangGraph, define two tools: a search tool (e.g., Tavily Search) and a code execution tool (e.g., a Python REPL). Create an agent that can answer a question like, "What is the current price of Apple stock and what is its P/E ratio?" by first searching for the price and then using the REPL to calculate the ratio. This project demonstrates the core concepts of agentic workflows.38</li>
-<li><strong>Module 25: Exploring Generative AI in the SDLC:</strong> Dedicate a full day to integrating Generative AI into a typical software development workflow. Select an AI-native code editor like Cursor or use GitHub Copilot extensively within your preferred IDE.41 Take on a small coding task (e.g., building a simple web app) and use the AI assistant for every stage: generating boilerplate, writing functions, creating unit tests, explaining unfamiliar code, and writing documentation. Meticulously document the experience in your PKES, noting productivity changes, quality of generated code, and points of friction. This provides a first-hand, critical evaluation of how GenAI is transforming the development lifecycle.43</li>
-<li><strong>Modules 26-30: Project: Build an "AI Research Analyst" Agent:</strong> Synthesize the skills from this sub-theme into a multi-day project. Build an autonomous agent that fully automates the workflow designed in Modules 7-10. The agent's task, triggered daily, is to: 1) Fetch new papers from your arXiv feed. 2) For each paper, decide if it's relevant based on a set of criteria. 3) If relevant, summarize the paper using the LLM tool. 4) Check Papers With Code for an associated implementation. 5) Compile the findings into a structured daily brief in Markdown format. 6) Push the Markdown file to a dedicated GitHub repository that powers a section of your technical blog.</li>
-</ul>
-<h3 id="sub-theme-modern-data-engineering-modules-31-35"><a class="header" href="#sub-theme-modern-data-engineering-modules-31-35"><strong>Sub-theme: Modern Data Engineering (Modules 31-35)</strong></a></h3>
-<p>This sub-theme addresses the shift in data architecture, moving beyond monolithic data warehouses to more flexible, scalable, and decentralized paradigms. For a senior engineer, understanding these system-level trends is crucial.46</p>
-<ul>
-<li><strong>Module 31: End-to-End MLOps with MLflow:</strong> Go beyond a simple model.fit() call and embrace the discipline of MLOps. Using a classic dataset like the UCI Wine Quality dataset, train a scikit-learn model, but with a focus on the operational aspects.47 Set up a local MLflow tracking server. In your training script, log hyperparameters, evaluation metrics (e.g., RMSE, MAE), and the trained model itself as an artifact. Use the MLflow UI to compare several runs with different hyperparameters. Finally, register the best-performing model in the MLflow Model Registry, promoting it to a "Staging" or "Production" tag. This project covers the core lifecycle of a managed ML model.48</li>
-<li><strong>Module 32: Data Mesh Proof-of-Concept:</strong> Build a small-scale simulation of a data mesh architecture to understand its core principles. Create two separate Python scripts or services. The first, the "Users Domain," generates mock user data and exposes it via a simple API as a "data product." The second, the "Orders Domain," does the same for mock order data. Create a third "Analytics" service that acts as a data consumer, pulling data from both domain APIs to answer a business question (e.g., "What is the average order value for users in California?"). This hands-on exercise demonstrates the principles of decentralized data ownership and data-as-a-product, contrasting it with a centralized data warehouse approach.52</li>
-<li><strong>Modules 33-35: Project: Real-Time Data Processing Pipeline (Comparative Study):</strong> Build a small but complete real-time data pipeline. Use a public streaming data source. The core task is to implement a simple consumer and transformation process twice, first using a traditional message queue like <strong>Apache Kafka</strong> and then using a unified processing framework like <strong>Apache Beam</strong>. Document the architectural differences, development overhead, and performance trade-offs in your PKES. This comparative approach deepens understanding beyond a single tool.</li>
-</ul>
-<h3 id="sub-theme-the-next-frontiers-modules-36-45"><a class="header" href="#sub-theme-the-next-frontiers-modules-36-45"><strong>Sub-theme: The Next Frontiers (Modules 36-45)</strong></a></h3>
-<p>This section focuses on gaining conceptual and practical fluency in technologies that represent significant long-term shifts in computing.55 The objective is not mastery but the ability to understand the fundamentals and identify potential future applications.</p>
-<ul>
-<li><strong>Module 36: Quantum Computing Fundamentals (Comparative Study):</strong> Demystify the core concepts of quantum computation. Using IBM's <strong>Qiskit</strong> open-source framework, implement a simple algorithm like creating an entangled Bell state. Then, repeat the same exercise using Google's <strong>Cirq</strong> framework. Document the differences in syntax, circuit construction, and overall developer experience. This provides a concrete understanding of concepts like superposition and entanglement from the perspective of two major ecosystems.</li>
-<li><strong>Modules 37-38: Neuromorphic &amp; Brain-Computer Interfaces:</strong> Shift focus from quantum to another frontier: brain-inspired computing.</li>
-<li><strong>Day 37 (Neuromorphic Concepts):</strong> Research the principles of neuromorphic computing and spiking neural networks (SNNs). Investigate current hardware like Innatera's Pulsar and IBM's NorthPole. Create a detailed summary in your PKES comparing the architecture of these chips to traditional von Neumann architectures.</li>
-<li><strong>Day 38 (BCI Exploration):</strong> Explore the open-source Brain-Computer Interface (BCI) landscape. Research the hardware and software stacks of <strong>OpenBCI</strong> 91 and commercial platforms like  <strong>Emotiv</strong>. The goal is to understand the types of data (EEG, EMG) they capture and the kinds of projects the communities are building.</li>
-<li><strong>Modules 39-40: AR/VR for Education &amp; Training:</strong> Replace the Web3 focus with an exploration of immersive technologies for learning, aligning with interests in simulation and education.</li>
-<li><strong>Day 39 (Intro to WebXR):</strong> Set up a basic development environment for WebXR. Work through a "Hello, World" tutorial to render a simple 3D object in a browser that can be viewed in VR or AR on a compatible device. This provides a low-barrier entry into immersive development.97</li>
-<li><strong>Day 40 (Educational AR/VR Prototype):</strong> Brainstorm and create a simple proof-of-concept for an educational AR/VR experience. For example, an AR app that displays a 3D model of a molecule when the phone camera is pointed at a marker, or a simple VR scene that visualizes a mathematical concept. The focus is on rapid prototyping, not a polished application.99</li>
-<li><strong>Modules 41-45: Project: Advanced Frontier Exploration:</strong> Select one of the frontier topics (Generative AI, BCI, or AR/VR) and build a more in-depth project.
-<ul>
-<li><strong>AI Option:</strong> Build and deploy a multi-modal application (e.g., an image captioning model) to a Hugging Face Space, making it publicly accessible.</li>
-<li><strong>BCI Option:</strong> Download a public EEG dataset and use Python libraries to perform basic signal processing and visualization, attempting to identify simple patterns (e.g., eye blinks).</li>
-<li><strong>AR/VR Option:</strong> Expand the educational prototype from Day 40, adding more interactivity or information overlays to create a more comprehensive learning module.</li>
-</ul>
-</li>
-</ul>
-<h3 id="sub-theme-review--synthesis-modules-46-50"><a class="header" href="#sub-theme-review--synthesis-modules-46-50"><strong>Sub-theme: Review &amp; Synthesis (Modules 46-50)</strong></a></h3>
-<h3 id="sub-theme-review--synthesis-modules-46-50-1"><a class="header" href="#sub-theme-review--synthesis-modules-46-50-1"><strong>Sub-theme: Review &amp; Synthesis (Modules 46-50)</strong></a></h3>
-<ul>
-<li><strong>Tasks:</strong> This process is now even more natural with mdBook. For each major technology explored, create a main chapter that serves as a "Map of Content" (MOC), linking to all the sub-pages (project notes, tutorials, etc.) you've written on the topic. This makes your book's structure itself a tool for synthesis.</li>
-<li><strong>Deliverable:</strong> A set of highly organized, interconnected chapters within your mdBook. This transforms the raw learning experience into a structured, searchable, and reusable knowledge asset.</li>
-</ul>
+                        <h1 id="measurement--sensor-integration-phase"><a class="header" href="#measurement--sensor-integration-phase"><strong>Measurement &amp; Sensor Integration Phase</strong></a></h1>
+<h2 id="modules-26-50"><a class="header" href="#modules-26-50">Modules 26-50</a></h2>
+<p><strong>Module 26: Hyperspectral Unmixing for Soil Mineralogy</strong>
+Implement endmember extraction and abundance estimation specifically for soil minerals with overlapping spectral features. Handle intimate mixtures and coating effects.</p>
+<p><strong>Module 27: X-Ray Diffraction Pattern Analysis &amp; Rietveld Refinement</strong>
+Build neural networks for automated clay mineral identification from XRD patterns. Handle preferred orientation, mixed-layer clays, and amorphous phases.</p>
+<p><strong>Module 28: Micro-CT Image Segmentation for Pore Networks</strong>
+Develop 3D CNNs for segmenting soil aggregates, pores, and organic matter in CT volumes. Implement morphological analysis for pore connectivity and tortuosity.</p>
+<p><strong>Module 29: Mass Spectrometry Data Processing for Soil Metabolomics</strong>
+Build pipelines for LC-MS and GC-MS data including peak detection, alignment, and identification. Handle matrix effects and ion suppression in complex soil extracts.</p>
+<p><strong>Module 30: Flow Cytometry Analysis for Soil Microbes</strong>
+Implement automated gating strategies for identifying microbial populations in soil suspensions. Handle high debris loads and autofluorescence from soil particles.</p>
+<p><strong>Module 31: Isotope Ratio Mass Spectrometry Calibration</strong>
+Build models for drift correction and inter-laboratory standardization of stable isotope measurements. Implement mixing models for source partitioning.</p>
+<p><strong>Module 32: Electrochemical Sensor Array Processing</strong>
+Develop calibration transfer functions for ion-selective electrodes in soil matrices. Handle interference effects and temperature compensation.</p>
+<p><strong>Module 33: Eddy Covariance Flux Processing</strong>
+Implement gap-filling, partitioning, and footprint analysis for CO₂/H₂O flux measurements. Handle quality control for turbulence conditions and energy balance closure.</p>
+<p><strong>Module 34: Ground-Penetrating Radar for Soil Profiles</strong>
+Process GPR radargrams for soil horizon detection and root biomass estimation. Implement velocity models for variable moisture conditions.</p>
+<p><strong>Module 35: Thermal/Multispectral Drone Image Processing</strong>
+Build orthomosaic generation and radiometric calibration pipelines. Implement vegetation indices and soil exposure mapping from UAV surveys.</p>
+<p><strong>Module 36: Automated Mineralogy (QEMSCAN/MLA) Integration</strong>
+Process electron microscopy data for mineral phase mapping. Implement grain size analysis and liberation assessment for soil aggregates.</p>
+<p><strong>Module 37: Nuclear Magnetic Resonance Spectroscopy for Soil Organic Matter</strong>
+Analyze solid-state ¹³C and ³¹P NMR spectra for functional group quantification. Implement spectral deconvolution for overlapping peaks.</p>
+<p><strong>Module 38: Laser-Induced Breakdown Spectroscopy for Rapid Analysis</strong>
+Build calibration models for multi-element prediction from LIBS spectra. Handle matrix effects and self-absorption in soil samples.</p>
+<p><strong>Module 39: Fourier Transform Infrared (FTIR) Spectral Libraries</strong>
+Develop spectral matching algorithms for soil organic matter characterization. Implement partial least squares and other chemometric methods.</p>
+<p><strong>Module 40: X-Ray Fluorescence Calibration for Trace Elements</strong>
+Build fundamental parameter models for XRF analysis of soils. Handle particle size effects and mineralogical interference.</p>
+<p><strong>Module 41: Enzyme Activity Assay Standardization</strong>
+Implement kinetic models for fluorometric enzyme assays. Handle substrate depletion and product inhibition effects.</p>
+<p><strong>Module 42: Aggregate Stability Test Automation</strong>
+Build image analysis pipelines for wet sieving and rainfall simulation tests. Quantify aggregate breakdown dynamics from video data.</p>
+<p><strong>Module 43: Root Image Analysis from Rhizotrons</strong>
+Implement deep learning for root segmentation and architecture analysis. Handle overlapping roots and soil background variation.</p>
+<p><strong>Module 44: Chlorophyll Fluorescence for Biological Soil Crusts</strong>
+Process PAM fluorometry data for crust activity assessment. Implement light curve fitting and stress index calculation.</p>
+<p><strong>Module 45: Electrical Resistivity Tomography Inversion</strong>
+Build inversion algorithms for 2D/3D resistivity surveys. Handle electrode configuration optimization and resolution assessment.</p>
+<p><strong>Module 46: Tensiometer and Moisture Sensor Networks</strong>
+Implement spatial interpolation for soil moisture from point measurements. Handle sensor calibration drift and soil-specific corrections.</p>
+<p><strong>Module 47: Gas Chromatography for Soil Atmosphere</strong>
+Process GC data for greenhouse gas concentrations. Implement automated peak integration and calibration curve fitting.</p>
+<p><strong>Module 48: Particle Size Analysis Integration</strong>
+Harmonize data from laser diffraction, sedimentation, and sieving methods. Build transfer functions between measurement techniques.</p>
+<p><strong>Module 49: Colorimetric Assay Digitization</strong>
+Implement computer vision for color-based soil tests. Handle lighting variation and color calibration for field deployments.</p>
+<p><strong>Module 50: Multi-Sensor Fusion for Proximal Sensing</strong>
+Build Kalman filters and other fusion algorithms for combining EMI, GPR, and other proximal sensors. Handle spatial misalignment and scale differences.</p>
+<h3 id="model-development-phase-modules-51-75"><a class="header" href="#model-development-phase-modules-51-75"><strong>Model Development Phase (Modules 51-75)</strong></a></h3>
+<p><strong>Module 51: Transformer Architectures for Soil Sequence Data</strong>
+Adapt protein language models for soil metagenomes. Implement attention mechanisms that capture long-range dependencies in metabolic pathways.</p>
+<p><strong>Module 52: Graph Neural Networks for Biogeochemical Cycles</strong>
+Model nutrient transformations as dynamic graphs. Implement message passing for reaction networks with environmental modulation.</p>
+<p><strong>Module 53: Physics-Informed Neural Networks for Soil Processes</strong>
+Embed conservation laws and thermodynamic constraints into neural architectures. Handle multi-phase flow and reactive transport.</p>
+<p><strong>Module 54: Variational Autoencoders for Soil Property Generation</strong>
+Build generative models that respect pedological constraints. Implement conditional VAEs for scenario exploration.</p>
+<p><strong>Module 55: Temporal Convolutional Networks for Soil Monitoring</strong>
+Design architectures for irregular time series from sensor networks. Handle missing data and varying temporal resolutions.</p>
+<p><strong>Module 56: Neural Ordinary Differential Equations for Soil Dynamics</strong>
+Model continuous soil processes with neural ODEs. Implement adjoint methods for efficient gradient computation.</p>
+<p><strong>Module 57: Attention Mechanisms for Multi-Scale Integration</strong>
+Build hierarchical attention to integrate pore, aggregate, and profile-scale information. Handle scale-dependent processes.</p>
+<p><strong>Module 58: Adversarial Training for Domain Adaptation</strong>
+Transfer models between soil types and climates using adversarial methods. Handle distribution shift from laboratory to field conditions.</p>
+<p><strong>Module 59: Meta-Learning for Few-Shot Soil Classification</strong>
+Develop models that quickly adapt to rare soil types. Implement MAML and Prototypical Networks for limited data scenarios.</p>
+<p><strong>Module 60: Causal Inference for Management Effects</strong>
+Build structural causal models for intervention prediction. Handle confounding from weather and spatial correlation.</p>
+<p><strong>Module 61: Ensemble Methods for Uncertainty Quantification</strong>
+Implement deep ensembles and Monte Carlo dropout for prediction intervals. Calibrate uncertainties for risk assessment.</p>
+<p><strong>Module 62: Active Learning for Optimal Sampling</strong>
+Design acquisition functions for soil sampling campaigns. Balance exploration and exploitation in spatial sampling.</p>
+<p><strong>Module 63: Multi-Task Learning for Soil Properties</strong>
+Build architectures that simultaneously predict multiple correlated properties. Implement task-specific layers with shared representations.</p>
+<p><strong>Module 64: Reinforcement Learning for Management Optimization</strong>
+Train agents for sequential decision-making in soil management. Handle delayed rewards and partial observability.</p>
+<p><strong>Module 65: Gaussian Processes for Spatial Prediction</strong>
+Implement scalable GP methods for soil mapping. Design kernels that capture soil-forming factors.</p>
+<p><strong>Module 66: Recurrent Networks for Microbial Succession</strong>
+Model community assembly with LSTMs and GRUs. Handle compositional data constraints and zero-inflation.</p>
+<p><strong>Module 67: Convolutional Networks for Spectral Analysis</strong>
+Design 1D CNNs for spectroscopic data. Implement spectral-spatial convolutions for hyperspectral imagery.</p>
+<p><strong>Module 68: Diffusion Models for Soil Structure Generation</strong>
+Build denoising diffusion models for realistic pore network synthesis. Condition on soil properties and management.</p>
+<p><strong>Module 69: Mixture of Experts for Soil Type Specialization</strong>
+Implement gated networks that route inputs to specialized models. Handle smooth transitions between soil types.</p>
+<p><strong>Module 70: Contrastive Learning for Soil Similarity</strong>
+Build representation learning frameworks using soil property contrasts. Implement data augmentation specific to soil data.</p>
+<p><strong>Module 71: Neural Architecture Search for Soil Models</strong>
+Automate architecture design for different soil prediction tasks. Handle multi-objective optimization for accuracy and efficiency.</p>
+<p><strong>Module 72: Federated Learning for Privacy-Preserving Training</strong>
+Implement secure aggregation for farm-level data. Handle non-IID data distributions across participants.</p>
+<p><strong>Module 73: Knowledge Distillation for Model Compression</strong>
+Transfer knowledge from large models to deployable versions. Maintain accuracy while reducing computational requirements.</p>
+<p><strong>Module 74: Bayesian Neural Networks for Probabilistic Prediction</strong>
+Implement variational inference and MCMC for weight uncertainty. Provide calibrated confidence intervals for decisions.</p>
+<p><strong>Module 75: Symbolic Regression for Interpretable Models</strong>
+Discover mathematical relationships in soil data. Balance complexity and interpretability for scientific insight.</p>
+<h3 id="deployment--applications-phase-modules-76-100"><a class="header" href="#deployment--applications-phase-modules-76-100"><strong>Deployment &amp; Applications Phase (Modules 76-100)</strong></a></h3>
+<p><strong>Module 76: Model Serving Infrastructure for Agriculture</strong>
+Build scalable APIs using TensorFlow Serving or TorchServe. Handle seasonal load patterns and geographic distribution.</p>
+<p><strong>Module 77: Mobile Application Development for Field Sampling</strong>
+Create apps for data collection with offline capability. Implement on-device inference for immediate feedback.</p>
+<p><strong>Module 78: Decision Support System Integration</strong>
+Connect models to farm management platforms. Handle data standards like ISOBUS and Agricultural Data Application Programming Toolkit.</p>
+<p><strong>Module 79: Precision Agriculture Equipment Interface</strong>
+Integrate with variable-rate controllers and guidance systems. Handle CAN bus protocols and equipment-specific APIs.</p>
+<p><strong>Module 80: Regulatory Compliance for Agricultural AI</strong>
+Navigate data privacy, algorithmic accountability, and agricultural regulations. Implement audit trails and explanation generation.</p>
+<p><strong>Module 81: Carbon Credit Quantification Systems</strong>
+Build MRV (Monitoring, Reporting, Verification) platforms for soil carbon. Handle baseline establishment and additionality requirements.</p>
+<p><strong>Module 82: Supply Chain Integration for Soil Health</strong>
+Connect soil quality predictions to crop quality and yield forecasts. Interface with commodity markets and food traceability systems.</p>
+<p><strong>Module 83: Environmental Impact Assessment Tools</strong>
+Quantify ecosystem services from soil management. Implement life cycle assessment and environmental footprint calculations.</p>
+<p><strong>Module 84: Farmer-Centric Interface Design</strong>
+Build intuitive dashboards for non-technical users. Implement progressive disclosure and context-sensitive help.</p>
+<p><strong>Module 85: Multi-Language Support for Global Deployment</strong>
+Localize interfaces and terminology for different regions. Handle unit conversions and regional soil classification systems.</p>
+<p><strong>Module 86: Cost-Benefit Analysis Frameworks</strong>
+Integrate economic models with soil predictions. Handle uncertainty in price projections and discount rates.</p>
+<p><strong>Module 87: Climate Scenario Integration</strong>
+Couple soil models with climate projections. Implement downscaling and bias correction for local predictions.</p>
+<p><strong>Module 88: Policy Decision Support Tools</strong>
+Build interfaces for land use planning and conservation prioritization. Handle multi-stakeholder optimization and trade-offs.</p>
+<p><strong>Module 89: Extension Service Training Platforms</strong>
+Develop educational modules for agricultural advisors. Implement case-based learning with local examples.</p>
+<p><strong>Module 90: Citizen Science Data Collection</strong>
+Build crowdsourcing platforms for soil observations. Implement quality control and gamification for engagement.</p>
+<p><strong>Module 91: Research Data Management Plans</strong>
+Design FAIR (Findable, Accessible, Interoperable, Reusable) data repositories. Handle metadata standards and persistent identifiers.</p>
+<p><strong>Module 92: Performance Monitoring in Production</strong>
+Implement model performance tracking and alerting. Detect distribution drift and trigger retraining pipelines.</p>
+<p><strong>Module 93: A/B Testing for Model Improvements</strong>
+Design experiments to validate model updates. Handle spatial correlation and weather confounding in field trials.</p>
+<p><strong>Module 94: Disaster Response Systems</strong>
+Rapidly assess soil degradation after floods, fires, or droughts. Implement emergency response protocols and communication.</p>
+<p><strong>Module 95: Long-Term Experiment Design</strong>
+Plan multi-year validation studies for slow soil processes. Handle site selection, power analysis, and adaptive designs.</p>
+<p><strong>Module 96: Technology Transfer &amp; Commercialization</strong>
+Navigate intellectual property, licensing, and startup formation. Build business models for soil intelligence services.</p>
+<p><strong>Module 97: International Collaboration Frameworks</strong>
+Establish data sharing agreements and joint development projects. Handle cross-border data transfer and sovereignty issues.</p>
+<p><strong>Module 98: Funding &amp; Grant Writing for Soil AI</strong>
+Master proposal writing for government and foundation funding. Build compelling narratives linking AI to soil outcomes.</p>
+<p><strong>Module 99: Scientific Publication &amp; Dissemination</strong>
+Write papers bridging soil science and machine learning venues. Handle reproducibility requirements and data/code sharing.</p>
+<p><strong>Module 100: Future Horizons in Soil Intelligence</strong>
+Explore quantum computing for soil simulation, synthetic biology interfaces, and autonomous soil management robots. Design research agendas for the next generation.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="nested/020.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="nested/025.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -217,7 +328,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="nested/020.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="nested/025.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

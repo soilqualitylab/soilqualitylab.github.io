@@ -1,6 +1,8 @@
 # Soil Quality Foundation Models: Transforming Earth's Living Skin
 
-*We describe the motivation for our [curated portfolio of 100 Soil Quality Foundation Model Concepts](#table-2-curated-portfolio-of-100-soil-quality-foundation-model-concepts) that we are developing to revolutionize soil science and enable planetary-scale restoration.*
+The purpose Soil Quality Laboratory is to sequester carbon AS LIFE, to improve the quality, ie fitness for use, of soils around the world. Sequestering carbon AS LIFE is about treating carbon in the atmosphere as a resource for the improvement of soils everywhere and for living material in soils and thus for the LIVES of human beings everywhere.
+
+*In this document, we describe the general motivation behind our four-phase, 100-module year long graduate level ML/AI ops engineering course as well as our [curated portfolio of 100 Soil Quality Foundation Model Concepts](#table-2-curated-portfolio-of-100-soil-quality-foundation-model-concepts) which we are developing ... maybe to revolutionize soil science and enable planetary-scale restoration ... but mostly because we just love soil and soil ecosystems.*
 
 The prevailing narrative of artificial intelligence in environmental science has focused on climate modeling and ecosystem monitoring from above. Yet beneath our feet lies the most critical and complex frontier for AI-driven discovery: soil—the living skin of our planet that regulates carbon cycles, supports all terrestrial life, and determines the fate of human civilization. This report posits that the next transformative application of foundation models lies in understanding, predicting, and ultimately engineering soil systems. The emergence of these Soil Quality Foundation Models (SQFMs) represents a paradigm shift from reactive soil management to predictive soil engineering, enabling humanity to transform degraded lands into productive ecosystems and reverse millennia of soil destruction.
 

@@ -157,158 +157,305 @@
                     <main>
                         <h1 id="measurement--sensor-integration-phase"><a class="header" href="#measurement--sensor-integration-phase"><strong>Measurement &amp; Sensor Integration Phase</strong></a></h1>
 <h2 id="modules-26-50"><a class="header" href="#modules-26-50">Modules 26-50</a></h2>
-<p><strong>Module 26: Hyperspectral Unmixing for Soil Mineralogy</strong>
-Implement endmember extraction and abundance estimation specifically for soil minerals with overlapping spectral features. Handle intimate mixtures and coating effects.</p>
-<p><strong>Module 27: X-Ray Diffraction Pattern Analysis &amp; Rietveld Refinement</strong>
-Build neural networks for automated clay mineral identification from XRD patterns. Handle preferred orientation, mixed-layer clays, and amorphous phases.</p>
-<p><strong>Module 28: Micro-CT Image Segmentation for Pore Networks</strong>
-Develop 3D CNNs for segmenting soil aggregates, pores, and organic matter in CT volumes. Implement morphological analysis for pore connectivity and tortuosity.</p>
-<p><strong>Module 29: Mass Spectrometry Data Processing for Soil Metabolomics</strong>
-Build pipelines for LC-MS and GC-MS data including peak detection, alignment, and identification. Handle matrix effects and ion suppression in complex soil extracts.</p>
-<p><strong>Module 30: Flow Cytometry Analysis for Soil Microbes</strong>
-Implement automated gating strategies for identifying microbial populations in soil suspensions. Handle high debris loads and autofluorescence from soil particles.</p>
-<p><strong>Module 31: Isotope Ratio Mass Spectrometry Calibration</strong>
-Build models for drift correction and inter-laboratory standardization of stable isotope measurements. Implement mixing models for source partitioning.</p>
-<p><strong>Module 32: Electrochemical Sensor Array Processing</strong>
-Develop calibration transfer functions for ion-selective electrodes in soil matrices. Handle interference effects and temperature compensation.</p>
-<p><strong>Module 33: Eddy Covariance Flux Processing</strong>
-Implement gap-filling, partitioning, and footprint analysis for CO₂/H₂O flux measurements. Handle quality control for turbulence conditions and energy balance closure.</p>
-<p><strong>Module 34: Ground-Penetrating Radar for Soil Profiles</strong>
-Process GPR radargrams for soil horizon detection and root biomass estimation. Implement velocity models for variable moisture conditions.</p>
-<p><strong>Module 35: Thermal/Multispectral Drone Image Processing</strong>
-Build orthomosaic generation and radiometric calibration pipelines. Implement vegetation indices and soil exposure mapping from UAV surveys.</p>
-<p><strong>Module 36: Automated Mineralogy (QEMSCAN/MLA) Integration</strong>
-Process electron microscopy data for mineral phase mapping. Implement grain size analysis and liberation assessment for soil aggregates.</p>
-<p><strong>Module 37: Nuclear Magnetic Resonance Spectroscopy for Soil Organic Matter</strong>
-Analyze solid-state ¹³C and ³¹P NMR spectra for functional group quantification. Implement spectral deconvolution for overlapping peaks.</p>
-<p><strong>Module 38: Laser-Induced Breakdown Spectroscopy for Rapid Analysis</strong>
-Build calibration models for multi-element prediction from LIBS spectra. Handle matrix effects and self-absorption in soil samples.</p>
-<p><strong>Module 39: Fourier Transform Infrared (FTIR) Spectral Libraries</strong>
-Develop spectral matching algorithms for soil organic matter characterization. Implement partial least squares and other chemometric methods.</p>
-<p><strong>Module 40: X-Ray Fluorescence Calibration for Trace Elements</strong>
-Build fundamental parameter models for XRF analysis of soils. Handle particle size effects and mineralogical interference.</p>
-<p><strong>Module 41: Enzyme Activity Assay Standardization</strong>
-Implement kinetic models for fluorometric enzyme assays. Handle substrate depletion and product inhibition effects.</p>
-<p><strong>Module 42: Aggregate Stability Test Automation</strong>
-Build image analysis pipelines for wet sieving and rainfall simulation tests. Quantify aggregate breakdown dynamics from video data.</p>
-<p><strong>Module 43: Root Image Analysis from Rhizotrons</strong>
-Implement deep learning for root segmentation and architecture analysis. Handle overlapping roots and soil background variation.</p>
-<p><strong>Module 44: Chlorophyll Fluorescence for Biological Soil Crusts</strong>
-Process PAM fluorometry data for crust activity assessment. Implement light curve fitting and stress index calculation.</p>
-<p><strong>Module 45: Electrical Resistivity Tomography Inversion</strong>
-Build inversion algorithms for 2D/3D resistivity surveys. Handle electrode configuration optimization and resolution assessment.</p>
-<p><strong>Module 46: Tensiometer and Moisture Sensor Networks</strong>
-Implement spatial interpolation for soil moisture from point measurements. Handle sensor calibration drift and soil-specific corrections.</p>
-<p><strong>Module 47: Gas Chromatography for Soil Atmosphere</strong>
-Process GC data for greenhouse gas concentrations. Implement automated peak integration and calibration curve fitting.</p>
-<p><strong>Module 48: Particle Size Analysis Integration</strong>
-Harmonize data from laser diffraction, sedimentation, and sieving methods. Build transfer functions between measurement techniques.</p>
-<p><strong>Module 49: Colorimetric Assay Digitization</strong>
-Implement computer vision for color-based soil tests. Handle lighting variation and color calibration for field deployments.</p>
-<p><strong>Module 50: Multi-Sensor Fusion for Proximal Sensing</strong>
-Build Kalman filters and other fusion algorithms for combining EMI, GPR, and other proximal sensors. Handle spatial misalignment and scale differences.</p>
-<h3 id="model-development-phase-modules-51-75"><a class="header" href="#model-development-phase-modules-51-75"><strong>Model Development Phase (Modules 51-75)</strong></a></h3>
-<p><strong>Module 51: Transformer Architectures for Soil Sequence Data</strong>
-Adapt protein language models for soil metagenomes. Implement attention mechanisms that capture long-range dependencies in metabolic pathways.</p>
-<p><strong>Module 52: Graph Neural Networks for Biogeochemical Cycles</strong>
-Model nutrient transformations as dynamic graphs. Implement message passing for reaction networks with environmental modulation.</p>
-<p><strong>Module 53: Physics-Informed Neural Networks for Soil Processes</strong>
-Embed conservation laws and thermodynamic constraints into neural architectures. Handle multi-phase flow and reactive transport.</p>
-<p><strong>Module 54: Variational Autoencoders for Soil Property Generation</strong>
-Build generative models that respect pedological constraints. Implement conditional VAEs for scenario exploration.</p>
-<p><strong>Module 55: Temporal Convolutional Networks for Soil Monitoring</strong>
-Design architectures for irregular time series from sensor networks. Handle missing data and varying temporal resolutions.</p>
-<p><strong>Module 56: Neural Ordinary Differential Equations for Soil Dynamics</strong>
-Model continuous soil processes with neural ODEs. Implement adjoint methods for efficient gradient computation.</p>
-<p><strong>Module 57: Attention Mechanisms for Multi-Scale Integration</strong>
-Build hierarchical attention to integrate pore, aggregate, and profile-scale information. Handle scale-dependent processes.</p>
-<p><strong>Module 58: Adversarial Training for Domain Adaptation</strong>
-Transfer models between soil types and climates using adversarial methods. Handle distribution shift from laboratory to field conditions.</p>
-<p><strong>Module 59: Meta-Learning for Few-Shot Soil Classification</strong>
-Develop models that quickly adapt to rare soil types. Implement MAML and Prototypical Networks for limited data scenarios.</p>
-<p><strong>Module 60: Causal Inference for Management Effects</strong>
-Build structural causal models for intervention prediction. Handle confounding from weather and spatial correlation.</p>
-<p><strong>Module 61: Ensemble Methods for Uncertainty Quantification</strong>
-Implement deep ensembles and Monte Carlo dropout for prediction intervals. Calibrate uncertainties for risk assessment.</p>
-<p><strong>Module 62: Active Learning for Optimal Sampling</strong>
-Design acquisition functions for soil sampling campaigns. Balance exploration and exploitation in spatial sampling.</p>
-<p><strong>Module 63: Multi-Task Learning for Soil Properties</strong>
-Build architectures that simultaneously predict multiple correlated properties. Implement task-specific layers with shared representations.</p>
-<p><strong>Module 64: Reinforcement Learning for Management Optimization</strong>
-Train agents for sequential decision-making in soil management. Handle delayed rewards and partial observability.</p>
-<p><strong>Module 65: Gaussian Processes for Spatial Prediction</strong>
-Implement scalable GP methods for soil mapping. Design kernels that capture soil-forming factors.</p>
-<p><strong>Module 66: Recurrent Networks for Microbial Succession</strong>
-Model community assembly with LSTMs and GRUs. Handle compositional data constraints and zero-inflation.</p>
-<p><strong>Module 67: Convolutional Networks for Spectral Analysis</strong>
-Design 1D CNNs for spectroscopic data. Implement spectral-spatial convolutions for hyperspectral imagery.</p>
-<p><strong>Module 68: Diffusion Models for Soil Structure Generation</strong>
-Build denoising diffusion models for realistic pore network synthesis. Condition on soil properties and management.</p>
-<p><strong>Module 69: Mixture of Experts for Soil Type Specialization</strong>
-Implement gated networks that route inputs to specialized models. Handle smooth transitions between soil types.</p>
-<p><strong>Module 70: Contrastive Learning for Soil Similarity</strong>
-Build representation learning frameworks using soil property contrasts. Implement data augmentation specific to soil data.</p>
-<p><strong>Module 71: Neural Architecture Search for Soil Models</strong>
-Automate architecture design for different soil prediction tasks. Handle multi-objective optimization for accuracy and efficiency.</p>
-<p><strong>Module 72: Federated Learning for Privacy-Preserving Training</strong>
-Implement secure aggregation for farm-level data. Handle non-IID data distributions across participants.</p>
-<p><strong>Module 73: Knowledge Distillation for Model Compression</strong>
-Transfer knowledge from large models to deployable versions. Maintain accuracy while reducing computational requirements.</p>
-<p><strong>Module 74: Bayesian Neural Networks for Probabilistic Prediction</strong>
-Implement variational inference and MCMC for weight uncertainty. Provide calibrated confidence intervals for decisions.</p>
-<p><strong>Module 75: Symbolic Regression for Interpretable Models</strong>
-Discover mathematical relationships in soil data. Balance complexity and interpretability for scientific insight.</p>
-<h3 id="deployment--applications-phase-modules-76-100"><a class="header" href="#deployment--applications-phase-modules-76-100"><strong>Deployment &amp; Applications Phase (Modules 76-100)</strong></a></h3>
-<p><strong>Module 76: Model Serving Infrastructure for Agriculture</strong>
-Build scalable APIs using TensorFlow Serving or TorchServe. Handle seasonal load patterns and geographic distribution.</p>
-<p><strong>Module 77: Mobile Application Development for Field Sampling</strong>
-Create apps for data collection with offline capability. Implement on-device inference for immediate feedback.</p>
-<p><strong>Module 78: Decision Support System Integration</strong>
-Connect models to farm management platforms. Handle data standards like ISOBUS and Agricultural Data Application Programming Toolkit.</p>
-<p><strong>Module 79: Precision Agriculture Equipment Interface</strong>
-Integrate with variable-rate controllers and guidance systems. Handle CAN bus protocols and equipment-specific APIs.</p>
-<p><strong>Module 80: Regulatory Compliance for Agricultural AI</strong>
-Navigate data privacy, algorithmic accountability, and agricultural regulations. Implement audit trails and explanation generation.</p>
-<p><strong>Module 81: Carbon Credit Quantification Systems</strong>
-Build MRV (Monitoring, Reporting, Verification) platforms for soil carbon. Handle baseline establishment and additionality requirements.</p>
-<p><strong>Module 82: Supply Chain Integration for Soil Health</strong>
-Connect soil quality predictions to crop quality and yield forecasts. Interface with commodity markets and food traceability systems.</p>
-<p><strong>Module 83: Environmental Impact Assessment Tools</strong>
-Quantify ecosystem services from soil management. Implement life cycle assessment and environmental footprint calculations.</p>
-<p><strong>Module 84: Farmer-Centric Interface Design</strong>
-Build intuitive dashboards for non-technical users. Implement progressive disclosure and context-sensitive help.</p>
-<p><strong>Module 85: Multi-Language Support for Global Deployment</strong>
-Localize interfaces and terminology for different regions. Handle unit conversions and regional soil classification systems.</p>
-<p><strong>Module 86: Cost-Benefit Analysis Frameworks</strong>
-Integrate economic models with soil predictions. Handle uncertainty in price projections and discount rates.</p>
-<p><strong>Module 87: Climate Scenario Integration</strong>
-Couple soil models with climate projections. Implement downscaling and bias correction for local predictions.</p>
-<p><strong>Module 88: Policy Decision Support Tools</strong>
-Build interfaces for land use planning and conservation prioritization. Handle multi-stakeholder optimization and trade-offs.</p>
-<p><strong>Module 89: Extension Service Training Platforms</strong>
-Develop educational modules for agricultural advisors. Implement case-based learning with local examples.</p>
-<p><strong>Module 90: Citizen Science Data Collection</strong>
-Build crowdsourcing platforms for soil observations. Implement quality control and gamification for engagement.</p>
-<p><strong>Module 91: Research Data Management Plans</strong>
-Design FAIR (Findable, Accessible, Interoperable, Reusable) data repositories. Handle metadata standards and persistent identifiers.</p>
-<p><strong>Module 92: Performance Monitoring in Production</strong>
-Implement model performance tracking and alerting. Detect distribution drift and trigger retraining pipelines.</p>
-<p><strong>Module 93: A/B Testing for Model Improvements</strong>
-Design experiments to validate model updates. Handle spatial correlation and weather confounding in field trials.</p>
-<p><strong>Module 94: Disaster Response Systems</strong>
-Rapidly assess soil degradation after floods, fires, or droughts. Implement emergency response protocols and communication.</p>
-<p><strong>Module 95: Long-Term Experiment Design</strong>
-Plan multi-year validation studies for slow soil processes. Handle site selection, power analysis, and adaptive designs.</p>
-<p><strong>Module 96: Technology Transfer &amp; Commercialization</strong>
-Navigate intellectual property, licensing, and startup formation. Build business models for soil intelligence services.</p>
-<p><strong>Module 97: International Collaboration Frameworks</strong>
-Establish data sharing agreements and joint development projects. Handle cross-border data transfer and sovereignty issues.</p>
-<p><strong>Module 98: Funding &amp; Grant Writing for Soil AI</strong>
-Master proposal writing for government and foundation funding. Build compelling narratives linking AI to soil outcomes.</p>
-<p><strong>Module 99: Scientific Publication &amp; Dissemination</strong>
-Write papers bridging soil science and machine learning venues. Handle reproducibility requirements and data/code sharing.</p>
-<p><strong>Module 100: Future Horizons in Soil Intelligence</strong>
-Explore quantum computing for soil simulation, synthetic biology interfaces, and autonomous soil management robots. Design research agendas for the next generation.</p>
+<p><strong>Module 26: Hyperspectral Unmixing for Soil Mineralogy</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the physics of soil reflectance spectroscopy and the fundamental challenge of spectral mixing.</li>
+<li><strong>Hour 3-4:</strong> Model linear (checkerboard) vs. non-linear (intimate) mixtures and the impact of mineral coatings.</li>
+<li><strong>Hour 5-6:</strong> Implement geometric endmember extraction algorithms like PPI and N-FINDR to find pure spectral signatures.</li>
+<li><strong>Hour 7-8:</strong> Apply constrained least squares and other inversion techniques to estimate mineral abundance maps.</li>
+<li><strong>Hour 9-10:</strong> Address non-linear effects using Hapke models or kernel-based methods for intimate mixtures.</li>
+<li><strong>Hour 11-12:</strong> Build and train deep learning autoencoders for simultaneous endmember extraction and abundance estimation.</li>
+<li><strong>Hour 13-14:</strong> Validate unmixing results against ground truth (XRD) and build a robust soil mineral spectral library.</li>
+<li><strong>Final Challenge:</strong> Unmix a real hyperspectral image of a soil profile to produce quantitative mineral maps and interpret the results.</li>
+</ul>
+<hr />
+<p><strong>Module 27: X-Ray Diffraction Pattern Analysis &amp; Rietveld Refinement</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Cover the fundamentals of X-ray diffraction (XRD) and Bragg's Law for crystalline mineral identification.</li>
+<li><strong>Hour 3-4:</strong> Implement automated peak detection, background subtraction, and mineral phase matching using spectral databases.</li>
+<li><strong>Hour 5-6:</strong> Address the specific challenges of clay mineralogy, including preferred orientation and analysis of oriented mounts.</li>
+<li><strong>Hour 7-8:</strong> Build a 1D Convolutional Neural Network (CNN) to classify common clay minerals directly from raw diffraction patterns.</li>
+<li><strong>Hour 9-10:</strong> Model complex mixed-layer clays and quantify amorphous phases that traditional methods miss.</li>
+<li><strong>Hour 11-12:</strong> Introduce the theory and practice of Rietveld refinement for quantitative mineral analysis.</li>
+<li><strong>Hour 13-14:</strong> Integrate machine learning with Rietveld refinement to automate and improve the fitting process.</li>
+<li><strong>Final Challenge:</strong> Develop a complete pipeline that takes a raw soil XRD pattern and produces a fully quantified mineralogical report.</li>
+</ul>
+<hr />
+<p><strong>Module 28: Micro-CT Image Segmentation for Pore Networks</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce X-ray computed microtomography (micro-CT) for non-destructive 3D soil imaging.</li>
+<li><strong>Hour 3-4:</strong> Apply traditional image processing techniques like thresholding and watershed segmentation to 3D volumes.</li>
+<li><strong>Hour 5-6:</strong> Build and train a 3D U-Net (a type of CNN) for robust semantic segmentation of soil phases (pores, aggregates, organic matter).</li>
+<li><strong>Hour 7-8:</strong> Implement data augmentation strategies specifically for 3D image data to improve model generalization.</li>
+<li><strong>Hour 9-10:</strong> Perform morphological analysis on the segmented pore network to calculate key properties like porosity and surface area.</li>
+<li><strong>Hour 11-12:</strong> Use skeletonization and graph theory algorithms to quantify pore connectivity, tortuosity, and path length.</li>
+<li><strong>Hour 13-14:</strong> Validate the 3D segmentation results against physical measurements and generate realistic 3D visualizations.</li>
+<li><strong>Final Challenge:</strong> Process a raw micro-CT scan of a soil core to produce a segmented 3D model and a report of its key structural properties.</li>
+</ul>
+<hr />
+<p><strong>Module 29: Mass Spectrometry Data Processing for Soil Metabolomics</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of Liquid/Gas Chromatography-Mass Spectrometry (LC/GC-MS) for identifying small molecules in soil.</li>
+<li><strong>Hour 3-4:</strong> Build a data processing pipeline for raw MS data, including noise filtering, baseline correction, and peak detection.</li>
+<li><strong>Hour 5-6:</strong> Implement algorithms for aligning peaks across multiple samples to correct for retention time drift.</li>
+<li><strong>Hour 7-8:</strong> Use spectral libraries (e.g., NIST, Metlin) and fragmentation patterns for automated compound identification.</li>
+<li><strong>Hour 9-10:</strong> Address soil-specific challenges like ion suppression from the complex soil matrix.</li>
+<li><strong>Hour 11-12:</strong> Apply statistical analysis to identify metabolites that are significantly different between treatments.</li>
+<li><strong>Hour 13-14:</strong> Map identified compounds to metabolic pathways to understand the functional state of the soil microbiome.</li>
+<li><strong>Final Challenge:</strong> Create a full pipeline to process a set of LC-MS runs from different soil samples and identify key differentiating metabolites.</li>
+</ul>
+<hr />
+<p><strong>Module 30: Flow Cytometry Analysis for Soil Microbes</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Cover the fundamentals of flow cytometry for high-throughput, single-cell analysis of soil microbes.</li>
+<li><strong>Hour 3-4:</strong> Implement computational strategies for compensating for spectral overlap between fluorescent channels.</li>
+<li><strong>Hour 5-6:</strong> Build automated pipelines to remove debris and abiotic particles based on scatter and fluorescence properties.</li>
+<li><strong>Hour 7-8:</strong> Apply unsupervised clustering algorithms (e.g., HDBSCAN) to identify microbial populations without manual gating.</li>
+<li><strong>Hour 9-10:</strong> Use supervised machine learning models to classify populations based on pre-defined gates.</li>
+<li><strong>Hour 11-12:</strong> Address the challenge of high autofluorescence from soil organic matter and mineral particles.</li>
+<li><strong>Hour 13-14:</strong> Quantify microbial viability and activity using fluorescent probes and appropriate data analysis.</li>
+<li><strong>Final Challenge:</strong> Develop an automated gating strategy to quantify the abundance of a target microbial group from a raw soil cytometry dataset.</li>
+</ul>
+<hr />
+<p><strong>Module 31: Isotope Ratio Mass Spectrometry Calibration</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce stable isotope analysis (¹³C, ¹⁵N) for tracing biogeochemical cycles in soil.</li>
+<li><strong>Hour 3-4:</strong> Build computational models to correct for instrumental drift and non-linearity during an analytical run.</li>
+<li><strong>Hour 5-6:</strong> Implement pipelines for inter-laboratory standardization using certified reference materials.</li>
+<li><strong>Hour 7-8:</strong> Apply Bayesian mixing models (e.g., MixSIAR) to partition the sources of soil organic matter.</li>
+<li><strong>Hour 9-10:</strong> Process data from compound-specific isotope analysis to trace the fate of individual molecules.</li>
+<li><strong>Hour 11-12:</strong> Model isotope fractionation effects to understand process rates.</li>
+<li><strong>Hour 13-14:</strong> Integrate isotope data with other measurements to build comprehensive biogeochemical models.</li>
+<li><strong>Final Challenge:</strong> Analyze a dataset of soil and plant isotope ratios to determine the contribution of different plant sources to soil organic matter.</li>
+</ul>
+<hr />
+<p><strong>Module 32: Electrochemical Sensor Array Processing</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce ion-selective electrodes (ISEs) and other electrochemical sensors for in-situ soil nutrient monitoring.</li>
+<li><strong>Hour 3-4:</strong> Build multivariate calibration models to account for the cross-sensitivity and interference between different ions.</li>
+<li><strong>Hour 5-6:</strong> Implement algorithms for temperature and ionic strength compensation to improve measurement accuracy.</li>
+<li><strong>Hour 7-8:</strong> Develop calibration transfer functions to adapt a model from one soil type to another.</li>
+<li><strong>Hour 9-10:</strong> Use time-series analysis to detect and correct for sensor drift and biofouling in long-term deployments.</li>
+<li><strong>Hour 11-12:</strong> Design machine learning models to predict nutrient concentrations from the raw sensor array output.</li>
+<li><strong>Hour 13-14:</strong> Integrate sensor data with uncertainty estimates into larger soil models.</li>
+<li><strong>Final Challenge:</strong> Create a complete calibration and correction pipeline for an array of ISEs to produce a time-series of nitrate concentration.</li>
+</ul>
+<hr />
+<p><strong>Module 33: Eddy Covariance Flux Processing</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Cover the theory of eddy covariance for measuring greenhouse gas exchange between the soil and atmosphere.</li>
+<li><strong>Hour 3-4:</strong> Implement standard quality control checks, including spike detection and stationarity tests, on high-frequency data.</li>
+<li><strong>Hour 5-6:</strong> Apply coordinate rotation and spectral corrections to calculate raw fluxes.</li>
+<li><strong>Hour 7-8:</strong> Use machine learning and meteorological data to perform gap-filling for missing flux measurements.</li>
+<li><strong>Hour 9-10:</strong> Implement flux partitioning algorithms to separate ecosystem respiration from photosynthesis.</li>
+<li><strong>Hour 11-12:</strong> Build footprint models to determine the source area of the measured fluxes.</li>
+<li><strong>Hour 13-14:</strong> Analyze energy balance closure as a key data quality indicator.</li>
+<li><strong>Final Challenge:</strong> Process a full year of raw eddy covariance data to produce a defensible annual carbon budget for a soil ecosystem.</li>
+</ul>
+<hr />
+<p><strong>Module 34: Ground-Penetrating Radar for Soil Profiles</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of Ground-Penetrating Radar (GPR) for imaging the shallow subsurface.</li>
+<li><strong>Hour 3-4:</strong> Build a processing pipeline for GPR data including trace editing, filtering, and gain corrections.</li>
+<li><strong>Hour 5-6:</strong> Implement velocity models, accounting for variable soil moisture, to convert travel time to depth.</li>
+<li><strong>Hour 7-8:</strong> Use image processing and computer vision techniques to automatically detect and map soil horizon boundaries.</li>
+<li><strong>Hour 9-10:</strong> Apply texture analysis and other features to classify different soil layers from the radargram.</li>
+<li><strong>Hour 11-12:</strong> Build machine learning models to estimate root biomass and soil moisture from GPR signal attributes.</li>
+<li><strong>Hour 13-14:</strong> Create 3D visualizations by interpolating between parallel 2D GPR transects.</li>
+<li><strong>Final Challenge:</strong> Process a raw GPR survey to produce a 2D map of soil horizon depth across a field.</li>
+</ul>
+<hr />
+<p><strong>Module 35: Thermal/Multispectral Drone Image Processing</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Cover mission planning and data acquisition for soil mapping with Unmanned Aerial Vehicles (UAVs).</li>
+<li><strong>Hour 3-4:</strong> Build a complete photogrammetry pipeline using Structure from Motion (SfM) to generate orthomosaics and digital elevation models.</li>
+<li><strong>Hour 5-6:</strong> Implement radiometric calibration using ground control panels to convert raw digital numbers to reflectance.</li>
+<li><strong>Hour 7-8:</strong> Calculate a suite of vegetation and soil indices (e.g., NDVI, BSI) from the calibrated imagery.</li>
+<li><strong>Hour 9-10:</strong> Use object-based image analysis and machine learning to map soil exposure, crop residue, and erosion features.</li>
+<li><strong>Hour 11-12:</strong> Process thermal imagery to map soil moisture variations and crop water stress.</li>
+<li><strong>Hour 13-14:</strong> Fuse drone data with ground-based samples for high-resolution soil property mapping.</li>
+<li><strong>Final Challenge:</strong> Process a raw drone dataset to create a high-resolution map of soil organic matter for a single field.</li>
+</ul>
+<hr />
+<p><strong>Module 36: Automated Mineralogy (QEMSCAN/MLA) Integration</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of automated, SEM-based mineralogy for high-resolution phase mapping.</li>
+<li><strong>Hour 3-4:</strong> Build pipelines to process the raw spectral and image data from QEMSCAN or MLA systems.</li>
+<li><strong>Hour 5-6:</strong> Implement advanced image segmentation to delineate individual mineral grains within soil aggregates.</li>
+<li><strong>Hour 7-8:</strong> Apply statistical analysis to quantify bulk mineralogy, grain size distributions, and mineral associations.</li>
+<li><strong>Hour 9-10:</strong> Calculate mineral liberation and exposure, critical for understanding weathering and nutrient availability.</li>
+<li><strong>Hour 11-12:</strong> Fuse automated mineralogy data with micro-CT scans to create 3D mineral maps.</li>
+<li><strong>Hour 13-14:</strong> Use machine learning to link mineralogical data to soil chemical and physical properties.</li>
+<li><strong>Final Challenge:</strong> Analyze a QEMSCAN dataset from a soil thin section to quantify the association between organic matter and different mineral phases.</li>
+</ul>
+<hr />
+<p><strong>Module 37: Nuclear Magnetic Resonance Spectroscopy for Soil Organic Matter</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Cover the fundamentals of solid-state Nuclear Magnetic Resonance (NMR) for characterizing soil organic matter structure.</li>
+<li><strong>Hour 3-4:</strong> Implement processing pipelines for raw NMR data, including Fourier transformation, phasing, and baseline correction.</li>
+<li><strong>Hour 5-6:</strong> Use spectral integration over defined chemical shift regions to quantify major organic functional groups (e.g., carbohydrates, proteins, lipids).</li>
+<li><strong>Hour 7-8:</strong> Apply spectral deconvolution algorithms to separate and quantify overlapping peaks from complex organic molecules.</li>
+<li><strong>Hour 9-10:</strong> Analyze ³¹P NMR spectra to characterize and quantify different forms of organic and inorganic phosphorus.</li>
+<li><strong>Hour 11-12:</strong> Use 2D NMR techniques to understand the connectivity and structure of complex humic substances.</li>
+<li><strong>Hour 13-14:</strong> Build machine learning models to predict soil properties and decomposition rates from NMR spectra.</li>
+<li><strong>Final Challenge:</strong> Process a raw ¹³C solid-state NMR spectrum to produce a quantitative report on the functional group composition of soil organic matter.</li>
+</ul>
+<hr />
+<p><strong>Module 38: Laser-Induced Breakdown Spectroscopy for Rapid Analysis</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of Laser-Induced Breakdown Spectroscopy (LIBS) for rapid, in-field elemental analysis.</li>
+<li><strong>Hour 3-4:</strong> Build a preprocessing pipeline for LIBS spectra, including noise reduction and baseline removal.</li>
+<li><strong>Hour 5-6:</strong> Implement automated peak identification using atomic emission line databases.</li>
+<li><strong>Hour 7-8:</strong> Develop univariate and multivariate calibration models (e.g., PLS) to predict elemental concentrations.</li>
+<li><strong>Hour 9-10:</strong> Address and correct for the complex matrix effects and self-absorption issues common in soil samples.</li>
+<li><strong>Hour 11-12:</strong> Use machine learning and feature selection to improve the accuracy and robustness of LIBS predictions.</li>
+<li><strong>Hour 13-14:</strong> Design strategies for fusing LIBS data with other sensors for more comprehensive soil analysis.</li>
+<li><strong>Final Challenge:</strong> Build a robust calibration model to predict soil carbon concentration from a set of soil LIBS spectra.</li>
+</ul>
+<hr />
+<p><strong>Module 39: Fourier Transform Infrared (FTIR) Spectral Libraries</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce FTIR spectroscopy for fingerprinting soil organic matter and mineral composition.</li>
+<li><strong>Hour 3-4:</strong> Implement a comprehensive preprocessing pipeline for MIR spectra, including scatter correction and baseline removal.</li>
+<li><strong>Hour 5-6:</strong> Develop and manage large-scale soil spectral libraries with standardized metadata.</li>
+<li><strong>Hour 7-8:</strong> Implement spectral matching algorithms (e.g., spectral angle mapping) for rapid component identification.</li>
+<li><strong>Hour 9-10:</strong> Build robust chemometric models (e.g., Partial Least Squares) to predict soil properties from spectra.</li>
+<li><strong>Hour 11-12:</strong> Use deep learning (1D CNNs) for end-to-end prediction directly from raw FTIR spectra.</li>
+<li><strong>Hour 13-14:</strong> Apply spectral subtraction and deconvolution techniques to isolate specific organic matter or mineral features.</li>
+<li><strong>Final Challenge:</strong> Create a complete pipeline that can take an unknown soil FTIR spectrum and predict its organic carbon, clay content, and carbonate content.</li>
+</ul>
+<hr />
+<p><strong>Module 40: X-Ray Fluorescence Calibration for Trace Elements</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of X-Ray Fluorescence (XRF) for non-destructive elemental analysis.</li>
+<li><strong>Hour 3-4:</strong> Implement pipelines for processing raw XRF spectra, including peak deconvolution and background modeling.</li>
+<li><strong>Hour 5-6:</strong> Build traditional empirical calibration models using linear regression and soil standards.</li>
+<li><strong>Hour 7-8:</strong> Develop and implement Fundamental Parameters (FP) models that correct for matrix absorption and enhancement effects.</li>
+<li><strong>Hour 9-10:</strong> Address physical matrix effects, including particle size, heterogeneity, and moisture content.</li>
+<li><strong>Hour 11-12:</strong> Use machine learning models to correct for mineralogical interferences that FP models miss.</li>
+<li><strong>Hour 13-14:</strong> Design workflows for calibrating portable, in-field XRF instruments against laboratory measurements.</li>
+<li><strong>Final Challenge:</strong> Develop a robust calibration model to predict lead and arsenic concentrations in a set of contaminated soil samples.</li>
+</ul>
+<hr />
+<p><strong>Module 41: Enzyme Activity Assay Standardization</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the use of fluorometric and colorimetric assays to measure microbial enzyme activity in soil.</li>
+<li><strong>Hour 3-4:</strong> Build pipelines to process raw time-series data from microplate reader assays.</li>
+<li><strong>Hour 5-6:</strong> Implement and fit Michaelis-Menten kinetic models to determine key enzyme parameters like Vmax and Km.</li>
+<li><strong>Hour 7-8:</strong> Develop algorithms to automatically correct for substrate depletion, product inhibition, and background fluorescence.</li>
+<li><strong>Hour 9-10:</strong> Design standardization protocols to harmonize data from different laboratories and assay conditions.</li>
+<li><strong>Hour 11-12:</strong> Use machine learning to link profiles of multiple enzyme activities to overall soil functions.</li>
+<li><strong>Hour 13-14:</strong> Integrate enzyme data with microbial community and metabolomic data for a systems-level understanding.</li>
+<li><strong>Final Challenge:</strong> Process a set of kinetic assay data to calculate and report the Vmax for phosphatase activity across different soil types.</li>
+</ul>
+<hr />
+<p><strong>Module 42: Aggregate Stability Test Automation</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the importance of soil aggregate stability and the methods used to measure it.</li>
+<li><strong>Hour 3-4:</strong> Develop a computer vision pipeline to process videos from wet sieving and slaking tests.</li>
+<li><strong>Hour 5-6:</strong> Implement image segmentation to track the size and number of soil aggregates over time.</li>
+<li><strong>Hour 7-8:</strong> Quantify the rate and dynamics of aggregate breakdown from the video data.</li>
+<li><strong>Hour 9-10:</strong> Build machine learning models to predict the mean weight diameter and other stability indices directly from image features.</li>
+<li><strong>Hour 11-12:</strong> Analyze data from rainfall simulation experiments to quantify splash and sheet erosion at the aggregate scale.</li>
+<li><strong>Hour 13-14:</strong> Correlate automated stability measurements with soil properties like organic matter and clay content.</li>
+<li><strong>Final Challenge:</strong> Process a video of a slaking test to produce a curve of aggregate stability over time.</li>
+</ul>
+<hr />
+<p><strong>Module 43: Root Image Analysis from Rhizotrons</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the use of minirhizotrons and rhizotrons for non-destructive imaging of root systems.</li>
+<li><strong>Hour 3-4:</strong> Implement classical image processing techniques for root segmentation and enhancement.</li>
+<li><strong>Hour 5-6:</strong> Build and train a deep learning model (e.g., U-Net) for robust, automated segmentation of roots from the soil background.</li>
+<li><strong>Hour 7-8:</strong> Develop algorithms to handle challenges like overlapping roots, varying illumination, and root decay.</li>
+<li><strong>Hour 9-10:</strong> Apply morphological analysis to the segmented images to calculate root length, diameter, and branching angles.</li>
+<li><strong>Hour 11-12:</strong> Track root growth, turnover, and mortality by analyzing time-series images from the same location.</li>
+<li><strong>Hour 13-14:</strong> Create 3D reconstructions of root system architecture from multiple 2D images.</li>
+<li><strong>Final Challenge:</strong> Process a time-series of minirhizotron images to quantify the rate of root growth for a specific plant.</li>
+</ul>
+<hr />
+<p><strong>Module 44: Chlorophyll Fluorescence for Biological Soil Crusts</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce biological soil crusts (biocrusts) and their ecological importance.</li>
+<li><strong>Hour 3-4:</strong> Cover the theory of Pulse Amplitude Modulated (PAM) fluorometry for assessing photosynthetic activity.</li>
+<li><strong>Hour 5-6:</strong> Build pipelines to process raw data from PAM fluorometry, including dark/light adaptation routines.</li>
+<li><strong>Hour 7-8:</strong> Implement and fit light curve models (e.g., Eilers-Peeters) to determine key photosynthetic parameters.</li>
+<li><strong>Hour 9-10:</strong> Calculate a suite of stress and activity indices, such as quantum yield (Fv/Fm) and non-photochemical quenching (NPQ).</li>
+<li><strong>Hour 11-12:</strong> Use machine learning to classify the health status of biocrusts based on their fluorescence signatures.</li>
+<li><strong>Hour 13-14:</strong> Integrate PAM data with hyperspectral reflectance to scale activity measurements from points to landscapes.</li>
+<li><strong>Final Challenge:</strong> Analyze a set of PAM fluorometry data from biocrusts under a dehydration experiment to quantify their stress response.</li>
+</ul>
+<hr />
+<p><strong>Module 45: Electrical Resistivity Tomography Inversion</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of Electrical Resistivity Tomography (ERT) for imaging soil moisture and structure.</li>
+<li><strong>Hour 3-4:</strong> Implement forward modeling to simulate ERT measurements for a given resistivity distribution.</li>
+<li><strong>Hour 5-6:</strong> Build a regularized, least-squares inversion algorithm to reconstruct the subsurface from field measurements.</li>
+<li><strong>Hour 7-8:</strong> Understand and implement different regularization strategies (e.g., L1 vs. L2 norm) to handle noisy data.</li>
+<li><strong>Hour 9-10:</strong> Design optimal electrode configurations and survey designs using sensitivity analysis.</li>
+<li><strong>Hour 11-12:</strong> Extend the algorithms to 4D (time-lapse) ERT to monitor dynamic processes like infiltration.</li>
+<li><strong>Hour 13-14:</strong> Use petrophysical models to convert the final resistivity maps into soil moisture content maps.</li>
+<li><strong>Final Challenge:</strong> Process a raw ERT dataset to produce a 2D cross-section of soil moisture distribution beneath an infiltrating water source.</li>
+</ul>
+<hr />
+<p><strong>Module 46: Tensiometer and Moisture Sensor Networks</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of various soil moisture sensors (tensiometers, TDR, capacitance).</li>
+<li><strong>Hour 3-4:</strong> Develop and apply soil-specific calibration functions to convert raw sensor outputs to volumetric water content.</li>
+<li><strong>Hour 5-6:</strong> Implement automated QA/QC pipelines for sensor network data to handle spikes, drift, and failures.</li>
+<li><strong>Hour 7-8:</strong> Use geostatistical methods (kriging) for spatial interpolation of moisture from sparse point measurements.</li>
+<li><strong>Hour 9-10:</strong> Incorporate secondary data (e.g., elevation, remote sensing) into co-kriging to improve spatial predictions.</li>
+<li><strong>Hour 11-12:</strong> Apply time-series analysis to calculate metrics like plant available water and soil water deficit.</li>
+<li><strong>Hour 13-14:</strong> Assimilate sensor network data into soil hydrology models to improve predictions.</li>
+<li><strong>Final Challenge:</strong> Ingest and process data from a network of soil moisture sensors to produce a daily, field-scale map of plant available water.</li>
+</ul>
+<hr />
+<p><strong>Module 47: Gas Chromatography for Soil Atmosphere</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce gas chromatography (GC) for measuring concentrations of greenhouse gases (CO₂, CH₄, N₂O) in soil.</li>
+<li><strong>Hour 3-4:</strong> Build a pipeline for processing raw chromatograms, including baseline correction and peak detection.</li>
+<li><strong>Hour 5-6:</strong> Implement automated peak integration and quantification algorithms.</li>
+<li><strong>Hour 7-8:</strong> Develop robust methods for fitting and validating multi-point calibration curves.</li>
+<li><strong>Hour 9-10:</strong> Address challenges like peak co-elution using deconvolution or multi-channel detectors.</li>
+<li><strong>Hour 11-12:</strong> Calculate gas fluxes from automated soil chambers using the processed concentration data.</li>
+<li><strong>Hour 13-14:</strong> Implement a complete data pipeline from the raw instrument output to a final flux report with uncertainty estimates.</li>
+<li><strong>Final Challenge:</strong> Process a batch of GC data from a nitrogen fertilization experiment to quantify N₂O emissions over time.</li>
+</ul>
+<hr />
+<p><strong>Module 48: Particle Size Analysis Integration</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Compare the principles of different particle size analysis methods: traditional (pipette, hydrometer) and modern (laser diffraction).</li>
+<li><strong>Hour 3-4:</strong> Build processing pipelines for raw output from laser diffraction instruments, including optical model selection.</li>
+<li><strong>Hour 5-6:</strong> Implement algorithms to digitize and process data from classical sedimentation experiments.</li>
+<li><strong>Hour 7-8:</strong> Develop and apply pedotransfer functions to estimate soil properties from particle size distributions.</li>
+<li><strong>Hour 9-10:</strong> Build robust statistical transfer functions to harmonize data between different measurement methods (e.g., predict pipette results from laser diffraction).</li>
+<li><strong>Hour 11-12:</strong> Address the impact of soil pre-treatment (e.g., organic matter removal) on measurement results.</li>
+<li><strong>Hour 13-14:</strong> Use particle size distributions to model soil hydraulic properties and water retention curves.</li>
+<li><strong>Final Challenge:</strong> Harmonize a dataset containing both historical pipette and modern laser diffraction texture data into a single, consistent dataset.</li>
+</ul>
+<hr />
+<p><strong>Module 49: Colorimetric Assay Digitization</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the principles of traditional color-based soil tests (e.g., pH strips, nutrient kits).</li>
+<li><strong>Hour 3-4:</strong> Develop a computer vision pipeline using a smartphone camera for standardized image acquisition in the field.</li>
+<li><strong>Hour 5-6:</strong> Implement robust color calibration using standard color charts to handle variations in ambient lighting.</li>
+<li><strong>Hour 7-8:</strong> Build image segmentation algorithms to isolate the region of interest (e.g., the colored solution or test strip).</li>
+<li><strong>Hour 9-10:</strong> Extract quantitative color information (e.g., in HSV or L<em>a</em>b* color spaces) from the region of interest.</li>
+<li><strong>Hour 11-12:</strong> Create a machine learning model that maps the extracted color features to a quantitative soil property value.</li>
+<li><strong>Hour 13-14:</strong> Design and build a simple mobile application for on-device inference and immediate feedback.</li>
+<li><strong>Final Challenge:</strong> Create a complete system to predict soil pH from a photograph of a colorimetric test strip.</li>
+</ul>
+<hr />
+<p><strong>Module 50: Multi-Sensor Fusion for Proximal Sensing</strong></p>
+<ul>
+<li><strong>Hour 1-2:</strong> Introduce the concept of proximal soil sensing and the major sensor types (EMI, GPR, Vis-NIR, XRF).</li>
+<li><strong>Hour 3-4:</strong> Implement geostatistical methods for co-located data, addressing issues of different spatial supports and footprints.</li>
+<li><strong>Hour 5-6:</strong> Build machine learning models that use data from multiple sensors as input features for improved soil property prediction.</li>
+<li><strong>Hour 7-8:</strong> Apply dimensionality reduction techniques (e.g., PCA) to handle the high dimensionality of fused sensor data.</li>
+<li><strong>Hour 9-10:</strong> Introduce and implement the Kalman filter for optimally fusing time-series data from different sensors.</li>
+<li><strong>Hour 11-12:</strong> Use deep learning (e.g., multi-headed CNNs) to learn feature representations directly from raw multi-sensor data.</li>
+<li><strong>Hour 13-14:</strong> Design workflows for on-the-go sensor fusion for real-time soil mapping.</li>
+<li><strong>Final Challenge:</strong> Fuse electromagnetic induction (EMI) and hyperspectral data to create a more accurate map of soil salinity than either sensor could produce alone.</li>
+</ul>
 
                     </main>
 

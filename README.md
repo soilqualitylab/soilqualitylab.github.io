@@ -4,7 +4,7 @@ The purpose of this repository is about developing 100-module graduate-level cou
 
 This curriculum bridges the unique challenges of soil science data with advanced ML engineering.
 
-## **Soil Intelligence Engineering: A 100-Module Graduate Curriculum for Foundation Model Development**
+## **Soil Intelligence Engineering: A 100-Module Graduate Curriculum for Soil Quality Laboratory Foundation Model Development**
 
 ### **Foundation Phase: Core Infrastructure & Data Engineering (Modules 1-25)**
 

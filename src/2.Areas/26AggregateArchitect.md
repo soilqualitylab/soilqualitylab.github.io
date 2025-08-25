@@ -1,0 +1,4 @@
+# **26. AggregateArchitect**
+This model predicts the hierarchical formation of soil aggregates from primary particles to large macroaggregates, forecasting aggregate size distributions and stability under different management. It learns the roles of organic binding agents, clay mineralogy, and wetting-drying cycles in aggregate formation.
+
+Training this model requires extensive aggregate fractionation data using methods like wet sieving and slaking tests, paired with organic matter characterization and clay mineral identification. The National Soil Survey Center has aggregate stability data for US soils, though most lacks detailed binding agent analysis. Future data collection should employ X-ray micro-CT scanning before and after aggregate stability tests to track structural changes, combined with FTIR imaging to map organic binding agents.

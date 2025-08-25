@@ -1,0 +1,4 @@
+# **5. NitrogenCycler**
+This model provides complete prediction of nitrogen transformations including mineralization, nitrification, denitrification, and N₂O emissions based on soil properties, microbial communities, and environmental conditions. It integrates gene abundance data (amoA, nirK, nosZ) with process rate measurements to predict nitrogen fate.
+
+Building this model requires datasets combining gross nitrogen transformation rates (measured via ¹⁵N pool dilution), N₂O flux measurements, and quantitative PCR of nitrogen cycling genes. The Global N₂O Database and various LTER sites have extensive process measurements, though few include comprehensive molecular data. New collection strategies should employ automated chamber systems with isotope analyzers to capture high-resolution N₂O dynamics alongside microbial sampling.

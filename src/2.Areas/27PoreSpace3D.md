@@ -1,0 +1,4 @@
+# **27. PoreSpace3D**
+This model generates realistic three-dimensional pore networks from basic soil properties, predicting pore size distributions, connectivity, and tortuosity. It learns relationships between particle arrangements and resulting pore geometries that control fluid flow and gas diffusion.
+
+Building PoreSpace3D requires extensive X-ray CT scanning of undisturbed soil cores at multiple resolutions, paired with measured hydraulic properties and particle size distributions. Several soil physics laboratories have CT facilities, including UC Davis and Rothamsted Research, though scanning remains expensive and time-consuming. New data strategies should focus on developing rapid CT protocols and automated image analysis pipelines to process thousands of samples across soil types and management systems.

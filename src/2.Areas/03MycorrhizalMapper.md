@@ -1,0 +1,4 @@
+# **3. MycorrhizalMapper**
+This model predicts the establishment, extent, and functional capacity of mycorrhizal fungal networks based on plant community composition, soil properties, and management history. It forecasts nutrient transfer rates between plants and identifies conditions that promote extensive hyphal networks for soil aggregation.
+
+The model requires datasets combining molecular identification of mycorrhizal fungi (via ITS sequencing), hyphal length measurements, and nutrient transfer rates measured using isotope tracers. The International Collection of Arbuscular Mycorrhizal Fungi and various forest ecology networks have taxonomic data, but few studies measure functional attributes like nutrient transfer. New data collection should use quantum dot labeling and microfluidic soil chips to observe hyphal networks and nutrient flows in real-time.

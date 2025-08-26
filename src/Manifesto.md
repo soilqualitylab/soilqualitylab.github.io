@@ -8,13 +8,13 @@ Specialized foundation models for soil quality are artificial intelligence syste
 
 ### How specialized foundation models work for soil quality
 
-These models leverage large-scale data and transfer learning to understand complex soil dynamics. 
+These models leverage vastly-large-scale training data by providing rapid access to query or assess patterns found by intelligent system to assist in better understand complex soil dynamics than was ever possible before. 
 
 1. **Data integration**: They combine information from multiple sources, including:
 * Satellite imagery (e.g., spectral data from MODIS and other NASA sources).
-* Ground-based sensors.
-* Drone data.
-* Geological, hydrological, and climate datasets. 
+* Ground-based sensors, including human-gathered or human-adjusted survey observations.
+* Data from field and/or fertigation equipment supplemented with targeted data from robots.
+* Existing geological, hydrological, and climate datasets, both present and past. 
 
 2. **Specialized training**: The models are pre-trained on this multi-modal data to learn universal representations of complex environmental patterns. For example, they can associate spectral patterns from satellite images with different soil properties. 
 
